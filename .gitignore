@@ -1,0 +1,18 @@
+# Firebase cache
+.firebase/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies (if added later)
+node_modules/

@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techstar ERP — Cloud Accounting, Banking & ERP System for Indian Businesses</title>
+  <meta name="description" content="Next-Generation Indian Accounting, GST, Connected Banking & Auto Reconciliation ERP Platform by TechStar Business Solution.">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Fonts & Core Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Techstar ERP Custom Theme -->
+  <link rel="stylesheet" href="css/bootstrap-erp-theme.css">
+</head>
+<body>
+
+<div id="erp-wrapper">
+
+  <!-- =========================================================================
+       1. LEFT SIDEBAR NAVIGATION
+       ========================================================================= -->
+  <aside id="erp-sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="brand-logo">
+        <img src="../assets/logo.svg" alt="Techstar ERP Logo" style="height: 34px;">
+      </a>
+      <button class="btn btn-sm btn-light border-0 d-none d-lg-block" id="sidebar-toggle" title="Toggle Sidebar">
+        <i class="bi bi-layout-sidebar-reverse"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-nav">
+      <div class="nav-section-title">Main Dashboard</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link active" data-view-target="dashboard-view">
+          <i class="bi bi-grid-1x2-fill"></i>
+          <span>Dashboard</span>
+        </a>
+      </div>
+
+      <div class="nav-section-title">Connected Banking</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="banking-view">
+          <i class="bi bi-bank2"></i>
+          <span>Connected Banks</span>
+          <span class="badge bg-primary-subtle text-primary rounded-pill ms-auto nav-badge">3</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="reconciliation-view">
+          <i class="bi bi-arrow-repeat"></i>
+          <span>Auto Reconciliation</span>
+          <span class="badge bg-warning text-dark rounded-pill ms-auto nav-badge">32</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="scheduler-view">
+          <i class="bi bi-calendar-check"></i>
+          <span>Payment Scheduler</span>
+        </a>
+      </div>
+
+      <div class="nav-section-title">Business Operations</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="sales-purchase-view">
+          <i class="bi bi-receipt"></i>
+          <span>Sales & Purchases</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="inventory-view">
+          <i class="bi bi-box-seam"></i>
+          <span>Inventory & Stock</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="customer-360-view">
+          <i class="bi bi-people"></i>
+          <span>Customer 360°</span>
+        </a>
+      </div>
+
+      <div class="nav-section-title">Accounting & Taxes</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="accounting-view">
+          <i class="bi bi-journal-bookmark"></i>
+          <span>Ledger & Journals</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="gst-view">
+          <i class="bi bi-file-earmark-text"></i>
+          <span>GST & Compliance</span>
+        </a>
+      </div>
+
+      <div class="nav-section-title">Reports & MIS</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="reports-view">
+          <i class="bi bi-bar-chart-line"></i>
+          <span>Financial Reports</span>
+        </a>
+      </div>
+
+      <div class="nav-section-title">Administration</div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-view-target="approvals-view">
+          <i class="bi bi-diagram-3"></i>
+          <span>Approval Builder</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#onboardingModal">
+          <i class="bi bi-rocket-takeoff"></i>
+          <span>Setup Wizard</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="p-3 border-top bg-light">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2">
+          <span class="pulse-dot"></span>
+          <span class="small fw-semibold text-muted">Techstar Sync</span>
+        </div>
+        <span class="badge bg-success-subtle text-success small">Online</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. MAIN CONTENT AREA & TOPBAR
+       ========================================================================= -->
+  <div id="erp-main">
+    
+    <!-- Top Navigation Bar -->
+    <header id="erp-topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-sm btn-light border d-lg-none" id="mobile-sidebar-toggle">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        
+        <!-- Breadcrumb / Branch Indicator -->
+        <div class="dropdown">
+          <button class="selector-pill dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-building text-primary"></i>
+            <span>Headquarters — Mumbai Branch</span>
+            <span class="badge bg-secondary-subtle text-secondary font-mono ms-1">FY 2026–27</span>
+          </button>
+          <ul class="dropdown-menu shadow border-0">
+            <li><h6 class="dropdown-header">Select Operating Branch</h6></li>
+            <li><a class="dropdown-item active" href="#"><i class="bi bi-check2 me-2"></i>Headquarters — Mumbai Branch</a></li>
+            <li><a class="dropdown-item" href="#">Pune Distribution Center</a></li>
+            <li><a class="dropdown-item" href="#">Delhi Regional Outlet</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-plus-circle me-2"></i>Add New Branch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Center / Right Topbar Actions -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Global Search Button -->
+        <button class="global-search-btn" id="global-search-trigger">
+          <i class="bi bi-search"></i>
+          <span>Search customers, invoices, ledgers...</span>
+          <span class="search-shortcut">CTRL K</span>
+        </button>
+
+        <!-- Notifications Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-light position-relative rounded-circle p-2" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-bell fs-6"></i>
+            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end shadow border-0 p-0" style="width: 320px;">
+            <div class="p-3 bg-light border-bottom d-flex justify-content-between align-items-center">
+              <h6 class="mb-0 fw-bold">Notifications</h6>
+              <span class="badge bg-primary">3 New</span>
+            </div>
+            <div class="list-group list-group-flush small">
+              <a href="#" class="list-group-item list-group-item-action p-3">
+                <div class="fw-bold text-danger"><i class="bi bi-exclamation-circle me-1"></i> GSTR-2B Mismatch Detected</div>
+                <div class="text-muted">3 supplier invoices missing in portal reconciliation.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action p-3">
+                <div class="fw-bold text-success"><i class="bi bi-bank me-1"></i> ICICI Auto-Sync Complete</div>
+                <div class="text-muted">14 new bank entries fetched. 94% auto-matched.</div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action p-3">
+                <div class="fw-bold text-warning"><i class="bi bi-box me-1"></i> Low Stock Alert</div>
+                <div class="text-muted">Wireless Barcode Scanner below reorder level (4 units).</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Profile Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-light border-0 d-flex align-items-center gap-2 p-1 pe-2 rounded-pill" type="button" data-bs-toggle="dropdown">
+            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">SA</div>
+            <span class="fw-semibold small d-none d-md-inline">Swapnil Aher</span>
+            <i class="bi bi-chevron-down small text-muted"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+            <li><h6 class="dropdown-header">Founder & Managing Director</h6></li>
+            <li><a class="dropdown-item" href="../about.html"><i class="bi bi-person me-2"></i>Swapnil Aher Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-shield-check me-2"></i>Security & Audit Log</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Workspace Views Container -->
+    <div class="erp-content">
+
+      <!-- =========================================================================
+           VIEW 1: DASHBOARD
+           ========================================================================= -->
+      <div id="dashboard-view" class="erp-view animate-fade-in">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Good Morning, Swapnil Aher 👋</h4>
+            <p class="text-muted small mb-0">Here is your Indian Financial Overview for <span class="fw-semibold text-dark">HQ — Mumbai Branch</span></p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-primary btn-sm" data-view-target="reconciliation-view">
+              <i class="bi bi-arrow-repeat me-1"></i> Reconcile Bank
+            </button>
+            <button class="btn btn-primary btn-sm" data-view-target="sales-purchase-view">
+              <i class="bi bi-plus-lg me-1"></i> New Invoice
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI Grid -->
+        <div class="row g-3 mb-4">
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-primary-subtle text-primary">
+                <i class="bi bi-currency-rupee"></i>
+              </div>
+              <div class="kpi-label">Sales Revenue</div>
+              <div class="kpi-value">₹24.85L</div>
+              <div class="kpi-trend trend-up">
+                <i class="bi bi-arrow-up-short"></i> +12.4% vs last mo
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-warning-subtle text-warning">
+                <i class="bi bi-hourglass-split"></i>
+              </div>
+              <div class="kpi-label">Receivables</div>
+              <div class="kpi-value">₹8.42L</div>
+              <div class="kpi-trend trend-down">
+                <i class="bi bi-arrow-down-short"></i> -4.8% recovered
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-danger-subtle text-danger">
+                <i class="bi bi-credit-card-2-back"></i>
+              </div>
+              <div class="kpi-label">Payables</div>
+              <div class="kpi-value">₹5.18L</div>
+              <div class="kpi-trend trend-up">
+                <i class="bi bi-arrow-up-short"></i> +3.2% due
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-success-subtle text-success">
+                <i class="bi bi-bank"></i>
+              </div>
+              <div class="kpi-label">Cash & Bank</div>
+              <div class="kpi-value">₹12.64L</div>
+              <div class="kpi-trend trend-up">
+                <i class="bi bi-arrow-up-short"></i> +8.7% liquidity
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-info-subtle text-info">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <div class="kpi-label">Inventory Value</div>
+              <div class="kpi-value">₹18.92L</div>
+              <div class="kpi-trend trend-up">
+                <i class="bi bi-check2"></i> Optimal FIFO
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-2">
+            <div class="kpi-card">
+              <div class="kpi-icon-wrapper bg-secondary-subtle text-secondary">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="kpi-label">GST Liability</div>
+              <div class="kpi-value">₹2.34L</div>
+              <div class="kpi-trend trend-up">
+                <i class="bi bi-check-circle"></i> Ready GSTR-3B
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-3 mb-4">
+          <div class="col-12 col-lg-8">
+            <div class="card-erp p-3">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h6 class="fw-bold mb-0">Financial Performance & Cashflow Trend (FY 2026-27)</h6>
+                <span class="badge bg-light text-dark border">Updated 5 mins ago</span>
+              </div>
+              <div style="height: 280px;">
+                <canvas id="revenueTrendChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card-erp p-3">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h6 class="fw-bold mb-0">Connected Bank Balance Split</h6>
+                <button class="btn btn-link btn-sm p-0" data-view-target="banking-view">View Banks</button>
+              </div>
+              <div style="height: 280px;" class="position-relative">
+                <canvas id="bankDistributionChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 2: CONNECTED BANKING
+           ========================================================================= -->
+      <div id="banking-view" class="erp-view d-none">
+        <div class="bg-white border rounded-3 p-4 mb-4 shadow-sm">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <span class="badge bg-primary-subtle text-primary mb-2 fw-bold">Intelligent Banking API</span>
+              <h3 class="fw-extrabold mb-2">All Your Banks. One Smart Dashboard.</h3>
+              <p class="text-muted mb-0">Connect, monitor and reconcile your business bank accounts directly from ICICI, Axis, and RBL Bank enterprise APIs.</p>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connectBankModal">
+                <i class="bi bi-plus-circle me-1"></i> Connect New Bank Account
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bank Spotlight Cards -->
+        <div class="row g-4 mb-4">
+          <!-- ICICI Bank -->
+          <div class="col-12 col-md-4">
+            <div class="bank-card icici">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fw-extrabold fs-4" style="color:var(--bank-icici);">ICICI BANK</div>
+                </div>
+                <span class="bank-badge bg-success-subtle text-success"><i class="bi bi-shield-lock-fill me-1"></i> Connected</span>
+              </div>
+              <div class="text-muted small">Current Account: XXXX 4582</div>
+              <div class="fs-3 fw-bold my-2 font-mono">₹12,64,850.00</div>
+              <div class="d-flex justify-content-between align-items-center small text-muted border-top pt-2 mt-3">
+                <span>Last Synced: 5 mins ago</span>
+                <span class="fw-bold text-success">97.4% Reconciled</span>
+              </div>
+              <div class="d-grid mt-3">
+                <button class="btn btn-outline-dark btn-sm" data-view-target="reconciliation-view">Open Reconciliation Workspace</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- AXIS Bank -->
+          <div class="col-12 col-md-4">
+            <div class="bank-card axis">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="fw-extrabold fs-4" style="color:var(--bank-axis);">AXIS BANK</div>
+                <span class="bank-badge bg-success-subtle text-success"><i class="bi bi-shield-lock-fill me-1"></i> Connected</span>
+              </div>
+              <div class="text-muted small">Current Account: XXXX 8812</div>
+              <div class="fs-3 fw-bold my-2 font-mono">₹5,77,700.00</div>
+              <div class="d-flex justify-content-between align-items-center small text-muted border-top pt-2 mt-3">
+                <span>Last Synced: 1 hour ago</span>
+                <span class="fw-bold text-primary">94.1% Reconciled</span>
+              </div>
+              <div class="d-grid mt-3">
+                <button class="btn btn-outline-dark btn-sm" data-view-target="reconciliation-view">Open Reconciliation Workspace</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RBL Bank -->
+          <div class="col-12 col-md-4">
+            <div class="bank-card rbl">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="fw-extrabold fs-4" style="color:var(--bank-rbl);">RBL BANK</div>
+                <span class="bank-badge bg-secondary-subtle text-secondary">Ready to Connect</span>
+              </div>
+              <div class="text-muted small">Corporate Account Ready</div>
+              <div class="fs-4 fw-bold my-2 text-muted">₹0.00</div>
+              <div class="d-flex justify-content-between align-items-center small text-muted border-top pt-2 mt-3">
+                <span>Direct API Integration</span>
+                <span class="text-primary"><i class="bi bi-shield-check"></i> Bank Grade</span>
+              </div>
+              <div class="d-grid mt-3">
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#connectBankModal">Connect Account Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 3: AUTO BANK RECONCILIATION WORKSPACE
+           ========================================================================= -->
+      <div id="reconciliation-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div>
+            <h4 class="fw-bold mb-1">Auto Bank Reconciliation Workspace</h4>
+            <p class="text-muted small mb-0">Comparing Bank Statements against Techstar General Ledger Entries</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-download me-1"></i> Export Unmatched</button>
+            <button class="btn btn-success btn-sm"><i class="bi bi-magic me-1"></i> Run Smart Auto-Match</button>
+          </div>
+        </div>
+
+        <!-- Reconciliation Top KPI Strip -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Bank Balance</div>
+              <div class="fw-bold font-mono text-dark">₹18,42,550</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Book Balance</div>
+              <div class="fw-bold font-mono text-dark">₹18,39,850</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Matched</div>
+              <div class="fw-bold font-mono text-success" id="recon-matched-count">1,248</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Unmatched</div>
+              <div class="fw-bold font-mono text-warning" id="recon-unmatched-count">32</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Exceptions</div>
+              <div class="fw-bold font-mono text-danger">7</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="p-3 bg-white border rounded text-center">
+              <div class="small text-muted">Reconciliation %</div>
+              <div class="fw-bold font-mono text-primary" id="recon-percent">97.4%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart Matching Panel -->
+        <div class="smart-match-banner mb-4" id="smart-match-panel">
+          <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+            <div>
+              <div class="confidence-pill mb-2">
+                <i class="bi bi-cpu-fill"></i> 94% Smart Match Found
+              </div>
+              <h5 class="fw-bold text-white mb-1">Bank Transaction ₹25,000.00 — "UPI/ABC TRADERS/INV-1042"</h5>
+              <div class="small text-white-50">Matched against Ledger Entry: <strong>ABC Traders (Sales Invoice INV-1042)</strong></div>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-success btn-sm px-3 fw-bold" id="accept-smart-match-btn"><i class="bi bi-check-lg me-1"></i> Accept Match</button>
+              <button class="btn btn-outline-light btn-sm px-3" data-bs-toggle="offcanvas" data-bs-target="#txnDetailDrawer">Review Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Data Table -->
+        <div class="card-erp overflow-hidden">
+          <div class="table-responsive">
+            <table class="table-erp">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Bank Description</th>
+                  <th>Reference</th>
+                  <th class="amount-col">Bank Amount</th>
+                  <th class="amount-col">Ledger Amount</th>
+                  <th class="amount-col">Diff</th>
+                  <th>Suggested Match</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-semibold">02 Sep 2026</td>
+                  <td>UPI/ABC TRADERS/INV-1042</td>
+                  <td class="font-mono text-muted">UPI/1042</td>
+                  <td class="amount-col amount-cr">+₹25,000.00</td>
+                  <td class="amount-col amount-cr">+₹25,000.00</td>
+                  <td class="amount-col text-muted">₹0.00</td>
+                  <td class="fw-semibold text-primary">ABC Traders (INV-1042)</td>
+                  <td><span class="status-badge badge-suggested"><i class="bi bi-magic"></i> 94% Match</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-primary btn-reconcile-match">Match</button>
+                    <button class="btn btn-sm btn-light border" data-bs-toggle="offcanvas" data-bs-target="#txnDetailDrawer"><i class="bi bi-eye"></i></button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-semibold">01 Sep 2026</td>
+                  <td>NEFT-MAHINDRA LOGISTICS-PUR-0982</td>
+                  <td class="font-mono text-muted">NEFT/9821</td>
+                  <td class="amount-col amount-dr">-₹42,000.00</td>
+                  <td class="amount-col amount-dr">-₹42,000.00</td>
+                  <td class="amount-col text-muted">₹0.00</td>
+                  <td class="fw-semibold text-primary">Mahindra Logistics</td>
+                  <td><span class="status-badge badge-matched"><i class="bi bi-check-circle-fill"></i> Matched</span></td>
+                  <td>
+                    <span class="text-success small fw-semibold"><i class="bi bi-check-lg"></i> Reconciled</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="fw-semibold">30 Aug 2026</td>
+                  <td>CMS/OFFICE RENT SEP/MUMBAI</td>
+                  <td class="font-mono text-muted">CMS/4412</td>
+                  <td class="amount-col amount-dr">-₹85,000.00</td>
+                  <td class="amount-col amount-dr">₹0.00</td>
+                  <td class="amount-col amount-dr">-₹85,000.00</td>
+                  <td class="text-muted">Unmapped Expense</td>
+                  <td><span class="status-badge badge-exception"><i class="bi bi-exclamation-triangle-fill"></i> Unmatched</span></td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#createLedgerModal">Create Entry</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 4: PAYMENT SCHEDULER
+           ========================================================================= -->
+      <div id="scheduler-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Payment Scheduler & Banking Statements</h4>
+            <p class="text-muted small mb-0">Automate supplier payout schedules and execute bulk payouts</p>
+          </div>
+          <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> Schedule Payout</button>
+        </div>
+
+        <ul class="nav nav-tabs mb-4 border-bottom">
+          <li class="nav-item"><a class="nav-link active fw-bold" href="#">Due Today (2)</a></li>
+          <li class="nav-item"><a class="nav-link text-muted" href="#">Due This Week (5)</a></li>
+          <li class="nav-item"><a class="nav-link text-danger fw-bold" href="#">Overdue (1)</a></li>
+        </ul>
+
+        <div class="card-erp p-3 mb-4">
+          <div class="table-responsive">
+            <table class="table-erp">
+              <thead>
+                <tr>
+                  <th>Vendor</th>
+                  <th>Invoice No</th>
+                  <th>Due Date</th>
+                  <th class="amount-col">Amount</th>
+                  <th>Bank Account</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Reliance Petroleum Ltd</td>
+                  <td class="font-mono">PUR-2026-99</td>
+                  <td>Today (03 Sep)</td>
+                  <td class="amount-col text-dark">₹1,45,000.00</td>
+                  <td>ICICI Bank (4582)</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Approval Pending</span></td>
+                  <td><button class="btn btn-sm btn-success">Pay Now</button></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Tata Power Utilities</td>
+                  <td class="font-mono">UTIL-8812</td>
+                  <td>Today (03 Sep)</td>
+                  <td class="amount-col text-dark">₹28,400.00</td>
+                  <td>Axis Bank (8812)</td>
+                  <td><span class="badge bg-success-subtle text-success">Scheduled</span></td>
+                  <td><button class="btn btn-sm btn-outline-danger">Cancel</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 5: ACCOUNTING & LEDGER
+           ========================================================================= -->
+      <div id="accounting-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">General Ledger & Journal Registers</h4>
+            <p class="text-muted small mb-0">Running Balance Ledger for Indian SME Bookkeeping</p>
+          </div>
+          <button class="btn btn-outline-primary btn-sm"><i class="bi bi-journal-plus me-1"></i> Create Journal Entry</button>
+        </div>
+
+        <div class="card-erp p-3 mb-4">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-4">
+              <label class="form-label small fw-bold text-muted">Select Ledger Account</label>
+              <select class="form-select form-select-sm">
+                <option selected>ABC Traders (Customer Ledger)</option>
+                <option>ICICI Bank Account</option>
+                <option>Sales Account (18% GST)</option>
+                <option>Mahindra Logistics (Vendor)</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-bold text-muted">Date Range</label>
+              <input type="text" class="form-select form-select-sm" value="01 Apr 2026 to 03 Sep 2026">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label small fw-bold text-muted">Voucher Type</label>
+              <select class="form-select form-select-sm">
+                <option>All Vouchers</option>
+                <option>Sales Voucher</option>
+                <option>Receipt Voucher</option>
+                <option>Payment Voucher</option>
+              </select>
+            </div>
+            <div class="col-md-2 text-end mt-auto">
+              <button class="btn btn-primary btn-sm w-100"><i class="bi bi-filter"></i> Apply Filter</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-erp overflow-hidden">
+          <div class="table-responsive">
+            <table class="table-erp">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Voucher Type / No</th>
+                  <th>Particulars</th>
+                  <th class="amount-col">Debit (Dr)</th>
+                  <th class="amount-col">Credit (Cr)</th>
+                  <th class="amount-col">Running Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01 Apr 2026</td>
+                  <td class="font-mono">OB-001</td>
+                  <td>Opening Balance Carried Forward</td>
+                  <td class="amount-col">₹0.00</td>
+                  <td class="amount-col">₹0.00</td>
+                  <td class="amount-col fw-bold">₹1,50,500.00 Dr</td>
+                </tr>
+                <tr>
+                  <td>15 May 2026</td>
+                  <td class="font-mono text-primary">INV-1042</td>
+                  <td>To Sales Account (GST 18%)</td>
+                  <td class="amount-col amount-dr">₹25,000.00</td>
+                  <td class="amount-col">₹0.00</td>
+                  <td class="amount-col fw-bold">₹1,75,500.00 Dr</td>
+                </tr>
+                <tr>
+                  <td>02 Sep 2026</td>
+                  <td class="font-mono text-success">REC-0441</td>
+                  <td>By ICICI Bank (UPI Payment)</td>
+                  <td class="amount-col">₹0.00</td>
+                  <td class="amount-col amount-cr">₹25,000.00</td>
+                  <td class="amount-col fw-bold text-success">₹1,50,500.00 Dr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 6: SALES & PURCHASES
+           ========================================================================= -->
+      <div id="sales-purchase-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Sales & Purchase Management Workflow</h4>
+            <p class="text-muted small mb-0">End-to-End Purchase Order ➔ GRN ➔ Invoice ➔ Payment Flow</p>
+          </div>
+          <button class="btn btn-primary btn-sm"><i class="bi bi-plus-circle me-1"></i> Create Sales Invoice</button>
+        </div>
+
+        <!-- Workflow Visual Nodes -->
+        <div class="workflow-chain mb-4">
+          <div class="workflow-step completed">
+            <div class="small fw-bold text-success">STEP 1</div>
+            <div class="fw-extrabold">Purchase Order (PO)</div>
+            <div class="small text-muted font-mono">PO-8814</div>
+          </div>
+          <i class="bi bi-arrow-right workflow-arrow"></i>
+          <div class="workflow-step completed">
+            <div class="small fw-bold text-success">STEP 2</div>
+            <div class="fw-extrabold">Goods Receipt (GRN)</div>
+            <div class="small text-muted font-mono">GRN-401</div>
+          </div>
+          <i class="bi bi-arrow-right workflow-arrow"></i>
+          <div class="workflow-step active">
+            <div class="small fw-bold text-primary">STEP 3</div>
+            <div class="fw-extrabold">Purchase Invoice</div>
+            <div class="small text-muted font-mono">PUR-0982</div>
+          </div>
+          <i class="bi bi-arrow-right workflow-arrow"></i>
+          <div class="workflow-step">
+            <div class="small fw-bold text-muted">STEP 4</div>
+            <div class="fw-extrabold">Payment & Bank Recon</div>
+            <div class="small text-muted">Pending Payout</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 7: INVENTORY MANAGEMENT
+           ========================================================================= -->
+      <div id="inventory-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Inventory & Stock Master (Marg-Style Depth)</h4>
+            <p class="text-muted small mb-0">Multi-warehouse stock valuation, HSN codes, batches, and low stock alarms</p>
+          </div>
+          <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> Add Stock Item</button>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-3">
+            <div class="p-3 bg-white border rounded">
+              <div class="small text-muted">Total Active SKUs</div>
+              <div class="fs-4 fw-bold">1,482 Items</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-white border rounded">
+              <div class="small text-muted">Total Stock Value (FIFO)</div>
+              <div class="fs-4 fw-bold text-primary">₹18,92,400</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-white border rounded">
+              <div class="small text-muted">Low Stock Warning</div>
+              <div class="fs-4 fw-bold text-danger">12 Items</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 bg-white border rounded">
+              <div class="small text-muted">Near Expiry (30 Days)</div>
+              <div class="fs-4 fw-bold text-warning">4 Batches</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 8: GST & COMPLIANCE
+           ========================================================================= -->
+      <div id="gst-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">GST Workspace & Tax Reconciliation</h4>
+            <p class="text-muted small mb-0">GSTR-1, GSTR-3B, GSTR-2B Input Tax Credit (ITC) matching with GST portal</p>
+          </div>
+          <button class="btn btn-outline-success btn-sm"><i class="bi bi-arrow-repeat me-1"></i> Fetch GSTR-2B from Portal</button>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="card-erp p-3 border-start border-4 border-success">
+              <h6 class="fw-bold text-success mb-1">GSTR-1 (Outward Supplies)</h6>
+              <div class="small text-muted">Ready to file for Aug 2026</div>
+              <div class="fs-4 fw-bold my-2">₹4,47,300 Taxable</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-erp p-3 border-start border-4 border-primary">
+              <h6 class="fw-bold text-primary mb-1">GSTR-2B (Input Tax Credit)</h6>
+              <div class="small text-muted">Matched against Books</div>
+              <div class="fs-4 fw-bold my-2">₹2,13,000 ITC</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-erp p-3 border-start border-4 border-warning">
+              <h6 class="fw-bold text-warning mb-1">Net GST Payable (GSTR-3B)</h6>
+              <div class="small text-muted">Due Date: 20 Sep 2026</div>
+              <div class="fs-4 fw-bold my-2">₹2,34,300</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 9: REPORTS & MIS
+           ========================================================================= -->
+      <div id="reports-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Financial Reports & MIS Dashboard</h4>
+            <p class="text-muted small mb-0">Profit & Loss, Balance Sheet, Cash Flow & GST Registers</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary btn-sm" id="btn-export-excel"><i class="bi bi-file-earmark-excel me-1"></i> Export Excel</button>
+            <button class="btn btn-outline-danger btn-sm" id="btn-export-pdf"><i class="bi bi-file-earmark-pdf me-1"></i> Export PDF</button>
+            <button class="btn btn-primary btn-sm" id="btn-print-report"><i class="bi bi-printer me-1"></i> Print</button>
+          </div>
+        </div>
+
+        <div class="card-erp p-4">
+          <div class="text-center mb-4 pb-3 border-bottom">
+            <h4 class="fw-bold mb-0">TECHSTAR MONEY SOLUTION PRIVATE LIMITED</h4>
+            <div class="text-muted">Headquarters — Mumbai Branch | CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB | Managing Director: Swapnil Aher</div>
+            <h5 class="fw-bold text-primary mt-2">Profit & Loss Statement (FY 2026–27 MTD)</h5>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle font-mono">
+              <thead class="table-light">
+                <tr>
+                  <th>Particulars</th>
+                  <th class="text-end">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="fw-bold">
+                  <td>Revenue From Operations (Sales)</td>
+                  <td class="text-end text-success">₹24,85,000.00</td>
+                </tr>
+                <tr>
+                  <td class="ps-4">Less: Cost of Goods Sold (COGS)</td>
+                  <td class="text-end text-danger">-₹14,20,000.00</td>
+                </tr>
+                <tr class="table-primary fw-bold">
+                  <td>Gross Profit Margin</td>
+                  <td class="text-end">₹10,65,000.00</td>
+                </tr>
+                <tr>
+                  <td class="ps-4">Operating & Administrative Expenses</td>
+                  <td class="text-end text-danger">-₹3,80,000.00</td>
+                </tr>
+                <tr class="table-success fw-bold fs-5">
+                  <td>Net Operating Profit (PAT)</td>
+                  <td class="text-end">₹6,85,000.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 10: CUSTOMER 360° PROFILE
+           ========================================================================= -->
+      <div id="customer-360-view" class="erp-view d-none">
+        <div class="card-erp p-4 mb-4">
+          <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 border-bottom pb-3">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h3 class="fw-bold mb-0">ABC Traders</h3>
+                <span class="badge bg-success-subtle text-success">Active VIP Customer</span>
+              </div>
+              <div class="text-muted small">GSTIN: 27AABCA1234F1ZM | PAN: AABCA1234F | Maharashtra</div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="text-end">
+                <div class="small text-muted">Credit Limit</div>
+                <div class="fw-bold">₹5,00,000</div>
+              </div>
+              <div class="border-start ps-3 text-end">
+                <div class="small text-muted">Current Outstanding</div>
+                <div class="fw-bold text-danger fs-5">₹1,84,500</div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-tabs mt-3 border-bottom">
+            <li class="nav-item"><a class="nav-link active fw-bold" href="#">Overview & Analytics</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="#">Invoices (14)</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="#">Ledger Account</a></li>
+            <li class="nav-item"><a class="nav-link text-muted" href="#">Payments Received</a></li>
+          </ul>
+
+          <div class="pt-4" style="height: 250px;">
+            <canvas id="customerSalesChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================================
+           VIEW 11: APPROVAL BUILDER
+           ========================================================================= -->
+      <div id="approvals-view" class="erp-view d-none">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Visual Approval Workflows & Governance</h4>
+            <p class="text-muted small mb-0">Configure multi-tier authorization limits for purchase invoices & vouchers</p>
+          </div>
+          <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> Add Rule</button>
+        </div>
+
+        <div class="card-erp p-4">
+          <h6 class="fw-bold mb-3">Purchase Invoice Approval Chain</h6>
+          <div class="workflow-chain">
+            <div class="workflow-step completed">
+              <div class="small text-muted">TIER 1 (₹0 – ₹50,000)</div>
+              <div class="fw-bold">Branch Manager</div>
+              <span class="badge bg-success-subtle text-success mt-1">Auto Approved</span>
+            </div>
+            <i class="bi bi-arrow-right fs-4 text-muted"></i>
+            <div class="workflow-step active">
+              <div class="small text-muted">TIER 2 (₹50,000 – ₹2,00,000)</div>
+              <div class="fw-bold">Finance Manager</div>
+              <span class="badge bg-primary-subtle text-primary mt-1">Requires 1 Approval</span>
+            </div>
+            <i class="bi bi-arrow-right fs-4 text-muted"></i>
+            <div class="workflow-step">
+              <div class="small text-muted">TIER 3 (₹2,00,000+)</div>
+              <div class="fw-bold">Managing Director</div>
+              <span class="badge bg-secondary-subtle text-secondary mt-1">Dual Signoff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================================
+     MODALS & DRAWER COMPONENTS
+     ========================================================================= -->
+
+<!-- Offcanvas Bank Transaction Detail Drawer -->
+<div class="offcanvas offcanvas-end offcanvas-erp" tabindex="-1" id="txnDetailDrawer">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold">Transaction Inspection</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="p-3 bg-light rounded mb-3">
+      <div class="small text-muted">Bank Account</div>
+      <div class="fw-bold">ICICI Bank (Current Account XXXX 4582)</div>
+      <div class="fs-4 fw-bold font-mono text-success my-1" id="drawer-txn-amount">₹25,000.00</div>
+      <div class="small text-muted" id="drawer-txn-date">02 Sep 2026</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="small text-muted fw-bold">Bank Description</label>
+      <div class="fw-semibold font-mono" id="drawer-txn-desc">UPI/ABC TRADERS/INV-1042</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="small text-muted fw-bold">Bank Reference ID</label>
+      <div class="fw-semibold font-mono" id="drawer-txn-ref">UPI/1042</div>
+    </div>
+
+    <div class="mb-4">
+      <label class="small text-muted fw-bold">Smart Match Confidence</label>
+      <div class="progress mt-1" style="height: 10px;">
+        <div class="progress-bar bg-success" style="width: 94%;">94%</div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button class="btn btn-success" data-bs-dismiss="offcanvas"><i class="bi bi-check-circle me-1"></i> Match Transaction</button>
+      <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createLedgerModal"><i class="bi bi-plus-circle me-1"></i> Create Ledger Entry</button>
+      <button class="btn btn-outline-danger"><i class="bi bi-flag me-1"></i> Mark as Exception</button>
+    </div>
+  </div>
+</div>
+
+<!-- Global Search Modal (Ctrl + K) -->
+<div class="modal fade" id="globalSearchModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content shadow-lg border-0">
+      <div class="modal-body p-3">
+        <div class="input-group input-group-lg border-bottom pb-2">
+          <span class="input-group-text bg-transparent border-0"><i class="bi bi-search fs-4 text-muted"></i></span>
+          <input type="text" class="form-control border-0 shadow-none" id="globalSearchInput" placeholder="Search customers, invoices, ledgers, transactions... (Try 'ABC' or 'INV')">
+        </div>
+        <div id="globalSearchResults" class="mt-2" style="max-height: 360px; overflow-y: auto;">
+          <div class="p-3 text-muted text-center">Type to search across Techstar ERP...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SaaS Setup Onboarding Wizard Modal -->
+<div class="modal fade" id="onboardingModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-header-title mb-0 fw-bold"><i class="bi bi-rocket-takeoff me-2"></i> Techstar ERP Onboarding Setup</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <!-- Step 1 -->
+        <div class="wizard-step" id="wizard-step-1">
+          <span class="badge bg-primary-subtle text-primary mb-2">Step 1 of 3</span>
+          <h4 class="fw-bold mb-2">Welcome to Techstar ERP</h4>
+          <p class="text-muted">Enter your Indian GSTIN to auto-fill business credentials and tax branches.</p>
+          <div class="mb-3">
+            <label class="form-label fw-bold">GSTIN (15 Digits)</label>
+            <input type="text" class="form-control form-control-lg font-mono" value="27AABCA1234F1ZM">
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary wizard-next-step" data-next-step="wizard-step-2">Continue to Connected Banking →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="wizard-step d-none" id="wizard-step-2">
+          <span class="badge bg-primary-subtle text-primary mb-2">Step 2 of 3</span>
+          <h4 class="fw-bold mb-2">Connect Your Bank Accounts</h4>
+          <p class="text-muted">Select your primary bank for direct API auto reconciliation.</p>
+          <div class="row g-3 mb-4">
+            <div class="col-4">
+              <div class="border rounded p-3 text-center cursor-pointer hover-bg-light border-primary">
+                <div class="fw-bold" style="color:var(--bank-icici)">ICICI BANK</div>
+                <div class="small text-muted">Direct API</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="border rounded p-3 text-center cursor-pointer hover-bg-light">
+                <div class="fw-bold" style="color:var(--bank-axis)">AXIS BANK</div>
+                <div class="small text-muted">Direct API</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="border rounded p-3 text-center cursor-pointer hover-bg-light">
+                <div class="fw-bold" style="color:var(--bank-rbl)">RBL BANK</div>
+                <div class="small text-muted">Direct API</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-light border wizard-prev-step" data-prev-step="wizard-step-1">← Back</button>
+            <button class="btn btn-primary wizard-next-step" data-next-step="wizard-step-3">Finish Setup →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="wizard-step d-none" id="wizard-step-3">
+          <span class="badge bg-success-subtle text-success mb-2">Step 3 of 3</span>
+          <h4 class="fw-bold mb-2">You Are All Set! 🎉</h4>
+          <p class="text-muted">Your ERP environment is configured for Indian Accounting Standards & Connected Banking.</p>
+          <div class="d-grid mt-4">
+            <button class="btn btn-success btn-lg" data-bs-dismiss="modal">Launch Techstar ERP Workspace</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Core Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/erp-app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Free Trial — Techstar ERP</title>
+  <meta name="description" content="Start your free 14-day trial of Techstar ERP. No credit card required.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body style="background:var(--color-bg-alt); display:flex; align-items:center; justify-content:center; min-height:100vh; padding:40px 20px;">
+
+  <div style="max-width:440px; width:100%; text-align:center;">
+    <a href="index.html" class="logo" style="justify-content:center; margin-bottom:20px; display:inline-flex;">
+      <img src="assets/logo.svg" alt="Techstar ERP Logo" style="height:42px;">
+    </a>
+
+    <h1 class="text-2xl font-extrabold" style="color:var(--color-primary-dark); margin-bottom:10px;">
+      Start Your Free 14-Day Trial
+    </h1>
+    <p class="text-sm text-muted" style="margin-bottom:24px;">
+      No credit card required. Set up your business in under 2 minutes.
+    </p>
+
+    <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 24px rgba(0,0,0,0.08); margin-bottom:20px;">
+      <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px; text-align:left;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
+          <span style="color:#22c55e; font-size:18px;">✓</span>
+          <span>Full access to all ERP modules</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
+          <span style="color:#22c55e; font-size:18px;">✓</span>
+          <span>GST billing, invoicing &amp; POS included</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
+          <span style="color:#22c55e; font-size:18px;">✓</span>
+          <span>Multi-branch inventory management</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
+          <span style="color:#22c55e; font-size:18px;">✓</span>
+          <span>Double-entry accounting &amp; reports</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
+          <span style="color:#22c55e; font-size:18px;">✓</span>
+          <span>No credit card, no commitment</span>
+        </div>
+      </div>
+
+      <a id="startTrialLink" href="#" class="btn btn-primary" style="width:100%; display:block; font-size:15px; padding:14px;">
+        Create My Free Account 🚀
+      </a>
+
+      <p style="margin-top:12px; font-size:12px; color:#94a3b8;">
+        Already have an account?
+        <a id="loginLink" href="#" style="color:var(--color-primary); font-weight:600;">Sign in</a>
+      </p>
+    </div>
+
+    <p style="font-size:12px; color:#94a3b8;">
+      Prefer to see it first?
+      <a href="demo.html" style="color:var(--color-primary); font-weight:600;">Book a free demo →</a>
+    </p>
+  </div>
+
+  <script src="js/firebase-integration.js"></script>
+  <script>
+    const ERP_URL = "https://erp-by-swapnilaher.web.app";
+
+    function buildUrl(path) {
+      const utm = window.TechstarERP ? window.TechstarERP.getStoredUtm?.() || {} : {};
+      const params = new URLSearchParams();
+      if (utm.utmSource && utm.utmSource !== "direct") params.set("utm_source", utm.utmSource);
+      if (utm.utmMedium && utm.utmMedium !== "none") params.set("utm_medium", utm.utmMedium);
+      if (utm.utmCampaign && utm.utmCampaign !== "none") params.set("utm_campaign", utm.utmCampaign);
+      const qs = params.toString();
+      return `${ERP_URL}${path}${qs ? "?" + qs : ""}`;
+    }
+
+    document.getElementById("startTrialLink").href = buildUrl("/register");
+    document.getElementById("loginLink").href = buildUrl("/login");
+  </script>
+</body>
+</html>

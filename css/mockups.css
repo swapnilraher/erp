@@ -1,0 +1,145 @@
+/* ============================================================
+   TECHSTAR ERP — MOCK ERP SCREENS CSS
+   ============================================================ */
+
+/* ====== SHARED MOCK SCREEN BASE ====== */
+.mock-screen {
+  background: #F1F5F9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(0,0,0,0.08);
+  font-family: var(--font-primary);
+}
+.mock-titlebar {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #E2E8F0;
+  gap: 6px;
+}
+.mock-dot { width: 10px; height: 10px; border-radius: 50%; }
+.mock-dot-r { background: #FF5F57; }
+.mock-dot-y { background: #FFBD2E; }
+.mock-dot-g { background: #28C840; }
+.mock-tab-title { font-size: 11px; color: #64748B; font-weight: 500; margin: 0 auto; letter-spacing: 0.02em; }
+
+/* ====== INVOICE MOCK ====== */
+.invoice-mock { background: white; padding: 20px; }
+.inv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 2px solid #1E3A8A; }
+.inv-company { font-size: 15px; font-weight: 800; color: #1E3A8A; }
+.inv-company-sub { font-size: 9px; color: #64748B; margin-top: 2px; }
+.inv-badge { background: #1E3A8A; color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; }
+.inv-info-row { display: flex; justify-content: space-between; margin-bottom: 14px; gap: 20px; }
+.inv-info-col { flex: 1; }
+.inv-info-label { font-size: 8px; text-transform: uppercase; color: #94A3B8; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 3px; }
+.inv-info-value { font-size: 11px; font-weight: 600; color: #1E293B; }
+.inv-info-value.highlight { color: #1E3A8A; }
+.inv-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; }
+.inv-table th { background: #F0F4FF; padding: 6px 8px; text-align: left; font-size: 9px; font-weight: 700; text-transform: uppercase; color: #1E3A8A; letter-spacing: 0.04em; }
+.inv-table td { padding: 6px 8px; font-size: 10px; border-bottom: 1px solid #F1F5F9; color: #334155; }
+.inv-table td:last-child { text-align: right; font-weight: 600; }
+.inv-totals { background: #F8FAFF; border-radius: 8px; padding: 10px 12px; }
+.inv-total-row { display: flex; justify-content: space-between; font-size: 10px; color: #475569; margin-bottom: 4px; }
+.inv-total-row.grand { font-size: 13px; font-weight: 800; color: #1E3A8A; border-top: 1px solid #CBD5E1; padding-top: 6px; margin-top: 4px; }
+.inv-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #E2E8F0; }
+.inv-payment-modes { display: flex; gap: 6px; }
+.inv-payment-badge { background: #E0F2FE; color: #0369A1; font-size: 9px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
+.inv-sig { font-size: 9px; color: #94A3B8; text-align: right; }
+
+/* ====== POS MOCK ====== */
+.pos-mock { display: grid; grid-template-columns: 1fr 280px; min-height: 300px; }
+.pos-products { padding: 12px; background: #F8FAFC; }
+.pos-header-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.pos-search { flex: 1; padding: 7px 12px; background: white; border: 1px solid #E2E8F0; border-radius: 8px; font-size: 11px; color: #334155; }
+.pos-product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.pos-product {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pos-product:hover { border-color: #3B82F6; background: #EFF6FF; }
+.pos-product-icon { font-size: 1.25rem; margin-bottom: 3px; }
+.pos-product-name { font-size: 9px; font-weight: 600; color: #334155; margin-bottom: 2px; }
+.pos-product-price { font-size: 10px; font-weight: 700; color: #1E3A8A; }
+.pos-bill { background: white; border-left: 1px solid #E2E8F0; display: flex; flex-direction: column; }
+.pos-bill-header { padding: 10px 12px; background: #1E3A8A; color: white; }
+.pos-bill-title { font-size: 11px; font-weight: 700; }
+.pos-bill-sub { font-size: 9px; opacity: 0.7; margin-top: 1px; }
+.pos-bill-items { flex: 1; padding: 10px 12px; overflow-y: auto; }
+.pos-bill-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #F1F5F9; }
+.pos-item-name { font-size: 10px; color: #334155; font-weight: 500; }
+.pos-item-qty { font-size: 10px; color: #64748B; }
+.pos-item-price { font-size: 10px; font-weight: 700; color: #1E293B; }
+.pos-bill-footer { padding: 10px 12px; border-top: 1px solid #E2E8F0; background: #F8FAFC; }
+.pos-total-row { display: flex; justify-content: space-between; font-size: 10px; color: #64748B; margin-bottom: 3px; }
+.pos-total-row.grand { font-size: 14px; font-weight: 800; color: #1E3A8A; }
+.pos-pay-modes { display: flex; gap: 4px; margin: 8px 0; }
+.pos-pay-btn { flex: 1; padding: 5px; background: white; border: 1px solid #E2E8F0; border-radius: 5px; font-size: 9px; font-weight: 600; color: #475569; cursor: pointer; text-align: center; }
+.pos-pay-btn.active { background: #1E3A8A; color: white; border-color: #1E3A8A; }
+.pos-checkout-btn { width: 100%; padding: 8px; background: #10B981; color: white; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+/* ====== INVENTORY MOCK ====== */
+.inv-mock-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: white; border-bottom: 1px solid #E2E8F0; }
+.inv-mock-title { font-size: 13px; font-weight: 700; color: #1E293B; }
+.inv-mock-actions { display: flex; gap: 8px; }
+.inv-mock-btn { padding: 5px 12px; border-radius: 6px; font-size: 10px; font-weight: 600; }
+.inv-mock-btn.primary { background: #1E3A8A; color: white; }
+.inv-mock-btn.secondary { background: #F0F4FF; color: #1E3A8A; border: 1px solid rgba(30,58,138,0.2); }
+.inv-kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; padding: 12px 16px; background: #F8FAFC; }
+.inv-kpi { background: white; border-radius: 8px; padding: 10px 12px; border: 1px solid #E2E8F0; }
+.inv-kpi-label { font-size: 9px; color: #64748B; font-weight: 600; text-transform: uppercase; margin-bottom: 4px; }
+.inv-kpi-val { font-size: 15px; font-weight: 800; color: #1E293B; }
+.inv-kpi-sub { font-size: 9px; margin-top: 2px; }
+.inv-kpi-sub.alert { color: #EF4444; font-weight: 600; }
+.inv-kpi-sub.ok { color: #10B981; font-weight: 600; }
+.inv-table-wrap { padding: 12px 16px; overflow-x: auto; }
+.inv-table-mock { width: 100%; border-collapse: collapse; font-size: 10px; }
+.inv-table-mock th { background: #1E3A8A; color: white; padding: 8px 10px; text-align: left; font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; }
+.inv-table-mock td { padding: 7px 10px; border-bottom: 1px solid #F1F5F9; color: #334155; }
+.stock-badge { padding: 2px 8px; border-radius: 20px; font-size: 9px; font-weight: 700; }
+.stock-ok { background: #D1FAE5; color: #065F46; }
+.stock-low { background: #FEF3C7; color: #92400E; }
+.stock-out { background: #FEE2E2; color: #991B1B; }
+
+/* ====== ANALYTICS MOCK ====== */
+.analytics-mock { padding: 12px; background: #0F172A; }
+.analytics-row1 { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 10px; }
+.analytics-kpi { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 12px; }
+.analytics-kpi-label { font-size: 8px; text-transform: uppercase; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; margin-bottom: 4px; }
+.analytics-kpi-value { font-size: 14px; font-weight: 800; color: white; }
+.analytics-kpi-trend { font-size: 9px; margin-top: 3px; }
+.analytics-kpi-trend.up { color: #34D399; }
+.analytics-kpi-trend.down { color: #F87171; }
+.analytics-charts { display: grid; grid-template-columns: 2fr 1fr; gap: 8px; }
+.analytics-chart-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; }
+.analytics-chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.analytics-chart-title { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); }
+.analytics-filter { font-size: 9px; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); padding: 2px 8px; border-radius: 4px; border: none; cursor: pointer; }
+.analytics-bars-wrap { display: flex; align-items: flex-end; gap: 5px; height: 70px; overflow: hidden; }
+.a-bar { border-radius: 3px 3px 0 0; flex: 1; }
+.a-bar-blue { background: rgba(59,130,246,0.7); }
+.a-bar-green { background: rgba(52,211,153,0.7); }
+.analytics-legend { display: flex; gap: 12px; margin-top: 6px; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 8px; color: rgba(255,255,255,0.5); }
+.legend-dot { width: 6px; height: 6px; border-radius: 50%; }
+.legend-dot-blue { background: rgba(59,130,246,0.7); }
+.legend-dot-green { background: rgba(52,211,153,0.7); }
+.top-item { display: flex; align-items: center; gap: 6px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.top-item-rank { font-size: 9px; color: rgba(255,255,255,0.3); font-weight: 700; width: 16px; }
+.top-item-name { flex: 1; font-size: 9px; color: rgba(255,255,255,0.7); }
+.top-item-val { font-size: 9px; font-weight: 700; color: #60A5FA; }
+
+/* ====== RESPONSIVE MOCKS ====== */
+@media (max-width: 768px) {
+  .pos-mock { grid-template-columns: 1fr; }
+  .pos-bill { display: none; }
+  .pos-product-grid { grid-template-columns: repeat(3,1fr); }
+  .inv-kpis { grid-template-columns: repeat(2,1fr); }
+  .analytics-row1 { grid-template-columns: repeat(2,1fr); }
+  .analytics-charts { grid-template-columns: 1fr; }
+}
