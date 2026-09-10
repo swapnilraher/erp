@@ -1,6 +1,6 @@
 /**
  * firebase-integration.js
- * Techstar ERP Marketing Website — Firebase & Analytics Integration
+ * Techstar ERP Marketing Website - Firebase & Cross-Domain Integration
  */
 
 const FIREBASE_CONFIG = {
@@ -12,7 +12,29 @@ const FIREBASE_CONFIG = {
   appId: "1:332157971292:web:16af23c960e23864ffaf99",
 };
 
-const ERP_APP_URL = "https://erp-by-swapnilaher.web.app";
+/**
+ * Resolves the canonical ERP subdomain URL dynamically.
+ * Works seamlessly across:
+ * - Localhost development (http://localhost:3000)
+ * - Firebase Hosting preview domains (*.web.app)
+ * - Production custom domains (e.g., https://techstarerp.com -> https://erp.techstarerp.com)
+ */
+function resolveErpAppUrl() {
+  const hostname = window.location.hostname;
+  if (hostname === "localhost" || hostname === "127.0.0.1") {
+    return "http://localhost:3000";
+  }
+  if (hostname.endsWith("web.app") || hostname.endsWith("firebaseapp.com")) {
+    return "https://erp-by-swapnilaher.web.app";
+  }
+  if (hostname.includes(".")) {
+    const rootDomain = hostname.replace(/^www\./, "");
+    return "https://erp." + rootDomain;
+  }
+  return "https://erp.techstarerp.com";
+}
+
+const ERP_APP_URL = resolveErpAppUrl();
 
 function captureUtm() {
   const params = new URLSearchParams(window.location.search);
@@ -31,6 +53,17 @@ function captureUtm() {
 function getStoredUtm() {
   try { return JSON.parse(sessionStorage.getItem("techstar_utm") || "{}"); }
   catch { return {}; }
+}
+
+function getErpUrl(path = "") {
+  const utm = getStoredUtm();
+  const params = new URLSearchParams();
+  if (utm.utmSource && utm.utmSource !== "direct") params.set("utm_source", utm.utmSource);
+  if (utm.utmMedium && utm.utmMedium !== "none") params.set("utm_medium", utm.utmMedium);
+  if (utm.utmCampaign && utm.utmCampaign !== "none") params.set("utm_campaign", utm.utmCampaign);
+  const cleanPath = path.startsWith("/") ? path : "/" + path;
+  const qs = params.toString();
+  return `${ERP_APP_URL}${cleanPath}${qs ? "?" + qs : ""}`;
 }
 
 let _db = null;
@@ -70,11 +103,12 @@ async function createOnboardingSession(leadId) {
   } catch { return null; }
 }
 
-function navigateToFreeTrial(sessionCode, leadId) {
+function navigateToFreeTrial(sessionCode, leadId, plan) {
   const utm = getStoredUtm();
   const params = new URLSearchParams();
   if (sessionCode) params.set("ref", sessionCode);
   if (leadId) params.set("lead", leadId);
+  if (plan) params.set("plan", plan);
   if (utm.utmSource && utm.utmSource !== "direct") params.set("utm_source", utm.utmSource);
   if (utm.utmMedium && utm.utmMedium !== "none") params.set("utm_medium", utm.utmMedium);
   if (utm.utmCampaign && utm.utmCampaign !== "none") params.set("utm_campaign", utm.utmCampaign);
@@ -90,13 +124,32 @@ document.addEventListener("DOMContentLoaded", () => {
   captureUtm();
   trackEvent("page_view", { page: window.location.pathname });
 
+  // Bind all start-trial and login triggers
   document.querySelectorAll("[data-action='start-trial']").forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
-      trackEvent("start_trial_click", {});
-      navigateToFreeTrial(null, null);
+      const plan = btn.getAttribute("data-plan") || null;
+      trackEvent("start_trial_click", { plan });
+      navigateToFreeTrial(null, null, plan);
+    });
+  });
+
+  document.querySelectorAll("[data-action='erp-login']").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      trackEvent("login_click", {});
+      window.location.href = getErpUrl("/login");
     });
   });
 });
 
-window.TechstarERP = { saveDemoLead, createOnboardingSession, navigateToFreeTrial, trackEvent };
+window.TechstarERP = {
+  ERP_APP_URL,
+  resolveErpAppUrl,
+  getErpUrl,
+  getStoredUtm,
+  saveDemoLead,
+  createOnboardingSession,
+  navigateToFreeTrial,
+  trackEvent
+};

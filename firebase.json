@@ -7,6 +7,43 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "cleanUrls": true
+    "cleanUrls": true,
+    "redirects": [
+      {
+        "source": "/login",
+        "destination": "https://erp.techstarerp.com/login",
+        "type": 302
+      },
+      {
+        "source": "/register",
+        "destination": "https://erp.techstarerp.com/register",
+        "type": 302
+      },
+      {
+        "source": "/dashboard",
+        "destination": "https://erp.techstarerp.com/dashboard",
+        "type": 302
+      },
+      {
+        "source": "/dashboard/**",
+        "destination": "https://erp.techstarerp.com/dashboard",
+        "type": 302
+      },
+      {
+        "source": "/app",
+        "destination": "https://erp.techstarerp.com/dashboard",
+        "type": 302
+      },
+      {
+        "source": "/app/**",
+        "destination": "https://erp.techstarerp.com/dashboard",
+        "type": 302
+      },
+      {
+        "source": "/privacy-policy",
+        "destination": "/privacy",
+        "type": 301
+      }
+    ]
   }
 }
