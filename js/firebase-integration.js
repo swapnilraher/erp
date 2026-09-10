@@ -10,6 +10,7 @@ const FIREBASE_CONFIG = {
   storageBucket: "erp-by-swapnilaher.firebasestorage.app",
   messagingSenderId: "332157971292",
   appId: "1:332157971292:web:16af23c960e23864ffaf99",
+  measurementId: "G-8LP0LEY9R0",
 };
 
 /**
