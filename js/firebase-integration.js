@@ -110,6 +110,18 @@ function navigateToFreeTrial(sessionCode, leadId, plan) {
   window.location.href = `${ERP_APP_URL}/register${qs ? "?" + qs : ""}`;
 }
 
+async function fetchPublicPlans() {
+  try {
+    const res = await fetch(`${ERP_APP_URL}/api/public/plans`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.plans || null;
+  } catch (err) {
+    console.warn("Could not fetch public plans from ERP API:", err);
+    return null;
+  }
+}
+
 function trackEvent(name, props = {}) {
   if (typeof gtag === "function") gtag("event", name, props);
 }
@@ -145,5 +157,6 @@ window.TechstarERP = {
   saveDemoLead,
   createOnboardingSession,
   navigateToFreeTrial,
+  fetchPublicPlans,
   trackEvent
 };

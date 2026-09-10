@@ -65,100 +65,119 @@
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="grid grid-3 mb-16" style="align-items:stretch;">
-        <!-- Monthly Plan -->
-        <div id="cardMonthly" class="pricing-card" style="display:flex; flex-direction:column; justify-content:between;">
+        <!-- Starter Plan -->
+        <div id="cardStarter" class="pricing-card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid #CBD5E1; border-radius:20px; padding:32px; background:#FFFFFF;">
           <div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#2563EB; background:#EFF6FF; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
-              Flexible Monthly
+            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#0284C7; background:#E0F2FE; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
+              Starter Outlets
             </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px;">Techstar ERP Monthly</h3>
-            <div class="pricing-plan-title">For Growing Businesses</div>
+            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Starter Plan</h3>
+            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Retail Counters &amp; Traders</div>
             
             <div style="margin:20px 0 15px 0;">
-              <span style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹999</span>
-              <span style="font-size:14px; color:#64748B; font-weight:500;">/ month</span>
+              <span id="priceStarter" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹4,999</span>
+              <span id="cycleStarter" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
+              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
             </div>
-            <p class="pricing-plan-desc font-medium">Auto-calculates sales taxes, double-entry books, barcode scanning, and multi-counter POS billing.</p>
+            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Fast billing, thermal receipts, basic inventory, and single-store GST tax invoice registers.</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#F8FAFC; border-radius:10px; border:1px solid #E2E8F0; font-size:12px;">
+              <div style="font-weight:700; color:#0F172A;">👥 Up to 2 Users</div>
+              <div style="font-weight:700; color:#0F172A;">🏢 1 Branch</div>
+            </div>
             
-            <ul class="pricing-features" style="margin-top:20px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 1 Primary Branch + POS Counter</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Double-Entry Accounting &amp; Ledgers</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Full GSTR-1, 2B &amp; 3B Reconciliation</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Live Warehouse Stock &amp; FIFO Inventory</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Barcode Scanning &amp; Label Printing</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Daily Cloud Backups &amp; 256-bit SSL</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Standard Email &amp; WhatsApp Support</li>
+            <ul class="pricing-features" style="margin-top:16px;">
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Up to 2 Active Users</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 1 Branch Location</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Fast Invoicing &amp; Thermal POS Printing</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Stock &amp; Basic Inventory Tracking</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GST Invoices &amp; GSTR-1 Ledger</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Customer &amp; Vendor Ledgers</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Standard WhatsApp &amp; Email Support</li>
             </ul>
           </div>
           <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="monthlyCtaLink" href="https://erp-system-psi-one.vercel.app/register?plan=monthly" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
-              Start Monthly Plan
+            <a id="linkStarter" href="https://erp-system-psi-one.vercel.app/register?plan=starter" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
+              Get Starter Plan
             </a>
           </div>
         </div>
 
-        <!-- Yearly Plan (Featured) -->
-        <div id="cardYearly" class="pricing-card featured" style="display:flex; flex-direction:column; justify-content:between; border:2px solid #2563EB; box-shadow:0 10px 30px rgba(37,99,235,0.15);">
+        <!-- Business Plan (Featured) -->
+        <div id="cardBusiness" class="pricing-card featured" style="display:flex; flex-direction:column; justify-content:space-between; border:2px solid #2563EB; border-radius:20px; padding:32px; background:#FFFFFF; box-shadow:0 10px 30px rgba(37,99,235,0.15); position:relative;">
           <div>
-            <div class="pricing-badge" style="background:#2563EB; color:white; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">
-              Best Value • Save 17%
+            <div class="pricing-badge" style="background:#2563EB; color:white; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; position:absolute; top:-12px; left:50%; transform:translateX(-50%); padding:4px 14px; border-radius:20px; font-size:11px;">
+              Most Popular • Best Value
             </div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#1D4ED8; background:#DBEAFE; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
-              Annual Commitment
+            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#1D4ED8; background:#DBEAFE; padding:4px 10px; border-radius:6px; margin-bottom:12px; margin-top:6px;">
+              High Growth
             </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px;">Techstar ERP Yearly</h3>
-            <div class="pricing-plan-title">For Ambitious Enterprises</div>
+            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Business Plan</h3>
+            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Wholesalers &amp; Multi-Counter Retail</div>
             
             <div style="margin:20px 0 15px 0;">
-              <span style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹9,999</span>
-              <span style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
-              <span style="font-size:12px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save 17%</span>
+              <span id="priceBusiness" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹9,999</span>
+              <span id="cycleBusiness" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
+              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
             </div>
-            <p class="pricing-plan-desc font-medium">Full ERP deployment with priority VIP desk, double-entry registers, and multi-location expansions.</p>
+            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Full double-entry accounting, GST registers, warehouse FIFO stock, barcode design &amp; priority support.</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#EFF6FF; border-radius:10px; border:1px solid #BFDBFE; font-size:12px;">
+              <div style="font-weight:700; color:#1E40AF;">👥 Up to 5 Users</div>
+              <div style="font-weight:700; color:#1E40AF;">🏢 1 Main Branch</div>
+            </div>
             
-            <ul class="pricing-features" style="margin-top:20px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Everything in Monthly Plan</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Annual Savings (~17% Discount)</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Priority VIP Desk Support (Pune HQ)</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Dedicated CA / Legal Tax Filing Support</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Invoice &amp; Barcode Templates</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Multi-Branch Expansion Ready</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Free Guided Onboarding &amp; Training</li>
+            <ul class="pricing-features" style="margin-top:16px;">
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 5 Active Users with RBAC</strong></li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>1 Branch with Multi-Counter POS</strong></li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Double-Entry Accounting &amp; Balance Sheets</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Multi-Godown / Warehouse Inventory</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GSTR-1, GSTR-3B &amp; Tax Audit Export</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Barcode &amp; Thermal Label Designer</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Priority Desk Support &amp; CA Filing Prep</li>
             </ul>
           </div>
           <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="yearlyCtaLink" href="https://erp-system-psi-one.vercel.app/register?plan=yearly" class="btn btn-primary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0; background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
-              Start Yearly Plan
+            <a id="linkBusiness" href="https://erp-system-psi-one.vercel.app/register?plan=business" class="btn btn-primary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0; background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
+              Start 14-Day Free Trial
             </a>
           </div>
         </div>
 
-        <!-- Custom Enterprise -->
-        <div class="pricing-card" style="display:flex; flex-direction:column; justify-content:between;">
+        <!-- Enterprise Plan -->
+        <div id="cardEnterprise" class="pricing-card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid #CBD5E1; border-radius:20px; padding:32px; background:#FFFFFF;">
           <div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#475569; background:#F1F5F9; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
+            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#7C3AED; background:#F3E8FF; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
               Enterprise Scale
             </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px;">Techstar Enterprise</h3>
-            <div class="pricing-plan-title">For Large Chain Groups</div>
+            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Enterprise Plan</h3>
+            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Multi-Branch Store Chains</div>
             
             <div style="margin:20px 0 15px 0;">
-              <span style="font-size:36px; font-weight:800; color:#0F172A; line-height:1;">Custom Quote</span>
+              <span id="priceEnterprise" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹24,999</span>
+              <span id="cycleEnterprise" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
+              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
             </div>
-            <p class="pricing-plan-desc font-medium">Custom server instance, API integrations support, unlimited branches sync, and granular user roles controls.</p>
+            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Scale seamlessly across 5 regional branches, department roles, and statutory e-invoice compliance.</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#FAF5FF; border-radius:10px; border:1px solid #E9D5FF; font-size:12px;">
+              <div style="font-weight:700; color:#6B21A8;">👥 Up to 15 Users</div>
+              <div style="font-weight:700; color:#6B21A8;">🏢 Up to 5 Branches</div>
+            </div>
             
-            <ul class="pricing-features" style="margin-top:20px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Unlimited Outlets &amp; Warehouses</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Unlimited User Database &amp; RBAC</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Role Matrix &amp; Approvals</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> API Webhook Connections</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Dedicated Account Manager (Swapnil Aher)</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> CA/CS Legal &amp; Compliance Support</li>
+            <ul class="pricing-features" style="margin-top:16px;">
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 15 Active Users Across Teams</strong></li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 5 Active Branches &amp; Hubs</strong></li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Inter-Branch Stock Transfers &amp; Approvals</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Advanced Role Permissions &amp; Audit Log</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Statutory E-Way Bill &amp; E-Invoice Prep</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Dedicated Account Manager (Pune HQ)</li>
+              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Thermal &amp; Letterhead Printing</li>
             </ul>
           </div>
           <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a href="contact.html" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
-              Get Custom Quote
+            <a id="linkEnterprise" href="https://erp-system-psi-one.vercel.app/register?plan=enterprise" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
+              Get Enterprise Plan
             </a>
           </div>
         </div>
@@ -257,48 +276,98 @@
   <script src="js/main.js"></script>
   <script src="js/firebase-integration.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
-      const monthlyLink = document.getElementById("monthlyCtaLink");
-      const yearlyLink = document.getElementById("yearlyCtaLink");
-      if (monthlyLink) monthlyLink.href = getUrl("/register?plan=monthly");
-      if (yearlyLink) yearlyLink.href = getUrl("/register?plan=yearly");
-    });
+    let currentBilling = "yearly";
+    let planData = {
+      starter: { monthly: 499, yearly: 4999 },
+      business: { monthly: 999, yearly: 9999 },
+      enterprise: { monthly: 2499, yearly: 24999 }
+    };
 
-    function setBillingMode(mode) {
+    function updatePricingDisplay() {
+      const isYearly = currentBilling === "yearly";
+      const cycleText = isYearly ? "/ year" : "/ month";
+      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
+
+      // Starter
+      const starterPrice = isYearly ? planData.starter.yearly : planData.starter.monthly;
+      const elPriceStarter = document.getElementById("priceStarter");
+      const elCycleStarter = document.getElementById("cycleStarter");
+      const elLinkStarter = document.getElementById("linkStarter");
+      if (elPriceStarter) elPriceStarter.innerText = "₹" + Number(starterPrice).toLocaleString("en-IN");
+      if (elCycleStarter) elCycleStarter.innerText = cycleText;
+      if (elLinkStarter) elLinkStarter.href = getUrl(`/register?plan=starter&billing=${currentBilling}`);
+
+      // Business
+      const businessPrice = isYearly ? planData.business.yearly : planData.business.monthly;
+      const elPriceBusiness = document.getElementById("priceBusiness");
+      const elCycleBusiness = document.getElementById("cycleBusiness");
+      const elLinkBusiness = document.getElementById("linkBusiness");
+      if (elPriceBusiness) elPriceBusiness.innerText = "₹" + Number(businessPrice).toLocaleString("en-IN");
+      if (elCycleBusiness) elCycleBusiness.innerText = cycleText;
+      if (elLinkBusiness) elLinkBusiness.href = getUrl(`/register?plan=business&billing=${currentBilling}`);
+
+      // Enterprise
+      const entPrice = isYearly ? planData.enterprise.yearly : planData.enterprise.monthly;
+      const elPriceEnterprise = document.getElementById("priceEnterprise");
+      const elCycleEnterprise = document.getElementById("cycleEnterprise");
+      const elLinkEnterprise = document.getElementById("linkEnterprise");
+      if (elPriceEnterprise) elPriceEnterprise.innerText = "₹" + Number(entPrice).toLocaleString("en-IN");
+      if (elCycleEnterprise) elCycleEnterprise.innerText = cycleText;
+      if (elLinkEnterprise) elLinkEnterprise.href = getUrl(`/register?plan=enterprise&billing=${currentBilling}`);
+
+      // Savings tags
+      document.querySelectorAll(".save-tag").forEach(el => {
+        el.style.display = isYearly ? "inline-block" : "none";
+      });
+
+      // Toggle buttons
       const monthlyBtn = document.getElementById("toggleMonthlyBtn");
       const yearlyBtn = document.getElementById("toggleYearlyBtn");
-      const cardMonthly = document.getElementById("cardMonthly");
-      const cardYearly = document.getElementById("cardYearly");
-
-      if (mode === "monthly") {
-        monthlyBtn.style.background = "#2563EB";
-        monthlyBtn.style.color = "white";
-        yearlyBtn.style.background = "transparent";
-        yearlyBtn.style.color = "#475569";
-        if (cardMonthly) {
-          cardMonthly.style.borderColor = "#2563EB";
-          cardMonthly.style.boxShadow = "0 10px 30px rgba(37,99,235,0.15)";
+      if (isYearly) {
+        if (yearlyBtn) {
+          yearlyBtn.style.background = "#2563EB";
+          yearlyBtn.style.color = "white";
         }
-        if (cardYearly) {
-          cardYearly.style.borderColor = "#E2E8F0";
-          cardYearly.style.boxShadow = "none";
+        if (monthlyBtn) {
+          monthlyBtn.style.background = "transparent";
+          monthlyBtn.style.color = "#475569";
         }
       } else {
-        yearlyBtn.style.background = "#2563EB";
-        yearlyBtn.style.color = "white";
-        monthlyBtn.style.background = "transparent";
-        monthlyBtn.style.color = "#475569";
-        if (cardYearly) {
-          cardYearly.style.borderColor = "#2563EB";
-          cardYearly.style.boxShadow = "0 10px 30px rgba(37,99,235,0.15)";
+        if (monthlyBtn) {
+          monthlyBtn.style.background = "#2563EB";
+          monthlyBtn.style.color = "white";
         }
-        if (cardMonthly) {
-          cardMonthly.style.borderColor = "#E2E8F0";
-          cardMonthly.style.boxShadow = "none";
+        if (yearlyBtn) {
+          yearlyBtn.style.background = "transparent";
+          yearlyBtn.style.color = "#475569";
         }
       }
     }
+
+    function setBillingMode(mode) {
+      currentBilling = mode;
+      updatePricingDisplay();
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      // Hydrate authoritative prices dynamically from ERP API if reachable
+      if (window.TechstarERP && typeof window.TechstarERP.fetchPublicPlans === "function") {
+        try {
+          const remotePlans = await window.TechstarERP.fetchPublicPlans();
+          if (remotePlans && Array.isArray(remotePlans)) {
+            remotePlans.forEach(p => {
+              if (planData[p.id]) {
+                if (typeof p.monthlyPrice === "number") planData[p.id].monthly = p.monthlyPrice;
+                if (typeof p.yearlyPrice === "number") planData[p.id].yearly = p.yearlyPrice;
+              }
+            });
+          }
+        } catch (e) {
+          console.warn("Using local plan fallback on pricing page");
+        }
+      }
+      updatePricingDisplay();
+    });
   </script>
 </body>
 </html>
