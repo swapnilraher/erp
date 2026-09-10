@@ -3,4 +3,4 @@ Allow: /
 Disallow: /app/
 Disallow: /app/*
 
-Sitemap: https://techstarerp.com/sitemap.xml
+Sitemap: https://erp-by-swapnilaher.web.app/sitemap.xml

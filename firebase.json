@@ -11,32 +11,32 @@
     "redirects": [
       {
         "source": "/login",
-        "destination": "https://erp.techstarerp.com/login",
+        "destination": "https://erp-system-psi-one.vercel.app/login",
         "type": 302
       },
       {
         "source": "/register",
-        "destination": "https://erp.techstarerp.com/register",
+        "destination": "https://erp-system-psi-one.vercel.app/register",
         "type": 302
       },
       {
         "source": "/dashboard",
-        "destination": "https://erp.techstarerp.com/dashboard",
+        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
         "type": 302
       },
       {
         "source": "/dashboard/**",
-        "destination": "https://erp.techstarerp.com/dashboard",
+        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
         "type": 302
       },
       {
         "source": "/app",
-        "destination": "https://erp.techstarerp.com/dashboard",
+        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
         "type": 302
       },
       {
         "source": "/app/**",
-        "destination": "https://erp.techstarerp.com/dashboard",
+        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
         "type": 302
       },
       {

@@ -14,14 +14,9 @@
   <script>
     (function() {
       const hostname = window.location.hostname;
-      let erpBase = "https://erp.techstarerp.com";
+      let erpBase = "https://erp-system-psi-one.vercel.app";
       if (hostname === "localhost" || hostname === "127.0.0.1") {
         erpBase = "http://localhost:3000";
-      } else if (hostname.endsWith("web.app") || hostname.endsWith("firebaseapp.com")) {
-        erpBase = "https://erp-by-swapnilaher.web.app";
-      } else if (hostname.includes(".")) {
-        const rootDomain = hostname.replace(/^www\./, "");
-        erpBase = "https://erp." + rootDomain;
       }
       const targetUrl = erpBase + "/login" + window.location.search;
       window.location.replace(targetUrl);
@@ -44,12 +39,12 @@
       Redirecting you to the Techstar ERP authentication portal.
     </p>
 
-    <a id="fallbackBtn" href="https://erp.techstarerp.com/login" class="btn btn-primary" style="display:inline-block; width:100%;">
+    <a id="fallbackBtn" href="https://erp-system-psi-one.vercel.app/login" class="btn btn-primary" style="display:inline-block; width:100%;">
       Continue to ERP Login &rarr;
     </a>
 
     <div style="margin-top:20px; font-size:12px; color:#64748b;">
-      Don't have an account? <a href="https://erp.techstarerp.com/register" id="regLink" style="color:var(--color-primary); font-weight:600;">Start Free Trial</a>
+      Don't have an account? <a href="https://erp-system-psi-one.vercel.app/register" id="regLink" style="color:var(--color-primary); font-weight:600;">Start Free Trial</a>
     </div>
   </div>
 
@@ -62,14 +57,9 @@
   <script>
     (function() {
       const hostname = window.location.hostname;
-      let erpBase = "https://erp.techstarerp.com";
+      let erpBase = "https://erp-system-psi-one.vercel.app";
       if (hostname === "localhost" || hostname === "127.0.0.1") {
         erpBase = "http://localhost:3000";
-      } else if (hostname.endsWith("web.app") || hostname.endsWith("firebaseapp.com")) {
-        erpBase = "https://erp-by-swapnilaher.web.app";
-      } else if (hostname.includes(".")) {
-        const rootDomain = hostname.replace(/^www\./, "");
-        erpBase = "https://erp." + rootDomain;
       }
       document.getElementById("fallbackBtn").href = erpBase + "/login" + window.location.search;
       document.getElementById("regLink").href = erpBase + "/register" + window.location.search;

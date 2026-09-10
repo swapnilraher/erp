@@ -91,7 +91,7 @@
             </ul>
           </div>
           <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="monthlyCtaLink" href="https://erp.techstarerp.com/register?plan=monthly" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
+            <a id="monthlyCtaLink" href="https://erp-system-psi-one.vercel.app/register?plan=monthly" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
               Start Monthly Plan
             </a>
           </div>
@@ -127,7 +127,7 @@
             </ul>
           </div>
           <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="yearlyCtaLink" href="https://erp.techstarerp.com/register?plan=yearly" class="btn btn-primary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0; background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
+            <a id="yearlyCtaLink" href="https://erp-system-psi-one.vercel.app/register?plan=yearly" class="btn btn-primary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0; background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
               Start Yearly Plan
             </a>
           </div>
@@ -258,7 +258,7 @@
   <script src="js/firebase-integration.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp.techstarerp.com" + p;
+      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
       const monthlyLink = document.getElementById("monthlyCtaLink");
       const yearlyLink = document.getElementById("yearlyCtaLink");
       if (monthlyLink) monthlyLink.href = getUrl("/register?plan=monthly");

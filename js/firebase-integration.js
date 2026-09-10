@@ -24,14 +24,8 @@ function resolveErpAppUrl() {
   if (hostname === "localhost" || hostname === "127.0.0.1") {
     return "http://localhost:3000";
   }
-  if (hostname.endsWith("web.app") || hostname.endsWith("firebaseapp.com")) {
-    return "https://erp-by-swapnilaher.web.app";
-  }
-  if (hostname.includes(".")) {
-    const rootDomain = hostname.replace(/^www\./, "");
-    return "https://erp." + rootDomain;
-  }
-  return "https://erp.techstarerp.com";
+  // Primary ERP App deployment on Vercel
+  return "https://erp-system-psi-one.vercel.app";
 }
 
 const ERP_APP_URL = resolveErpAppUrl();

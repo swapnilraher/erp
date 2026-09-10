@@ -69,7 +69,7 @@
   <script src="js/firebase-integration.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp.techstarerp.com" + p;
+      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
       document.getElementById("startTrialLink").href = getUrl("/register");
       document.getElementById("loginLink").href = getUrl("/login");
     });
