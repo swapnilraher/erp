@@ -4,23 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Free Trial — Techstar ERP</title>
-  <meta name="description" content="Start your free 14-day trial of Techstar ERP. No credit card required.">
+  <meta name="description" content="Start your free 3-day trial of Techstar ERP. No credit card required.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body style="background:var(--color-bg-alt); display:flex; align-items:center; justify-content:center; min-height:100vh; padding:40px 20px;">
 
   <div style="max-width:440px; width:100%; text-align:center;">
     <a href="index.html" class="logo" style="justify-content:center; margin-bottom:20px; display:inline-flex;">
-      <img src="assets/logo.svg" alt="Techstar ERP Logo" style="height:42px;">
+      <img src="assets/logo.svg" alt="Techstar ERP" width="185" height="40" style="height:40px;width:auto">
     </a>
 
     <h1 class="text-2xl font-extrabold" style="color:var(--color-primary-dark); margin-bottom:10px;">
-      Start Your Free 14-Day Trial
+      Start Your Free 3-Day Trial
     </h1>
     <p class="text-sm text-muted" style="margin-bottom:24px;">
       No credit card required. Set up your business in under 2 minutes.
@@ -50,13 +58,13 @@
         </div>
       </div>
 
-      <a id="startTrialLink" href="#" class="btn btn-primary" style="width:100%; display:block; font-size:15px; padding:14px;">
+      <a id="startTrialLink" href="https://erp.techstarsolution.in/register" class="btn btn-primary" style="width:100%; display:block; font-size:15px; padding:14px;">
         Create My Free Account 🚀
       </a>
 
       <p style="margin-top:12px; font-size:12px; color:#94a3b8;">
         Already have an account?
-        <a id="loginLink" href="#" style="color:var(--color-primary); font-weight:600;">Sign in</a>
+        <a id="loginLink" href="https://erp.techstarsolution.in/login" style="color:var(--color-primary); font-weight:600;">Sign in</a>
       </p>
     </div>
 
@@ -66,10 +74,10 @@
     </p>
   </div>
 
-  <script src="js/firebase-integration.js"></script>
+  <script src="js/erp-integration.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
+      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp.techstarsolution.in" + p;
       document.getElementById("startTrialLink").href = getUrl("/register");
       document.getElementById("loginLink").href = getUrl("/login");
     });

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi-Branch & Location Sync — Techstar ERP</title>
-  <meta name="description" content="Centralize 25+ retail outlets, warehouses and regional distribution hubs in Techstar ERP by TECHSTAR MONEY SOLUTION PRIVATE LIMITED.">
+  <meta name="description" content="Run up to 5 branches from one login: branch transfers, branch-wise GSTIN and invoice series, branch ledgers and multi-branch reports.">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,40 +17,94 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/mockups.css">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
   <!-- Header -->
   <header class="header scrolled">
     <div class="container header-inner">
-      <a href="../index.html" class="logo">
-        <img src="../assets/logo.svg" alt="Techstar ERP Logo" style="height: 38px;">
+      <a href="../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
       </a>
-      <nav class="nav">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../features.html" class="nav-link active">Features</a>
-        <a href="../solutions.html" class="nav-link">Solutions</a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../features.html" class="nav-link active" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="../features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="../features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="../features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="../features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="../features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="../features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="../features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="../features/gst.html" class="nav-link">GST</a>
         <a href="../industries.html" class="nav-link">Industries</a>
         <a href="../pricing.html" class="nav-link">Pricing</a>
-        <a href="../about.html" class="nav-link">About Us</a>
+        <a href="../about.html" class="nav-link">About</a>
         <a href="../contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="../app/index.html" class="btn btn-primary btn-sm" style="background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">⚡ Launch ERP App</a>
-        <a href="../login.html" class="btn-login">Login</a>
-        <a href="../pricing.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../login.html" class="btn-login" data-action="erp-login">Login</a>
+        <a href="../demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
       </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../features.html" class="mobile-nav-link">Features</a>
+    <a href="../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="../features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="../features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="../features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="../features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="../features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="../industries.html" class="mobile-nav-link">Industries</a>
+    <a href="../pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="../faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="../about.html" class="mobile-nav-link">About</a>
+    <a href="../contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="../login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="../demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
 
   <!-- Content -->
   <section class="section" style="padding-top:140px;">
     <div class="container grid grid-2 items-center">
       <div class="animate-slide-left">
-        <span class="section-badge">Multi-Branch Module</span>
-        <h1 class="text-4xl font-extrabold mb-6" style="color:var(--color-primary-dark)">Central HQ Dashboard & Branch Sync</h1>
-        <p class="mb-6 text-muted">Connect your Headquarters in Pune or Mumbai with regional branches across India. Real-time sales consolidation, stock transfers, and branch-level P&L tracking by TECHSTAR MONEY SOLUTION PRIVATE LIMITED.</p>
-        <a href="../app/index.html" class="btn btn-primary">Launch Multi-Branch App ⚡</a>
+        <span class="section-badge">Multi-Branch Control</span>
+        <h1 class="text-4xl font-extrabold mb-6" style="color:var(--color-primary-dark)">All Your Branches in One Login</h1>
+        <p class="mb-6 text-muted">Every branch keeps its own invoice series and GSTIN where needed — and you see the whole business in one place.</p>
+        <ul class="check-list mb-8">
+          <li class="check-item"><div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Business plan: 2 branches · Enterprise: up to 5</li>
+          <li class="check-item"><div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Branch transfers with goods in transit; inter-GSTIN transfers taxed correctly</li>
+          <li class="check-item"><div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Branch-wise sales, stock and ledgers; multi-branch analysis</li>
+          <li class="check-item"><div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Staff limited to their own branch</li>
+          <li class="check-item"><div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> One set of books for the whole company</li>
+        </ul>
+        <div class="btn-group">
+          <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+          <a href="../demo.html" class="btn btn-secondary">Book a Demo</a>
+        </div>
       </div>
       <div class="animate-slide-right delay-200">
         <div class="mock-screen">
@@ -54,29 +112,14 @@
             <div class="mock-dot mock-dot-r"></div>
             <div class="mock-dot mock-dot-y"></div>
             <div class="mock-dot mock-dot-g"></div>
-            <div class="mock-tab-title">Branch Performance Console — Techstar ERP</div>
+            <div class="mock-tab-title">Branch Summary — Today</div>
           </div>
-          <div style="background: white; padding: 25px; font-size: 11px;">
-            <div style="font-weight:700; border-bottom:2px solid #E2E8F0; padding-bottom:5px; margin-bottom:10px; display:flex; justify-content:space-between;">
-              <span>Branch Location</span>
-              <span>Daily Sales</span>
-              <span>Stock Status</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-              <span>Mumbai HQ Outlet</span>
-              <span class="text-success font-mono">₹1,42,000</span>
-              <span class="badge bg-success-subtle text-success">Optimal</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-              <span>Pune Distribution Hub</span>
-              <span class="text-success font-mono">₹2,85,000</span>
-              <span class="badge bg-success-subtle text-success">Optimal</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-              <span>Delhi Regional Store</span>
-              <span class="text-success font-mono">₹98,500</span>
-              <span class="badge bg-warning-subtle text-warning">Reorder Req</span>
-            </div>
+          <div style="background: white; padding: 22px; font-size: 12px; color:#1E293B;">
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; padding:7px 0; font-weight:700; border-bottom:2px solid #334155;"><span>Branch</span><span style="text-align:right">Sales (₹)</span><span style="text-align:right">Stock</span></div>
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; padding:7px 0; border-bottom:1px solid #E2E8F0;"><span>Pune HQ</span><span style="text-align:right">1,42,000</span><span style="text-align:right">OK</span></div>
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; padding:7px 0; border-bottom:1px solid #E2E8F0;"><span>Nashik</span><span style="text-align:right">98,500</span><span style="text-align:right">OK</span></div>
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; padding:7px 0; border-bottom:1px solid #E2E8F0;"><span>Kolhapur</span><span style="text-align:right">61,300</span><span style="text-align:right">Reorder 4</span></div>
+            <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; padding:7px 0; font-weight:800; border-top:2px solid #334155; color:#1E3A8A;"><span>Total</span><span style="text-align:right">3,01,800</span><span style="text-align:right"></span></div>
           </div>
         </div>
       </div>
@@ -89,61 +132,54 @@
       <div class="footer-top">
         <div>
           <a href="../index.html" class="logo footer-logo">
-            <div class="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 22h7l3-6 3 6h7L12 2zm0 6l4.5 9h-9L12 8z" />
-              </svg>
-            </div>
-            <span class="logo-text">Techstar<span>ERP</span></span>
+            <img src="../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
           </a>
-          <p class="footer-tagline">Complete Billing, GST Invoicing, POS Terminals, Live Inventory & Double-Entry Accounting unified across multi-branch environments.</p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
-            <a href="#" class="footer-social-link" aria-label="LinkedIn">LN</a>
-            <a href="#" class="footer-social-link" aria-label="Youtube">YT</a>
-          </div>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
         </div>
         <div>
-          <h4 class="footer-col-title">Modules</h4>
+          <h4 class="footer-col-title">Product</h4>
           <ul class="footer-links">
-            <li><a href="accounting.html" class="footer-link">Double-Entry Accounting</a></li>
-            <li><a href="gst.html" class="footer-link">GST registers & Tax</a></li>
-            <li><a href="billing-sales.html" class="footer-link">Sales & billing templates</a></li>
-            <li><a href="pos.html" class="footer-link">POS quick checkout</a></li>
-            <li><a href="inventory.html" class="footer-link">Inventory & FIFO stock</a></li>
+            <li><a href="../features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="../features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="../features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="../features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="../features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="../features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-col-title">Solutions</h4>
+          <h4 class="footer-col-title">Industries</h4>
           <ul class="footer-links">
-            <li><a href="../solutions.html" class="footer-link">Retail Chains</a></li>
-            <li><a href="../solutions.html" class="footer-link">Wholesale Distributors</a></li>
-            <li><a href="../solutions.html" class="footer-link">Manufacturing Units</a></li>
-            <li><a href="../solutions.html" class="footer-link">Pharmacies & Clinics</a></li>
-            <li><a href="../solutions.html" class="footer-link">Hardware Stores</a></li>
+            <li><a href="../industries.html" class="footer-link">Retail &amp; POS</a></li>
+            <li><a href="../industries.html" class="footer-link">Wholesale &amp; Distribution</a></li>
+            <li><a href="../industries.html" class="footer-link">Manufacturing</a></li>
+            <li><a href="../industries.html" class="footer-link">Pharmacies</a></li>
+            <li><a href="../industries.html" class="footer-link">Services &amp; AMC</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links">
-            <li><a href="../faq.html" class="footer-link">Common FAQs</a></li>
-            <li><a href="../contact.html" class="footer-link">Raise a ticket</a></li>
+            <li><a href="../faq.html" class="footer-link">FAQs</a></li>
             <li><a href="../docs.html" class="footer-link">Help documentation</a></li>
-            <li><a href="../privacy.html" class="footer-link">Privacy terms</a></li>
-            <li><a href="../terms.html" class="footer-link">Security policies</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="../demo.html" class="footer-link">Book a demo</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="../refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-title">Contact</h4>
           <div class="footer-contact-item">
-            <span>📍 Address:</span> TechStar Business Solution, Pune, Maharashtra, India
+            <span>Address:</span> Pune, Maharashtra, India
           </div>
           <div class="footer-contact-item">
-            <span>📧 Email:</span> official@swapnilaher.in
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
           </div>
           <div class="footer-contact-item">
-            <span>📞 Call Desk:</span> +91 9579005645
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
           </div>
         </div>
       </div>
@@ -151,12 +187,15 @@
       <div class="footer-bottom">
         <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
         <div class="footer-bottom-right">
-          <a href="../privacy-policy.html" class="footer-bottom-link">Privacy Policy</a>
-          <a href="../terms.html" class="footer-bottom-link">Terms & Conditions</a>
+          <a href="../privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-bottom-link">Terms &amp; Conditions</a>
+          <a href="../refund-policy.html" class="footer-bottom-link">Refund &amp; Cancellation</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="../js/main.js"></script>
+  <script src="../js/erp-integration.js"></script>
 </body>
 </html>

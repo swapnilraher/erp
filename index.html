@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Techstar ERP – Cloud Billing, Accounting, GST, e-Invoice &amp; e-Way Bill Software</title>
-  <meta name="description" content="Manage billing, accounting, GST, GSTIN verification, e-Invoices, e-Way Bills, inventory, POS and multiple branches with Techstar ERP — a modern cloud ERP built for growing Indian businesses.">
+  <title>Techstar ERP – GST Billing, Accounting, Inventory &amp; POS Software</title>
+  <meta name="description" content="GST billing, POS, inventory, accounting and GST returns in one cloud ERP for Indian businesses. e-Invoice / e-Way Bill JSON, multi-branch, Tally data migration. Prices include GST.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-  <!-- Keywords & SEO -->
-  <meta name="keywords" content="Business Accounting Software, GST Software, e-Invoice Software, e-Way Bill Software, GSTIN Verification, Billing Software, Inventory Management, POS Software, ERP Software, Multi Branch ERP, Techstar ERP, Cloud ERP India, GST Billing Software">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
   <link rel="canonical" href="https://erp-by-swapnilaher.web.app/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Techstar ERP – Billing, GST, e-Invoice, e-Way Bill &amp; Business Management Software">
-  <meta property="og:description" content="Manage billing, GST, GSTIN verification, e-Invoices, e-Way Bills, inventory, POS and multiple branches from one cloud ERP platform built for Indian businesses.">
+  <meta property="og:title" content="Techstar ERP – GST Billing, Accounting, Inventory &amp; POS">
+  <meta property="og:description" content="Billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses. Prices include GST.">
   <meta property="og:url" content="https://erp-by-swapnilaher.web.app/">
   <meta property="og:type" content="website">
 
@@ -26,43 +27,46 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/mockups.css">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
   <!-- ====== HEADER ====== -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="Techstar ERP Logo" style="height: 38px;">
+      <a href="index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
       </a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
+      <nav class="nav" aria-label="Main">
         <div class="nav-dropdown">
-          <a href="features.html" class="nav-link">Features ▾</a>
+          <a href="features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
           <div class="nav-dropdown-menu">
-            <a href="features/accounting.html" class="nav-dropdown-item">Accounting &amp; Ledger</a>
-            <a href="features/gst.html" class="nav-dropdown-item">GST &amp; Tax Management</a>
-            <a href="features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Invoicing</a>
-            <a href="features/pos.html" class="nav-dropdown-item">POS Billing</a>
+            <a href="features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="features/pos.html" class="nav-dropdown-item">Retail POS</a>
             <a href="features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
-            <a href="features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Management</a>
-            <a href="features/role-management.html" class="nav-dropdown-item">Role-Based Security</a>
-            <a href="features/reports.html" class="nav-dropdown-item">Reports &amp; Analytics</a>
+            <a href="features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
           </div>
         </div>
-        <a href="features/gst.html" class="nav-link">GST Tools</a>
-        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="features/gst.html" class="nav-link">GST</a>
         <a href="industries.html" class="nav-link">Industries</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
         <a href="login.html" class="btn-login" data-action="erp-login">Login</a>
-        <a href="free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial" style="background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">Start Free Trial 🚀</a>
+        <a href="demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
       </div>
-      <button class="hamburger" aria-label="Toggle Navigation">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -70,14 +74,20 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Menu -->
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="mobile-nav-link">Home</a>
     <a href="features.html" class="mobile-nav-link">Features</a>
-    <a href="features/gst.html" class="mobile-nav-link">GST Tools</a>
-    <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+    <a href="features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
     <a href="industries.html" class="mobile-nav-link">Industries</a>
     <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="faq.html" class="mobile-nav-link">FAQ</a>
     <a href="about.html" class="mobile-nav-link">About</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
     <div class="mobile-menu-actions">
@@ -92,13 +102,13 @@
     <div class="container hero-inner">
       <div class="hero-content animate-fade-up">
         <div class="hero-badge">
-          <span class="dot"></span> Billing &bull; Accounting &bull; GST &bull; e-Invoice &bull; e-Way Bill &bull; Inventory &bull; POS
+          <span class="dot"></span> Billing &bull; POS &bull; Inventory &bull; Accounting &bull; GST Returns
         </div>
         <h1 class="hero-title">
           Run Your Entire Business<br><span class="gradient-text">From One Place</span>
         </h1>
         <p class="hero-subtitle">
-          Billing, Accounting, GST, GSTIN Verification, e-Invoice, e-Way Bill, Inventory, POS and Multi-Branch Management — all connected in one cloud ERP built for Indian businesses.
+          GST billing, POS, inventory, accounting and GST returns for Indian businesses — with e-Invoice / e-Way Bill JSON, multi-branch control and Tally data migration.
         </p>
         <div class="btn-group">
           <a href="free-trial.html" class="btn btn-primary btn-xl" id="hero-trial-btn" data-action="start-trial">Start Free Trial</a>
@@ -108,11 +118,11 @@
         <div class="hero-trust-tags">
           <span class="hero-trust-tag"><span class="htag-dot"></span> Cloud Based</span>
           <span class="hero-trust-tag"><span class="htag-dot"></span> GST Ready</span>
-          <span class="hero-trust-tag green"><span class="htag-dot"></span> GSTIN Verification</span>
-          <span class="hero-trust-tag green"><span class="htag-dot"></span> e-Invoice</span>
-          <span class="hero-trust-tag green"><span class="htag-dot"></span> e-Way Bill</span>
+          <span class="hero-trust-tag green"><span class="htag-dot"></span> GSTR-1 / 3B</span>
+          <span class="hero-trust-tag green"><span class="htag-dot"></span> e-Invoice JSON</span>
+          <span class="hero-trust-tag green"><span class="htag-dot"></span> Data in India</span>
           <span class="hero-trust-tag"><span class="htag-dot"></span> Multi-Branch</span>
-          <span class="hero-trust-tag"><span class="htag-dot"></span> Mobile Friendly</span>
+          <span class="hero-trust-tag"><span class="htag-dot"></span> Works on Mobile</span>
         </div>
 
         <!-- Mobile-only lightweight product card (shown below 1024px) -->
@@ -130,7 +140,7 @@
             <div class="hmc-kpi">
               <div class="hmc-kpi-label">Net Profit (MTD)</div>
               <div class="hmc-kpi-value blue">₹4.2L</div>
-              <div class="hmc-kpi-change">↑ +18% Margin</div>
+              <div class="hmc-kpi-change">34% net margin</div>
             </div>
             <div class="hmc-kpi">
               <div class="hmc-kpi-label">Receivables</div>
@@ -145,16 +155,16 @@
           </div>
           <div class="hmc-compliance-row">
             <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">🔍 GSTIN Status</span>
-              <span class="hmc-compliance-badge verified">✓ Verified</span>
+              <span class="hmc-compliance-label">🧾 GSTR-1 (Aug)</span>
+              <span class="hmc-compliance-badge verified">✓ Ready</span>
             </div>
             <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">📄 e-Invoice</span>
-              <span class="hmc-compliance-badge generated">✓ Generated</span>
+              <span class="hmc-compliance-label">📄 e-Invoice JSON</span>
+              <span class="hmc-compliance-badge generated">✓ Exported</span>
             </div>
             <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">🚛 e-Way Bill</span>
-              <span class="hmc-compliance-badge active">⏱ Active</span>
+              <span class="hmc-compliance-label">🏦 Bank Reconciliation</span>
+              <span class="hmc-compliance-badge active">3 to match</span>
             </div>
           </div>
         </div>
@@ -170,18 +180,18 @@
         </div>
         <div class="float-card top-right animate-float-card float-delay-1">
           <div class="fc-icon">✅</div>
-          <div class="fc-label">GSTIN Status</div>
-          <div class="fc-value" style="color:var(--color-accent-dark)">Verified</div>
+          <div class="fc-label">GSTR-1 (Aug)</div>
+          <div class="fc-value" style="color:var(--color-accent-dark)">Ready</div>
         </div>
         <div class="float-card bottom-left animate-float-card float-delay-2">
           <div class="fc-icon">📄</div>
-          <div class="fc-label">e-Invoice</div>
-          <div class="fc-value" style="color:var(--color-primary-light)">IRN Generated</div>
+          <div class="fc-label">e-Invoice JSON</div>
+          <div class="fc-value" style="color:var(--color-primary-light)">Exported</div>
         </div>
         <div class="float-card bottom-right animate-float-card float-delay-3">
           <div class="fc-icon">🏢</div>
-          <div class="fc-label">Branches Live</div>
-          <div class="fc-value">5 Active</div>
+          <div class="fc-label">Branches</div>
+          <div class="fc-value">3 Active</div>
         </div>
 
         <!-- Live ERP Dashboard Mockup -->
@@ -207,7 +217,7 @@
               </div>
               <div class="mockup-kpi-grid">
                 <div class="mockup-kpi">
-                  <div class="mockup-kpi-label">Sales (Mtd)</div>
+                  <div class="mockup-kpi-label">Sales (MTD)</div>
                   <div class="mockup-kpi-value green">₹12.4L</div>
                   <div class="mockup-kpi-change">+14% vs Last Month</div>
                 </div>
@@ -224,7 +234,7 @@
                 <div class="mockup-kpi">
                   <div class="mockup-kpi-label">Net Profit</div>
                   <div class="mockup-kpi-value green">₹4.2L</div>
-                  <div class="mockup-kpi-change">+18% Profit Margin</div>
+                  <div class="mockup-kpi-change">34% net margin</div>
                 </div>
               </div>
 
@@ -243,13 +253,13 @@
                   <div class="mockup-chart-title">GST Compliance</div>
                   <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px;">
                     <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>GSTIN Verified</span><span style="color:#34D399;font-weight:700;">✓ Active</span>
+                      <span>GSTR-3B (Aug)</span><span style="color:#34D399;font-weight:700;">✓ Ready</span>
                     </div>
                     <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>e-Invoice Status</span><span style="color:#60A5FA;font-weight:700;">IRN Ready</span>
+                      <span>e-Invoice JSON</span><span style="color:#60A5FA;font-weight:700;">Exported</span>
                     </div>
                     <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>e-Way Bill</span><span style="color:#FBBF24;font-weight:700;">⏱ Active</span>
+                      <span>GSTR-2B recon</span><span style="color:#FBBF24;font-weight:700;">2 to review</span>
                     </div>
                     <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
                       <span>GSTR-1 Status</span><span style="color:#34D399;font-weight:700;">Ready</span>
@@ -279,35 +289,17 @@
   <!-- ====== TRUST / VALUE STRIP ====== -->
   <section class="trust-strip">
     <div class="container trust-strip-inner">
-      <div class="trust-item">
-        <div class="trust-icon">🌐</div>
-        <span class="trust-label">100% Cloud-Based ERP</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">🌐</div><span class="trust-label">100% Cloud — no installation</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item">
-        <div class="trust-icon">🧾</div>
-        <span class="trust-label">GST-Ready Billing</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">🧾</div><span class="trust-label">GSTR-1 / 3B from your books</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item">
-        <div class="trust-icon">✅</div>
-        <span class="trust-label">GSTIN Verification</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">📄</div><span class="trust-label">e-Invoice &amp; e-Way Bill JSON</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item">
-        <div class="trust-icon">📄</div>
-        <span class="trust-label">e-Invoice Support</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">⌨️</div><span class="trust-label">Tally-style keyboard</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item">
-        <div class="trust-icon">🚛</div>
-        <span class="trust-label">e-Way Bill Support</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">🇮🇳</div><span class="trust-label">Data stored in India</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item">
-        <div class="trust-icon">🏢</div>
-        <span class="trust-label">Multi-Branch Control</span>
-      </div>
+      <div class="trust-item"><div class="trust-icon">🏢</div><span class="trust-label">Multi-branch control</span></div>
     </div>
   </section>
 
@@ -317,7 +309,7 @@
       <div class="text-center mb-12 animate-fade-up">
         <span class="section-badge">The Challenge</span>
         <h2 class="section-title">Still Managing Your Business Across <span class="highlight">Multiple Tools?</span></h2>
-        <p class="section-subtitle centered">Most Indian businesses struggle with split data, manual accounting, spreadsheets, separate GST tools and zero real-time branch visibility.</p>
+        <p class="section-subtitle centered">Many Indian businesses juggle a billing app, Excel sheets, a separate accounts package and the GST portal — and still can't see branch-wise numbers.</p>
       </div>
 
       <div class="problem-grid mb-12 animate-fade-up delay-100">
@@ -339,23 +331,23 @@
         </div>
         <div class="problem-card">
           <div class="problem-icon">❌</div>
-          <div class="problem-text">Manual GST calculations &amp; filing stress</div>
+          <div class="problem-text">GST returns prepared by hand in Excel</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon">❌</div>
-          <div class="problem-text">GSTIN details verified manually or through separate tools</div>
+          <div class="problem-text">e-Invoice / e-Way Bill details typed again on the portal</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon">❌</div>
-          <div class="problem-text">e-Invoices generated outside your billing system</div>
+          <div class="problem-text">Old data stuck in Tally or other software</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon">❌</div>
-          <div class="problem-text">e-Way Bills managed separately from your sales entries</div>
+          <div class="problem-text">No idea which bills are overdue</div>
         </div>
         <div class="problem-card">
           <div class="problem-icon">❌</div>
-          <div class="problem-text">No real-time profits or cashflow tracking</div>
+          <div class="problem-text">No real-time profit or cash-flow view</div>
         </div>
       </div>
 
@@ -363,31 +355,30 @@
         <span class="section-badge accent">The Techstar Solution</span>
         <h3 class="text-2xl font-extrabold mb-6">One Platform. Complete Control.</h3>
         <div class="solution-tags mb-8">
-          <span class="solution-tag">Sales Invoicing</span>
-          <span class="solution-tag">GST Registers</span>
-          <span class="solution-tag">GSTIN Verification</span>
-          <span class="solution-tag">e-Invoice Workflow</span>
-          <span class="solution-tag">e-Way Bill Management</span>
-          <span class="solution-tag">POS Terminals</span>
-          <span class="solution-tag">Central Inventory</span>
-          <span class="solution-tag">Journals &amp; Ledgers</span>
-          <span class="solution-tag">Supplier Payments</span>
-          <span class="solution-tag">Consolidated Profit</span>
+          <span class="solution-tag">GST Invoices &amp; POS</span>
+          <span class="solution-tag">GSTR-1 / 3B Workbench</span>
+          <span class="solution-tag">GSTR-2B Reconciliation</span>
+          <span class="solution-tag">e-Invoice &amp; e-Way Bill JSON</span>
+          <span class="solution-tag">Batch &amp; Expiry Stock</span>
+          <span class="solution-tag">Bill-wise Outstanding</span>
+          <span class="solution-tag">Bank Reconciliation</span>
+          <span class="solution-tag">TDS &amp; Fixed Assets</span>
+          <span class="solution-tag">Schedule III Statements</span>
+          <span class="solution-tag">Tally Data Migration</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== GST COMPLIANCE WORKFLOW SECTION (NEW) ====== -->
+  <!-- ====== GST COMPLIANCE WORKFLOW SECTION ====== -->
   <section class="section gst-compliance-section" id="gst-tools">
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge accent">GST Compliance Workflows</span>
-        <h2 class="section-title">GST Workflows <span class="highlight">Built Into Your Business</span></h2>
-        <p class="section-subtitle centered">Create invoices, verify GSTIN details, generate e-Invoices and manage e-Way Bills — all without switching between multiple systems.</p>
+        <span class="section-badge accent">GST Compliance</span>
+        <h2 class="section-title">GST Returns <span class="highlight">From Your Own Books</span></h2>
+        <p class="section-subtitle centered">Create GST invoices, prepare GSTR-1 / 3B, reconcile GSTR-2B and export e-Invoice / e-Way Bill JSON — then file on the GST portal and record the ARN.</p>
       </div>
 
-      <!-- Workflow Steps -->
       <div class="gst-workflow-steps mb-12 animate-fade-up delay-100">
         <div class="gst-step">
           <div class="gst-step-icon">
@@ -403,8 +394,8 @@
             🔍
             <span class="gst-step-num">2</span>
           </div>
-          <div class="gst-step-label">Verify GSTIN</div>
-          <div class="gst-step-sub">Within the workflow</div>
+          <div class="gst-step-label">Check GSTIN</div>
+          <div class="gst-step-sub">Format &amp; state code</div>
         </div>
         <div class="gst-step-arrow">→</div>
         <div class="gst-step">
@@ -412,8 +403,8 @@
             📄
             <span class="gst-step-num">3</span>
           </div>
-          <div class="gst-step-label">Generate e-Invoice</div>
-          <div class="gst-step-sub">For eligible transactions</div>
+          <div class="gst-step-label">e-Invoice JSON</div>
+          <div class="gst-step-sub">Upload on the IRP portal</div>
         </div>
         <div class="gst-step-arrow">→</div>
         <div class="gst-step">
@@ -421,8 +412,8 @@
             🚛
             <span class="gst-step-num">4</span>
           </div>
-          <div class="gst-step-label">Generate e-Way Bill</div>
-          <div class="gst-step-sub">If goods in transit</div>
+          <div class="gst-step-label">e-Way Bill JSON</div>
+          <div class="gst-step-sub">For goods in transit</div>
         </div>
         <div class="gst-step-arrow">→</div>
         <div class="gst-step">
@@ -430,143 +421,124 @@
             📊
             <span class="gst-step-num">5</span>
           </div>
-          <div class="gst-step-label">Track &amp; Report</div>
-          <div class="gst-step-sub">All docs connected</div>
+          <div class="gst-step-label">GSTR-1 / 3B</div>
+          <div class="gst-step-sub">Prepared from your books</div>
         </div>
       </div>
 
-      <!-- GST Feature Cards -->
       <div class="grid grid-4 animate-fade-up delay-200">
-
-        <!-- GSTIN Verification Card -->
         <div class="gst-card">
-          <div class="gst-card-icon blue">🔍</div>
-          <div class="gst-card-title">GSTIN Verification</div>
-          <div class="gst-card-desc">Verify customer and supplier GSTIN details directly within your billing workflow — no separate portal needed.</div>
+          <div class="gst-card-icon blue">🧾</div>
+          <div class="gst-card-title">GST Returns Workbench</div>
+          <div class="gst-card-desc">GSTR-1 and GSTR-3B prepared from your books, checked, and ready for the portal.</div>
           <div class="gst-card-features">
-            <div class="gst-card-feature">GSTIN validity status</div>
-            <div class="gst-card-feature">Registered business name</div>
-            <div class="gst-card-feature">State &amp; registration type</div>
-            <div class="gst-card-feature">GST filing status indicator</div>
+            <div class="gst-card-feature">GSTR-1 / GSTR-1A JSON with checks</div>
+            <div class="gst-card-feature">GSTR-3B working with set-off</div>
+            <div class="gst-card-feature">Mark filed with ARN — month locks</div>
+            <div class="gst-card-feature">GSTR-9 / 9C working, CMP-08 / GSTR-4</div>
           </div>
-          <!-- GSTIN mockup snippet -->
-          <div class="gstin-mockup">
-            <div class="gstin-search-row">🔍 27AABCT3456Q1ZX</div>
-            <div class="gstin-result">
-              <div class="gstin-result-row">
-                <span class="gstin-key">Status</span>
-                <span class="gstin-verified-badge">✓ Active</span>
-              </div>
-              <div class="gstin-result-row">
-                <span class="gstin-key">Business</span>
-                <span class="gstin-val">M/s Patel Trading Co.</span>
-              </div>
-              <div class="gstin-result-row">
-                <span class="gstin-key">State</span>
-                <span class="gstin-val">Maharashtra (27)</span>
-              </div>
+          <div class="einv-mockup">
+            <div class="einv-row">
+              <span class="einv-label">GSTR-1 (Aug)</span>
+              <span class="einv-badge-green">✓ JSON ready</span>
+            </div>
+            <div class="einv-row">
+              <span class="einv-label">JSON checks</span>
+              <span class="einv-val">0 errors</span>
+            </div>
+            <div class="einv-row">
+              <span class="einv-label">GSTR-3B (Aug)</span>
+              <span class="einv-badge-blue">Working ready</span>
+            </div>
+            <div class="einv-row">
+              <span class="einv-label">Filed with ARN</span>
+              <span class="einv-val">Jul ✓</span>
             </div>
           </div>
         </div>
 
-        <!-- e-Invoice Card -->
         <div class="gst-card">
           <div class="gst-card-icon blue">📄</div>
-          <div class="gst-card-title">e-Invoice Generation</div>
-          <div class="gst-card-desc">Generate e-Invoices from eligible sales transactions and manage IRN details connected to your invoices.</div>
+          <div class="gst-card-title">e-Invoice JSON</div>
+          <div class="gst-card-desc">Export the official e-Invoice JSON from any B2B invoice and upload it on the IRP portal.</div>
           <div class="gst-card-features">
-            <div class="gst-card-feature">e-Invoice generation workflow</div>
-            <div class="gst-card-feature">IRN linked to invoice</div>
-            <div class="gst-card-feature">QR code display &amp; print</div>
-            <div class="gst-card-feature">e-Invoice status tracking</div>
+            <div class="gst-card-feature">Official IRP JSON from the invoice</div>
+            <div class="gst-card-feature">Checks the invoice before export</div>
+            <div class="gst-card-feature">Business &amp; Enterprise plans</div>
+            <div class="gst-card-feature">Direct GSP generation with IRN &amp; QR — coming soon</div>
           </div>
-          <!-- e-Invoice mockup snippet -->
           <div class="einv-mockup">
             <div class="einv-row">
               <span class="einv-label">Invoice No.</span>
               <span class="einv-val">INV-2045</span>
             </div>
             <div class="einv-row">
-              <span class="einv-label">e-Invoice</span>
-              <span class="einv-badge-green">✓ Generated</span>
+              <span class="einv-label">e-Invoice JSON</span>
+              <span class="einv-badge-green">✓ Exported</span>
             </div>
             <div class="einv-row">
-              <span class="einv-label">IRN Status</span>
-              <span class="einv-badge-blue">IRN Active</span>
+              <span class="einv-label">Upload</span>
+              <span class="einv-badge-blue">IRP portal</span>
             </div>
             <div class="einv-row">
-              <span class="einv-label">QR Code</span>
-              <span class="einv-val">Attached</span>
+              <span class="einv-label">Plan</span>
+              <span class="einv-val">Business</span>
             </div>
           </div>
         </div>
 
-        <!-- e-Way Bill Card -->
         <div class="gst-card">
           <div class="gst-card-icon orange">🚛</div>
-          <div class="gst-card-title">e-Way Bill Management</div>
-          <div class="gst-card-desc">Create and manage e-Way Bills for goods in transit from within your sales and purchase workflow.</div>
+          <div class="gst-card-title">e-Way Bill JSON</div>
+          <div class="gst-card-desc">Create the official e-Way Bill JSON from your invoice, with transporter and vehicle details.</div>
           <div class="gst-card-features">
-            <div class="gst-card-feature">e-Way Bill generation</div>
+            <div class="gst-card-feature">Official EWB JSON from the invoice</div>
             <div class="gst-card-feature">Transporter &amp; vehicle details</div>
-            <div class="gst-card-feature">Validity tracking</div>
-            <div class="gst-card-feature">e-Way Bill status &amp; records</div>
+            <div class="gst-card-feature">Business &amp; Enterprise plans</div>
+            <div class="gst-card-feature">Direct generation — coming soon</div>
           </div>
-          <!-- e-Way Bill mockup snippet -->
           <div class="ewb-mockup">
             <div class="ewb-row">
-              <span class="ewb-label">e-Way Bill No.</span>
-              <span class="ewb-val">231234567890</span>
+              <span class="ewb-label">Invoice No.</span>
+              <span class="ewb-val">INV-2045</span>
             </div>
             <div class="ewb-row">
-              <span class="ewb-label">Status</span>
-              <span class="ewb-active">⏱ Active</span>
+              <span class="ewb-label">e-Way Bill JSON</span>
+              <span class="ewb-active">✓ Exported</span>
             </div>
             <div class="ewb-row">
-              <span class="ewb-label">Transporter</span>
+              <span class="ewb-label">Vehicle No.</span>
               <span class="ewb-val">MH-12-AB-3456</span>
             </div>
             <div class="ewb-row">
-              <span class="ewb-label">Valid Till</span>
-              <span class="ewb-val">09-Sep-2026</span>
+              <span class="ewb-label">Distance</span>
+              <span class="ewb-val">148 km</span>
             </div>
           </div>
         </div>
 
-        <!-- GST Reports Card -->
         <div class="gst-card">
           <div class="gst-card-icon purple">📊</div>
-          <div class="gst-card-title">GST Reports &amp; Registers</div>
-          <div class="gst-card-desc">Export-ready GST registers, tax summaries and ITC tracking to support your monthly return filing.</div>
+          <div class="gst-card-title">GSTR-2B &amp; ITC</div>
+          <div class="gst-card-desc">Import GSTR-2B from the portal and see which purchase bills match — your books stay unchanged.</div>
           <div class="gst-card-features">
-            <div class="gst-card-feature">GSTR-1 &amp; GSTR-2 registers</div>
-            <div class="gst-card-feature">CGST / SGST / IGST split</div>
-            <div class="gst-card-feature">Input Tax Credit (ITC) tracking</div>
-            <div class="gst-card-feature">HSN / SAC summary reports</div>
+            <div class="gst-card-feature">GSTR-2B import (Excel / JSON) &amp; reconciliation</div>
+            <div class="gst-card-feature">IMS action per invoice</div>
+            <div class="gst-card-feature">ITC register &amp; Rule 37 (180-day)</div>
+            <div class="gst-card-feature">HSN / SAC summary with UQC</div>
           </div>
-          <!-- GST summary mockup -->
           <div class="gstin-mockup" style="margin-top:var(--space-4);">
             <div class="gstin-result">
-              <div class="gstin-result-row">
-                <span class="gstin-key">Output GST (CGST)</span>
-                <span class="gstin-val">₹22,410</span>
-              </div>
-              <div class="gstin-result-row">
-                <span class="gstin-key">Output GST (SGST)</span>
-                <span class="gstin-val">₹22,410</span>
-              </div>
-              <div class="gstin-result-row">
-                <span class="gstin-key">ITC Available</span>
-                <span class="gstin-verified-badge">₹18,900</span>
-              </div>
+              <div class="gstin-result-row"><span class="gstin-key">Matched</span><span class="gstin-val">142 bills</span></div>
+              <div class="gstin-result-row"><span class="gstin-key">Not in GSTR-2B</span><span class="gstin-val">2 bills</span></div>
+              <div class="gstin-result-row"><span class="gstin-key">ITC available</span><span class="gstin-verified-badge">₹18,900</span></div>
             </div>
           </div>
         </div>
-
       </div>
 
       <div class="text-center mt-12 animate-fade-up delay-300">
-        <a href="features/gst.html" class="btn btn-secondary btn-lg btn-arrow" id="gst-explore-btn">Explore GST Tools <span class="arrow">→</span></a>
+        <a href="features/gst.html" class="btn btn-secondary btn-lg btn-arrow" id="gst-explore-btn">Explore GST Compliance <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -594,7 +566,7 @@
         <div class="feature-tab-panel active animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">Professional Billing &amp; Invoicing</h3>
-            <p class="text-muted mb-6">Create GST invoices instantly. Customizable formats, auto tax calculation, party-wise outstanding tracking and WhatsApp delivery.</p>
+            <p class="text-muted mb-6">Create GST invoices in seconds — A4, A5 or 80 mm thermal, auto tax split, bill-wise outstanding, and one-click WhatsApp / e-mail sharing.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -602,7 +574,7 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Custom invoice formats — logo, signature, terms &amp; conditions</span>
+                <span>Your logo, bank details, terms, declaration and signatory on every invoice</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -610,7 +582,7 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>WhatsApp invoice sharing and PDF export</span>
+                <span>Bulk print up to 100 invoices, PDF download, e-mail and WhatsApp share</span>
               </li>
             </ul>
             <a href="features/billing-sales.html" class="btn btn-secondary btn-arrow">Learn Billing Module <span class="arrow">→</span></a>
@@ -629,8 +601,8 @@
                   <div style="font-size:10px;color:#64748B;">INV-2045 | 08-Sep-2026</div>
                 </div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;font-size:10px;">
-                  <div><div style="font-weight:700;color:#334155;margin-bottom:2px;">Bill To:</div><div>M/s Patel Trading Co.</div><div style="color:#64748B;">GSTIN: 27AABCT3456Q1ZX</div></div>
-                  <div style="text-align:right;"><div style="font-weight:700;color:#334155;margin-bottom:2px;">From:</div><div>Techstar Business</div><div style="color:#64748B;">GSTIN: 27AANCT3833C1ZB</div></div>
+                  <div><div style="font-weight:700;color:#334155;margin-bottom:2px;">Bill To:</div><div>M/s Shree Ganesh Traders</div><div style="color:#64748B;">GSTIN: 27AAJFS6310Q1ZN</div></div>
+                  <div style="text-align:right;"><div style="font-weight:700;color:#334155;margin-bottom:2px;">From:</div><div>Sai Computers, Pune</div><div style="color:#64748B;">GSTIN: 27AAKFS4821M1ZQ</div></div>
                 </div>
                 <table style="width:100%;border-collapse:collapse;font-size:10px;margin-bottom:8px;">
                   <tr style="background:#F1F5F9;font-weight:700;">
@@ -641,12 +613,13 @@
                     <th style="padding:5px;text-align:right;">Total</th>
                   </tr>
                   <tr><td style="padding:4px 5px;">Core Processor v2</td><td style="padding:4px 5px;text-align:right;">5</td><td style="padding:4px 5px;text-align:right;">₹2,400</td><td style="padding:4px 5px;text-align:right;">18%</td><td style="padding:4px 5px;text-align:right;">₹14,160</td></tr>
-                  <tr><td style="padding:4px 5px;">Wireless Mouse</td><td style="padding:4px 5px;text-align:right;">10</td><td style="padding:4px 5px;text-align:right;">₹1,200</td><td style="padding:4px 5px;text-align:right;">12%</td><td style="padding:4px 5px;text-align:right;">₹13,440</td></tr>
+                  <tr><td style="padding:4px 5px;">Wireless Mouse</td><td style="padding:4px 5px;text-align:right;">10</td><td style="padding:4px 5px;text-align:right;">₹1,200</td><td style="padding:4px 5px;text-align:right;">18%</td><td style="padding:4px 5px;text-align:right;">₹14,160</td></tr>
                 </table>
                 <div style="text-align:right;font-size:11px;">
-                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:2px;"><span style="color:#64748B;">CGST:</span><span>₹2,484</span></div>
-                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:4px;"><span style="color:#64748B;">SGST:</span><span>₹2,484</span></div>
-                  <div style="display:flex;justify-content:flex-end;gap:16px;font-weight:800;font-size:12px;color:#1E3A8A;border-top:1.5px solid #E2E8F0;padding-top:4px;"><span>Grand Total:</span><span>₹27,600</span></div>
+                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:2px;"><span style="color:#64748B;">Taxable value:</span><span>₹24,000</span></div>
+                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:2px;"><span style="color:#64748B;">CGST 9%:</span><span>₹2,160</span></div>
+                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:4px;"><span style="color:#64748B;">SGST 9%:</span><span>₹2,160</span></div>
+                  <div style="display:flex;justify-content:flex-end;gap:16px;font-weight:800;font-size:12px;color:#1E3A8A;border-top:1.5px solid #E2E8F0;padding-top:4px;"><span>Grand Total:</span><span>₹28,320</span></div>
                 </div>
               </div>
             </div>
@@ -657,7 +630,7 @@
         <div class="feature-tab-panel animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">Complete Accounting &amp; Bookkeeping</h3>
-            <p class="text-muted mb-6">Gain absolute financial clarity. Double-entry bookkeeping, auto balancing, cash books, and real-time P&amp;L generation.</p>
+            <p class="text-muted mb-6">Double-entry books with Tally-style groups, bill-wise outstanding, bank reconciliation, TDS, fixed assets and Schedule III statements.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -665,15 +638,15 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Contra &amp; Journal entries, Debit/Credit Notes</span>
+                <span>Bill-wise outstanding with ageing, interest and confirmation letters</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Auto Balance Sheet, Profit &amp; Loss &amp; Day books</span>
+                <span>Schedule III P&amp;L and Balance Sheet, cash flow (AS-3) and ratios</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Customer/Supplier Outstanding Reports &amp; Accounts Payables</span>
+                <span>Bank reconciliation from your bank statement (Excel)</span>
               </li>
             </ul>
             <a href="features/accounting.html" class="btn btn-secondary btn-arrow">Learn Accounting Module <span class="arrow">→</span></a>
@@ -712,7 +685,7 @@
                   <span>-₹62,000</span>
                 </div>
                 <div style="display:flex; justify-content:space-between; font-weight:800; border-top:2px solid #334155; padding-top:8px; font-size:13px; color:#1E3A8A;">
-                  <span>Net Profit (PAT)</span>
+                  <span>Net Profit</span>
                   <span>₹4,21,000</span>
                 </div>
               </div>
@@ -724,7 +697,7 @@
         <div class="feature-tab-panel animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">GST, e-Invoice &amp; e-Way Bill</h3>
-            <p class="text-muted mb-6">GST-ready billing, GSTIN verification, e-Invoice generation and e-Way Bill management — all built into your existing workflow.</p>
+            <p class="text-muted mb-6">GST invoices, GSTR-1 / 3B prepared from your books, GSTR-2B reconciliation, and e-Invoice / e-Way Bill JSON for the government portals.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -732,19 +705,19 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>GSTIN verification within the billing workflow</span>
+                <span>GSTR-1 / 1A JSON with checks; GSTR-3B working with set-off</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>e-Invoice generation for eligible transactions</span>
+                <span>e-Invoice JSON for the IRP portal (Business &amp; Enterprise)</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>e-Way Bill creation and management for goods in transit</span>
+                <span>e-Way Bill JSON with transporter &amp; vehicle details</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Export-ready GSTR-1, GSTR-2 &amp; ITC tracking</span>
+                <span>GSTR-2B reconciliation with IMS status and ITC register</span>
               </li>
             </ul>
             <a href="features/gst.html" class="btn btn-secondary btn-arrow">Explore GST Features <span class="arrow">→</span></a>
@@ -760,19 +733,19 @@
               <div style="background: white; padding: 15px; font-size: 10px;">
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
                   <div style="background:#F0FFF4;border:1px solid #A7F3D0;border-radius:8px;padding:8px;">
-                    <div style="font-size:9px;color:#059669;font-weight:700;text-transform:uppercase;margin-bottom:2px;">GSTIN Status</div>
-                    <div style="font-weight:800;color:#065F46;font-size:12px;">✓ Active</div>
-                    <div style="font-size:9px;color:#64748B;">27AANCT3833C1ZB</div>
+                    <div style="font-size:9px;color:#059669;font-weight:700;text-transform:uppercase;margin-bottom:2px;">GSTR-3B</div>
+                    <div style="font-weight:800;color:#065F46;font-size:12px;">✓ Working ready</div>
+                    <div style="font-size:9px;color:#64748B;">Aug 2026</div>
                   </div>
                   <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:8px;">
                     <div style="font-size:9px;color:#2563EB;font-weight:700;text-transform:uppercase;margin-bottom:2px;">e-Invoice</div>
-                    <div style="font-weight:800;color:#1E3A8A;font-size:12px;">IRN Generated</div>
+                    <div style="font-weight:800;color:#1E3A8A;font-size:12px;">JSON exported</div>
                     <div style="font-size:9px;color:#64748B;">INV-2045</div>
                   </div>
                   <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:8px;">
                     <div style="font-size:9px;color:#D97706;font-weight:700;text-transform:uppercase;margin-bottom:2px;">e-Way Bill</div>
-                    <div style="font-weight:800;color:#92400E;font-size:12px;">⏱ Active</div>
-                    <div style="font-size:9px;color:#64748B;">Valid: 09-Sep-2026</div>
+                    <div style="font-weight:800;color:#92400E;font-size:12px;">JSON exported</div>
+                    <div style="font-size:9px;color:#64748B;">MH-12-AB-3456</div>
                   </div>
                   <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:8px;padding:8px;">
                     <div style="font-size:9px;color:#7C3AED;font-weight:700;text-transform:uppercase;margin-bottom:2px;">GSTR-1</div>
@@ -806,19 +779,19 @@
         <div class="feature-tab-panel animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">Fast Point-Of-Sale (POS) Billing</h3>
-            <p class="text-muted mb-6">Dramatically accelerate your checkouts. Barcode scanner support, multiple quick checkout modes, hold tickets, and receipt printers.</p>
+            <p class="text-muted mb-6">Fast counter billing with barcode scan, touch mode, held bills and F-key shortcuts — cash, UPI, card, credit or split payment.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Dot Matrix &amp; Thermal Printer Support — use existing printers from cloud browsers</span>
+                <span>80 mm thermal receipts printed from the browser</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Instant Printing — no preview loading delays</span>
+                <span>Keyboard billing: F8 cash · F9 UPI · F10 credit · F3 hold</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Queue Buster — local cache enables billing during internet drops</span>
+                <span>Shifts with X / Z reports, coupons and loyalty points</span>
               </li>
             </ul>
             <a href="features/pos.html" class="btn btn-secondary btn-arrow">Learn POS Features <span class="arrow">→</span></a>
@@ -838,7 +811,7 @@
                   </div>
                   <div class="pos-product-grid">
                     <div class="pos-product">
-                      <div class="pos-product-icon">💻</div>
+                      <div class="pos-product-icon">🖱️</div>
                       <div class="pos-product-name">Wireless Mouse</div>
                       <div class="pos-product-price">₹1,200</div>
                     </div>
@@ -883,19 +856,19 @@
         <div class="feature-tab-panel animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">Live Inventory &amp; Stock Optimization</h3>
-            <p class="text-muted mb-6">Stop guessing your stock counts. Set real-time alarms, run barcode scans for replenishment, and value stock with FIFO metrics.</p>
+            <p class="text-muted mb-6">Know exactly what is in stock at every branch and godown — with batch &amp; expiry, serial numbers, reorder reports and FIFO or weighted-average valuation.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Real-time stock levels with low-stock &amp; out-of-stock alerts</span>
+                <span>Real-time stock with reorder, slow-moving, ABC and expiry reports</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Batch &amp; expiry tracking for pharma and FMCG businesses</span>
+                <span>Batch &amp; expiry (FEFO) — expired batches are never sold</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Barcode scanning, FIFO valuation and inter-branch stock transfers</span>
+                <span>Barcode labels, FIFO / weighted-average valuation and branch transfers</span>
               </li>
             </ul>
             <a href="features/inventory.html" class="btn btn-secondary btn-arrow">Learn Inventory Module <span class="arrow">→</span></a>
@@ -948,7 +921,7 @@
         <div class="feature-tab-panel animate-fade-up">
           <div class="panel-content">
             <h3 class="text-3xl font-extrabold mb-4">Multi-Branch Centralized Control</h3>
-            <p class="text-muted mb-6">Unify operations. Securely track transactions, adjust global catalogs, and perform warehouse-to-store stock routing.</p>
+            <p class="text-muted mb-6">See every branch from one login — sales, stock and profit — and move stock between branches with full records.</p>
             <ul class="check-list mb-8">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -956,14 +929,14 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Inter-branch stock transfer logs &amp; transit alerts</span>
+                <span>Branch transfers with goods-in-transit tracking</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Branch-isolated data access controls for staff</span>
+                <span>Branch-scoped users and branch-wise ledgers</span>
               </li>
             </ul>
-            <a href="features/multi-branch.html" class="btn btn-secondary btn-arrow">Learn Multi-Branch USP <span class="arrow">→</span></a>
+            <a href="features/multi-branch.html" class="btn btn-secondary btn-arrow">Learn about multi-branch <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
             <div class="branch-diagram">
@@ -994,13 +967,13 @@
     </div>
   </section>
 
-  <!-- ====== MULTI-BRANCH HIGH-LIGHT USP ====== -->
+  <!-- ====== MULTI-BRANCH HIGHLIGHT ====== -->
   <section class="section section-alt">
     <div class="container grid grid-2 items-center">
       <div class="animate-slide-left">
         <span class="section-badge">Enterprise Scale</span>
         <h2 class="section-title">One Business. Multiple Branches. <span class="highlight">One Control Center.</span></h2>
-        <p class="mb-6">Whether your business operates across multiple cities or local neighborhoods, Techstar brings everything together under one console. Sync stock levels, compare outlet profits, and delegate branch permissions without hassle.</p>
+        <p class="mb-6">Whether your branches are across a city or across India, Techstar keeps them in one set of books. Compare branch profits, move stock between branches and give staff access only to their own branch.</p>
         <ul class="check-list mb-8">
           <li class="check-item">
             <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -1008,14 +981,14 @@
           </li>
           <li class="check-item">
             <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Inter-branch stock transfer logs &amp; transit alerts</span>
+            <span>Branch transfers with goods-in-transit tracking</span>
           </li>
           <li class="check-item">
             <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Branch-isolated data access controls for staff</span>
+            <span>Branch-scoped users and branch-wise ledgers</span>
           </li>
         </ul>
-        <a href="free-trial.html" class="btn btn-primary">Control Your Business <span class="arrow">→</span></a>
+        <a href="free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial <span class="arrow">→</span></a>
       </div>
       <div class="animate-slide-right delay-200">
         <div class="mock-screen">
@@ -1065,59 +1038,63 @@
           <table class="rbac-table">
             <thead>
               <tr>
-                <th>Module / Action</th>
-                <th>Super Admin</th>
+                <th>Module</th>
+                <th>Owner / Admin</th>
                 <th>Accountant</th>
-                <th>POS Cashier</th>
-                <th>Viewer</th>
+                <th>Cashier</th>
+                <th>Auditor</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Company Settings</td>
+                <td>Company &amp; GST Settings</td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
               </tr>
               <tr>
-                <td>Double Entry Journals</td>
+                <td>Journals &amp; Ledgers</td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
-                <td><span class="rbac-partial">o View Only</span></td>
+                <td><span class="rbac-partial">◐ View only</span></td>
               </tr>
               <tr>
-                <td>POS Billing Terminal</td>
+                <td>POS Billing Counter</td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
                 <td><span class="rbac-check">✓ Create</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
               </tr>
               <tr>
-                <td>Consolidated P&amp;L Reports</td>
+                <td>P&amp;L &amp; GST Returns</td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-check">✓ Full</span></td>
                 <td><span class="rbac-cross">✗ None</span></td>
-                <td><span class="rbac-partial">o View Only</span></td>
+                <td><span class="rbac-partial">◐ View only</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
       <div class="animate-slide-right delay-200">
-        <span class="section-badge">Organizational Safety</span>
-        <h2 class="section-title">Granular User Roles &amp; <span class="highlight">Access Control</span></h2>
-        <p class="mb-6">Guarantee organizational security. Restrict billing staff to retail POS windows while granting corporate accountants complete access to ledgers and purchase logs.</p>
+        <span class="section-badge">Users &amp; Roles</span>
+        <h2 class="section-title">Ready-made Roles &amp; <span class="highlight">Access Control</span></h2>
+        <p class="mb-6">Cashiers see the billing counter, accountants see the books, and your CA can audit read-only. Every change is recorded in the audit trail.</p>
         <ul class="check-list">
-          <li class="check-item">
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Pre-defined roles: Admin, Cashier, Accountant, Branch Manager</span>
-          </li>
-          <li class="check-item">
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Isolate staff permissions to view, create, edit, delete, or export</span>
-          </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>9 ready roles: Owner, Admin, Accountant, Branch Manager, Billing Operator, Cashier, Purchase Manager, Store Keeper, Auditor</span>
+              </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Branch-scoped users and approval of payments above your limit</span>
+              </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Auditor role is strictly read-only</span>
+              </li>
         </ul>
       </div>
     </div>
@@ -1129,11 +1106,11 @@
       <div class="animate-slide-left">
         <span class="section-badge">Business Analytics</span>
         <h2 class="section-title">Data-Driven Insights for <span class="highlight">Smarter Decisions</span></h2>
-        <p class="mb-6">Techstar turns raw transactions into visual progress reports. Access comprehensive filters, purchase track ratios, and customer loyalty indicators instantly.</p>
+        <p class="mb-6">See item gross profit, customer profitability, monthly P&amp;L and budget vs actual — and export any report to Excel or PDF.</p>
         <ul class="check-list mb-8">
           <li class="check-item">
             <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Daily Profit statements &amp; expense charts</span>
+            <span>MIS dashboard, item gross profit &amp; customer profitability</span>
           </li>
           <li class="check-item">
             <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -1200,22 +1177,26 @@
   <section class="section">
     <div class="container grid grid-2-3 items-center">
       <div class="animate-slide-left">
-        <span class="section-badge">Security Infrastructure</span>
+        <span class="section-badge">Security &amp; Data</span>
         <h2 class="section-title">Your Financial Records. <span class="highlight">Protected.</span></h2>
-        <p class="mb-6">Techstar maintains continuous backups and a detailed audit trail system for every user activity.</p>
+        <p class="mb-6">Each company's data is kept apart from every other customer by database-level security, and every change is recorded in an audit trail.</p>
         <ul class="check-list">
-          <li class="check-item">
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>IP Allowlist protection to block unauthorized geographical logs</span>
-          </li>
-          <li class="check-item">
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Encrypted user logins &amp; automatic session expires</span>
-          </li>
-          <li class="check-item">
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <span>Automatic cloud backups with multi-location storage (Azure &amp; OneDrive slots)</span>
-          </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Data stored in India (Mumbai); download a full backup of your company data any time</span>
+              </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Sign in with e-mail + password, e-mail OTP or Google</span>
+              </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Audit trail of master changes, cancelled, modified and back-dated entries</span>
+              </li>
+              <li class="check-item">
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <span>Month and year locks — nobody changes closed periods</span>
+              </li>
         </ul>
       </div>
       <div class="animate-slide-right delay-200">
@@ -1224,13 +1205,13 @@
             <div class="mock-dot mock-dot-r"></div>
             <div class="mock-dot mock-dot-y"></div>
             <div class="mock-dot mock-dot-g"></div>
-            <div class="mock-tab-title">Activity Audit Trail logs</div>
+            <div class="mock-tab-title">Audit Trail</div>
           </div>
-          <div style="background:white; padding:15px; font-family:var(--font-mono); font-size:10px; line-height:1.6; color:#334155;">
-            <div>[2026-08-18 11:42:01] <span style="color:#2563EB; font-weight:700;">USER_LOGIN:</span> Accountant logged in from Mumbai Branch IP</div>
-            <div>[2026-08-18 11:45:32] <span style="color:#059669; font-weight:700;">TRANSACTION_CREATE:</span> Invoice INV-1045 generated (₹4,200)</div>
-            <div>[2026-08-18 11:49:15] <span style="color:#D97706; font-weight:700;">STOCK_ADJUST:</span> Item 'CPU-CORE-V2' stock reduced by 1</div>
-            <div>[2026-08-18 11:51:09] <span style="color:#EF4444; font-weight:700;">ROLE_WARNING:</span> Cashier attempted account ledger export (BLOCKED)</div>
+          <div style="background:white; padding:15px; font-family:var(--font-mono); font-size:11px; line-height:1.6; color:#334155;">
+            <div>[2026-09-18 11:42] <span style="color:#2563EB; font-weight:700;">LOGIN:</span> Accountant signed in (Pune branch)</div>
+            <div>[2026-09-18 11:45] <span style="color:#059669; font-weight:700;">INVOICE:</span> INV-2045 created (₹28,320)</div>
+            <div>[2026-09-18 11:49] <span style="color:#D97706; font-weight:700;">MASTER:</span> Product rate changed ₹2,350 → ₹2,400</div>
+            <div>[2026-09-18 11:51] <span style="color:#EF4444; font-weight:700;">PERIOD LOCK:</span> Back-dated voucher for August refused</div>
           </div>
         </div>
       </div>
@@ -1241,16 +1222,16 @@
   <section class="section section-alt" id="industries">
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge">Made For All Sectors</span>
-        <h2 class="section-title">Built For Your Specific <span class="highlight">Industry</span></h2>
-        <p class="section-subtitle centered">Tailored tools of POS billing, wholesale registers, batch alerts, and double ledger systems mapped per business sector.</p>
+        <span class="section-badge">Industries</span>
+        <h2 class="section-title">Built For Your <span class="highlight">Industry</span></h2>
+        <p class="section-subtitle centered">The same ERP, set up for the way your business sells, stocks and bills.</p>
       </div>
 
       <div class="grid grid-4 animate-fade-up delay-100">
         <div class="industry-card">
           <div class="industry-icon">🏪</div>
           <div class="industry-name">Retail &amp; POS</div>
-          <p class="industry-desc text-sm text-muted">Fast POS billing, barcode scanners, stock deductions &amp; loyalty credits.</p>
+          <p class="industry-desc text-sm text-muted">Fast counter billing, barcode labels, shifts with Z reports, coupons &amp; loyalty.</p>
           <div class="industry-tags">
             <span class="industry-tag">POS Billing</span>
             <span class="industry-tag">Loyalty</span>
@@ -1259,143 +1240,119 @@
         <div class="industry-card">
           <div class="industry-icon">📦</div>
           <div class="industry-name">Wholesale &amp; Distribution</div>
-          <p class="industry-desc text-sm text-muted">Bulk billing, party-wise outstanding, e-Invoice &amp; e-Way Bill workflows.</p>
+          <p class="industry-desc text-sm text-muted">Price lists &amp; schemes, credit limits, bill-wise outstanding, e-Way Bill JSON.</p>
           <div class="industry-tags">
-            <span class="industry-tag">Bulk Invoice</span>
-            <span class="industry-tag">e-Way Bill</span>
+            <span class="industry-tag">Price Lists</span>
+            <span class="industry-tag">e-Way Bill JSON</span>
           </div>
         </div>
         <div class="industry-card">
           <div class="industry-icon">🏭</div>
           <div class="industry-name">Manufacturing</div>
-          <p class="industry-desc text-sm text-muted">Raw material masters, production billing, e-Invoice &amp; vendor control.</p>
+          <p class="industry-desc text-sm text-muted">BOM, production orders, WIP costing, by-products and job work (ITC-04 data).</p>
           <div class="industry-tags">
             <span class="industry-tag">BOM</span>
-            <span class="industry-tag">e-Invoice</span>
+            <span class="industry-tag">Job Work</span>
           </div>
         </div>
         <div class="industry-card">
           <div class="industry-icon">💊</div>
-          <div class="industry-name">Pharmacies &amp; Clinics</div>
-          <p class="industry-desc text-sm text-muted">Expiry alerts, batch number management &amp; quick counter bills.</p>
+          <div class="industry-name">Pharmacies</div>
+          <p class="industry-desc text-sm text-muted">Batch &amp; expiry with FEFO, expiry reports, quick counter bills.</p>
           <div class="industry-tags">
-            <span class="industry-tag">Batch Code</span>
-            <span class="industry-tag">Expiry Alert</span>
+            <span class="industry-tag">Batch</span>
+            <span class="industry-tag">Expiry</span>
           </div>
         </div>
         <div class="industry-card">
           <div class="industry-icon">🛠️</div>
-          <div class="industry-name">Hardware &amp; Materials</div>
-          <p class="industry-desc text-sm text-muted">Serial number filters, unit conversions, outstanding tracking.</p>
+          <div class="industry-name">Hardware &amp; Electronics</div>
+          <p class="industry-desc text-sm text-muted">Serial numbers, alternate units (box / piece), bill-wise outstanding.</p>
           <div class="industry-tags">
-            <span class="industry-tag">Unit Conversion</span>
-            <span class="industry-tag">Serials</span>
+            <span class="industry-tag">Serial Nos.</span>
+            <span class="industry-tag">Alt. Units</span>
           </div>
         </div>
         <div class="industry-card">
-          <div class="industry-icon">👗</div>
-          <div class="industry-name">Garments &amp; Apparel</div>
-          <p class="industry-desc text-sm text-muted">Sizing matrix, color codes, barcode prints &amp; multi-store sync.</p>
+          <div class="industry-icon">🧰</div>
+          <div class="industry-name">Services &amp; AMC</div>
+          <p class="industry-desc text-sm text-muted">Contracts, AMC &amp; recurring invoices, milestones and timesheets.</p>
           <div class="industry-tags">
-            <span class="industry-tag">Size Matrix</span>
-            <span class="industry-tag">Barcode Print</span>
+            <span class="industry-tag">AMC</span>
+            <span class="industry-tag">Recurring</span>
           </div>
         </div>
         <div class="industry-card">
-          <div class="industry-icon">🍔</div>
-          <div class="industry-name">Restaurants &amp; FMCG</div>
-          <p class="industry-desc text-sm text-muted">Table maps, kitchen tickets (KOT), tax splits &amp; cash registers.</p>
+          <div class="industry-icon">🛒</div>
+          <div class="industry-name">FMCG Distribution</div>
+          <p class="industry-desc text-sm text-muted">Schemes by product or category, godown stock, delivery challans.</p>
           <div class="industry-tags">
-            <span class="industry-tag">KOT</span>
-            <span class="industry-tag">Cash Draw</span>
+            <span class="industry-tag">Schemes</span>
+            <span class="industry-tag">Challans</span>
           </div>
         </div>
         <div class="industry-card">
           <div class="industry-icon">📈</div>
-          <div class="industry-name">Trading &amp; Service</div>
-          <p class="industry-desc text-sm text-muted">Service estimations, recurring bills, task ledgers &amp; cost tracking.</p>
+          <div class="industry-name">Trading</div>
+          <p class="industry-desc text-sm text-muted">Quotation → order → delivery challan → invoice, with part deliveries.</p>
           <div class="industry-tags">
-            <span class="industry-tag">Estimations</span>
-            <span class="industry-tag">Auto Remind</span>
+            <span class="industry-tag">Quotations</span>
+            <span class="industry-tag">Orders</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== WHY CHOOSE US & COMPARISON ====== -->
+  <!-- ====== WHY TECHSTAR ====== -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge">How Techstar Compares</span>
+        <span class="section-badge">Why Techstar ERP</span>
         <h2 class="section-title">Everything Your Business Needs. <span class="highlight">One Platform.</span></h2>
-        <p class="section-subtitle centered">Why settle for split offline files or basic single-counter billing tools? Upgrade to modern centralized control.</p>
+        <p class="section-subtitle centered">What you get when you move your billing, stock and books to Techstar ERP.</p>
       </div>
 
       <div class="compare-table-wrap mb-16 animate-fade-up delay-100">
         <table class="compare-table">
           <thead>
             <tr>
-              <th>Feature Parameter</th>
-              <th>Traditional Software</th>
-              <th>Basic Billing App</th>
-              <th class="highlight-col">Techstar Web ERP</th>
+              <th>What you need</th>
+              <th class="highlight-col">How Techstar ERP does it</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>100% Web &amp; Mobile Browser Access</td>
-              <td><span class="compare-no">✗ Desktop Only</span></td>
-              <td><span class="compare-partial">o App Only</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Anywhere)</span></td>
+              <td>Works in any browser</td>
+              <td class="highlight-col">Desktop, laptop, tablet or phone — no installation; install it as an app if you like.</td>
             </tr>
             <tr>
-              <td>Centralized Multi-Outlet Sync</td>
-              <td><span class="compare-no">✗ No (Manual Exports)</span></td>
-              <td><span class="compare-no">✗ No Sync</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Real-Time)</span></td>
+              <td>All branches in one login</td>
+              <td class="highlight-col">Business plan: 2 branches · Enterprise: up to 5, with branch transfers and branch-wise reports.</td>
             </tr>
             <tr>
-              <td>Role-Based Staff Access Controls</td>
-              <td><span class="compare-partial">o Limited</span></td>
-              <td><span class="compare-no">✗ No Roles</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Granular Matrix)</span></td>
+              <td>Feels like Tally</td>
+              <td class="highlight-col">Alt+G go to, Enter to the next field, Ctrl+A to save, F-keys at the POS.</td>
             </tr>
             <tr>
-              <td>Corporate Invoicing &amp; Double Entry ledgers</td>
-              <td><span class="compare-yes">✓ Yes</span></td>
-              <td><span class="compare-no">✗ Simple Bills Only</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Double Entry)</span></td>
+              <td>Bring your old data</td>
+              <td class="highlight-col">Import customers, suppliers, products, opening stock and bill-wise balances from Excel — including Tally exports.</td>
             </tr>
             <tr>
-              <td>GST Calculators &amp; Tax Filing Registers</td>
-              <td><span class="compare-partial">o Complex manual setup</span></td>
-              <td><span class="compare-partial">o Basic GSTR</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (GST-Ready)</span></td>
+              <td>GST returns from your books</td>
+              <td class="highlight-col">GSTR-1 / 1A JSON, GSTR-3B working, GSTR-2B reconciliation, GSTR-9 / 9C working.</td>
             </tr>
             <tr>
-              <td>GSTIN Verification within Workflow</td>
-              <td><span class="compare-no">✗ Separate Portal</span></td>
-              <td><span class="compare-no">✗ Not Available</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Built-in)</span></td>
+              <td>e-Invoice &amp; e-Way Bill JSON</td>
+              <td class="highlight-col">Official JSON for the government portals on Business and Enterprise plans.</td>
             </tr>
             <tr>
-              <td>e-Invoice &amp; e-Way Bill Support</td>
-              <td><span class="compare-no">✗ Not Available</span></td>
-              <td><span class="compare-no">✗ Not Available</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Integrated)</span></td>
+              <td>Books your CA trusts</td>
+              <td class="highlight-col">Schedule III statements, cash flow (AS-3), Form 3CD data, MSME 43B(h) report, read-only auditor role.</td>
             </tr>
             <tr>
-              <td>POS Billing &amp; Thermal Printer Ready</td>
-              <td><span class="compare-no">✗ No Printer Support</span></td>
-              <td><span class="compare-yes">✓ Yes</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Lightning Fast)</span></td>
-            </tr>
-            <tr>
-              <td>Dot Matrix Printer &amp; Zero Delay Billing</td>
-              <td><span class="compare-no">✗ Slow/Delayed Setup</span></td>
-              <td><span class="compare-partial">o Delay Speed Issues</span></td>
-              <td class="highlight-col"><span class="compare-yes">✓ Yes (Direct Driverless)</span></td>
+              <td>Your data, in India</td>
+              <td class="highlight-col">Stored in Mumbai; download a full backup any time.</td>
             </tr>
           </tbody>
         </table>
@@ -1407,64 +1364,16 @@
   <section class="section section-alt" id="pricing">
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge">Fair Plans</span>
-        <h2 class="section-title">Premium ERP Power. <span class="highlight">Honest Pricing.</span></h2>
-        <p class="section-subtitle centered">Select the plan that fits your business scale. No complex installations. All plans include automated dashboard reports.</p>
+        <span class="section-badge">Plans &amp; Pricing</span>
+        <h2 class="section-title">Simple yearly plans. <span class="highlight">GST included.</span></h2>
+        <p class="section-subtitle centered">No installation, no hidden charges. Try the Business plan free for 3 days — no credit card needed.</p>
       </div>
 
-      <div class="grid grid-3 animate-fade-up delay-100">
-        <!-- Plan 1 -->
-        <div class="pricing-card">
-          <h3 class="pricing-plan-name">Techstar Starter</h3>
-          <div class="pricing-plan-title">For Micro Businesses</div>
-          <p class="pricing-plan-desc">Manage a single retail store counter, simple inventory &amp; GST invoices.</p>
-          <div class="pricing-cta-label">Start Trial / Free Plan</div>
-          <ul class="pricing-features">
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 1 Branch Outlet</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 2 Users</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Retail POS Terminal</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GST-Ready Invoicing</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GST Tax Calculator</li>
-          </ul>
-          <a href="free-trial.html" class="btn btn-secondary" style="width: 100%;">Start Free Trial</a>
-        </div>
-
-        <!-- Plan 2 -->
-        <div class="pricing-card featured">
-          <div class="pricing-badge">Popular Choice</div>
-          <h3 class="pricing-plan-name">Techstar Growth</h3>
-          <div class="pricing-plan-title">For Scaling Businesses</div>
-          <p class="pricing-plan-desc">Multi-counter outlets, detailed ledgers, GSTIN verification &amp; e-Invoice support.</p>
-          <div class="pricing-cta-label">Contact For Details</div>
-          <ul class="pricing-features">
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Up to 3 Branch Outlets</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 10 Users</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GSTIN Verification</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> e-Invoice &amp; e-Way Bill</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Advanced Double-Entry Ledgers</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> WhatsApp Invoice Sharing</li>
-          </ul>
-          <a href="demo.html" class="btn btn-primary" style="width: 100%;">Contact For Pricing</a>
-        </div>
-
-        <!-- Plan 3 -->
-        <div class="pricing-card">
-          <h3 class="pricing-plan-name">Techstar Enterprise</h3>
-          <div class="pricing-plan-title">For Large Chain Groups</div>
-          <p class="pricing-plan-desc">Custom integration requirements, global hub-branch mapping &amp; audit logs.</p>
-          <div class="pricing-cta-label">Enterprise Quote</div>
-          <ul class="pricing-features">
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Unlimited Branch Outlets</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Unlimited Users</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GSTIN Verification &amp; e-Invoice</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> e-Way Bill Management</li>
-            <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Full Activity Audit Logs</li>
-          </ul>
-          <a href="demo.html" class="btn btn-secondary" style="width: 100%;">Book Custom Demo</a>
-        </div>
-      </div>
-      <p class="text-center text-muted text-sm mt-8" style="max-width:560px;margin:var(--space-8) auto 0;">
-        Eligibility for e-Invoice and e-Way Bill features may depend on applicable government rules and your business profile. Contact us for details.
+      <div class="grid grid-3" style="align-items:stretch;" data-plans="compact"></div>
+      <noscript><p class="text-center">Starter ₹4,999/year · Business ₹9,999/year · Enterprise ₹24,999/year — prices include GST.</p></noscript>
+      <p class="text-center mt-8"><a href="pricing.html" class="btn btn-secondary btn-arrow">See monthly prices &amp; compare plans <span class="arrow">→</span></a></p>
+      <p class="text-center text-muted text-sm mt-8" style="max-width:600px;margin:var(--space-6) auto 0;">
+        e-Invoice and e-Way Bill JSON are included in the Business and Enterprise plans.
       </p>
     </div>
   </section>
@@ -1475,67 +1384,73 @@
       <div class="animate-slide-left" style="color: white;">
         <span class="section-badge" style="background:rgba(255,255,255,0.1); color:white;">Live Walkthrough</span>
         <h2 class="section-title" style="color: white; margin-top:20px;">See How Much Easier Your Business Can Be</h2>
-        <p class="mb-8" style="opacity:0.8;">Schedule a personal consultation. Our system experts will review your operations and show how Techstar can consolidate your branches, inventory, POS, GST workflows and corporate tax registers.</p>
+        <p class="mb-8" style="opacity:0.8;">Book a free walkthrough. We'll look at how you bill, stock and keep accounts today, and show how Techstar ERP fits — including moving your data from Tally or Excel.</p>
         <ul class="check-list">
           <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> 15-minute live screen sharing session</li>
           <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Custom onboarding roadmap suggestion</li>
-          <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Live demo of GSTIN verification, e-Invoice &amp; e-Way Bill workflows</li>
-          <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Interactive Q&amp;A for your specific branch logistics</li>
+          <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Live demo of GST returns, e-Invoice / e-Way Bill JSON and POS billing</li>
+          <li class="check-item" style="color:white;"><div class="check-icon" style="background:rgba(255,255,255,0.15)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div> Answers for your branches, users and GST needs</li>
         </ul>
       </div>
       <div class="animate-slide-right delay-200">
         <div class="demo-form-card">
           <div id="formContent">
             <h3 class="text-xl font-extrabold mb-6">Book My Free Demo</h3>
-            <form id="demoForm">
+            <form id="demoForm" novalidate>
               <div class="form-grid">
                 <div class="form-group">
-                  <label class="form-label" for="demo-name">Full Name</label>
-                  <input type="text" id="demo-name" class="form-input" placeholder="e.g. Swapnil" required>
+                  <label class="form-label" for="demo-name">Full Name *</label>
+                  <input type="text" id="demo-name" class="form-input" placeholder="e.g. Rahul Patil" autocomplete="name" required>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="demo-business">Business Name</label>
-                  <input type="text" id="demo-business" class="form-input" placeholder="e.g. Techstar Trading" required>
+                  <label class="form-label" for="demo-business">Business Name *</label>
+                  <input type="text" id="demo-business" class="form-input" placeholder="e.g. Patil Traders" autocomplete="organization" required>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="demo-mobile">Mobile Number</label>
-                  <input type="tel" id="demo-mobile" class="form-input" placeholder="10-digit phone number" required>
+                  <label class="form-label" for="demo-mobile">Mobile / WhatsApp *</label>
+                  <input type="tel" id="demo-mobile" class="form-input" placeholder="10-digit mobile number" inputmode="numeric" maxlength="14" autocomplete="tel" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="demo-email">Email Address</label>
-                  <input type="email" id="demo-email" class="form-input" placeholder="name@business.com" required>
+                  <input type="email" id="demo-email" class="form-input" placeholder="name@business.com" autocomplete="email">
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="demo-sector">Business Sector</label>
+                  <label class="form-label" for="demo-sector">Business Type</label>
                   <select id="demo-sector" class="form-select">
-                    <option>Retail Outlets</option>
+                    <option value="">Select…</option>
+                    <option>Retail / POS</option>
                     <option>Wholesale &amp; Distribution</option>
-                    <option>Manufacturing Group</option>
-                    <option>Pharmacy &amp; Batch</option>
-                    <option>Service &amp; Trading</option>
+                    <option>Manufacturing</option>
+                    <option>Pharmacy</option>
+                    <option>Services / AMC</option>
+                    <option>Trading</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="demo-branches">No. of Branches</label>
                   <select id="demo-branches" class="form-select">
-                    <option>1 Branch</option>
-                    <option>2 - 5 Branches</option>
-                    <option>5 - 20 Branches</option>
-                    <option>20+ Branches</option>
+                    <option value="">Select…</option>
+                    <option>1</option>
+                    <option>2 – 5</option>
+                    <option>6 – 20</option>
+                    <option>21+</option>
                   </select>
                 </div>
                 <div class="form-group full">
-                  <label class="form-label" for="demo-requirements">Special Requirements</label>
-                  <textarea id="demo-requirements" class="form-textarea" placeholder="Explain your current challenges or current software..."></textarea>
+                  <label class="form-label" for="demo-requirements">What do you use today? (optional)</label>
+                  <textarea id="demo-requirements" class="form-textarea" placeholder="e.g. Tally + Excel, 2 counters, need GST returns and stock by batch"></textarea>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary mt-6" style="width:100%;">Schedule Demo Session ⚡</button>
+              <p class="form-error" role="alert" hidden></p>
+              <button type="submit" class="btn btn-primary mt-6" style="width:100%;">Book My Free Demo</button>
+              <p class="form-consent">We'll contact you on WhatsApp / phone about Techstar ERP. See our <a href="privacy.html">Privacy Policy</a>.</p>
             </form>
           </div>
-          <div id="formSuccess" class="form-success">
-            <div class="form-success-icon">🎉</div>
-            <h3 class="text-2xl font-extrabold mb-2" style="color:var(--color-primary-light);">Demo Request Submitted!</h3>
-            <p class="text-muted">A pricing consultant will reach out to you within 2 business hours on your phone number.</p>
+          <div id="formSuccess" class="form-success" role="status">
+            <div class="form-success-icon">✓</div>
+            <h3 class="text-2xl font-extrabold mb-2" style="color:var(--color-primary-light);">Request received</h3>
+            <p class="text-muted">Thank you! Our team will WhatsApp or call you within one working day to fix your demo time.</p>
           </div>
         </div>
       </div>
@@ -1546,122 +1461,90 @@
   <section class="section" id="faq">
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge">Help Center FAQs</span>
+        <span class="section-badge">FAQs</span>
         <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
-        <p class="section-subtitle centered">Have questions? We have answers. If you don't find what you need here, contact support.</p>
+        <p class="section-subtitle centered">Can't find your answer? <a href="contact.html">Contact us</a> or WhatsApp +91 95790 05645.</p>
       </div>
 
       <div class="grid grid-2 animate-fade-up delay-100" style="align-items:start;">
         <div class="faq-col">
           <div class="faq-item">
             <div class="faq-question">1. Is Techstar ERP 100% web-based? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes, Techstar ERP is entirely cloud-based. You can access the system securely through any desktop, tablet, or mobile browser. No local downloads or installation needed.</div>
+            <div class="faq-answer">Yes. It runs in any modern browser on a computer, tablet or phone — nothing to install. You can also install it as an app from Chrome or Edge.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">2. Can I manage multiple outlets/branches? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Absolutely. Multi-branch management is a core Techstar USP. You can connect, manage, and consolidate inventory, billing, sales, and accounting data from a single account.</div>
+            <div class="faq-question">2. Can I manage multiple branches? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes. The Business plan includes 2 branches and the Enterprise plan up to 5, each with its own GSTIN and invoice series if needed, branch transfers and branch-wise reports.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">3. Does Techstar support GSTIN verification? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Techstar ERP supports GSTIN verification within the billing workflow. You can verify customer and supplier GSTIN details including registration status, business name and state information. Note: GSTIN data reflects publicly available information and may not always be real-time.</div>
+            <div class="faq-question">3. Does Techstar check GSTINs? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes — GSTINs are checked for format, check digit and state code when you import parties or add customer addresses, and again in the GSTR-1 checks. A live name / status lookup will come with the direct e-Invoice (GSP) connection.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">4. Can I generate e-Invoices from Techstar ERP? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Techstar ERP supports e-Invoice generation for eligible sales transactions. You can manage IRN details and QR code information connected to your invoices. Eligibility for e-Invoicing depends on your business turnover and applicable government rules. Please contact us for details about your specific plan.</div>
+            <div class="faq-question">4. Can I create e-Invoices? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Techstar exports the official e-Invoice JSON from your B2B invoice; you upload it on the IRP portal. Direct generation through a GSP — with the IRN and signed QR printed on your invoice — is coming soon.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">5. Can I create and manage e-Way Bills? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Techstar ERP supports e-Way Bill creation and management for goods in transit. You can enter transporter details, vehicle information and track e-Way Bill validity. Requirements for e-Way Bills depend on applicable government rules and goods value thresholds.</div>
+            <div class="faq-question">5. Can I create e-Way Bills? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes — as the official e-Way Bill JSON with transporter and vehicle details, which you upload on the e-Way Bill portal. An e-Way Bill is generally needed when goods worth more than ₹50,000 move.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">6. How does Role-Based Access Control work? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">System owners can configure exact permissions. For example, a POS Cashier can only see checkout screens, Accountants get access to ledger reports, and Viewers can only view dashboards.</div>
+            <div class="faq-question">6. How do users and roles work? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">There are 9 ready roles — Owner, Admin, Accountant, Branch Manager, Billing Operator, Cashier, Purchase Manager, Store Keeper and Auditor (read-only). Users can be limited to their branch.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">7. Can I customize invoice formats? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Techstar offers customizable invoice layouts. Add your brand logo, business address, personalized headers, authorized signature, terms &amp; conditions, and local tax fields (CGST/SGST/IGST).</div>
+            <div class="faq-question">7. Can I customise my invoice? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes. Add your logo, bank details, terms, declaration, signatory and footer, and print in A4, A5 or 80 mm thermal with Original / Duplicate / Triplicate copies.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">8. Which plans include e-Invoice and e-Way Bill? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">The Business and Enterprise plans. All plan prices include GST.</div>
           </div>
         </div>
         <div class="faq-col">
           <div class="faq-item">
-            <div class="faq-question">8. Are e-Invoice and e-Way Bill features in all plans? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">e-Invoice and e-Way Bill support is available in the Techstar Growth and Enterprise plans. Eligibility also depends on your business profile and applicable government requirements. Contact us to confirm availability for your business.</div>
+            <div class="faq-question">9. Who must generate e-Invoices? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Businesses whose aggregate annual turnover in any year since 2017-18 exceeds ₹5 crore must e-invoice B2B supplies. Businesses with turnover of ₹10 crore or more must report each invoice on the IRP within 30 days. Check with your CA for your case.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">9. Which businesses need e-Invoice generation? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">As per government GST rules, businesses above a specified annual turnover threshold are required to generate e-Invoices for B2B transactions. Eligibility and thresholds are determined by government notification. We recommend consulting your CA or tax advisor for your specific situation.</div>
+            <div class="faq-question">10. Which printers can I use? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Any printer installed on your computer: 80 mm thermal for receipts, A4 or A5 for tax invoices. You can bulk-print up to 100 invoices at a time or download a PDF.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">10. Is thermal printing supported for POS? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes, we support thermal receipts (80mm/58mm) out-of-the-box. Standard desktop laser printers are also supported for regular A4/A5 billing formats. Dot matrix printers are also supported for traditional counter billing.</div>
+            <div class="faq-question">11. Does it prepare GST returns? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes. GSTR-1 / 1A JSON with checks, the GSTR-3B working with set-off, GSTR-2B reconciliation with IMS status, the ITC register and the GSTR-9 / 9C working. You file on the GST portal and record the ARN in Techstar.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">11. Does the software generate GST reports? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Create tax registers, input credit reports, and export compliance-friendly GSTR-1 &amp; tax summaries. These reports support your return filing process.</div>
+            <div class="faq-question">12. How do low-stock and expiry checks work? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">The reorder report lists items at or below their reorder level with a suggested quantity, and the expiry report shows batches that are expired or about to expire. Expired batches are never sold.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">12. Does Techstar support automated stock warnings? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes. Easily configure low-stock indicators per warehouse/location. You'll receive alert notifications when items drop below threshold limits.</div>
+            <div class="faq-question">13. Can I bring my data from Tally or Excel? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes. Import customers, suppliers, products, opening stock, ledger openings and bill-wise outstanding from Excel / CSV templates — including data exported from Tally. Every row is checked before anything is saved.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">13. Can we import previous inventory records? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes, you can import item masters, categorizations, SKUs, and purchase list entries via Excel templates.</div>
+            <div class="faq-question">14. Is my data safe? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Each company's data is isolated by database-level security, every change is in the audit trail, data is stored in India (Mumbai), and owners can download a full backup of their company data any time.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">14. Is my financial database secure? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Techstar has built-in database firewalls, isolated workspaces, custom authorization logs, and regular offsite backups. Your data is accessible only to authorized users.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">15. Do you provide setup training? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes! Every trial account includes full screen-sharing setup training. Enterprise groups receive an account coordinator to map active outlets.</div>
+            <div class="faq-question">15. Do you help with setup? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Yes — we help you set up your company, masters and opening balances on a screen-sharing call.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== TESTIMONIALS MODULE ====== -->
+  <!-- ====== WHO WE ARE (no testimonials until real customers agree to be quoted) ====== -->
   <section class="section section-alt">
-    <div class="container">
-      <div class="text-center mb-12 animate-fade-up">
-        <span class="section-badge">Testimonials</span>
-        <h2 class="section-title">Trusted By <span class="highlight">Growing Businesses</span></h2>
-        <p class="section-subtitle centered">See how retail chains, wholesale distributors, and manufacturers use Techstar to run their companies.</p>
-      </div>
-
-      <div class="grid grid-3 animate-fade-up delay-100">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Before Techstar, we spent days exporting branches' sales manually. Now, we monitor inventory transfers and outlet profits in real-time. Highly recommended."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">A</div>
-            <div>
-              <div class="testimonial-name">Abhishek Patel</div>
-              <div class="testimonial-role">Owner, Patel Trading (Wholesale FMCG)</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The POS checkout speed is amazing. Role-based restrictions prevent checkout cashiers from viewing our tax reports. Techstar has simplified our accounting."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">M</div>
-            <div>
-              <div class="testimonial-name">Megha Sharma</div>
-              <div class="testimonial-role">Operations Lead, Elite Garments (Retail Chain)</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Automated low-stock alerts save us from out-of-stock orders. It handles multiple billing counters and GST tax configurations effortlessly. Outstanding support!"</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">R</div>
-            <div>
-              <div class="testimonial-name">Rajesh Kumar</div>
-              <div class="testimonial-role">Founder, TechHardware (Multi-Outlet Supplies)</div>
-            </div>
-          </div>
+    <div class="container" style="max-width:820px;">
+      <div class="text-center animate-fade-up">
+        <span class="section-badge">Built in Pune</span>
+        <h2 class="section-title">Made for Indian Businesses. <span class="highlight">Talk to Us Directly.</span></h2>
+        <p class="section-subtitle centered">Techstar ERP is a new product from TECHSTAR MONEY SOLUTION PRIVATE LIMITED, Pune. Our early customers get set-up help straight from our team — we'll walk you through your first invoice, GST return and stock report.</p>
+        <div class="btn-group justify-center mt-8">
+          <a href="https://wa.me/919579005645?text=Hi%2C%20I%20want%20to%20know%20about%20Techstar%20ERP" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a href="demo.html" class="btn btn-secondary">Book a Free Demo</a>
         </div>
       </div>
     </div>
@@ -1672,7 +1555,7 @@
     <div class="container">
       <div class="cta-banner animate-scale">
         <h2 class="cta-banner-title">Ready to Run Your Business from One Place?</h2>
-        <p class="cta-banner-sub">Billing, Accounting, GST, GSTIN Verification, e-Invoice, e-Way Bill, Inventory, POS and Multi-Branch — all in one cloud ERP built for Indian businesses.</p>
+        <p class="cta-banner-sub">Billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses. Prices include GST.</p>
         <div class="btn-group justify-center">
           <a href="free-trial.html" class="btn btn-white btn-lg" id="cta-trial-btn" data-action="start-trial">Start Free Trial Now</a>
           <a href="demo.html" class="btn btn-ghost btn-lg" id="cta-demo-btn">Book a Free Demo</a>
@@ -1687,50 +1570,39 @@
       <div class="footer-top">
         <div>
           <a href="index.html" class="logo footer-logo">
-            <div class="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 22h7l3-6 3 6h7L12 2zm0 6l4.5 9h-9L12 8z" />
-              </svg>
-            </div>
-            <span class="logo-text">Techstar<span>ERP</span></span>
+            <img src="assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
           </a>
-          <p class="footer-tagline">Complete Billing, GST Invoicing, GSTIN Verification, e-Invoice, e-Way Bill, POS Terminals, Live Inventory &amp; Double-Entry Accounting unified across multi-branch environments.</p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
-            <a href="#" class="footer-social-link" aria-label="LinkedIn">LN</a>
-            <a href="#" class="footer-social-link" aria-label="Youtube">YT</a>
-          </div>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
         </div>
         <div>
-          <h4 class="footer-col-title">Modules</h4>
+          <h4 class="footer-col-title">Product</h4>
           <ul class="footer-links">
-            <li><a href="features/accounting.html" class="footer-link">Double-Entry Accounting</a></li>
-            <li><a href="features/gst.html" class="footer-link">GST Registers &amp; Tax</a></li>
-            <li><a href="features/gst.html" class="footer-link">GSTIN Verification</a></li>
-            <li><a href="features/gst.html" class="footer-link">e-Invoice Management</a></li>
-            <li><a href="features/gst.html" class="footer-link">e-Way Bill Management</a></li>
             <li><a href="features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
-            <li><a href="features/pos.html" class="footer-link">POS Quick Checkout</a></li>
-            <li><a href="features/inventory.html" class="footer-link">Inventory &amp; FIFO Stock</a></li>
+            <li><a href="features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-col-title">Solutions</h4>
+          <h4 class="footer-col-title">Industries</h4>
           <ul class="footer-links">
-            <li><a href="solutions.html" class="footer-link">Retail Chains</a></li>
-            <li><a href="solutions.html" class="footer-link">Wholesale Distributors</a></li>
-            <li><a href="solutions.html" class="footer-link">Manufacturing Units</a></li>
-            <li><a href="solutions.html" class="footer-link">Pharmacies &amp; Clinics</a></li>
-            <li><a href="solutions.html" class="footer-link">Hardware Stores</a></li>
+            <li><a href="industries.html" class="footer-link">Retail &amp; POS</a></li>
+            <li><a href="industries.html" class="footer-link">Wholesale &amp; Distribution</a></li>
+            <li><a href="industries.html" class="footer-link">Manufacturing</a></li>
+            <li><a href="industries.html" class="footer-link">Pharmacies</a></li>
+            <li><a href="industries.html" class="footer-link">Services &amp; AMC</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links">
-            <li><a href="faq.html" class="footer-link">Common FAQs</a></li>
-            <li><a href="contact.html" class="footer-link">Raise a ticket</a></li>
+            <li><a href="faq.html" class="footer-link">FAQs</a></li>
             <li><a href="docs.html" class="footer-link">Help documentation</a></li>
+            <li><a href="contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="demo.html" class="footer-link">Book a demo</a></li>
             <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
             <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
             <li><a href="refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
@@ -1739,13 +1611,13 @@
         <div>
           <h4 class="footer-col-title">Contact</h4>
           <div class="footer-contact-item">
-            <span>📍 Address:</span> TechStar Business Solution, Pune, Maharashtra, India
+            <span>Address:</span> Pune, Maharashtra, India
           </div>
           <div class="footer-contact-item">
-            <span>📧 Email:</span> official@swapnilaher.in
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
           </div>
           <div class="footer-contact-item">
-            <span>📞 Call Desk:</span> +91 9579005645
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
           </div>
         </div>
       </div>
@@ -1781,6 +1653,7 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/firebase-integration.js"></script>
+  <script src="js/erp-integration.js"></script>
+  <script src="js/plans.js"></script>
 </body>
 </html>

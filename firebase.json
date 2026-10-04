@@ -5,38 +5,40 @@
       "firebase.json",
       ".firebaserc",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "docs/**",
+      "**/*.md"
     ],
     "cleanUrls": true,
     "redirects": [
       {
         "source": "/login",
-        "destination": "https://erp-system-psi-one.vercel.app/login",
+        "destination": "https://erp.techstarsolution.in/login",
         "type": 302
       },
       {
         "source": "/register",
-        "destination": "https://erp-system-psi-one.vercel.app/register",
+        "destination": "https://erp.techstarsolution.in/register",
         "type": 302
       },
       {
         "source": "/dashboard",
-        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
+        "destination": "https://erp.techstarsolution.in/dashboard",
         "type": 302
       },
       {
         "source": "/dashboard/**",
-        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
+        "destination": "https://erp.techstarsolution.in/dashboard",
         "type": 302
       },
       {
         "source": "/app",
-        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
+        "destination": "https://erp.techstarsolution.in/dashboard",
         "type": 302
       },
       {
         "source": "/app/**",
-        "destination": "https://erp-system-psi-one.vercel.app/dashboard",
+        "destination": "https://erp.techstarsolution.in/dashboard",
         "type": 302
       },
       {

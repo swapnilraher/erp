@@ -5,106 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Free Demo — Techstar ERP</title>
   <meta name="description" content="Book a free live demo of Techstar ERP. See how our GST billing, inventory, accounting and POS software can transform your business.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body style="background:var(--color-bg-alt); display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; padding: 40px 20px;">
 
   <div class="demo-form-card" style="max-width: 520px; width: 100%;">
     <div style="text-align: center; margin-bottom: 25px;">
       <a href="index.html" class="logo" style="justify-content:center; margin-bottom:15px;">
-        <img src="assets/logo.svg" alt="Techstar ERP Logo" style="height: 42px;">
+        <img src="assets/logo.svg" alt="Techstar ERP" width="185" height="40" style="height:40px;width:auto">
       </a>
       <h1 class="text-2xl font-extrabold" style="color:var(--color-primary-dark)">Book Free Demo</h1>
       <p class="text-sm text-muted">15-minute live walkthrough with our product team. No commitment required.</p>
     </div>
 
     <!-- MAIN FORM -->
-    <div id="demoMainWrap">
+    <form id="demoMainWrap" novalidate>
       <div style="margin-bottom:12px;">
-        <label class="form-label">Full Name *</label>
-        <input type="text" id="demoName" class="form-input" placeholder="e.g. Rahul Patil" required>
+        <label class="form-label" for="demoName">Full Name *</label>
+        <input type="text" id="demoName" class="form-input" placeholder="e.g. Rahul Patil" autocomplete="name" required>
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">WhatsApp Mobile Number *</label>
-        <input type="tel" id="demoMobile" class="form-input" placeholder="10-digit number" maxlength="10" required>
+        <label class="form-label" for="demoMobile">WhatsApp Mobile Number *</label>
+        <input type="tel" id="demoMobile" class="form-input" placeholder="10-digit mobile number" inputmode="numeric" maxlength="14" autocomplete="tel" required>
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">Email Address</label>
-        <input type="email" id="demoEmail" class="form-input" placeholder="optional@example.com">
+        <label class="form-label" for="demoBusinessName">Business Name *</label>
+        <input type="text" id="demoBusinessName" class="form-input" placeholder="e.g. Patil Electricals" autocomplete="organization" required>
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">Business Name</label>
-        <input type="text" id="demoBusinessName" class="form-input" placeholder="e.g. Patil Electricals">
+        <label class="form-label" for="demoEmail">Email Address</label>
+        <input type="email" id="demoEmail" class="form-input" placeholder="name@business.com" autocomplete="email">
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">Business Type</label>
+        <label class="form-label" for="demoBusinessType">Business Type</label>
         <select id="demoBusinessType" class="form-select">
-          <option>Trading</option>
-          <option>Retail</option>
-          <option>Wholesale</option>
+          <option value="">Select…</option>
+          <option>Retail / POS</option>
+          <option>Wholesale &amp; Distribution</option>
           <option>Manufacturing</option>
           <option>Pharmacy</option>
-          <option>Hardware Store</option>
-          <option>Grocery</option>
-          <option>Electronics</option>
-          <option>Restaurant / Food</option>
-          <option>Services</option>
+          <option>Services / AMC</option>
+          <option>Trading</option>
           <option>Other</option>
         </select>
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">City</label>
-        <input type="text" id="demoCity" class="form-input" placeholder="e.g. Pune">
+        <label class="form-label" for="demoCity">City</label>
+        <input type="text" id="demoCity" class="form-input" placeholder="e.g. Pune" autocomplete="address-level2">
       </div>
       <div style="margin-bottom:12px;">
-        <label class="form-label">Preferred Demo Date *</label>
+        <label class="form-label" for="demoDate">Preferred Demo Date * <span style="font-weight:400;color:#64748b;">(Mon–Sat)</span></label>
         <input type="date" id="demoDate" class="form-input" required>
       </div>
       <div style="margin-bottom:20px;">
-        <label class="form-label">Preferred Time Slot *</label>
+        <label class="form-label" for="demoTime">Preferred Time Slot *</label>
         <select id="demoTime" class="form-select">
-          <option>10:00 AM - 12:00 PM (Morning)</option>
-          <option>12:00 PM - 03:00 PM (Midday)</option>
-          <option>03:00 PM - 06:00 PM (Evening)</option>
-          <option>06:00 PM - 08:00 PM (Late Evening)</option>
+          <option>10:00 AM – 12:00 PM</option>
+          <option>12:00 PM – 03:00 PM</option>
+          <option>03:00 PM – 06:00 PM</option>
         </select>
       </div>
 
-      <div id="demoError" style="display:none; color:#dc2626; font-size:13px; margin-bottom:12px; padding:10px; background:#fef2f2; border-radius:8px;"></div>
+      <p id="demoError" class="form-error" role="alert" hidden></p>
 
-      <button id="demoSubmitBtn" class="btn btn-primary" style="width:100%;" onclick="handleDemoSubmit()">
-        Book My Free Demo 🚀
-      </button>
+      <button id="demoSubmitBtn" type="submit" class="btn btn-primary" style="width:100%;">Book My Free Demo</button>
+      <p class="form-consent">We'll contact you on WhatsApp / phone about Techstar ERP. See our <a href="privacy.html">Privacy Policy</a>.</p>
 
       <p style="text-align:center; margin-top:16px; font-size:12px; color:#64748b;">
         Want to start right away?
-        <a href="#" data-action="start-trial" style="color: var(--color-primary); font-weight:600;">Start Free Trial</a>
+        <a href="free-trial.html" data-action="start-trial" style="color: var(--color-primary); font-weight:600;">Start Free Trial</a>
       </p>
-    </div>
+    </form>
 
     <!-- SUCCESS STATE -->
-    <div id="demoSuccessWrap" style="display:none; text-align:center; padding: 24px 0;">
-      <div style="font-size:48px; margin-bottom:16px;">🎉</div>
-      <h3 class="text-xl font-extrabold mb-2" style="color: var(--color-primary-dark);">Demo Request Received!</h3>
-      <p class="text-sm text-muted mb-4">Our team will WhatsApp you shortly to confirm your demo slot.</p>
+    <div id="demoSuccessWrap" role="status" style="display:none; text-align:center; padding: 24px 0;">
+      <div style="font-size:40px; margin-bottom:12px; color:#16a34a;">✓</div>
+      <h3 class="text-xl font-extrabold mb-2" style="color: var(--color-primary-dark);">Demo request received</h3>
+      <p class="text-sm text-muted mb-4">Our team will WhatsApp you within one working day to confirm your slot.</p>
 
-      <div id="confirmSummary" style="background:#f0f9ff; border:1.5px solid #bae6fd; border-radius:12px; padding:16px; text-align:left; margin-bottom:20px; font-size:13px;">
-        <!-- filled by JS -->
-      </div>
+      <div id="confirmSummary" style="background:#f0f9ff; border:1.5px solid #bae6fd; border-radius:12px; padding:16px; text-align:left; margin-bottom:20px; font-size:13px; color:#0c4a6e; display:flex; flex-direction:column; gap:6px;"></div>
 
-      <div style="background: linear-gradient(135deg, #4338ca 0%, #3b82f6 100%); border-radius:14px; padding:20px; margin-bottom:16px;">
-        <p style="color:#e0e7ff; font-size:13px; margin-bottom:12px; font-weight:500;">
-          🚀 Want to explore Techstar ERP before your demo?
-        </p>
-        <button id="startTrialAfterDemo" class="btn" style="background:white; color:#4338ca; font-weight:700; border:none; padding:12px 24px; border-radius:8px; font-size:14px; cursor:pointer; width:100%; display:none;" onclick="handleStartTrialAfterDemo()">
+      <div style="background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); border-radius:14px; padding:20px; margin-bottom:16px;">
+        <p style="color:#e0e7ff; font-size:13px; margin-bottom:12px; font-weight:500;">Want to explore Techstar ERP before your demo?</p>
+        <button id="startTrialAfterDemo" type="button" class="btn" style="background:white; color:#1e40af; font-weight:700; border:none; padding:12px 24px; border-radius:8px; font-size:14px; cursor:pointer; width:100%;">
           Start Free Trial Now
         </button>
-        <p id="sessionLoading" style="color:#c7d2fe; font-size:12px; margin-top:8px; display:none;">Preparing your personalised account...</p>
       </div>
 
       <a href="index.html" class="btn btn-secondary">Return to Home</a>
@@ -124,83 +122,76 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/firebase-integration.js"></script>
+  <script src="js/erp-integration.js"></script>
   <script>
-    // Min date = today
-    document.getElementById("demoDate").min = new Date().toISOString().split("T")[0];
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const pad = (n) => String(n).padStart(2, "0");
+      const now = new Date();
+      // Local (IST) date, not UTC — before 05:30 the UTC date is still yesterday
+      $("demoDate").min = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 
-    let savedLeadId = null;
+      let lead = null;
 
-    async function handleDemoSubmit() {
-      const name = document.getElementById("demoName").value.trim();
-      const mobile = document.getElementById("demoMobile").value.trim();
-      const date = document.getElementById("demoDate").value;
-      const errorEl = document.getElementById("demoError");
-      const btn = document.getElementById("demoSubmitBtn");
-
-      errorEl.style.display = "none";
-
-      if (!name) { showError("Please enter your full name."); return; }
-      if (!mobile || mobile.replace(/\D/g,"").length < 10) { showError("Please enter a valid 10-digit mobile number."); return; }
-      if (!date) { showError("Please select your preferred demo date."); return; }
-
-      btn.disabled = true;
-      btn.textContent = "Booking your demo...";
-
-      const formData = {
-        name,
-        mobile: mobile.replace(/\D/g,""),
-        email: document.getElementById("demoEmail").value.trim(),
-        businessName: document.getElementById("demoBusinessName").value.trim(),
-        businessType: document.getElementById("demoBusinessType").value,
-        city: document.getElementById("demoCity").value.trim(),
-        preferredDate: date,
-        preferredTime: document.getElementById("demoTime").value,
-      };
-
-      savedLeadId = await window.TechstarERP.saveDemoLead(formData);
-
-      // Show success
-      document.getElementById("demoMainWrap").style.display = "none";
-      document.getElementById("demoSuccessWrap").style.display = "block";
-
-      // Fill summary
-      document.getElementById("confirmSummary").innerHTML = `
-        <div style="display:flex; flex-direction:column; gap:6px; color:#0c4a6e;">
-          <div><strong>Name:</strong> ${formData.name}</div>
-          ${formData.businessName ? `<div><strong>Business:</strong> ${formData.businessName}</div>` : ""}
-          <div><strong>Date:</strong> ${formData.preferredDate}</div>
-          <div><strong>Time:</strong> ${formData.preferredTime}</div>
-          <div><strong>WhatsApp:</strong> ${formData.mobile}</div>
-        </div>`;
-
-      // Show trial button
-      const trialBtn = document.getElementById("startTrialAfterDemo");
-      trialBtn.style.display = "block";
-    }
-
-    async function handleStartTrialAfterDemo() {
-      const btn = document.getElementById("startTrialAfterDemo");
-      const loading = document.getElementById("sessionLoading");
-      btn.style.display = "none";
-      loading.style.display = "block";
-
-      let sessionCode = null;
-      if (savedLeadId) {
-        sessionCode = await window.TechstarERP.createOnboardingSession(savedLeadId);
+      function showError(msg) {
+        $("demoError").textContent = msg;
+        $("demoError").hidden = false;
       }
 
-      window.TechstarERP.navigateToFreeTrial(sessionCode, savedLeadId);
-    }
+      $("demoMainWrap").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        $("demoError").hidden = true;
+        const erp = window.TechstarERP;
+        const name = $("demoName").value.trim();
+        const businessName = $("demoBusinessName").value.trim();
+        const date = $("demoDate").value;
+        const mobile = erp ? erp.cleanIndianMobile($("demoMobile").value) : null;
 
-    function showError(msg) {
-      const el = document.getElementById("demoError");
-      el.textContent = msg;
-      el.style.display = "block";
-      const btn = document.getElementById("demoSubmitBtn");
-      btn.disabled = false;
-      btn.textContent = "Book My Free Demo 🚀";
-    }
+        if (!name) return showError("Please enter your full name.");
+        if (!mobile) return showError("Please enter a valid 10-digit mobile number.");
+        if (!businessName) return showError("Please enter your business name.");
+        if (!date) return showError("Please select your preferred demo date.");
+        if (new Date(date + "T12:00:00").getDay() === 0) return showError("Demos run Monday to Saturday. Please pick another date.");
+        if (!erp) return showError("Please try again in a moment.");
+
+        const btn = $("demoSubmitBtn");
+        btn.disabled = true;
+        btn.textContent = "Booking your demo...";
+
+        const formData = {
+          name,
+          mobile,
+          email: $("demoEmail").value.trim(),
+          businessName,
+          businessType: $("demoBusinessType").value,
+          city: $("demoCity").value.trim(),
+          preferredDate: date,
+          preferredTime: $("demoTime").value,
+        };
+        const result = await erp.submitLead(formData);
+        btn.disabled = false;
+        btn.textContent = "Book My Free Demo";
+        if (!result.ok) return showError(`${result.error} You can also WhatsApp or call us on +91 95790 05645.`);
+
+        lead = result;
+        $("demoMainWrap").style.display = "none";
+        $("demoSuccessWrap").style.display = "block";
+        const summary = $("confirmSummary");
+        summary.replaceChildren();
+        [["Name", formData.name], ["Business", formData.businessName], ["Date", formData.preferredDate],
+         ["Time", formData.preferredTime], ["WhatsApp", formData.mobile]].forEach(([k, v]) => {
+          const row = document.createElement("div");
+          const label = document.createElement("strong");
+          label.textContent = `${k}: `;
+          row.append(label, document.createTextNode(v));
+          summary.append(row);
+        });
+      });
+
+      $("startTrialAfterDemo").addEventListener("click", () => {
+        window.TechstarERP.navigateToFreeTrial(lead && lead.sessionCode, lead && lead.leadId);
+      });
+    })();
   </script>
 </body>
 </html>

@@ -64,6 +64,24 @@
   transform: translateX(0);
 }
 
+/* Without JavaScript (or if main.js fails) nothing stays hidden: the <head> script adds .js */
+html:not(.js) .animate-fade-up,
+html:not(.js) .animate-fade,
+html:not(.js) .animate-scale,
+html:not(.js) .animate-slide-left,
+html:not(.js) .animate-slide-right {
+  opacity: 1;
+  transform: none;
+}
+
+/* Phones: fade only — sideways slides push content past the screen edge */
+@media (max-width: 768px) {
+  .animate-slide-left,
+  .animate-slide-right {
+    transform: none;
+  }
+}
+
 /* Staggered Delays */
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }

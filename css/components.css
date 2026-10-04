@@ -72,7 +72,8 @@
   transition: all var(--transition-base);
   z-index: var(--z-dropdown);
 }
-.nav-dropdown:hover .nav-dropdown-menu {
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -156,7 +157,9 @@
   padding-top: var(--space-6);
 }
 
-@media (max-width: 1024px) { .nav { display: none; } .hamburger { display: flex; } .header-actions .btn { display: none; } .header-actions .btn-login { display: none; } }
+/* Below 1200px the full nav no longer fits (common laptops run 1100–1280px wide at 125% scaling) */
+@media (max-width: 1200px) { .nav { display: none; } .hamburger { display: flex; } .header-actions .btn { display: none; } .header-actions .btn-login { display: none; } }
+.mobile-nav-sub { padding-left: var(--space-8); font-size: var(--text-sm); color: var(--text-muted, #64748B); }
 
 /* ====== HERO ====== */
 .hero {
@@ -569,6 +572,7 @@
   box-shadow: var(--shadow-xl);
 }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.form-grid > * { min-width: 0; }
 .form-group { display: flex; flex-direction: column; gap: var(--space-2); }
 .form-group.full { grid-column: 1 / -1; }
 .form-label { font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--text-dark); }
@@ -595,6 +599,18 @@
 }
 .form-success.show { display: block; }
 .form-success-icon { font-size: 4rem; margin-bottom: var(--space-4); }
+.form-error {
+  margin-top: var(--space-4);
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: #B91C1C;
+  font-size: 14px;
+}
+.form-error[hidden] { display: none; }
+.form-consent { margin-top: 10px; font-size: 12px; color: var(--text-muted, #64748B); text-align: center; }
+.form-consent a { color: var(--color-primary); font-weight: 600; }
 @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } .demo-form-card { padding: var(--space-6); } }
 
 /* ====== FAQ ====== */
@@ -1393,3 +1409,26 @@
     padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
   }
 }
+
+/* ====== PRICING (js/plans.js) ====== */
+.billing-toggle { display: inline-flex; gap: 4px; padding: 5px; background: #F1F5F9; border: 1px solid #CBD5E1; border-radius: 14px; }
+.billing-toggle button { border: 0; background: transparent; padding: 9px 20px; font-size: 14px; font-weight: 700; color: #475569; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.billing-toggle button.active { background: #2563EB; color: #FFFFFF; }
+.billing-toggle button:focus-visible { outline: 2px solid #1E40AF; outline-offset: 2px; }
+.billing-save { font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 20px; background: #DCFCE7; color: #166534; }
+.plan-card { display: flex; flex-direction: column; text-align: left; position: relative; }
+.plan-price { margin: 18px 0 2px; }
+.plan-price-amount { font-size: 40px; font-weight: 800; color: #0F172A; line-height: 1; }
+.plan-price-cycle { font-size: 14px; color: #64748B; font-weight: 500; }
+.plan-tax-note { font-size: 12px; color: #166534; font-weight: 600; margin-bottom: 14px; }
+.plan-limits { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.plan-limits span { font-size: 12px; font-weight: 700; color: #1E40AF; background: #EFF6FF; border: 1px solid #BFDBFE; padding: 4px 10px; border-radius: 999px; }
+.plan-card .pricing-features { flex: 1; }
+.plan-cta { width: 100%; margin-top: 20px; text-align: center; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.plan-compare-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; }
+.plan-compare-table th, .plan-compare-table td { padding: 12px 14px; border-bottom: 1px solid #E2E8F0; text-align: center; }
+.plan-compare-table th:first-child, .plan-compare-table td:first-child { text-align: left; font-weight: 600; color: #334155; }
+.plan-compare-table thead th { background: #F8FAFC; font-weight: 800; color: #0F172A; }
+
+.plan-card .plan-desc { font-size: 14px; line-height: 1.55; color: #475569; min-height: 4.6em; margin: 6px 0 0; }

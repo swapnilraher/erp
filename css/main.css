@@ -338,6 +338,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-6);
 }
 
+/* A wide child (table, mockup) must not stretch its column past the screen; it scrolls inside its own wrapper */
+.grid > * { min-width: 0; }
+
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }

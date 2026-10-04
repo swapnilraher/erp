@@ -5,6 +5,9 @@
 
 'use strict';
 
+// Tells the <head> fallback that animations will be revealed (otherwise it un-hides everything)
+window.TechstarMainReady = true;
+
 /* ====== HEADER / SCROLL ====== */
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.hamburger');
@@ -17,19 +20,16 @@ if (header) {
 }
 
 if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    const isOpen = hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
+  const setMenu = (open) => {
+    hamburger.classList.toggle('open', open);
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  hamburger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+  mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) setMenu(false); });
 }
 
 /* ====== SMOOTH SCROLL FOR ANCHOR LINKS ====== */
@@ -166,19 +166,48 @@ const formContent = document.querySelector('#formContent');
 const formSuccess = document.querySelector('#formSuccess');
 
 if (demoForm) {
-  demoForm.addEventListener('submit', function(e) {
+  const errorBox = demoForm.querySelector('.form-error');
+  const showError = (msg) => {
+    if (!errorBox) return;
+    errorBox.textContent = msg;
+    errorBox.hidden = false;
+  };
+
+  demoForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('[type="submit"]');
-    btn.textContent = 'Submitting...';
-    btn.disabled = true;
+    const label = btn.textContent;
+    const value = (id) => (document.getElementById(id)?.value || '').trim();
+    const erp = window.TechstarERP;
+    if (errorBox) errorBox.hidden = true;
 
-    // Simulate API call
-    setTimeout(() => {
+    const mobile = erp ? erp.cleanIndianMobile(value('demo-mobile')) : null;
+    if (!value('demo-name')) return showError('Please enter your name.');
+    if (!value('demo-business')) return showError('Please enter your business name.');
+    if (!mobile) return showError('Please enter a valid 10-digit mobile number.');
+    if (!erp) return showError('Please try again in a moment.');
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    const branches = value('demo-branches');
+    const notes = value('demo-requirements');
+    const result = await erp.submitLead({
+      name: value('demo-name'),
+      mobile,
+      email: value('demo-email'),
+      businessName: value('demo-business'),
+      businessType: value('demo-sector'),
+      message: [branches && `Branches: ${branches}`, notes].filter(Boolean).join(' | '),
+    });
+
+    if (result.ok) {
       if (formContent) formContent.style.display = 'none';
-      if (formSuccess) {
-        formSuccess.classList.add('show');
-      }
-    }, 1500);
+      if (formSuccess) formSuccess.classList.add('show');
+      return;
+    }
+    btn.textContent = label;
+    btn.disabled = false;
+    showError(`${result.error} You can also WhatsApp or call us on +91 95790 05645.`);
   });
 }
 

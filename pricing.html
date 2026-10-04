@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing Plans — Techstar ERP</title>
-  <meta name="description" content="Flexible pricing modules for single branch outlets up to enterprise global retail groups by TechStar Business Solution.">
+  <meta name="description" content="Techstar ERP plans: Starter ₹4,999/year, Business ₹9,999/year, Enterprise ₹24,999/year. Prices include GST; 3-day free trial on Business.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -13,185 +17,112 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/mockups.css">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
   <!-- Header -->
   <header class="header scrolled">
     <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="Techstar ERP Logo" style="height: 38px;">
+      <a href="index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
       </a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="features.html" class="nav-link">Features</a>
-        <a href="solutions.html" class="nav-link">Solutions</a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="features/gst.html" class="nav-link">GST</a>
         <a href="industries.html" class="nav-link">Industries</a>
         <a href="pricing.html" class="nav-link active">Pricing</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
         <a href="login.html" class="btn-login" data-action="erp-login">Login</a>
-        <a href="free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial" style="background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">Start Free Trial 🚀</a>
+        <a href="demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
       </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Title & Billing Switch Section -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="features.html" class="mobile-nav-link">Features</a>
+    <a href="features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="industries.html" class="mobile-nav-link">Industries</a>
+    <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
+
+  <!-- Title & billing switch -->
   <section class="section" style="padding-top:140px; text-align:center; padding-bottom:30px;">
     <div class="container">
-      <span class="section-badge">Commercial Plans</span>
-      <h1 class="text-5xl font-extrabold mb-4">Choose Your Techstar ERP Plan</h1>
+      <span class="section-badge">Plans &amp; Pricing</span>
+      <h1 class="text-5xl font-extrabold mb-4">Simple plans for Indian businesses</h1>
       <p class="section-subtitle centered" style="max-width:680px; margin:0 auto 28px;">
-        High-density double-entry accounting, GST registers, real-time inventory, and multi-branch operations backed by Cashfree Payments.
+        Every price below includes GST. Try the Business plan free for 3 days — no credit card needed.
       </p>
-
-      <!-- Segmented Control for Mobile & Desktop -->
-      <div style="display:inline-flex; align-items:center; background:#F1F5F9; padding:5px; border-radius:14px; border:1px solid #CBD5E1; margin-bottom:10px;">
-        <button id="toggleMonthlyBtn" type="button" onclick="setBillingMode('monthly')" style="border:none; background:transparent; padding:9px 20px; font-size:14px; font-weight:700; color:#475569; border-radius:10px; cursor:pointer; transition:all 0.2s;">
-          Monthly Billing
-        </button>
-        <button id="toggleYearlyBtn" type="button" onclick="setBillingMode('yearly')" style="border:none; background:#2563EB; color:white; padding:9px 20px; font-size:14px; font-weight:700; border-radius:10px; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:6px;">
-          <span>Yearly Billing</span>
-          <span style="background:#1E40AF; color:#DBEAFE; font-size:11px; font-weight:800; padding:2px 7px; border-radius:20px; text-transform:uppercase;">Save 17%</span>
-        </button>
+      <div class="billing-toggle" role="group" aria-label="Billing period">
+        <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+        <button type="button" data-billing="yearly" class="active" aria-pressed="true">Yearly <span class="billing-save">Save ~17%</span></button>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Cards -->
+  <!-- Plan cards (rendered from the ERP's public plans by js/plans.js) -->
   <section class="section" style="padding-top:0;">
     <div class="container">
-      <div class="grid grid-3 mb-16" style="align-items:stretch;">
-        <!-- Starter Plan -->
-        <div id="cardStarter" class="pricing-card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid #CBD5E1; border-radius:20px; padding:32px; background:#FFFFFF;">
-          <div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#0284C7; background:#E0F2FE; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
-              Starter Outlets
-            </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Starter Plan</h3>
-            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Retail Counters &amp; Traders</div>
-            
-            <div style="margin:20px 0 15px 0;">
-              <span id="priceStarter" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹4,999</span>
-              <span id="cycleStarter" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
-              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
-            </div>
-            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Fast billing, thermal receipts, basic inventory, and single-store GST tax invoice registers.</p>
-
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#F8FAFC; border-radius:10px; border:1px solid #E2E8F0; font-size:12px;">
-              <div style="font-weight:700; color:#0F172A;">👥 Up to 2 Users</div>
-              <div style="font-weight:700; color:#0F172A;">🏢 1 Branch</div>
-            </div>
-            
-            <ul class="pricing-features" style="margin-top:16px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Up to 2 Active Users</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> 1 Branch Location</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Fast Invoicing &amp; Thermal POS Printing</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Stock &amp; Basic Inventory Tracking</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GST Invoices &amp; GSTR-1 Ledger</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Customer &amp; Vendor Ledgers</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Standard WhatsApp &amp; Email Support</li>
-            </ul>
-          </div>
-          <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="linkStarter" href="https://erp-system-psi-one.vercel.app/register?plan=starter" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
-              Get Starter Plan
-            </a>
-          </div>
-        </div>
-
-        <!-- Business Plan (Featured) -->
-        <div id="cardBusiness" class="pricing-card featured" style="display:flex; flex-direction:column; justify-content:space-between; border:2px solid #2563EB; border-radius:20px; padding:32px; background:#FFFFFF; box-shadow:0 10px 30px rgba(37,99,235,0.15); position:relative;">
-          <div>
-            <div class="pricing-badge" style="background:#2563EB; color:white; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; position:absolute; top:-12px; left:50%; transform:translateX(-50%); padding:4px 14px; border-radius:20px; font-size:11px;">
-              Most Popular • Best Value
-            </div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#1D4ED8; background:#DBEAFE; padding:4px 10px; border-radius:6px; margin-bottom:12px; margin-top:6px;">
-              High Growth
-            </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Business Plan</h3>
-            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Wholesalers &amp; Multi-Counter Retail</div>
-            
-            <div style="margin:20px 0 15px 0;">
-              <span id="priceBusiness" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹9,999</span>
-              <span id="cycleBusiness" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
-              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
-            </div>
-            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Full double-entry accounting, GST registers, warehouse FIFO stock, barcode design &amp; priority support.</p>
-
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#EFF6FF; border-radius:10px; border:1px solid #BFDBFE; font-size:12px;">
-              <div style="font-weight:700; color:#1E40AF;">👥 Up to 5 Users</div>
-              <div style="font-weight:700; color:#1E40AF;">🏢 1 Main Branch</div>
-            </div>
-            
-            <ul class="pricing-features" style="margin-top:16px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 5 Active Users with RBAC</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>1 Branch with Multi-Counter POS</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Double-Entry Accounting &amp; Balance Sheets</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Multi-Godown / Warehouse Inventory</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> GSTR-1, GSTR-3B &amp; Tax Audit Export</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Barcode &amp; Thermal Label Designer</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Priority Desk Support &amp; CA Filing Prep</li>
-            </ul>
-          </div>
-          <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="linkBusiness" href="https://erp-system-psi-one.vercel.app/register?plan=business" class="btn btn-primary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0; background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
-              Start 14-Day Free Trial
-            </a>
-          </div>
-        </div>
-
-        <!-- Enterprise Plan -->
-        <div id="cardEnterprise" class="pricing-card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid #CBD5E1; border-radius:20px; padding:32px; background:#FFFFFF;">
-          <div>
-            <div style="display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; color:#7C3AED; background:#F3E8FF; padding:4px 10px; border-radius:6px; margin-bottom:12px;">
-              Enterprise Scale
-            </div>
-            <h3 class="pricing-plan-name" style="margin-bottom:4px; font-size:22px; font-weight:800; color:#0F172A;">Enterprise Plan</h3>
-            <div class="pricing-plan-title" style="color:#64748B; font-size:13px; font-weight:600;">For Multi-Branch Store Chains</div>
-            
-            <div style="margin:20px 0 15px 0;">
-              <span id="priceEnterprise" style="font-size:42px; font-weight:800; color:#0F172A; line-height:1;">₹24,999</span>
-              <span id="cycleEnterprise" style="font-size:14px; color:#64748B; font-weight:500;">/ year</span>
-              <span class="save-tag" style="font-size:11px; font-weight:700; color:#16A34A; background:#DCFCE7; padding:3px 8px; border-radius:6px; margin-left:6px;">Save ~17%</span>
-            </div>
-            <p class="pricing-plan-desc font-medium" style="color:#475569; font-size:13px; line-height:1.5;">Scale seamlessly across 5 regional branches, department roles, and statutory e-invoice compliance.</p>
-
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0; padding:10px; background:#FAF5FF; border-radius:10px; border:1px solid #E9D5FF; font-size:12px;">
-              <div style="font-weight:700; color:#6B21A8;">👥 Up to 15 Users</div>
-              <div style="font-weight:700; color:#6B21A8;">🏢 Up to 5 Branches</div>
-            </div>
-            
-            <ul class="pricing-features" style="margin-top:16px;">
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 15 Active Users Across Teams</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> <strong>Up to 5 Active Branches &amp; Hubs</strong></li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Inter-Branch Stock Transfers &amp; Approvals</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Advanced Role Permissions &amp; Audit Log</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Statutory E-Way Bill &amp; E-Invoice Prep</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Dedicated Account Manager (Pune HQ)</li>
-              <li class="pricing-feature"><div class="pricing-feature-icon">✓</div> Custom Thermal &amp; Letterhead Printing</li>
-            </ul>
-          </div>
-          <div style="margin-top:25px; padding-top:20px; border-top:1px solid #F1F5F9;">
-            <a id="linkEnterprise" href="https://erp-system-psi-one.vercel.app/register?plan=enterprise" class="btn btn-secondary" style="width:100%; text-align:center; font-weight:700; font-size:15px; padding:13px 0;">
-              Get Enterprise Plan
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="grid grid-3 mb-8" style="align-items:stretch;" data-plans="full"></div>
+      <noscript><p class="text-center">Starter ₹4,999/year · Business ₹9,999/year (2 branches, 3-day free trial) · Enterprise ₹24,999/year — prices include GST.</p></noscript>
+      <h2 class="text-2xl font-extrabold mb-4 text-center">Compare plans</h2>
+      <div data-plans="compare"></div>
+      <p class="text-center text-muted text-sm mt-8" style="max-width:720px;margin:var(--space-8) auto 0;">
+        Prices include GST. Yearly plans are billed upfront; monthly plans renew through Cashfree AutoPay and can be cancelled any time from the app.
+        e-Invoice and e-Way Bill files are exported as the official JSON for the government portals. See our <a href="refund-policy.html">Refund &amp; Cancellation Policy</a>.
+      </p>
     </div>
   </section>
 
-  <!-- CTA Banner -->
+  <!-- CTA -->
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="cta-banner">
-        <h2 class="cta-banner-title">Need a Special Custom Feature Map?</h2>
-        <p class="cta-banner-sub">Speak with Swapnil Aher & our product team at TechStar Business Solution. We tailor custom ERP integrations for your business.</p>
-        <a href="demo.html" class="btn btn-white btn-lg">Request Custom Demo Walkthrough</a>
+        <h2 class="cta-banner-title">Not sure which plan fits?</h2>
+        <p class="cta-banner-sub">Book a free demo. We'll look at your branches, users and GST needs and suggest the right plan.</p>
+        <a href="demo.html" class="btn btn-white btn-lg">Book a Free Demo</a>
       </div>
     </div>
   </section>
@@ -202,47 +133,39 @@
       <div class="footer-top">
         <div>
           <a href="index.html" class="logo footer-logo">
-            <div class="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 22h7l3-6 3 6h7L12 2zm0 6l4.5 9h-9L12 8z" />
-              </svg>
-            </div>
-            <span class="logo-text">Techstar<span>ERP</span></span>
+            <img src="assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
           </a>
-          <p class="footer-tagline">Complete Billing, GST Invoicing, POS Terminals, Live Inventory & Double-Entry Accounting unified across multi-branch environments.</p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
-            <a href="#" class="footer-social-link" aria-label="LinkedIn">LN</a>
-            <a href="#" class="footer-social-link" aria-label="Youtube">YT</a>
-          </div>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
         </div>
         <div>
-          <h4 class="footer-col-title">Modules</h4>
+          <h4 class="footer-col-title">Product</h4>
           <ul class="footer-links">
-            <li><a href="features/accounting.html" class="footer-link">Double-Entry Accounting</a></li>
-            <li><a href="features/gst.html" class="footer-link">GST registers & Tax</a></li>
-            <li><a href="features/billing-sales.html" class="footer-link">Sales & billing templates</a></li>
-            <li><a href="features/pos.html" class="footer-link">POS quick checkout</a></li>
-            <li><a href="features/inventory.html" class="footer-link">Inventory & FIFO stock</a></li>
+            <li><a href="features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-col-title">Solutions</h4>
+          <h4 class="footer-col-title">Industries</h4>
           <ul class="footer-links">
-            <li><a href="solutions.html" class="footer-link">Retail Chains</a></li>
-            <li><a href="solutions.html" class="footer-link">Wholesale Distributors</a></li>
-            <li><a href="solutions.html" class="footer-link">Manufacturing Units</a></li>
-            <li><a href="solutions.html" class="footer-link">Pharmacies & Clinics</a></li>
-            <li><a href="solutions.html" class="footer-link">Hardware Stores</a></li>
+            <li><a href="industries.html" class="footer-link">Retail &amp; POS</a></li>
+            <li><a href="industries.html" class="footer-link">Wholesale &amp; Distribution</a></li>
+            <li><a href="industries.html" class="footer-link">Manufacturing</a></li>
+            <li><a href="industries.html" class="footer-link">Pharmacies</a></li>
+            <li><a href="industries.html" class="footer-link">Services &amp; AMC</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-col-title">Support</h4>
           <ul class="footer-links">
-            <li><a href="faq.html" class="footer-link">Common FAQs</a></li>
-            <li><a href="contact.html" class="footer-link">Raise a ticket</a></li>
+            <li><a href="faq.html" class="footer-link">FAQs</a></li>
             <li><a href="docs.html" class="footer-link">Help documentation</a></li>
+            <li><a href="contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="demo.html" class="footer-link">Book a demo</a></li>
             <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
             <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
             <li><a href="refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
@@ -251,13 +174,13 @@
         <div>
           <h4 class="footer-col-title">Contact</h4>
           <div class="footer-contact-item">
-            <span>📍 Address:</span> TechStar Business Solution, Pune, Maharashtra, India
+            <span>Address:</span> Pune, Maharashtra, India
           </div>
           <div class="footer-contact-item">
-            <span>📧 Email:</span> official@swapnilaher.in
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
           </div>
           <div class="footer-contact-item">
-            <span>📞 Call Desk:</span> +91 9579005645
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
           </div>
         </div>
       </div>
@@ -274,100 +197,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/firebase-integration.js"></script>
-  <script>
-    let currentBilling = "yearly";
-    let planData = {
-      starter: { monthly: 499, yearly: 4999 },
-      business: { monthly: 999, yearly: 9999 },
-      enterprise: { monthly: 2499, yearly: 24999 }
-    };
-
-    function updatePricingDisplay() {
-      const isYearly = currentBilling === "yearly";
-      const cycleText = isYearly ? "/ year" : "/ month";
-      const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp-system-psi-one.vercel.app" + p;
-
-      // Starter
-      const starterPrice = isYearly ? planData.starter.yearly : planData.starter.monthly;
-      const elPriceStarter = document.getElementById("priceStarter");
-      const elCycleStarter = document.getElementById("cycleStarter");
-      const elLinkStarter = document.getElementById("linkStarter");
-      if (elPriceStarter) elPriceStarter.innerText = "₹" + Number(starterPrice).toLocaleString("en-IN");
-      if (elCycleStarter) elCycleStarter.innerText = cycleText;
-      if (elLinkStarter) elLinkStarter.href = getUrl(`/register?plan=starter&billing=${currentBilling}`);
-
-      // Business
-      const businessPrice = isYearly ? planData.business.yearly : planData.business.monthly;
-      const elPriceBusiness = document.getElementById("priceBusiness");
-      const elCycleBusiness = document.getElementById("cycleBusiness");
-      const elLinkBusiness = document.getElementById("linkBusiness");
-      if (elPriceBusiness) elPriceBusiness.innerText = "₹" + Number(businessPrice).toLocaleString("en-IN");
-      if (elCycleBusiness) elCycleBusiness.innerText = cycleText;
-      if (elLinkBusiness) elLinkBusiness.href = getUrl(`/register?plan=business&billing=${currentBilling}`);
-
-      // Enterprise
-      const entPrice = isYearly ? planData.enterprise.yearly : planData.enterprise.monthly;
-      const elPriceEnterprise = document.getElementById("priceEnterprise");
-      const elCycleEnterprise = document.getElementById("cycleEnterprise");
-      const elLinkEnterprise = document.getElementById("linkEnterprise");
-      if (elPriceEnterprise) elPriceEnterprise.innerText = "₹" + Number(entPrice).toLocaleString("en-IN");
-      if (elCycleEnterprise) elCycleEnterprise.innerText = cycleText;
-      if (elLinkEnterprise) elLinkEnterprise.href = getUrl(`/register?plan=enterprise&billing=${currentBilling}`);
-
-      // Savings tags
-      document.querySelectorAll(".save-tag").forEach(el => {
-        el.style.display = isYearly ? "inline-block" : "none";
-      });
-
-      // Toggle buttons
-      const monthlyBtn = document.getElementById("toggleMonthlyBtn");
-      const yearlyBtn = document.getElementById("toggleYearlyBtn");
-      if (isYearly) {
-        if (yearlyBtn) {
-          yearlyBtn.style.background = "#2563EB";
-          yearlyBtn.style.color = "white";
-        }
-        if (monthlyBtn) {
-          monthlyBtn.style.background = "transparent";
-          monthlyBtn.style.color = "#475569";
-        }
-      } else {
-        if (monthlyBtn) {
-          monthlyBtn.style.background = "#2563EB";
-          monthlyBtn.style.color = "white";
-        }
-        if (yearlyBtn) {
-          yearlyBtn.style.background = "transparent";
-          yearlyBtn.style.color = "#475569";
-        }
-      }
-    }
-
-    function setBillingMode(mode) {
-      currentBilling = mode;
-      updatePricingDisplay();
-    }
-
-    document.addEventListener("DOMContentLoaded", async () => {
-      // Hydrate authoritative prices dynamically from ERP API if reachable
-      if (window.TechstarERP && typeof window.TechstarERP.fetchPublicPlans === "function") {
-        try {
-          const remotePlans = await window.TechstarERP.fetchPublicPlans();
-          if (remotePlans && Array.isArray(remotePlans)) {
-            remotePlans.forEach(p => {
-              if (planData[p.id]) {
-                if (typeof p.monthlyPrice === "number") planData[p.id].monthly = p.monthlyPrice;
-                if (typeof p.yearlyPrice === "number") planData[p.id].yearly = p.yearlyPrice;
-              }
-            });
-          }
-        } catch (e) {
-          console.warn("Using local plan fallback on pricing page");
-        }
-      }
-      updatePricingDisplay();
-    });
-  </script>
+  <script src="js/erp-integration.js"></script>
+  <script src="js/plans.js"></script>
 </body>
 </html>
