@@ -9,7 +9,11 @@ This file is internal. `firebase.json` ignores `docs/**`, so it is never deploye
 
 ### Progress (4-Oct-2026)
 
-Nothing is committed or deployed.
+**Deployed 4-Oct-2026:**
+- ERP commit `a52b578f` (only this work's 17 files) was pushed → Vercel. It was live after about 4 minutes: CORS for the marketing origin and the new plan texts confirmed.
+- Website commit `ec58d51` → `firebase deploy` to `erp-by-swapnilaher.web.app`. Live checks: pages 200, `docs/` 404, `/login` → app, plan cards from the live API, 0 JS errors.
+- The website commit is not pushed to GitHub yet.
+- No real lead was submitted as a test. Submit one demo request and check Admin → Demo leads.
 
 | Task | State |
 |---|---|
