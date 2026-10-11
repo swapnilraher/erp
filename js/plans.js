@@ -8,9 +8,9 @@
   const FALLBACK = [
     {
       id: "starter", name: "Starter Plan", monthlyPrice: 499, yearlyPrice: 4999, maxUsers: 2, maxBranches: 1,
-      recommended: false, trialEligible: false, displayOrder: 1,
+      recommended: false, trialEligible: true, displayOrder: 1,
       description: "Ideal for single-location retail counters, individual traders, and early-stage small businesses.",
-      features: ["Up to 2 Active Users", "1 Branch Location", "Fast Invoicing & Thermal POS Printing",
+      features: ["Up to 2 Active Users", "1 Branch Location", "Fast Invoicing & Thermal POS Printing", "Invoices & payment reminders on WhatsApp",
         "Stock & Basic Inventory Tracking", "GST Invoices & GSTR-1 Ledger", "Customer & Vendor Accounts",
         "Standard WhatsApp & Email Support"],
     },
@@ -19,8 +19,8 @@
       recommended: true, trialEligible: true, displayOrder: 2,
       description: "Comprehensive multi-user ERP for growing distributors, wholesalers, and multi-counter retail shops.",
       features: ["Up to 5 Active Users with RBAC", "2 Active Branches with Multi-Counter POS",
-        "Double-Entry Accounting & Balance Sheets", "Multi-Godown / Warehouse Inventory", "Reorder Report & Purchase Orders",
-        "GSTR-1, GSTR-3B & Form 3CD Data", "e-Invoice & e-Way Bill JSON (portal-ready)", "Custom Barcode & Label Designer",
+        "Double-Entry Accounting & Balance Sheets", "Invoices & payment reminders on WhatsApp", "Multi-Godown / Warehouse Inventory", "Reorder Report & Purchase Orders",
+        "GSTR-1, GSTR-3B & Form 3CD Data", "Direct e-Invoice (IRN) & e-Way Bill from the ERP", "Custom Barcode & Label Designer",
         "Priority Desk Support & CA Assistance"],
     },
     {
@@ -28,11 +28,21 @@
       recommended: false, trialEligible: false, displayOrder: 3,
       description: "Scale operations seamlessly across multi-branch chains, regional warehouses, and expanding teams.",
       features: ["Up to 15 Active Users Across Departments", "Up to 5 Active Branches & Regional Hubs",
-        "Inter-Branch Stock Transfers & Approvals", "Advanced Role-Based Access & Audit Trails",
-        "e-Invoice & e-Way Bill JSON (portal-ready)", "Dedicated Account Manager (Pune HQ)",
+        "Inter-Branch Stock Transfers & Approvals", "Invoices & payment reminders on WhatsApp", "Advanced Role-Based Access & Audit Trails",
+        "Direct e-Invoice (IRN) & e-Way Bill from the ERP", "Dedicated Account Manager (Head Office)",
         "Custom Thermal & Letterhead Printing", "Custom ERP Integrations & Priority Support"],
     },
   ];
+
+  // The largest plan: quoted per customer, so no price and no sign-up link — contact buttons only.
+  // Keep equal to src/config/contactPlan.ts in the ERP.
+  const CONTACT_PLAN = {
+    id: "dedicated", name: "Dedicated Cloud",
+    description: "Your own server and domain, with no limit on users or branches, for large chains and groups.",
+    features: ["Dedicated CPU & server for your company", "Custom domain (e.g. erp.yourcompany.com)", "Unlimited users",
+      "Unlimited branches", "Dedicated relationship manager (RM)", "Everything in the Enterprise plan"],
+  };
+  const CONTACT = { phone: "+91 95790 05645", tel: "tel:+919579005645", whatsapp: "https://wa.me/919579005645", email: "official@swapnilaher.in" };
 
   let plans = FALLBACK.slice();
   let billing = "yearly";
@@ -45,8 +55,14 @@
     if (text != null) e.textContent = text;
     return e;
   };
-  const registerUrl = (plan) => {
-    const path = `/register?plan=${encodeURIComponent(plan.id)}&billing=${billing}`;
+  // Owner's decision (11-Oct-2026): Starter and Business can be tried free; every self-service plan can be bought directly.
+  // Keep equal to TRIAL_PLAN_IDS in the ERP's src/config/trial.ts.
+  const TRIAL_PLAN_IDS = ["starter", "business"];
+  const canTry = (plan) => TRIAL_PLAN_IDS.includes(String(plan.id).toLowerCase());
+  const registerUrl = (plan, intent) => {
+    const path = intent === "trial"
+      ? `/register?plan=${encodeURIComponent(plan.id)}&intent=trial`
+      : `/register?plan=${encodeURIComponent(plan.id)}&billing=${billing}&intent=buy`;
     return window.TechstarERP ? window.TechstarERP.getErpUrl(path) : "https://erp.techstarsolution.in" + path;
   };
   const hasEinvoice = (plan) => (plan.features || []).some((f) => /e-?invoice/i.test(f));
@@ -81,11 +97,57 @@
     });
     c.append(ul);
 
-    const cta = el("a", "btn " + (plan.recommended ? "btn-primary" : "btn-secondary") + " plan-cta",
-      plan.trialEligible ? "Start 3-day free trial" : `Choose ${plan.name.replace(/ Plan$/, "")}`);
-    cta.href = registerUrl(plan);
-    cta.addEventListener("click", () => window.TechstarERP && window.TechstarERP.trackEvent("plan_click", { plan: plan.id, billing }));
-    c.append(cta);
+    // Starter / Business: try free or buy now; other plans: buy now
+    const actions = el("div", "plan-contact-actions");
+    if (canTry(plan)) {
+      const trial = el("a", "btn " + (plan.recommended ? "btn-primary" : "btn-secondary") + " plan-cta", "Start 3-day free trial");
+      trial.href = registerUrl(plan, "trial");
+      trial.addEventListener("click", () => window.TechstarERP && window.TechstarERP.trackEvent("plan_click", { plan: plan.id, intent: "trial" }));
+      actions.append(trial);
+    }
+    const buy = el("a", "btn " + (canTry(plan) ? "btn-secondary" : plan.recommended ? "btn-primary" : "btn-secondary") + " plan-cta",
+      "Subscribe now · " + (billing === "yearly" ? "yearly" : "monthly"));
+    buy.href = registerUrl(plan, "buy");
+    buy.addEventListener("click", () => window.TechstarERP && window.TechstarERP.trackEvent("plan_click", { plan: plan.id, billing, intent: "buy" }));
+    actions.append(buy);
+    if (canTry(plan)) actions.append(el("div", "plan-tax-note", "Trial: no card needed"));
+    c.append(actions);
+    return c;
+  }
+
+  function contactCard(compact) {
+    const message = "Hello, I would like a quote for the " + CONTACT_PLAN.name + " plan of Techstar ERP.";
+    const c = el("div", "pricing-card plan-card plan-card-contact");
+    c.append(el("h3", "pricing-plan-title", CONTACT_PLAN.name));
+    c.append(el("p", "pricing-plan-desc plan-desc", CONTACT_PLAN.description));
+    const price = el("div", "plan-price");
+    price.append(el("span", "plan-price-amount", "Let's talk"));
+    c.append(price);
+    c.append(el("div", "plan-tax-note", "A plan set up for your business"));
+    const limits = el("div", "plan-limits");
+    limits.append(el("span", "", "Unlimited users"), el("span", "", "Unlimited branches"));
+    c.append(limits);
+    const ul = el("ul", "pricing-features");
+    (compact ? CONTACT_PLAN.features.slice(0, 2).concat(CONTACT_PLAN.features.slice(4, 5)) : CONTACT_PLAN.features).forEach((f) => {
+      const li = el("li", "pricing-feature");
+      li.append(el("div", "pricing-feature-icon", "✓"), document.createTextNode(" " + f));
+      ul.append(li);
+    });
+    c.append(ul);
+    const actions = el("div", "plan-contact-actions");
+    const call = el("a", "btn btn-primary plan-cta", "Call us: " + CONTACT.phone);
+    call.href = CONTACT.tel;
+    const wa = el("a", "btn btn-secondary", "WhatsApp");
+    wa.href = CONTACT.whatsapp + "?text=" + encodeURIComponent(message);
+    wa.target = "_blank";
+    wa.rel = "noopener noreferrer";
+    const mail = el("a", "btn btn-secondary", "Email");
+    mail.href = "mailto:" + CONTACT.email + "?subject=" + encodeURIComponent(CONTACT_PLAN.name + " plan — quote") + "&body=" + encodeURIComponent(message);
+    [call, wa, mail].forEach((a) => a.addEventListener("click", () => window.TechstarERP && window.TechstarERP.trackEvent("contact_plan_click", { plan: CONTACT_PLAN.id, via: a.textContent })));
+    const row = el("div", "plan-contact-row");
+    row.append(wa, mail);
+    actions.append(call, row);
+    c.append(actions);
     return c;
   }
 
@@ -94,21 +156,28 @@
     const head = el("tr");
     head.append(el("th", "", ""));
     plans.forEach((p) => head.append(el("th", "", p.name.replace(/ Plan$/, ""))));
+    head.append(el("th", "", CONTACT_PLAN.name));
     const thead = el("thead"); thead.append(head); table.append(thead);
+    // [label, value per plan, value for Dedicated Cloud]
     const rows = [
-      ["Price per year (incl. GST)", (p) => inr(p.yearlyPrice)],
-      ["Price per month (incl. GST)", (p) => inr(p.monthlyPrice)],
-      ["Users", (p) => String(p.maxUsers)],
-      ["Branches", (p) => String(p.maxBranches)],
+      ["Price per year (incl. GST)", (p) => inr(p.yearlyPrice), "Contact us"],
+      ["Price per month (incl. GST)", (p) => inr(p.monthlyPrice), "Contact us"],
+      ["Users", (p) => String(p.maxUsers), "Unlimited"],
+      ["Branches", (p) => String(p.maxBranches), "Unlimited"],
       // Owner's decision (4-Oct-2026): every plan except Starter
-      ["e-Invoice & e-Way Bill JSON", (p) => (p.id !== "starter" || hasEinvoice(p) ? "✓" : "—")],
-      ["3-day free trial", (p) => (p.trialEligible ? "✓" : "—")],
+      ["e-Invoice & e-Way Bill, generated from the ERP", (p) => (p.id !== "starter" || hasEinvoice(p) ? "✓" : "—"), "✓"],
+      ["Invoices & reminders on WhatsApp", () => "✓", "✓"],
+      ["Dedicated server & custom domain", () => "—", "✓"],
+      ["Dedicated relationship manager", (p) => ((p.features || []).some((f) => /dedicated account manager/i.test(f)) ? "✓" : "—"), "✓"],
+      ["3-day free trial", (p) => (canTry(p) ? "✓" : "—"), "—"],
+      ["Subscribe without a trial", () => "✓", "Contact us"],
     ];
     const tbody = el("tbody");
-    rows.forEach(([label, fn]) => {
+    rows.forEach(([label, fn, contactValue]) => {
       const tr = el("tr");
       tr.append(el("td", "", label));
       plans.forEach((p) => tr.append(el("td", "", fn(p))));
+      tr.append(el("td", "", contactValue));
       tbody.append(tr);
     });
     table.append(tbody);
@@ -121,7 +190,16 @@
     mounts.forEach(({ node, mode }) => {
       node.replaceChildren();
       if (mode === "compare") node.append(compare());
-      else plans.forEach((p) => node.append(card(p, mode === "compact")));
+      else {
+        plans.forEach((p) => node.append(card(p, mode === "compact")));
+        node.append(contactCard(mode === "compact"));
+      }
+    });
+    // The "save" badge states the real saving of the current prices, not a fixed number
+    const best = Math.max(0, ...plans.map(savingPct));
+    document.querySelectorAll(".billing-save").forEach((badge) => {
+      badge.textContent = best > 0 ? "Save up to " + best + "%" : "";
+      badge.hidden = best === 0;
     });
     document.querySelectorAll("[data-billing]").forEach((b) => {
       const on = b.getAttribute("data-billing") === billing;

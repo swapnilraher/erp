@@ -31,36 +31,42 @@
       Start Your Free 3-Day Trial
     </h1>
     <p class="text-sm text-muted" style="margin-bottom:24px;">
-      No credit card required. Set up your business in under 2 minutes.
+      Choose Starter or Business, no credit card required. Set up your business in under 2 minutes.
     </p>
 
     <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 24px rgba(0,0,0,0.08); margin-bottom:20px;">
       <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px; text-align:left;">
         <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
           <span style="color:#22c55e; font-size:18px;">✓</span>
-          <span>Full access to all ERP modules</span>
+          <span>GST billing, invoicing &amp; POS on both trials</span>
         </div>
         <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
           <span style="color:#22c55e; font-size:18px;">✓</span>
-          <span>GST billing, invoicing &amp; POS included</span>
+          <span>Stock, double-entry accounting &amp; reports</span>
         </div>
         <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
           <span style="color:#22c55e; font-size:18px;">✓</span>
-          <span>Multi-branch inventory management</span>
+          <span>Business trial: e-Invoice &amp; e-Way Bill generated from the ERP</span>
         </div>
         <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
           <span style="color:#22c55e; font-size:18px;">✓</span>
-          <span>Double-entry accounting &amp; reports</span>
+          <span>Invoices on WhatsApp</span>
         </div>
         <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:#1e293b;">
           <span style="color:#22c55e; font-size:18px;">✓</span>
-          <span>No credit card, no commitment</span>
+          <span>No credit card, no commitment — subscribe when you are ready</span>
         </div>
       </div>
 
-      <a id="startTrialLink" href="https://erp.techstarsolution.in/register" class="btn btn-primary" style="width:100%; display:block; font-size:15px; padding:14px;">
-        Create My Free Account 🚀
+      <a id="startTrialBusiness" href="https://erp.techstarsolution.in/register?plan=business&amp;intent=trial" class="btn btn-primary" style="width:100%; display:block; font-size:15px; padding:14px; margin-bottom:10px;">
+        Try Business free (with e-Invoice) 🚀
       </a>
+      <a id="startTrialLink" href="https://erp.techstarsolution.in/register?plan=starter&amp;intent=trial" class="btn btn-secondary" style="width:100%; display:block; font-size:15px; padding:14px;">
+        Try Starter free
+      </a>
+      <p style="margin-top:10px; font-size:13px;">
+        Don't need a trial? <a href="pricing.html" style="color:var(--color-primary); font-weight:600;">Subscribe to a plan →</a>
+      </p>
 
       <p style="margin-top:12px; font-size:12px; color:#94a3b8;">
         Already have an account?
@@ -78,7 +84,8 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const getUrl = window.TechstarERP ? window.TechstarERP.getErpUrl : (p) => "https://erp.techstarsolution.in" + p;
-      document.getElementById("startTrialLink").href = getUrl("/register");
+      document.getElementById("startTrialLink").href = getUrl("/register?plan=starter&intent=trial");
+      document.getElementById("startTrialBusiness").href = getUrl("/register?plan=business&intent=trial");
       document.getElementById("loginLink").href = getUrl("/login");
     });
   </script>

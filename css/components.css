@@ -1432,3 +1432,22 @@
 .plan-compare-table thead th { background: #F8FAFC; font-weight: 800; color: #0F172A; }
 
 .plan-card .plan-desc { font-size: 14px; line-height: 1.55; color: #475569; min-height: 4.6em; margin: 6px 0 0; }
+
+/* Four plans in a row (Starter, Business, Enterprise, Dedicated Cloud): tighter cards */
+.grid-4 > .plan-card { padding: 28px 22px; }
+.grid-4 > .plan-card .plan-price-amount { font-size: 34px; }
+/* Dedicated Cloud: no price, contact buttons only */
+.plan-card-contact { background: #0F172A; border-color: #0F172A; }
+.plan-card-contact .pricing-plan-title { color: #FFFFFF; }
+.plan-card-contact .plan-desc, .plan-card-contact .pricing-plan-desc { color: #CBD5E1; border-bottom-color: rgba(255,255,255,0.12); }
+.plan-card-contact .plan-price-amount { color: #FFFFFF; }
+.plan-card-contact .plan-tax-note { color: #86EFAC; }
+.plan-card-contact .plan-limits span { color: #FFFFFF; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); }
+.plan-card-contact .pricing-feature { color: #E2E8F0; }
+.plan-contact-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.plan-contact-actions .plan-cta { margin-top: 0; }
+.plan-contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.plan-contact-row .btn { justify-content: center; text-align: center; }
+.plan-card-contact .btn-secondary { background: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.35); }
+.plan-card-contact .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+@media (max-width: 640px) { .grid-4[data-plans] { grid-template-columns: 1fr; } }
