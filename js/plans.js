@@ -11,7 +11,7 @@
       recommended: false, trialEligible: true, displayOrder: 1,
       description: "Ideal for single-location retail counters, individual traders, and early-stage small businesses.",
       features: ["Up to 2 Active Users", "1 Branch Location", "Fast Invoicing & Thermal POS Printing", "Invoices & payment reminders on WhatsApp",
-        "Stock & Basic Inventory Tracking", "GST Invoices & GSTR-1 Ledger", "Customer & Vendor Accounts",
+        "Stock & Basic Inventory Tracking", "GST Invoices & GSTR-1 Ledger", "Direct e-Invoice (IRN) & e-Way Bill from the ERP", "Customer & Vendor Accounts",
         "Standard WhatsApp & Email Support"],
     },
     {
@@ -65,7 +65,6 @@
       : `/register?plan=${encodeURIComponent(plan.id)}&billing=${billing}&intent=buy`;
     return window.TechstarERP ? window.TechstarERP.getErpUrl(path) : "https://erp.techstarsolution.in" + path;
   };
-  const hasEinvoice = (plan) => (plan.features || []).some((f) => /e-?invoice/i.test(f));
   const savingPct = (plan) => {
     const full = plan.monthlyPrice * 12;
     return full > plan.yearlyPrice ? Math.round(((full - plan.yearlyPrice) / full) * 100) : 0;
@@ -164,8 +163,8 @@
       ["Price per month (incl. GST)", (p) => inr(p.monthlyPrice), "Contact us"],
       ["Users", (p) => String(p.maxUsers), "Unlimited"],
       ["Branches", (p) => String(p.maxBranches), "Unlimited"],
-      // Owner's decision (4-Oct-2026): every plan except Starter
-      ["e-Invoice & e-Way Bill, generated from the ERP", (p) => (p.id !== "starter" || hasEinvoice(p) ? "✓" : "—"), "✓"],
+      // Owner's decision (12-Oct-2026): every plan, Starter included
+      ["e-Invoice & e-Way Bill, generated from the ERP", () => "✓", "✓"],
       ["Invoices & reminders on WhatsApp", () => "✓", "✓"],
       ["Dedicated server & custom domain", () => "—", "✓"],
       ["Dedicated relationship manager", (p) => ((p.features || []).some((f) => /dedicated account manager/i.test(f)) ? "✓" : "—"), "✓"],
