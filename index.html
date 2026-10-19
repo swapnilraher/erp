@@ -17,11 +17,13 @@
   <meta property="og:description" content="Billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses. Prices include GST.">
   <meta property="og:url" content="https://erp-by-swapnilaher.web.app/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Techstar ERP">
+  <meta property="og:locale" content="en_IN">
 
   <!-- Google Fonts & Stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
@@ -32,6 +34,32 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Structured data for search engines. Prices: keep equal to the ERP's plans (incl. GST). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Techstar ERP",
+        "legalName": "TECHSTAR MONEY SOLUTION PRIVATE LIMITED",
+        "url": "https://erp-by-swapnilaher.web.app/",
+        "logo": "https://erp-by-swapnilaher.web.app/assets/icon-512.png",
+        "email": "official@swapnilaher.in",
+        "telephone": "+91-95790-05645",
+        "address": { "@type": "PostalAddress", "addressLocality": "Chhatrapati Sambhajinagar", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Techstar ERP",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web browser (Windows, macOS, Android, iOS)",
+        "description": "GST billing, POS, inventory, accounting and GST returns for Indian businesses, with e-Invoice and e-Way Bill generated from the ERP.",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "INR", "lowPrice": "4999", "highPrice": "24999", "offerCount": "3" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -100,19 +128,29 @@
   <!-- ====== HERO SECTION ====== -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-content animate-fade-up">
+      <!-- No scroll-in animation above the fold: the first screen must paint at once -->
+      <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span> Billing &bull; POS &bull; Inventory &bull; Accounting &bull; GST Returns
         </div>
         <h1 class="hero-title">
-          Run Your Entire Business<br><span class="gradient-text">From One Place</span>
+          GST Billing, Stock &amp; Accounts<br><span class="gradient-text">in One Simple ERP</span>
         </h1>
         <p class="hero-subtitle">
-          GST billing, POS, inventory, accounting and GST returns for Indian businesses — with e-Invoice and e-Way Bill generated straight from the ERP, invoices sent on WhatsApp, multi-branch control and Tally data migration.
+          For shops, traders and distributors: e-Invoice and e-Way Bill straight from your bill, invoices on WhatsApp and a Tally-style keyboard — on your computer or phone.
         </p>
         <div class="btn-group">
           <a href="free-trial.html" class="btn btn-primary btn-xl" id="hero-trial-btn" data-action="start-trial">Start Free Trial</a>
           <a href="demo.html" class="btn btn-secondary btn-xl" id="hero-demo-btn">Book a Free Demo</a>
+        </div>
+        <!-- Price of the cheapest plan, per month: yearly = yearly price ÷ 12, monthly = monthly price.
+             js/plans.js fills it in from the ERP's plans and switches it with the Yearly / Monthly buttons; these are the current values. -->
+        <div class="hero-price">
+          <div class="billing-toggle billing-toggle-sm" role="group" aria-label="Billing period">
+            <button type="button" data-billing="yearly" class="active" aria-pressed="true">Yearly <span class="billing-save">Save 17%</span></button>
+            <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+          </div>
+          <p class="hero-price-line"><strong class="hero-price-amount" data-hero-price>₹417</strong> a month, <span data-hero-price-note>paid annually (₹4,999 a year)</span> · GST included · 7-day free trial, no card needed</p>
         </div>
         <!-- Compact trust tags -->
         <div class="hero-trust-tags">
@@ -124,165 +162,21 @@
           <span class="hero-trust-tag"><span class="htag-dot"></span> Multi-Branch</span>
           <span class="hero-trust-tag"><span class="htag-dot"></span> Works on Mobile</span>
         </div>
-
-        <!-- Mobile-only lightweight product card (shown below 1024px) -->
-        <div class="hero-mobile-card animate-scale delay-200">
-          <div class="hmc-header">
-            <span class="hmc-title">📊 Techstar ERP — Dashboard</span>
-            <span class="hmc-live"><span class="hmc-live-dot"></span> Live</span>
-          </div>
-          <div class="hmc-kpi-row">
-            <div class="hmc-kpi">
-              <div class="hmc-kpi-label">Today's Sales</div>
-              <div class="hmc-kpi-value green">₹1,24,500</div>
-              <div class="hmc-kpi-change">↑ +14% vs Yesterday</div>
-            </div>
-            <div class="hmc-kpi">
-              <div class="hmc-kpi-label">Net Profit (MTD)</div>
-              <div class="hmc-kpi-value blue">₹4.2L</div>
-              <div class="hmc-kpi-change">34% net margin</div>
-            </div>
-            <div class="hmc-kpi">
-              <div class="hmc-kpi-label">Receivables</div>
-              <div class="hmc-kpi-value orange">₹2.1L</div>
-              <div class="hmc-kpi-change">Due in 15 Days</div>
-            </div>
-            <div class="hmc-kpi">
-              <div class="hmc-kpi-label">Low Stock Items</div>
-              <div class="hmc-kpi-value" style="color:var(--color-danger)">12 Items</div>
-              <div class="hmc-kpi-change" style="color:var(--color-danger)">⚠ Alert Active</div>
-            </div>
-          </div>
-          <div class="hmc-compliance-row">
-            <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">🧾 GSTR-1 (Aug)</span>
-              <span class="hmc-compliance-badge verified">✓ Ready</span>
-            </div>
-            <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">📄 e-Invoice IRN</span>
-              <span class="hmc-compliance-badge generated">✓ Exported</span>
-            </div>
-            <div class="hmc-compliance-item">
-              <span class="hmc-compliance-label">🏦 Bank Reconciliation</span>
-              <span class="hmc-compliance-badge active">3 to match</span>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- Desktop ERP Dashboard Mockup (hidden below 1024px) -->
-      <div class="hero-image erp-mockup-wrapper animate-scale delay-200">
-        <!-- Floating cards -->
-        <div class="float-card top-left animate-float-card">
-          <div class="fc-icon">📊</div>
-          <div class="fc-label">Today's Sales</div>
-          <div class="fc-value">₹1,24,500</div>
-        </div>
-        <div class="float-card top-right animate-float-card float-delay-1">
-          <div class="fc-icon">✅</div>
-          <div class="fc-label">GSTR-1 (Aug)</div>
-          <div class="fc-value" style="color:var(--color-accent-dark)">Ready</div>
-        </div>
-        <div class="float-card bottom-left animate-float-card float-delay-2">
-          <div class="fc-icon">📄</div>
-          <div class="fc-label">e-Invoice IRN</div>
-          <div class="fc-value" style="color:var(--color-primary-light)">Exported</div>
-        </div>
-        <div class="float-card bottom-right animate-float-card float-delay-3">
-          <div class="fc-icon">🏢</div>
-          <div class="fc-label">Branches</div>
-          <div class="fc-value">3 Active</div>
-        </div>
-
-        <!-- Live ERP Dashboard Mockup -->
-        <div class="erp-mockup">
-          <div class="mockup-topbar">
-            <div class="mockup-dot red"></div>
-            <div class="mockup-dot yellow"></div>
-            <div class="mockup-dot green"></div>
-            <div class="mockup-topbar-title">Techstar ERP - Headquarters Control Center</div>
+      <!-- A real ERP screen: beside the text on desktop, below the buttons on phones -->
+      <figure class="shot hero-shot hero-image">
+        <div class="mock-screen">
+          <div class="mock-titlebar">
+            <div class="mock-dot mock-dot-r"></div>
+            <div class="mock-dot mock-dot-y"></div>
+            <div class="mock-dot mock-dot-g"></div>
+            <div class="mock-tab-title">Techstar ERP — e-Invoice / e-Way Bill</div>
           </div>
-          <div class="mockup-body">
-            <div class="mockup-sidebar">
-              <div class="mockup-sidebar-icon active">📊</div>
-              <div class="mockup-sidebar-icon">🧾</div>
-              <div class="mockup-sidebar-icon">📦</div>
-              <div class="mockup-sidebar-icon">👥</div>
-              <div class="mockup-sidebar-icon">⚙️</div>
-            </div>
-            <div class="mockup-main">
-              <div class="mockup-header-row">
-                <div class="mockup-title">Control Dashboard</div>
-                <div class="mockup-date">Real-Time Data Feed</div>
-              </div>
-              <div class="mockup-kpi-grid">
-                <div class="mockup-kpi">
-                  <div class="mockup-kpi-label">Sales (MTD)</div>
-                  <div class="mockup-kpi-value green">₹12.4L</div>
-                  <div class="mockup-kpi-change">+14% vs Last Month</div>
-                </div>
-                <div class="mockup-kpi">
-                  <div class="mockup-kpi-label">Purchase</div>
-                  <div class="mockup-kpi-value blue">₹5.8L</div>
-                  <div class="mockup-kpi-change">-2% vs Last Month</div>
-                </div>
-                <div class="mockup-kpi">
-                  <div class="mockup-kpi-label">Receivables</div>
-                  <div class="mockup-kpi-value orange">₹2.1L</div>
-                  <div class="mockup-kpi-change">Due in 15 Days</div>
-                </div>
-                <div class="mockup-kpi">
-                  <div class="mockup-kpi-label">Net Profit</div>
-                  <div class="mockup-kpi-value green">₹4.2L</div>
-                  <div class="mockup-kpi-change">34% net margin</div>
-                </div>
-              </div>
-
-              <div class="mockup-charts-row">
-                <div class="mockup-chart-card">
-                  <div class="mockup-chart-title">Branch Sales Performance (Weekly)</div>
-                  <div class="mockup-bars">
-                    <div class="mockup-bar" style="height: 60%"></div>
-                    <div class="mockup-bar" style="height: 80%"></div>
-                    <div class="mockup-bar accent" style="height: 95%"></div>
-                    <div class="mockup-bar" style="height: 40%"></div>
-                    <div class="mockup-bar" style="height: 70%"></div>
-                  </div>
-                </div>
-                <div class="mockup-chart-card">
-                  <div class="mockup-chart-title">GST Compliance</div>
-                  <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px;">
-                    <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>GSTR-3B (Aug)</span><span style="color:#34D399;font-weight:700;">✓ Ready</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>e-Invoice IRN</span><span style="color:#60A5FA;font-weight:700;">Generated</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>GSTR-2B recon</span><span style="color:#FBBF24;font-weight:700;">2 to review</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,0.7);">
-                      <span>GSTR-1 Status</span><span style="color:#34D399;font-weight:700;">Ready</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mockup-txns">
-                <div class="mockup-txn-title">Recent Real-Time Operations</div>
-                <div class="mockup-txn-row">
-                  <span class="mockup-txn-name">INV-2045 - Mumbai Branch</span>
-                  <span class="mockup-txn-amt plus">+₹18,500</span>
-                </div>
-                <div class="mockup-txn-row">
-                  <span class="mockup-txn-name">PUR-0982 - Delhi Warehouse</span>
-                  <span class="mockup-txn-amt minus">-₹42,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src="assets/screens/hero-einvoice-ewaybill-1280.webp" srcset="assets/screens/hero-einvoice-ewaybill-720.webp 720w, assets/screens/hero-einvoice-ewaybill-1280.webp 1280w" sizes="(max-width: 1024px) 100vw, 640px" width="1280" height="800" alt="Techstar ERP e-Way Bill screen: invoices with their e-Way Bill numbers and validity" decoding="async">
         </div>
-      </div>
+        <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -297,7 +191,7 @@
       <div class="trust-separator"></div>
       <div class="trust-item"><div class="trust-icon">⌨️</div><span class="trust-label">Tally-style keyboard</span></div>
       <div class="trust-separator"></div>
-      <div class="trust-item"><div class="trust-icon">🇮🇳</div><span class="trust-label">Data stored in India</span></div>
+      <div class="trust-item"><div class="trust-icon"><svg class="flag-in" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="5.34" fill="#FF9933"/><rect y="5.33" width="24" height="5.34" fill="#FFFFFF"/><rect y="10.66" width="24" height="5.34" fill="#138808"/><circle cx="12" cy="8" r="2" fill="none" stroke="#000080" stroke-width="0.6"/></svg></div><span class="trust-label">Data stored in India</span></div>
       <div class="trust-separator"></div>
       <div class="trust-item"><div class="trust-icon">🏢</div><span class="trust-label">Multi-branch control</span></div>
     </div>
@@ -437,24 +331,6 @@
             <div class="gst-card-feature">Mark filed with ARN — month locks</div>
             <div class="gst-card-feature">GSTR-9 / 9C working, CMP-08 / GSTR-4</div>
           </div>
-          <div class="einv-mockup">
-            <div class="einv-row">
-              <span class="einv-label">GSTR-1 (Aug)</span>
-              <span class="einv-badge-green">✓ JSON ready</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">JSON checks</span>
-              <span class="einv-val">0 errors</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">GSTR-3B (Aug)</span>
-              <span class="einv-badge-blue">Working ready</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">Filed with ARN</span>
-              <span class="einv-val">Jul ✓</span>
-            </div>
-          </div>
         </div>
 
         <div class="gst-card">
@@ -464,26 +340,8 @@
           <div class="gst-card-features">
             <div class="gst-card-feature">IRN and signed QR on the invoice</div>
             <div class="gst-card-feature">Checks the invoice before generating</div>
-            <div class="gst-card-feature">All plans</div>
             <div class="gst-card-feature">Cancel within 24 hours from the ERP</div>
-          </div>
-          <div class="einv-mockup">
-            <div class="einv-row">
-              <span class="einv-label">Invoice No.</span>
-              <span class="einv-val">INV-2045</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">IRN</span>
-              <span class="einv-badge-green">✓ Generated</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">Signed QR</span>
-              <span class="einv-badge-blue">On the invoice</span>
-            </div>
-            <div class="einv-row">
-              <span class="einv-label">Plan</span>
-              <span class="einv-val">Business</span>
-            </div>
+            <div class="gst-card-feature">All plans · ₹2 per IRN from your prepaid wallet</div>
           </div>
         </div>
 
@@ -494,26 +352,8 @@
           <div class="gst-card-features">
             <div class="gst-card-feature">EWB number from the invoice, challan or return</div>
             <div class="gst-card-feature">Transporter &amp; vehicle details</div>
-            <div class="gst-card-feature">All plans</div>
             <div class="gst-card-feature">Part-B, extend and cancel in the ERP</div>
-          </div>
-          <div class="ewb-mockup">
-            <div class="ewb-row">
-              <span class="ewb-label">Invoice No.</span>
-              <span class="ewb-val">INV-2045</span>
-            </div>
-            <div class="ewb-row">
-              <span class="ewb-label">e-Way Bill</span>
-              <span class="ewb-active">✓ Generated</span>
-            </div>
-            <div class="ewb-row">
-              <span class="ewb-label">Vehicle No.</span>
-              <span class="ewb-val">MH-12-AB-3456</span>
-            </div>
-            <div class="ewb-row">
-              <span class="ewb-label">Distance</span>
-              <span class="ewb-val">148 km</span>
-            </div>
+            <div class="gst-card-feature">All plans · ₹2 per e-Way Bill action from your prepaid wallet</div>
           </div>
         </div>
 
@@ -526,13 +366,6 @@
             <div class="gst-card-feature">IMS action per invoice</div>
             <div class="gst-card-feature">ITC register &amp; Rule 37 (180-day)</div>
             <div class="gst-card-feature">HSN / SAC summary with UQC</div>
-          </div>
-          <div class="gstin-mockup" style="margin-top:var(--space-4);">
-            <div class="gstin-result">
-              <div class="gstin-result-row"><span class="gstin-key">Matched</span><span class="gstin-val">142 bills</span></div>
-              <div class="gstin-result-row"><span class="gstin-key">Not in GSTR-2B</span><span class="gstin-val">2 bills</span></div>
-              <div class="gstin-result-row"><span class="gstin-key">ITC available</span><span class="gstin-verified-badge">₹18,900</span></div>
-            </div>
           </div>
         </div>
       </div>
@@ -588,41 +421,18 @@
             <a href="features/billing-sales.html" class="btn btn-secondary btn-arrow">Learn Billing Module <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="mock-screen">
-              <div class="mock-titlebar">
-                <div class="mock-dot mock-dot-r"></div>
-                <div class="mock-dot mock-dot-y"></div>
-                <div class="mock-dot mock-dot-g"></div>
-                <div class="mock-tab-title">Techstar — GST Sales Invoice</div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">Print or send on WhatsApp</div>
+                </div>
+                <img src="assets/screens/billing-print-whatsapp.webp" width="1120" height="999" alt="Techstar ERP print window: A4, A5 or 80 mm thermal, send the invoice on WhatsApp, payment link and UPI QR" loading="lazy" decoding="async">
               </div>
-              <div style="background:white;padding:16px;font-size:11px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #1E3A8A;">
-                  <div style="font-weight:800;font-size:13px;color:#1E3A8A;">TAX INVOICE</div>
-                  <div style="font-size:10px;color:#64748B;">INV-2045 | 08-Sep-2026</div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;font-size:10px;">
-                  <div><div style="font-weight:700;color:#334155;margin-bottom:2px;">Bill To:</div><div>M/s Shree Ganesh Traders</div><div style="color:#64748B;">GSTIN: 27AAJFS6310Q1ZN</div></div>
-                  <div style="text-align:right;"><div style="font-weight:700;color:#334155;margin-bottom:2px;">From:</div><div>Sai Computers, Pune</div><div style="color:#64748B;">GSTIN: 27AAKFS4821M1ZQ</div></div>
-                </div>
-                <table style="width:100%;border-collapse:collapse;font-size:10px;margin-bottom:8px;">
-                  <tr style="background:#F1F5F9;font-weight:700;">
-                    <th style="padding:5px;text-align:left;">Item</th>
-                    <th style="padding:5px;text-align:right;">Qty</th>
-                    <th style="padding:5px;text-align:right;">Rate</th>
-                    <th style="padding:5px;text-align:right;">GST</th>
-                    <th style="padding:5px;text-align:right;">Total</th>
-                  </tr>
-                  <tr><td style="padding:4px 5px;">Core Processor v2</td><td style="padding:4px 5px;text-align:right;">5</td><td style="padding:4px 5px;text-align:right;">₹2,400</td><td style="padding:4px 5px;text-align:right;">18%</td><td style="padding:4px 5px;text-align:right;">₹14,160</td></tr>
-                  <tr><td style="padding:4px 5px;">Wireless Mouse</td><td style="padding:4px 5px;text-align:right;">10</td><td style="padding:4px 5px;text-align:right;">₹1,200</td><td style="padding:4px 5px;text-align:right;">18%</td><td style="padding:4px 5px;text-align:right;">₹14,160</td></tr>
-                </table>
-                <div style="text-align:right;font-size:11px;">
-                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:2px;"><span style="color:#64748B;">Taxable value:</span><span>₹24,000</span></div>
-                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:2px;"><span style="color:#64748B;">CGST 9%:</span><span>₹2,160</span></div>
-                  <div style="display:flex;justify-content:flex-end;gap:16px;margin-bottom:4px;"><span style="color:#64748B;">SGST 9%:</span><span>₹2,160</span></div>
-                  <div style="display:flex;justify-content:flex-end;gap:16px;font-weight:800;font-size:12px;color:#1E3A8A;border-top:1.5px solid #E2E8F0;padding-top:4px;"><span>Grand Total:</span><span>₹28,320</span></div>
-                </div>
-              </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -652,44 +462,18 @@
             <a href="features/accounting.html" class="btn btn-secondary btn-arrow">Learn Accounting Module <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="mock-screen">
-              <div class="mock-titlebar">
-                <div class="mock-dot mock-dot-r"></div>
-                <div class="mock-dot mock-dot-y"></div>
-                <div class="mock-dot mock-dot-g"></div>
-                <div class="mock-tab-title">Techstar — Profit &amp; Loss Statement</div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">Customers — credit limit and dues</div>
+                </div>
+                <img src="assets/screens/accounts-credit-due.webp" width="1200" height="407" alt="Techstar ERP customer list with credit limit, amount due, an over-limit warning and a WhatsApp payment reminder" loading="lazy" decoding="async">
               </div>
-              <div style="background: white; padding: 20px; font-size: 11px;">
-                <div style="display:flex; justify-content:space-between; font-weight:700; border-bottom:2px solid #334155; padding-bottom:5px; margin-bottom:10px;">
-                  <span>Particulars</span>
-                  <span>Amount</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-weight: 600;">
-                  <span>Revenue from Sales</span>
-                  <span>₹12,45,000</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px; color:#F87171;">
-                  <span>Less: Cost of Goods Sold (COGS)</span>
-                  <span>-₹5,82,000</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; font-weight:700; border-top:1.5px solid #E2E8F0; padding-top:6px; margin-bottom:12px; color:#10B981;">
-                  <span>Gross Profit</span>
-                  <span>₹6,63,000</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-                  <span>Operating Expenses (Rent, Staff, Utility)</span>
-                  <span>-₹1,80,000</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-                  <span>Marketing &amp; Admin Expenses</span>
-                  <span>-₹62,000</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; font-weight:800; border-top:2px solid #334155; padding-top:8px; font-size:13px; color:#1E3A8A;">
-                  <span>Net Profit</span>
-                  <span>₹4,21,000</span>
-                </div>
-              </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -723,55 +507,18 @@
             <a href="features/gst.html" class="btn btn-secondary btn-arrow">Explore GST Features <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="mock-screen">
-              <div class="mock-titlebar">
-                <div class="mock-dot mock-dot-r"></div>
-                <div class="mock-dot mock-dot-y"></div>
-                <div class="mock-dot mock-dot-g"></div>
-                <div class="mock-tab-title">GST &amp; Compliance Dashboard</div>
-              </div>
-              <div style="background: white; padding: 15px; font-size: 10px;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-                  <div style="background:#F0FFF4;border:1px solid #A7F3D0;border-radius:8px;padding:8px;">
-                    <div style="font-size:9px;color:#059669;font-weight:700;text-transform:uppercase;margin-bottom:2px;">GSTR-3B</div>
-                    <div style="font-weight:800;color:#065F46;font-size:12px;">✓ Working ready</div>
-                    <div style="font-size:9px;color:#64748B;">Aug 2026</div>
-                  </div>
-                  <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:8px;">
-                    <div style="font-size:9px;color:#2563EB;font-weight:700;text-transform:uppercase;margin-bottom:2px;">e-Invoice</div>
-                    <div style="font-weight:800;color:#1E3A8A;font-size:12px;">✓ IRN generated</div>
-                    <div style="font-size:9px;color:#64748B;">INV-2045</div>
-                  </div>
-                  <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:8px;">
-                    <div style="font-size:9px;color:#D97706;font-weight:700;text-transform:uppercase;margin-bottom:2px;">e-Way Bill</div>
-                    <div style="font-weight:800;color:#92400E;font-size:12px;">✓ EWB generated</div>
-                    <div style="font-size:9px;color:#64748B;">MH-12-AB-3456</div>
-                  </div>
-                  <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:8px;padding:8px;">
-                    <div style="font-size:9px;color:#7C3AED;font-weight:700;text-transform:uppercase;margin-bottom:2px;">GSTR-1</div>
-                    <div style="font-weight:800;color:#4C1D95;font-size:12px;">Ready</div>
-                    <div style="font-size:9px;color:#64748B;">Aug 2026</div>
-                  </div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">e-Invoices (IRN) for B2B invoices</div>
                 </div>
-                <table style="width: 100%; border-collapse: collapse;">
-                  <tr style="background:#F1F5F9; font-weight:700;">
-                    <th style="padding:6px; text-align:left;font-size:9px;">Tax Type</th>
-                    <th style="padding:6px; text-align:right;font-size:9px;">Output</th>
-                    <th style="padding:6px; text-align:right;font-size:9px;">ITC</th>
-                  </tr>
-                  <tr>
-                    <td style="padding:5px 6px; border-bottom:1px solid #E2E8F0;">CGST</td>
-                    <td style="padding:5px 6px; text-align:right; border-bottom:1px solid #E2E8F0;">₹22,410</td>
-                    <td style="padding:5px 6px; text-align:right; border-bottom:1px solid #E2E8F0;color:#10B981;">₹14,200</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:5px 6px;">SGST</td>
-                    <td style="padding:5px 6px; text-align:right;">₹22,410</td>
-                    <td style="padding:5px 6px; text-align:right;color:#10B981;">₹14,200</td>
-                  </tr>
-                </table>
+                <img src="assets/screens/gst-einvoice-irn.webp" width="1400" height="550" alt="Techstar ERP e-Invoice list with IRN pending and generated, and the generate, JSON and e-Way Bill actions" loading="lazy" decoding="async">
               </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -797,58 +544,18 @@
             <a href="features/pos.html" class="btn btn-secondary btn-arrow">Learn POS Features <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="mock-screen">
-              <div class="mock-titlebar">
-                <div class="mock-dot mock-dot-r"></div>
-                <div class="mock-dot mock-dot-y"></div>
-                <div class="mock-dot mock-dot-g"></div>
-                <div class="mock-tab-title">POS Terminal Counter</div>
-              </div>
-              <div class="pos-mock">
-                <div class="pos-products">
-                  <div class="pos-header-bar">
-                    <input type="text" class="pos-search" value="Quick Barcode Scanner Enabled..." readonly>
-                  </div>
-                  <div class="pos-product-grid">
-                    <div class="pos-product">
-                      <div class="pos-product-icon">🖱️</div>
-                      <div class="pos-product-name">Wireless Mouse</div>
-                      <div class="pos-product-price">₹1,200</div>
-                    </div>
-                    <div class="pos-product">
-                      <div class="pos-product-icon">⌨️</div>
-                      <div class="pos-product-name">Mech Keyboard</div>
-                      <div class="pos-product-price">₹4,500</div>
-                    </div>
-                    <div class="pos-product">
-                      <div class="pos-product-icon">🎧</div>
-                      <div class="pos-product-name">USB Headset</div>
-                      <div class="pos-product-price">₹2,800</div>
-                    </div>
-                  </div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">POS counter</div>
                 </div>
-                <div class="pos-bill">
-                  <div class="pos-bill-header">
-                    <div class="pos-bill-title">Ticket #4501</div>
-                    <div class="pos-bill-sub">Counter 01 Cashier</div>
-                  </div>
-                  <div class="pos-bill-items">
-                    <div class="pos-bill-item">
-                      <div class="pos-item-name">Mech Keyboard</div>
-                      <div class="pos-item-qty">x 1</div>
-                      <div class="pos-item-price">₹4,500</div>
-                    </div>
-                  </div>
-                  <div class="pos-bill-footer">
-                    <div class="pos-total-row grand">
-                      <span>Total:</span>
-                      <span>₹4,500</span>
-                    </div>
-                    <button class="pos-checkout-btn">⚡ Instant Pay</button>
-                  </div>
-                </div>
+                <img src="assets/screens/pos-counter.webp" width="1120" height="611" alt="Techstar ERP POS counter with barcode scan, F-key shortcuts and a three-item bill" loading="lazy" decoding="async">
               </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -874,46 +581,18 @@
             <a href="features/inventory.html" class="btn btn-secondary btn-arrow">Learn Inventory Module <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="mock-screen">
-              <div class="mock-titlebar">
-                <div class="mock-dot mock-dot-r"></div>
-                <div class="mock-dot mock-dot-y"></div>
-                <div class="mock-dot mock-dot-g"></div>
-                <div class="mock-tab-title">Inventory Master</div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">Purchase bill — batch, expiry and MRP</div>
+                </div>
+                <img src="assets/screens/stock-batch-expiry.webp" width="1200" height="460" alt="Techstar ERP purchase bill lines with batch, expiry, landed cost, MRP and selling price" loading="lazy" decoding="async">
               </div>
-              <div class="inv-table-wrap" style="background: white;">
-                <table class="inv-table-mock">
-                  <thead>
-                    <tr>
-                      <th>Product Name</th>
-                      <th>SKU</th>
-                      <th>Qty</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Core Processor v2</td>
-                      <td>CPU-CORE-V2</td>
-                      <td>142 Units</td>
-                      <td><span class="stock-badge stock-ok">Optimal</span></td>
-                    </tr>
-                    <tr>
-                      <td>Fiber Optic Modem</td>
-                      <td>MOD-FIBER-99</td>
-                      <td>8 Units</td>
-                      <td><span class="stock-badge stock-low">Low Warning</span></td>
-                    </tr>
-                    <tr>
-                      <td>HD Display 27"</td>
-                      <td>DISP-HD27-IPS</td>
-                      <td>0 Units</td>
-                      <td><span class="stock-badge stock-out">Out of Stock</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -939,27 +618,18 @@
             <a href="features/multi-branch.html" class="btn btn-secondary btn-arrow">Learn about multi-branch <span class="arrow">→</span></a>
           </div>
           <div class="panel-visual">
-            <div class="branch-diagram">
-              <div class="branch-hq">
-                <div class="branch-hq-title">CENTRAL HUB</div>
-                <div class="branch-hq-name">Headquarters Control</div>
+            <figure class="shot">
+              <div class="mock-screen">
+                <div class="mock-titlebar">
+                  <div class="mock-dot mock-dot-r"></div>
+                  <div class="mock-dot mock-dot-y"></div>
+                  <div class="mock-dot mock-dot-g"></div>
+                  <div class="mock-tab-title">Stock transfers between branches</div>
+                </div>
+                <img src="assets/screens/branch-stock-transfers.webp" width="1120" height="678" alt="Techstar ERP stock transfers from Main Branch Pune to Nashik Branch, approved and received" loading="lazy" decoding="async">
               </div>
-              <div class="branch-connector"></div>
-              <div class="branches-row">
-                <div class="branch-item">
-                  <div class="branch-line"></div>
-                  <div class="branch-node">Mumbai Retail<span class="city">Outlet 1</span></div>
-                </div>
-                <div class="branch-item">
-                  <div class="branch-line"></div>
-                  <div class="branch-node">Pune Warehouse<span class="city">Supply</span></div>
-                </div>
-                <div class="branch-item">
-                  <div class="branch-line"></div>
-                  <div class="branch-node">Kolhapur POS<span class="city">Outlet 2</span></div>
-                </div>
-              </div>
-            </div>
+              <figcaption class="shot-caption">Real Techstar ERP screen, demo company</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -991,38 +661,24 @@
         <a href="free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial <span class="arrow">→</span></a>
       </div>
       <div class="animate-slide-right delay-200">
-        <div class="mock-screen">
-          <div class="mock-titlebar">
-            <div class="mock-dot mock-dot-r"></div>
-            <div class="mock-dot mock-dot-y"></div>
-            <div class="mock-dot mock-dot-g"></div>
-            <div class="mock-tab-title">Consolidated Branch Sales</div>
+        <div class="branch-diagram">
+          <div class="branch-hq">
+            <div class="branch-hq-title">ONE SET OF BOOKS</div>
+            <div class="branch-hq-name">Head office</div>
           </div>
-          <div style="background: white; padding: 20px;">
-            <div style="display:flex; justify-content:space-between; margin-bottom:12px; font-size:12px; font-weight:700;">
-              <span>Branch Outlet</span>
-              <span>Sales (Today)</span>
-              <span>Profit</span>
+          <div class="branch-connector"></div>
+          <div class="branches-row">
+            <div class="branch-item">
+              <div class="branch-line"></div>
+              <div class="branch-node">Main branch<span class="city">Counter &amp; godown</span></div>
             </div>
-            <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #F1F5F9; font-size:11px;">
-              <span>Mumbai Corporate</span>
-              <span style="font-weight:700;">₹42,500</span>
-              <span style="color:#10B981; font-weight:600;">+₹12,400</span>
+            <div class="branch-item">
+              <div class="branch-line"></div>
+              <div class="branch-node">Second branch<span class="city">Own GSTIN if needed</span></div>
             </div>
-            <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #F1F5F9; font-size:11px;">
-              <span>Pune Outlet</span>
-              <span style="font-weight:700;">₹28,200</span>
-              <span style="color:#10B981; font-weight:600;">+₹8,100</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #F1F5F9; font-size:11px;">
-              <span>Kolhapur Warehouse</span>
-              <span style="font-weight:700;">₹92,800</span>
-              <span style="color:#10B981; font-weight:600;">+₹24,500</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; padding:8px 0; font-size:11px; font-weight:700; color:#1E3A8A; background:#F8FAFF; margin-top:8px; padding:8px;">
-              <span>Total Consolidated</span>
-              <span>₹1,63,500</span>
-              <span>+₹45,000</span>
+            <div class="branch-item">
+              <div class="branch-line"></div>
+              <div class="branch-node">Godown<span class="city">Stock transfers</span></div>
             </div>
           </div>
         </div>
@@ -1045,38 +701,40 @@
                 <th>Auditor</th>
               </tr>
             </thead>
+            <!-- Keep equal to the ERP's menu access per role (src/config/navigation.ts in the ERP) -->
             <tbody>
               <tr>
-                <td>Company &amp; GST Settings</td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
+                <td>Sales &amp; POS billing</td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
               </tr>
               <tr>
-                <td>Journals &amp; Ledgers</td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
+                <td>Items &amp; stock</td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
+              </tr>
+              <tr>
+                <td>GST returns</td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
                 <td><span class="rbac-partial">◐ View only</span></td>
               </tr>
               <tr>
-                <td>POS Billing Counter</td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
-                <td><span class="rbac-check">✓ Create</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
-              </tr>
-              <tr>
-                <td>P&amp;L &amp; GST Returns</td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-check">✓ Full</span></td>
-                <td><span class="rbac-cross">✗ None</span></td>
+                <td>Reports, P&amp;L &amp; balance sheet</td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-check">✓ Yes</span></td>
+                <td><span class="rbac-cross">✗ No</span></td>
                 <td><span class="rbac-partial">◐ View only</span></td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="rbac-swipe-hint">Swipe the table to see all roles →</p>
       </div>
       <div class="animate-slide-right delay-200">
         <span class="section-badge">Users &amp; Roles</span>
@@ -1089,7 +747,7 @@
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                <span>Branch-scoped users and approval of payments above your limit</span>
+                <span>Branch-scoped users, and approvals for discounts, price changes and credit-limit breaches</span>
               </li>
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -1119,55 +777,14 @@
         </ul>
       </div>
       <div class="animate-slide-right delay-200">
-        <div class="mock-screen">
-          <div class="mock-titlebar">
-            <div class="mock-dot mock-dot-r"></div>
-            <div class="mock-dot mock-dot-y"></div>
-            <div class="mock-dot mock-dot-g"></div>
-            <div class="mock-tab-title">Techstar Analytics Hub</div>
+        <div class="list-card">
+          <div class="list-card-title">Reports in Techstar ERP</div>
+          <div class="list-card-chips">
+            <span>MIS dashboard</span><span>Item gross profit</span><span>Customer profitability</span><span>Monthly P&amp;L</span>
+            <span>Budget vs actual</span><span>Schedule III P&amp;L &amp; Balance Sheet</span><span>Cash flow (AS-3)</span><span>Ratios</span>
+            <span>Bill-wise outstanding &amp; ageing</span><span>Reorder &amp; slow-moving stock</span><span>ABC &amp; expiry reports</span><span>HSN / SAC summary</span>
           </div>
-          <div class="analytics-mock">
-            <div class="analytics-row1">
-              <div class="analytics-kpi">
-                <div class="analytics-kpi-label">Sales Margin</div>
-                <div class="analytics-kpi-value">34.2%</div>
-                <div class="analytics-kpi-trend up">↑ 2.1%</div>
-              </div>
-              <div class="analytics-kpi">
-                <div class="analytics-kpi-label">Active Orders</div>
-                <div class="analytics-kpi-value">1,489</div>
-                <div class="analytics-kpi-trend up">↑ 18.5%</div>
-              </div>
-            </div>
-            <div class="analytics-charts">
-              <div class="analytics-chart-card">
-                <div class="analytics-chart-header">
-                  <div class="analytics-chart-title">Net Margin Progression</div>
-                </div>
-                <div class="analytics-bars-wrap">
-                  <div class="a-bar a-bar-green" style="height:40%;"></div>
-                  <div class="a-bar a-bar-blue" style="height:65%;"></div>
-                  <div class="a-bar a-bar-green" style="height:85%;"></div>
-                  <div class="a-bar a-bar-blue" style="height:90%;"></div>
-                </div>
-              </div>
-              <div class="analytics-chart-card">
-                <div class="analytics-chart-title">Top Products</div>
-                <div class="top-items-list">
-                  <div class="top-item">
-                    <span class="top-item-rank">#1</span>
-                    <span class="top-item-name">Keyboard</span>
-                    <span class="top-item-val">₹4.2L</span>
-                  </div>
-                  <div class="top-item">
-                    <span class="top-item-rank">#2</span>
-                    <span class="top-item-name">Mouse</span>
-                    <span class="top-item-val font-semibold">₹3.1L</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="list-card-note">Every report exports to Excel or PDF.</p>
         </div>
       </div>
     </div>
@@ -1180,6 +797,8 @@
         <span class="section-badge">Security &amp; Data</span>
         <h2 class="section-title">Your Financial Records. <span class="highlight">Protected.</span></h2>
         <p class="mb-6">Each company's data is kept apart from every other customer by database-level security, and every change is recorded in an audit trail.</p>
+        <!-- Must match privacy.html sections 4 and 5 (loan referral only with separate consent; nothing sold or sent to advertisers) -->
+        <p class="mb-6"><strong>Your books stay yours.</strong> We never sell your data, and your invoices, ledgers and customer lists are never sent to advertisers. Any other use — such as an optional business-loan check — needs your separate consent. <a href="privacy.html" class="text-link">Privacy Policy</a></p>
         <ul class="check-list">
               <li class="check-item">
                 <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
@@ -1200,19 +819,13 @@
         </ul>
       </div>
       <div class="animate-slide-right delay-200">
-        <div class="mock-screen">
-          <div class="mock-titlebar">
-            <div class="mock-dot mock-dot-r"></div>
-            <div class="mock-dot mock-dot-y"></div>
-            <div class="mock-dot mock-dot-g"></div>
-            <div class="mock-tab-title">Audit Trail</div>
+        <div class="list-card">
+          <div class="list-card-title">What the audit trail records</div>
+          <div class="list-card-chips">
+            <span>Changes to items, rates and parties</span><span>Cancelled entries</span><span>Modified entries</span>
+            <span>Back-dated entries</span><span>Closed months &amp; years locked</span><span>Read-only access for your CA</span>
           </div>
-          <div style="background:white; padding:15px; font-family:var(--font-mono); font-size:11px; line-height:1.6; color:#334155;">
-            <div>[2026-09-18 11:42] <span style="color:#2563EB; font-weight:700;">LOGIN:</span> Accountant signed in (Pune branch)</div>
-            <div>[2026-09-18 11:45] <span style="color:#059669; font-weight:700;">INVOICE:</span> INV-2045 created (₹28,320)</div>
-            <div>[2026-09-18 11:49] <span style="color:#D97706; font-weight:700;">MASTER:</span> Product rate changed ₹2,350 → ₹2,400</div>
-            <div>[2026-09-18 11:51] <span style="color:#EF4444; font-weight:700;">PERIOD LOCK:</span> Back-dated voucher for August refused</div>
-          </div>
+          <p class="list-card-note">Owners can download a full backup of the company data at any time.</p>
         </div>
       </div>
     </div>
@@ -1228,7 +841,7 @@
       </div>
 
       <div class="grid grid-4 animate-fade-up delay-100">
-        <div class="industry-card">
+        <a href="industries.html#retail" class="industry-card">
           <div class="industry-icon">🏪</div>
           <div class="industry-name">Retail &amp; POS</div>
           <p class="industry-desc text-sm text-muted">Fast counter billing, barcode labels, shifts with Z reports, coupons &amp; loyalty.</p>
@@ -1236,8 +849,8 @@
             <span class="industry-tag">POS Billing</span>
             <span class="industry-tag">Loyalty</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#wholesale" class="industry-card">
           <div class="industry-icon">📦</div>
           <div class="industry-name">Wholesale &amp; Distribution</div>
           <p class="industry-desc text-sm text-muted">Price lists &amp; schemes, credit limits, bill-wise outstanding, e-Way Bills from the ERP.</p>
@@ -1245,8 +858,8 @@
             <span class="industry-tag">Price Lists</span>
             <span class="industry-tag">e-Way Bill</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#manufacturing" class="industry-card">
           <div class="industry-icon">🏭</div>
           <div class="industry-name">Manufacturing</div>
           <p class="industry-desc text-sm text-muted">BOM, production orders, WIP costing, by-products and job work (ITC-04 data).</p>
@@ -1254,8 +867,8 @@
             <span class="industry-tag">BOM</span>
             <span class="industry-tag">Job Work</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#pharmacy" class="industry-card">
           <div class="industry-icon">💊</div>
           <div class="industry-name">Pharmacies</div>
           <p class="industry-desc text-sm text-muted">Batch &amp; expiry with FEFO, expiry reports, quick counter bills.</p>
@@ -1263,8 +876,8 @@
             <span class="industry-tag">Batch</span>
             <span class="industry-tag">Expiry</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#hardware" class="industry-card">
           <div class="industry-icon">🛠️</div>
           <div class="industry-name">Hardware &amp; Electronics</div>
           <p class="industry-desc text-sm text-muted">Serial numbers, alternate units (box / piece), bill-wise outstanding.</p>
@@ -1272,8 +885,8 @@
             <span class="industry-tag">Serial Nos.</span>
             <span class="industry-tag">Alt. Units</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#services" class="industry-card">
           <div class="industry-icon">🧰</div>
           <div class="industry-name">Services &amp; AMC</div>
           <p class="industry-desc text-sm text-muted">Contracts, AMC &amp; recurring invoices, milestones and timesheets.</p>
@@ -1281,8 +894,8 @@
             <span class="industry-tag">AMC</span>
             <span class="industry-tag">Recurring</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html#wholesale" class="industry-card">
           <div class="industry-icon">🛒</div>
           <div class="industry-name">FMCG Distribution</div>
           <p class="industry-desc text-sm text-muted">Schemes by product or category, godown stock, delivery challans.</p>
@@ -1290,8 +903,8 @@
             <span class="industry-tag">Schemes</span>
             <span class="industry-tag">Challans</span>
           </div>
-        </div>
-        <div class="industry-card">
+        </a>
+        <a href="industries.html" class="industry-card">
           <div class="industry-icon">📈</div>
           <div class="industry-name">Trading</div>
           <p class="industry-desc text-sm text-muted">Quotation → order → delivery challan → invoice, with part deliveries.</p>
@@ -1299,7 +912,7 @@
             <span class="industry-tag">Quotations</span>
             <span class="industry-tag">Orders</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1344,11 +957,11 @@
             </tr>
             <tr>
               <td>e-Invoice &amp; e-Way Bill</td>
-              <td class="highlight-col">Generated directly from the ERP — IRN, signed QR and EWB number on your documents (all plans).</td>
+              <td class="highlight-col">Generated directly from the ERP — IRN, signed QR and EWB number on your documents. All plans; ₹2 per portal action from your prepaid wallet.</td>
             </tr>
             <tr>
               <td>Invoices on WhatsApp</td>
-              <td class="highlight-col">Send the invoice PDF and payment reminders to your customer's WhatsApp from the ERP.</td>
+              <td class="highlight-col">Send the invoice PDF and payment reminders to your customer's WhatsApp from the ERP — ₹0.20 per message from your prepaid wallet.</td>
             </tr>
             <tr>
               <td>Books your CA trusts</td>
@@ -1369,15 +982,25 @@
     <div class="container">
       <div class="text-center mb-12 animate-fade-up">
         <span class="section-badge">Plans &amp; Pricing</span>
-        <h2 class="section-title">Simple yearly plans. <span class="highlight">GST included.</span></h2>
-        <p class="section-subtitle centered">No installation, no setup fee. Try Starter or Business free for 3 days — no credit card needed — or subscribe straight away.</p>
+        <h2 class="section-title">Simple plans. <span class="highlight">GST included.</span></h2>
+        <p class="section-subtitle centered">No installation, no setup fee. Try Starter or Business free for 7 days — no credit card needed — or subscribe straight away.</p>
       </div>
 
+      <!-- Same switch as the hero's: both follow one billing choice (js/plans.js) -->
+      <div class="text-center mb-8">
+        <div class="billing-toggle" role="group" aria-label="Billing period">
+          <button type="button" data-billing="yearly" class="active" aria-pressed="true">Yearly <span class="billing-save">Save 17%</span></button>
+          <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+        </div>
+      </div>
       <div class="grid grid-4" style="align-items:stretch;" data-plans="compact"></div>
       <noscript><p class="text-center">Starter ₹4,999/year · Business ₹9,999/year · Enterprise ₹24,999/year — prices include GST.</p></noscript>
       <p class="text-center mt-8"><a href="pricing.html" class="btn btn-secondary btn-arrow">See monthly prices &amp; compare plans <span class="arrow">→</span></a></p>
-      <p class="text-center text-muted text-sm mt-8" style="max-width:600px;margin:var(--space-6) auto 0;">
-        Direct e-Invoice and e-Way Bill generation is included in every plan.
+      <!-- Pay-per-use rates: keep equal to Admin → Wallet pricing in the ERP (shown live at erp.techstarsolution.in/pricing) -->
+      <p class="text-center text-muted text-sm mt-8 pricing-wallet-note" style="max-width:640px;margin:var(--space-6) auto 0;">
+        e-Invoice, e-Way Bill and WhatsApp work on every plan. Government-portal and WhatsApp actions are pay-per-use from your prepaid wallet:
+        <strong>₹2</strong> per e-Invoice or e-Way Bill action, <strong>₹0.20</strong> per WhatsApp message (GST included).
+        <a href="https://erp.techstarsolution.in/pricing" target="_blank" rel="noopener">See current rates</a>
       </p>
     </div>
   </section>
@@ -1455,6 +1078,11 @@
             <div class="form-success-icon">✓</div>
             <h3 class="text-2xl font-extrabold mb-2" style="color:var(--color-primary-light);">Request received</h3>
             <p class="text-muted">Thank you! Our team will WhatsApp or call you within one working day to fix your demo time.</p>
+            <p class="text-muted text-sm mt-4">In a hurry? Message us now, or start trying the ERP while you wait.</p>
+            <div class="form-success-actions">
+              <a href="https://wa.me/919579005645?text=Hi%2C%20I%20just%20booked%20a%20Techstar%20ERP%20demo" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp us now</a>
+              <a href="free-trial.html" class="btn btn-secondary" data-action="start-trial">Start free trial</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1482,15 +1110,15 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">3. Does Techstar check GSTINs? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes — GSTINs are checked for format, check digit and state code when you import parties or add customer addresses, and again in the GSTR-1 checks. A live lookup also fills the party's legal name, address and registration status from the GST system.</div>
+            <div class="faq-answer">Yes — GSTINs are checked for format, check digit and state code when you import parties or add customer addresses, and again in the GSTR-1 checks. A live lookup also fills the party's legal name, address and registration status from the GST system (₹0.50 per live lookup from your prepaid wallet; looking up the same GSTIN again is free).</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">4. Can I create e-Invoices from Techstar? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes — on every plan Techstar generates the e-Invoice directly from your B2B invoice through a licensed GST service provider. The IRN and signed QR print on your invoice; cancellation within 24 hours is done from the ERP too. No portal login or file upload.</div>
+            <div class="faq-answer">Yes — on every plan Techstar generates the e-Invoice directly from your B2B invoice through a licensed GST service provider. The IRN and signed QR print on your invoice; cancellation within 24 hours is done from the ERP too. No portal login or file upload. Each IRN action costs ₹2 from your prepaid wallet.</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">5. Can I create e-Way Bills? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes — straight from the ERP, from an invoice, delivery challan or sales / purchase return, with transporter and vehicle details. Part-B updates, validity extension and cancellation are done in Techstar as well. An e-Way Bill is generally needed when goods worth more than ₹50,000 move.</div>
+            <div class="faq-answer">Yes — straight from the ERP, from an invoice, delivery challan or sales / purchase return, with transporter and vehicle details. Part-B updates, validity extension and cancellation are done in Techstar as well. An e-Way Bill is generally needed when goods worth more than ₹50,000 move. Each e-Way Bill action costs ₹2 from your prepaid wallet.</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">6. How do users and roles work? <span class="faq-icon">+</span></div>
@@ -1501,14 +1129,14 @@
             <div class="faq-answer">Yes. Add your logo, bank details, terms, declaration, signatory and footer, and print in A4, A5 or 80 mm thermal with Original / Duplicate / Triplicate copies.</div>
           </div>
           <div class="faq-item">
-            <div class="faq-question">8. Which plans include e-Invoice and e-Way Bill? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Every plan — Starter, Business and Enterprise. Each portal action is charged from the prepaid wallet at the rates shown in the app. All plan prices include GST.</div>
+            <div class="faq-question">8. Which plans include e-Invoice and e-Way Bill, and what do they cost? <span class="faq-icon">+</span></div>
+            <div class="faq-answer">Every plan — Starter, Business and Enterprise. The plan price covers the software; each government-portal action is pay-per-use from your prepaid wallet: ₹2 per e-Invoice or e-Way Bill action (generate, cancel, Part-B update and so on), GST included. Nothing is charged when a call fails. You recharge the wallet from the app; current rates are on the <a href="https://erp.techstarsolution.in/pricing" target="_blank" rel="noopener">pricing page</a>.</div>
           </div>
         </div>
         <div class="faq-col">
           <div class="faq-item">
             <div class="faq-question">9. Who must generate e-Invoices? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Businesses whose aggregate annual turnover in any year since 2017-18 exceeds ₹5 crore must e-invoice B2B supplies. Businesses with turnover of ₹10 crore or more must report each invoice on the IRP within 30 days. Check with your CA for your case.</div>
+            <div class="faq-answer">Businesses whose aggregate annual turnover in any year since 2017-18 exceeds ₹5 crore must e-invoice B2B supplies. Businesses with turnover of ₹10 crore or more must report each invoice on the IRP within 30 days. Techstar generates the IRN for such invoices directly from the ERP; check with your CA for your case.</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">10. Which printers can I use? <span class="faq-icon">+</span></div>
@@ -1536,11 +1164,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">16. Can I send invoices on WhatsApp? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">Yes — the invoice PDF goes straight to your customer's WhatsApp from Techstar, and you can send payment reminders for outstanding bills the same way. No need to download and forward files from your phone.</div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">17. Do I need e-Invoicing? <span class="faq-icon">+</span></div>
-            <div class="faq-answer">e-Invoicing is mandatory for B2B invoices of businesses whose aggregate turnover has crossed ₹5 crore in any financial year since 2017-18. Techstar generates the IRN for such invoices directly from the ERP; your CA can confirm whether it applies to you.</div>
+            <div class="faq-answer">Yes — the invoice PDF goes straight to your customer's WhatsApp from Techstar, and you can send payment reminders for outstanding bills the same way. No need to download and forward files from your phone. Each message costs ₹0.20 from your prepaid wallet.</div>
           </div>
         </div>
       </div>
@@ -1659,6 +1283,9 @@
 
   <!-- ====== MOBILE BOTTOM CTA PILL ====== -->
   <div class="mobile-cta-bar">
+    <a href="https://wa.me/919579005645?text=Hi%2C%20I%20want%20to%20know%20about%20Techstar%20ERP" class="btn btn-sm mobile-cta-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" id="mobile-wa-btn">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.88.52 3.65 1.43 5.17L2.05 22l4.98-1.35C8.42 21.46 10.15 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm6.29 13.93c-.27.76-1.36 1.43-1.89 1.46-.5.03-1.15.12-3.41-.82-2.89-1.2-4.71-4.14-4.85-4.34-.15-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.09 1-2.38.27-.3.59-.37.79-.37.2 0 .39.01.56.02.18.01.41-.07.64.48.24.58.82 2.01.89 2.16.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.17-.32.39-.46.52-.15.15-.31.32-.13.62.18.3.79 1.3 1.7 2.11.9.81 1.66 1.06 1.96 1.19.3.13.48.11.66-.1.18-.21.79-.92 1-1.24.21-.32.42-.27.71-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.07.13.07.76-.2 1.52z"/></svg>
+    </a>
     <a href="demo.html" class="btn btn-secondary btn-sm" style="flex:1;" id="mobile-demo-btn">Book Demo</a>
     <a href="free-trial.html" class="btn btn-primary btn-sm" style="flex:1;" id="mobile-trial-btn" data-action="start-trial">Start Free Trial</a>
   </div>

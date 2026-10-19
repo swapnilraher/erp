@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आइटम कैसे जोड़ें (HSN, GST, कीमतें) — Techstar ERP मदद</title>
+  <meta name="description" content="Screenshots के साथ स्टेप बाय स्टेप: Techstar ERP में आइटम जोड़ें — नाम, बारकोड, HSN या SAC कोड, GST दर, यूनिट, खरीद रेट, MRP, बिक्री कीमत, होलसेल रेट और reorder level।">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/hi/guides/add-items">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/add-items">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/add-items">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/add-items">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/add-items">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="hi_IN">
+  <meta property="og:title" content="आइटम कैसे जोड़ें (HSN, GST, कीमतें) — Techstar ERP मदद">
+  <meta property="og:description" content="Screenshots के साथ स्टेप बाय स्टेप: Techstar ERP में आइटम जोड़ें — नाम, बारकोड, HSN या SAC कोड, GST दर, यूनिट, खरीद रेट, MRP, बिक्री कीमत, होलसेल रेट और reorder level।">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/hi/guides/add-items">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"HSN, GST दर और कीमतों के साथ आइटम कैसे जोड़ें","description":"Screenshots के साथ स्टेप बाय स्टेप: Techstar ERP में आइटम जोड़ें — नाम, बारकोड, HSN या SAC कोड, GST दर, यूनिट, खरीद रेट, MRP, बिक्री कीमत, होलसेल रेट और reorder level।","inLanguage":"hi","step":[{"@type":"HowToStep","position":1,"name":"Items & stock → Items खोलें और Add item पर click करें"},{"@type":"HowToStep","position":2,"name":"आइटम का नाम, बारकोड (या Generate) और HSN / SAC कोड डालें"},{"@type":"HowToStep","position":3,"name":"GST लागू है या नहीं, GST दर और यूनिट चुनें"},{"@type":"HowToStep","position":4,"name":"खरीद रेट, MRP और बिक्री कीमत डालें, होलसेल रेट हो तो वह भी"},{"@type":"HowToStep","position":5,"name":"Reorder level डालें और Save item पर click करें"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../../features.html" class="nav-link" aria-haspopup="true">फ़ीचर ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../../features/billing-sales.html" class="nav-dropdown-item">बिक्री और बिलिंग</a>
+            <a href="../../features/pos.html" class="nav-dropdown-item">रिटेल POS</a>
+            <a href="../../features/inventory.html" class="nav-dropdown-item">इन्वेंटरी और स्टॉक</a>
+            <a href="../../features/accounting.html" class="nav-dropdown-item">अकाउंटिंग और फ़ाइनेंस</a>
+            <a href="../../features/gst.html" class="nav-dropdown-item">GST अनुपालन</a>
+            <a href="../../features/reports.html" class="nav-dropdown-item">रिपोर्ट, ऑडिट और MIS</a>
+            <a href="../../features/multi-branch.html" class="nav-dropdown-item">कई ब्रांच का कंट्रोल</a>
+            <a href="../../features/role-management.html" class="nav-dropdown-item">यूज़र, रोल और सुरक्षा</a>
+          </div>
+        </div>
+        <a href="../../features/gst.html" class="nav-link">GST</a>
+        <a href="../../industries.html" class="nav-link">इंडस्ट्री</a>
+        <a href="../../pricing.html" class="nav-link">कीमत</a>
+        <a href="../../about.html" class="nav-link">हमारे बारे में</a>
+        <a href="../../contact.html" class="nav-link">संपर्क</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../../login.html" class="btn-login" data-action="erp-login">लॉगिन</a>
+        <a href="../../demo.html" class="btn btn-secondary btn-sm">डेमो बुक करें</a>
+        <a href="../../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">फ़्री ट्रायल शुरू करें</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="मेनू खोलें" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mobile-nav-link">होम</a>
+    <a href="../../features.html" class="mobile-nav-link">फ़ीचर</a>
+    <a href="../../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">बिक्री और बिलिंग</a>
+    <a href="../../features/pos.html" class="mobile-nav-link mobile-nav-sub">रिटेल POS</a>
+    <a href="../../features/inventory.html" class="mobile-nav-link mobile-nav-sub">इन्वेंटरी और स्टॉक</a>
+    <a href="../../features/accounting.html" class="mobile-nav-link mobile-nav-sub">अकाउंटिंग और फ़ाइनेंस</a>
+    <a href="../../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST अनुपालन</a>
+    <a href="../../features/reports.html" class="mobile-nav-link mobile-nav-sub">रिपोर्ट, ऑडिट और MIS</a>
+    <a href="../../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">कई ब्रांच का कंट्रोल</a>
+    <a href="../../features/role-management.html" class="mobile-nav-link mobile-nav-sub">यूज़र, रोल और सुरक्षा</a>
+    <a href="../../industries.html" class="mobile-nav-link">इंडस्ट्री</a>
+    <a href="../../pricing.html" class="mobile-nav-link">कीमत</a>
+    <a href="../../faq.html" class="mobile-nav-link">सवाल-जवाब</a>
+    <a href="../../hi/guides/index.html" class="mobile-nav-link">मदद guides</a>
+    <a href="../../about.html" class="mobile-nav-link">हमारे बारे में</a>
+    <a href="../../contact.html" class="mobile-nav-link">संपर्क</a>
+    <div class="mobile-menu-actions">
+      <a href="../../login.html" class="btn btn-secondary" data-action="erp-login">लॉगिन</a>
+      <a href="../../demo.html" class="btn btn-secondary">डेमो बुक करें</a>
+      <a href="../../free-trial.html" class="btn btn-primary" data-action="start-trial">फ़्री ट्रायल शुरू करें</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="आप यहाँ हैं">
+            <a href="index.html">मदद guides</a><span aria-hidden="true">›</span><a href="index.html#stock">आइटम और स्टॉक</a>
+          </nav>
+          <nav class="lang-switch" aria-label="भाषा / Language">
+            <a href="../../guides/add-items.html" hreflang="en" lang="en">English</a>
+            <a href="../../mr/guides/add-items.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../../hi/guides/add-items.html" hreflang="hi" lang="hi" aria-current="page">हिंदी</a>
+          </nav>
+        </div>
+        <h1>HSN, GST दर और कीमतों के साथ आइटम कैसे जोड़ें</h1>
+        <p class="guide-lead">हर आइटम एक बार उसके HSN या SAC कोड, GST दर, यूनिट और कीमतों के साथ सेट करें। फिर बिल, ऑर्डर और स्टॉक यह जानकारी आइटम से ही लेते हैं, इसलिए हर इनवॉइस और खरीद पर GST एक जैसा निकलता है।</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ लगभग 2 मिनट</span>
+          <span class="guide-chip">Menu: Items & stock → Items</span>
+          <span class="guide-chip">Shortcut: Ctrl+S से save</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="इस पेज पर">
+          <p class="guide-toc-title">इस पेज पर</p>
+          <ol>
+            <li><a href="#before">शुरू करने से पहले</a></li>
+            <li><a href="#step-open">1. आइटम की सूची खोलें</a></li>
+            <li><a href="#step-item">2. नाम, बारकोड और HSN</a></li>
+            <li><a href="#step-price">3. GST दर, यूनिट और कीमतें</a></li>
+            <li><a href="#step-stock">4. Reorder level और save</a></li>
+            <li><a href="#step-after">5. Save के बाद</a></li>
+            <li><a href="#step-rate">6. GST दर बदले तो</a></li>
+            <li><a href="#faq">आम सवाल</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="सारे guides">
+          <p class="guide-toc-title"><a href="index.html">सारे guides</a></p>
+          <details class="guide-nav-group">
+            <summary>बिक्री <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">सेल्स इनवॉइस बनाएँ</a></li>
+              <li><a href="pos-billing.html">काउंटर पर बिल (POS)</a></li>
+              <li><a href="customers-credit.html">ग्राहक और उधार</a></li>
+              <li><a href="invoices-list.html">इनवॉइस खोजें, दोबारा प्रिंट करें या कैंसिल करें</a></li>
+              <li><a href="quotations.html">कोटेशन बनाएँ</a></li>
+              <li><a href="sales-orders.html">सेल्स ऑर्डर और डिलीवरी</a></li>
+              <li><a href="delivery-challans.html">डिलीवरी चालान</a></li>
+              <li><a href="credit-notes-returns.html">सेल्स रिटर्न और क्रेडिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>खरीद <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">खरीद बिल डालें</a></li>
+              <li><a href="suppliers.html">सप्लायर जोड़ें</a></li>
+              <li><a href="purchase-orders-grn.html">खरीद ऑर्डर और माल आया (GRN)</a></li>
+              <li><a href="supplier-payments.html">सप्लायर को पेमेंट करें</a></li>
+              <li><a href="debit-notes-returns.html">खरीद वापसी और डेबिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>आइटम और स्टॉक <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html" aria-current="page">HSN, GST और कीमतों के साथ आइटम जोड़ें</a></li>
+              <li><a href="opening-stock.html">शुरुआती स्टॉक डालें</a></li>
+              <li><a href="stock-transfer.html">ब्रांचों के बीच स्टॉक ट्रांसफ़र करें</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">ई-इनवॉइस (IRN) बनाएँ</a></li>
+              <li><a href="e-way-bill.html">ई-वे बिल बनाएँ</a></li>
+              <li><a href="gstr-1.html">GSTR-1 तैयार करें</a></li>
+              <li><a href="gstr-3b.html">GSTR-3B तैयार करें</a></li>
+              <li><a href="gstr-2b-matching.html">खरीद का GSTR-2B से मिलान</a></li>
+              <li><a href="gstr-1a.html">GSTR-1A सुधार</a></li>
+              <li><a href="gst-payments.html">GST पेमेंट और कैश लेजर</a></li>
+              <li><a href="pre-filing-checks.html">रिटर्न से पहले जाँच</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP हिंदी और मराठी में भी इस्तेमाल कर सकते हैं।</strong> ऊपर दाईं ओर अपने नाम के पहले अक्षर वाले गोल बटन पर click करें → <span class="ui">Language</span> (भाषा) → <strong>हिन्दी</strong>। ERP का menu हिंदी में दिखेगा (जैसे Sales = बिक्री)। बिल और दूसरे कानूनी दस्तावेज़ हमेशा की तरह छपते हैं। इस guide के screenshots English menu के हैं।</p></div>
+          </div>
+
+          <h2 id="before">शुरू करने से पहले</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>पास रखें:</strong> आइटम का HSN कोड (माल) या SAC कोड (सेवा) और GST दर — सप्लायर के बिल पर आमतौर पर दोनों होते हैं — और आपका खरीद रेट, MRP और बिक्री कीमत।</p>
+              <p><strong>स्टॉक यहाँ नहीं डालते।</strong> नया आइटम 0 स्टॉक से शुरू होता है; स्टॉक खरीद बिल या माल आने की एंट्री से आता है, या शुरुआती स्टॉक के रूप में (देखें <a href="opening-stock.html">शुरुआती स्टॉक कैसे डालें</a>)।</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>आइटम की सूची खोलें</h3>
+              <p>बाईं ओर के menu में <strong>Items &amp; stock → Items</strong> <span class="mark-letter" aria-label="बॉक्स A">A</span> पर click करें (हिंदी menu में: <strong>आइटम और स्टॉक → आइटम</strong>), फिर <span class="ui">+ Add item</span> <span class="mark-letter" aria-label="बॉक्स B">B</span>।</p>
+              <p>सूची में हर आइटम उसके HSN और यूनिट, बारकोड, कैटेगरी और ब्रांड, GST %, खरीद रेट, MRP, बिक्री कीमत, स्टॉक और स्टेटस के साथ दिखता है। <em>Low stock</em> टैब में reorder level जितना या उससे कम स्टॉक वाले आइटम दिखते हैं।</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/01-items.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/01-items.webp" alt="Techstar ERP में आइटम की सूची, Items menu और Add item बटन हाइलाइट किया हुआ" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: Items &amp; stock → Items। बॉक्स B: Add item।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-item">
+              <h3>नाम, बारकोड और HSN कोड डालें</h3>
+              <p><strong>New item</strong> विंडो के तीन हिस्से हैं: <strong>Item</strong>, <strong>Price &amp; GST</strong> और <strong>Stock</strong>। * वाले field ज़रूरी हैं।</p>
+              <ul class="guide-list">
+                <li><span class="ui">Item name</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> — बिलों पर छपने वाला नाम।</li>
+                <li><span class="ui">Barcode</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> — पैक का बारकोड स्कैन करें या लिखें। बारकोड नहीं है? दुकान का अपना कोड बनाने के लिए <span class="ui">Generate</span> पर click करें (यह 2 से शुरू होता है, इसलिए किसी असली प्रोडक्ट के कोड से कभी नहीं टकराता)। उसी आइटम के और कोड <span class="ui">Other barcodes</span> में कॉमा से अलग करके डालें।</li>
+                <li><span class="ui">HSN / SAC code</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> — 4 से 8 अंकों का।</li>
+                <li><span class="ui">Item code (SKU)</span>, <span class="ui">Category</span> और <span class="ui">Brand / maker</span> — ज़रूरी नहीं; कैटेगरी बॉक्स में आपकी पहले इस्तेमाल की कैटेगरी सुझाई जाती हैं।</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/02-item.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/02-item.webp" alt="New item विंडो का Item हिस्सा: आइटम का नाम, Generate बटन के साथ बारकोड और HSN कोड हाइलाइट किए हुए" width="2000" height="1592" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: आइटम का नाम। बॉक्स B: बारकोड और Generate। बॉक्स C: HSN / SAC कोड।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-price">
+              <h3>GST दर और यूनिट चुनें, कीमतें डालें</h3>
+              <ul class="guide-list">
+                <li><span class="ui">Prices include GST</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> — आप जो बिक्री कीमत डाल रहे हैं वह GST सहित हो (खुदरा कीमत के टैग की तरह) तो टिक रखें। तब GST इनवॉइस GST से पहले का रेट खुद निकालता है। कीमतें GST अलग से जोड़कर बताते हों तो टिक हटाएँ।</li>
+                <li><span class="ui">Type</span> — <em>Goods (HSN code)</em> (माल) या <em>Service (SAC code)</em> (सेवा)।</li>
+                <li><span class="ui">GST applies</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> — <em>Taxable</em>, <em>Nil rated (0%)</em>, <em>Exempt</em> या <em>Outside GST</em>।</li>
+                <li><span class="ui">GST rate</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> — सिर्फ़ आज लागू दर ही दिखते हैं। आइटम पर cess हो तो <span class="ui">Cess rate (%)</span> डालें। जिन आइटम का GST खरीदार के रूप में आप भरते हैं, सिर्फ़ उनके लिए <em>Bought under reverse charge</em> पर टिक करें।</li>
+                <li><span class="ui">Unit</span> <span class="mark-letter" aria-label="बॉक्स D">D</span> — आपकी यूनिट सूची से (हर यूनिट अपने GST UQC के तहत रिपोर्ट होती है)।</li>
+                <li><span class="ui">Purchase rate (₹)</span>, <span class="ui">MRP (₹)</span> और <span class="ui">Selling price (₹)</span> <span class="mark-letter" aria-label="बॉक्स E">E</span> — तीनों ज़रूरी। बिक्री कीमत MRP से ज़्यादा नहीं हो सकती। <span class="ui">Wholesale from qty</span> और <span class="ui">Wholesale rate (₹)</span> से तय मात्रा से कम रेट रख सकते हैं।</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/03-price-gst.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/03-price-gst.webp" alt="Price & GST हिस्सा: Prices include GST, GST applies, 18 प्रतिशत GST दर, यूनिट और बिक्री कीमत हाइलाइट किए हुए" width="2000" height="1592" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: कीमतें GST सहित। बॉक्स B: GST लागू। बॉक्स C: GST दर। बॉक्स D: यूनिट। बॉक्स E: बिक्री कीमत। 100 नग से होलसेल रेट भी रखा है।</figcaption>
+          </figure>
+              <div class="guide-callout is-tip">
+                <span class="guide-callout-icon" aria-hidden="true">💡</span>
+                <div><p>बिक्री कीमत खरीद रेट से कम हो तो save से पहले ERP पूछता है <em>Selling price is below the purchase rate</em> — अक्सर टाइपिंग की गलती होती है, पर क्लियरेंस कीमत हो तो <strong>Save anyway</strong> चुन सकते हैं।</p></div>
+              </div>
+            </section>
+
+            <section class="guide-step" id="step-stock">
+              <h3>Reorder level डालें और save करें</h3>
+              <ul class="guide-list">
+                <li>सूचना <span class="mark-letter" aria-label="बॉक्स A">A</span> याद दिलाती है कि स्टॉक खरीद बिल या माल आने की एंट्री से, बैच और एक्सपायरी के साथ आता है। <span class="ui">Stock in hand</span> सिर्फ़ बिल, ट्रांसफ़र और गिनती से बदलता है।</li>
+                <li><span class="ui">Reorder level</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> — स्टॉक इस आँकड़े तक आए तो आइटम <em>Low</em> दिखता है।</li>
+                <li><span class="ui">Item group</span> — ज़रूरी नहीं, आपके आइटम ग्रुप से।</li>
+                <li><span class="ui">Active (shown in billing)</span> — आइटम को बिलिंग से छिपाना हो तो टिक हटाएँ। <span class="ui">Track serial numbers (IMEI)</span> — खरीदे और बेचे हर नग का सीरियल नंबर।</li>
+              </ul>
+              <p><span class="ui">Save item</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> पर click करें या <kbd>Ctrl</kbd> + <kbd>S</kbd> दबाएँ। कोई ज़रूरी field छूटा हो तो वह लाल हो जाता है और संदेश में उसका नाम आता है।</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/04-stock.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/04-stock.webp" alt="नए आइटम का Stock हिस्सा: स्टॉक की सूचना, reorder level 50 और Save item बटन हाइलाइट किए हुए" width="2000" height="1592" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: स्टॉक बिलों से आता है। बॉक्स B: reorder level। बॉक्स C: Save item।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-after">
+              <h3>Save के बाद</h3>
+              <p><em>Item saved. Add stock through a purchase bill.</em> संदेश आता है और आइटम सूची में <span class="mark-letter" aria-label="बॉक्स A">A</span> 0 स्टॉक के साथ दिखता है। हर लाइन में:</p>
+              <ul class="guide-list">
+                <li><strong>प्रिंटर</strong> वाला आइकन बारकोड लेबल प्रिंट करता है (MRP हमेशा, चाहें तो आपकी बिक्री कीमत भी);</li>
+                <li><strong>पेंसिल</strong> वाला आइकन (या आइटम का नाम) आइटम बदलने के लिए खोलता है;</li>
+                <li><span class="ui">⋯</span> → <span class="ui">Delete item</span>। स्टॉक या लेन-देन वाला आइटम delete नहीं होता; उसकी जगह ERP उसे inactive करने का विकल्प देता है।</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/05-saved.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/05-saved.webp" alt="नया PVC एल्बो दिखाती आइटम सूची: HSN, बारकोड, 18 प्रतिशत GST, कीमतें और शून्य स्टॉक" width="2000" height="847" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: नया आइटम। Incl. GST यानी इसकी कीमतें GST सहित हैं; स्टॉक आने तक यह Low दिखता है, क्योंकि 0 उसके reorder level से कम है।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-rate">
+              <h3>GST दर बदले तो</h3>
+              <p>आइटम खोलें और नया <span class="ui">GST rate</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> चुनें। <strong>GST rate effective from</strong> बॉक्स आता है: आज से लागू हो तो खाली छोड़ें, वरना वह तारीख डालें जिससे नया दर लागू है — उससे पहले की तारीख के बिल पुराने दर पर ही रहते हैं।</p>
+              <p><strong>GST rate history</strong> <span class="mark-letter" aria-label="बॉक्स B">B</span> में हर तारीख से लागू दर दिखता है; बिल पर उसकी तारीख का दर लगता है। <span class="ui">Earlier rate from</span>, <span class="ui">GST %</span> और <span class="ui">Record rate</span> से पिछली अवधि का दर जोड़ सकते हैं।</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/add-items/06-gst-history.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/add-items/06-gst-history.webp" alt="Edit item विंडो: GST दर और 2017 से 12 प्रतिशत व 22 सितंबर 2025 से 5 प्रतिशत दिखाती GST rate history" width="2000" height="1592" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: आइटम का GST दर। बॉक्स B: GST rate history और पिछला दर दर्ज करने के बॉक्स।</figcaption>
+          </figure>
+            </section>
+          </div>
+
+          <h2 id="faq">आम सवाल</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>आइटम का HSN कोड और GST दर कहाँ मिलेगा?</summary>
+              <div>सप्लायर के खरीद बिल पर हर आइटम का HSN कोड और GST दर होता है। आइटम पर वही इस्तेमाल करें, ताकि आपकी बिक्री और खरीद मेल खाएँ।</div>
+            </details>
+            <details>
+              <summary>नए आइटम का स्टॉक कैसे जोड़ें?</summary>
+              <div>सप्लायर का बिल डालें (देखें <a href="purchase-bill.html">खरीद बिल कैसे डालें</a>), माल आने की एंट्री करें, या — ERP शुरू करते समय — <a href="opening-stock.html">शुरुआती स्टॉक</a> के रूप में डालें।</div>
+            </details>
+            <details>
+              <summary>बिल बनाते समय आइटम जोड़ सकते हैं?</summary>
+              <div>हाँ। खरीद बिल और खरीद ऑर्डर की विंडो में <strong>+ New item</strong> है; खरीद बिल के आइटम बॉक्स में <kbd>Alt</kbd> + <kbd>C</kbd> दबाकर भी जोड़ सकते हैं।</div>
+            </details>
+            <details>
+              <summary>बिक्री कीमत MRP से ज़्यादा क्यों save नहीं होती?</summary>
+              <div>पैक किया माल उस पर छपे MRP से ज़्यादा कीमत पर नहीं बेचा जा सकता, इसलिए ERP <em>Selling price is above the MRP</em> कहकर रोकता है।</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">और guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="opening-stock.html"><span>अगला →</span><strong>शुरुआती स्टॉक डालें</strong></a>
+            <a class="guide-next-card" href="index.html"><span>मदद guides</span><strong>सारे मदद guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots Techstar ERP की demo कंपनी के हैं (Shree Ganesh Traders, Pune)। सभी नाम, GSTIN, रकम और दस्तावेज़ों के नंबर नमूना जानकारी हैं।</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../../index.html" class="logo footer-logo">
+            <img src="../../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST बिलिंग, POS, इन्वेंटरी, अकाउंटिंग और GST रिटर्न — भारतीय व्यापारों के लिए एक cloud ERP।</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">प्रोडक्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../features/billing-sales.html" class="footer-link">बिक्री और बिलिंग</a></li>
+            <li><a href="../../features/pos.html" class="footer-link">रिटेल POS</a></li>
+            <li><a href="../../features/inventory.html" class="footer-link">इन्वेंटरी और स्टॉक</a></li>
+            <li><a href="../../features/accounting.html" class="footer-link">अकाउंटिंग और फ़ाइनेंस</a></li>
+            <li><a href="../../features/gst.html" class="footer-link">GST अनुपालन</a></li>
+            <li><a href="../../features/reports.html" class="footer-link">रिपोर्ट, ऑडिट और MIS</a></li>
+            <li><a href="../../pricing.html" class="footer-link">कीमत</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">मदद guides</h4>
+          <ul class="footer-links">
+            <li><a href="../../hi/guides/sales-invoice.html" class="footer-link">सेल्स इनवॉइस बनाएँ</a></li>
+            <li><a href="../../hi/guides/purchase-bill.html" class="footer-link">खरीद बिल डालें</a></li>
+            <li><a href="../../hi/guides/e-way-bill.html" class="footer-link">ई-वे बिल बनाएँ</a></li>
+            <li><a href="../../hi/guides/gstr-1.html" class="footer-link">GSTR-1 तैयार करें</a></li>
+            <li><a href="../../hi/guides/index.html" class="footer-link">सारे मदद guides</a></li>
+            <li><a href="../../docs.html" class="footer-link">मदद जानकारी (English)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">सपोर्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../faq.html" class="footer-link">सवाल-जवाब (FAQ)</a></li>
+            <li><a href="../../contact.html" class="footer-link">संपर्क करें</a></li>
+            <li><a href="../../demo.html" class="footer-link">डेमो बुक करें</a></li>
+            <li><a href="../../privacy.html" class="footer-link">प्राइवेसी पॉलिसी</a></li>
+            <li><a href="../../terms.html" class="footer-link">सेवा की शर्तें</a></li>
+            <li><a href="../../refund-policy.html" class="footer-link">रिफ़ंड और कैंसिलेशन</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">संपर्क</h4>
+          <div class="footer-contact-item">
+            <span>पता:</span> छत्रपति संभाजीनगर, महाराष्ट्र, भारत
+          </div>
+          <div class="footer-contact-item">
+            <span>ई-मेल:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>फ़ोन / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../../privacy.html" class="footer-bottom-link">प्राइवेसी पॉलिसी</a>
+          <a href="../../terms.html" class="footer-bottom-link">नियम और शर्तें</a>
+          <a href="../../refund-policy.html" class="footer-bottom-link">रिफ़ंड और कैंसिलेशन</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/erp-integration.js"></script>
+
+</body>
+</html>

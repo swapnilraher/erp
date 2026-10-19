@@ -160,7 +160,7 @@
                   businessName: $("contactBusiness").value.trim(),
                   businessType: "Support / Contact",
                   message: $("contactMessage").value.trim(),
-                });
+                }, { pixelEvent: "Contact" });
                 btn.disabled = false; btn.textContent = "Send Message";
                 if (!result.ok) return err(`${result.error} You can also WhatsApp or call us on +91 95790 05645.`);
                 $("contactForm").style.display = "none";

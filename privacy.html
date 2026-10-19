@@ -32,9 +32,9 @@
 
     <h1 class="text-4xl font-extrabold mb-2" style="color:var(--color-primary-dark);">Privacy Policy</h1>
     <p class="text-xs text-muted mb-6">
-      <strong>Policy Version:</strong> 2026-09-10 &nbsp;|&nbsp; 
-      <strong>Effective Date:</strong> September 10, 2026 &nbsp;|&nbsp; 
-      <strong>Last Updated:</strong> September 10, 2026
+      <strong>Policy Version:</strong> 2026-10-19 &nbsp;|&nbsp;
+      <strong>Effective Date:</strong> October 19, 2026 &nbsp;|&nbsp;
+      <strong>Last Updated:</strong> October 19, 2026
     </p>
 
     <div style="background:#f8fafc; border-left:4px solid #3b82f6; padding:16px; border-radius:4px; margin-bottom:32px; font-size:14px;">
@@ -71,10 +71,13 @@
           <strong>Security &amp; Audit Logs:</strong> Timestamps, user IDs, user roles, action types (e.g. login, payment status update, invoice creation), and branch associations logged in your private tenant security trail.
         </li>
         <li style="margin-bottom:8px;">
-          <strong>Attribution &amp; Session Data:</strong> First-party session storage tokens, one-time demo handoff exchange codes, and standard UTM campaign parameters (source, medium, campaign) captured to evaluate marketing effectiveness.
+          <strong>Attribution &amp; Session Data:</strong> First-party browser storage (for a campaign visit, up to 90 days; see section 5), one-time demo handoff exchange codes, and standard UTM campaign parameters (source, medium, campaign) and, if you arrive from a Meta (Facebook / Instagram) advertisement, the ad-click identifier (<code>fbclid</code>), captured to evaluate marketing effectiveness.
         </li>
         <li style="margin-bottom:8px;">
-          <strong>Website Enquiries:</strong> When you book a demo or contact us on this website we collect your name, mobile number, e-mail (optional), business name, business type, city, preferred demo time and your message, together with the page and campaign you came from. We use them only to contact you about Techstar ERP and keep them for up to 24 months after our last contact, or until you ask us to delete them.
+          <strong>Trial and plan messages:</strong> During and just after a free trial we send the account's e-mail address and, once the templates are approved, its WhatsApp number a few service messages: a welcome, getting-started tips, that the trial ends soon (or that an AutoPay debit is due), and that it has ended. They come from Techstar ERP only and stop once a plan is chosen or a few days after the trial ends.
+        </li>
+        <li style="margin-bottom:8px;">
+          <strong>Website Enquiries:</strong> When you book a demo or contact us on this website we collect your name, mobile number, e-mail (optional), business name, business type, city, preferred demo time and your message, together with the page and campaign you came from. We use them to contact you about Techstar ERP and, with the mobile number and e-mail in hashed form only, to measure our advertising (section 5), and keep them for up to 24 months after our last contact, or until you ask us to delete them.
         </li>
       </ul>
     </div>
@@ -97,7 +100,7 @@
       <li><strong>Tenant Separation:</strong> Data belonging to your business workspace is partitioned using unique company identifiers and enforced through server-side authorization checks and database security rules. No other customer can access your ledgers or reports.</li>
       <li><strong>Encryption Standards:</strong> All data transmitted between your browser and our servers is encrypted using Transport Layer Security (TLS 1.3 / HTTPS). Data stored in our database is encrypted at rest using AES-256.</li>
       <li><strong>Where your data is stored:</strong> ERP data is kept in a managed PostgreSQL database (Supabase) in the <strong>Mumbai, India</strong> region. Owners and Admins can download a complete backup of their company data at any time.</li>
-      <li><strong>Service providers (sub-processors):</strong> Vercel (application hosting), Supabase (database), Google Firebase (sign-in and this website's hosting), Cashfree Payments (subscription payments) and our e-mail delivery provider. If you later connect a GST Suvidha Provider (for e-Invoice / e-Way Bill) or your own Google Drive (for backups), the data you send there is shared with that service only on your instruction.</li>
+      <li><strong>Service providers (sub-processors):</strong> Vercel (application hosting), Supabase (database), Google Firebase (sign-in and this website's hosting), Cashfree Payments (subscription payments), Meta Platforms (advertising measurement through the Meta Pixel on this website, see section 5, and WhatsApp service messages), Google (website visit statistics through Google Analytics on this website, see section 5) and our e-mail delivery provider. If you later connect a GST Suvidha Provider (for e-Invoice / e-Way Bill) or your own Google Drive (for backups), the data you send there is shared with that service only on your instruction.</li>
       <li><strong>Business loan referral (only with your separate consent):</strong> TECHSTAR MONEY SOLUTION PRIVATE LIMITED also works as a
         loan referral partner (DSA) for banks and NBFCs. Only if you separately opt in, we may use your company's own ERP records — such as sales,
         purchases, receivables and GST return summaries — to check your eligibility for business loans and share them with the lender you choose.
@@ -107,12 +110,15 @@
 
     <h2 class="text-2xl font-bold mb-3" style="color:var(--color-primary-dark);">5. Cookies &amp; Local Storage</h2>
     <p class="mb-4">
-      We utilize only essential functional cookies and local browser storage necessary for application functionality:
+      We use essential functional cookies and local browser storage necessary for application functionality, and, on this website, Google Analytics to count visits and the Meta Pixel to measure our advertising, both described below:
     </p>
     <ul style="list-style-type:disc; padding-left:24px; margin-bottom:24px;">
       <li><strong>Authentication Session:</strong> Secure tokens to maintain your login status across ERP modules without requiring repeated logins.</li>
-      <li><strong>UTM Attribution:</strong> Session storage temporary keys to preserve marketing source attribution during demo booking and trial registration.</li>
-      <li><strong>No Third-Party Advertising Trackers:</strong> We do NOT employ third-party advertising retargeting pixels (such as Meta Pixel or TikTok tracking scripts).</li>
+      <li><strong>Campaign Attribution:</strong> When you arrive on this website from one of our advertisements or campaign links, your browser's local storage keeps the campaign name and the ad-click identifier for up to 90 days (a visit without a campaign is kept only until you close the tab), so that a demo booking or a trial you start later is credited to that campaign. It stays in your browser and is sent to us only with a demo booking, a contact message or a trial sign-up.</li>
+      <li><strong>Google Analytics (visit statistics):</strong> This website uses Google Analytics 4, provided by Google LLC, to count visits and see which pages and buttons are used (for example "Start free trial" or "Book a demo"), so that we can improve the website. Google sets cookies such as <code>_ga</code> and receives the pages you view, your browser and device details, an approximate location derived from your IP address, and those button events. <strong>We do not send what you type into our forms to Google.</strong> Google handles this information under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--color-primary); font-weight:600;">Privacy Policy</a>. You can stop it by blocking cookies or with Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--color-primary); font-weight:600;">opt-out add-on</a>. The ERP application itself loads no analytics script.</li>
+      <li><strong>Meta Pixel (advertising measurement):</strong> This website uses the Meta Pixel, a tool provided by Meta Platforms, Inc. and Meta Platforms Ireland Limited, to measure the results of our advertisements on Facebook and Instagram and to show our advertisements to people who may be interested in Techstar ERP. When you visit this website, Meta sets cookies in your browser (such as <code>_fbp</code> and <code>_fbc</code>) and receives the pages you view, your browser and device details, your IP address, and the actions you take: booking a demo, sending us a contact message, or tapping the WhatsApp or Call button. <strong>We do not send what you type into our forms (name, mobile number, e-mail, business name or message) to Meta through the Pixel;</strong> our server sends only your mobile number and e-mail in hashed form, as described in the next point. Meta handles the information it receives under its own <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener" style="color:var(--color-primary); font-weight:600;">Privacy Policy</a>. You can stop this by blocking cookies in your browser, by using a tracker-blocking extension, or by changing your ad settings in your Facebook / Instagram account (Settings &rarr; Ad preferences).</li>
+      <li><strong>Enquiry, sign-up and purchase events (Meta Conversions API):</strong> To measure our advertising, and so that Meta can learn which enquiries become customers, our server tells Meta when you book a demo or send us a contact message on this website, when a free trial starts, when a company makes its first invoice during the trial (only that it happened, never the invoice), and when a company's first paid plan is activated (with the plan and the amount excluding GST). With each event we send the mobile number and e-mail address you gave us in hashed (one-way encrypted) form, the ad-click identifier if you came from a Meta advertisement, the Meta cookies this website set in your browser (<code>_fbp</code>, <code>_fbc</code>; this website passes them to the ERP when you start a trial) and, for enquiries and the trial, the IP address and browser type used at that time. We never send your name, business name or message, nor invoices, ledgers, customer or supplier details or any other business records. The ERP application itself loads no advertising script.</li>
+      <li><strong>No Other Advertising Trackers:</strong> We do not use any other third-party advertising or retargeting pixel (such as TikTok or LinkedIn scripts), and we never sell your data to advertisers.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mb-3" style="color:var(--color-primary-dark);">6. Data Retention &amp; Customer Deletion Rights</h2>
@@ -162,5 +168,6 @@
     </div>
   </div>
 
+  <script src="js/erp-integration.js"></script>
 </body>
 </html>

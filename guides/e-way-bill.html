@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Generate an e-Way Bill from an Invoice — Techstar ERP Help</title>
+  <meta name="description" content="Step by step with screenshots: generate an e-Way Bill from a sales invoice in Techstar ERP — one-time portal login, Part B transport details, print, update vehicle, extend or cancel.">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/guides/e-way-bill">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/e-way-bill">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/e-way-bill">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/e-way-bill">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/e-way-bill">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="How to Generate an e-Way Bill from an Invoice — Techstar ERP Help">
+  <meta property="og:description" content="Step by step with screenshots: generate an e-Way Bill from a sales invoice in Techstar ERP — one-time portal login, Part B transport details, print, update vehicle, extend or cancel.">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/guides/e-way-bill">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to generate an e-Way Bill","description":"Step by step with screenshots: generate an e-Way Bill from a sales invoice in Techstar ERP — one-time portal login, Part B transport details, print, update vehicle, extend or cancel.","inLanguage":"en","step":[{"@type":"HowToStep","position":1,"name":"Save the e-Way Bill API user once in GST → E-Invoice / E-Way Bill → GST Configuration"},{"@type":"HowToStep","position":2,"name":"Open GST → E-Invoice / E-Way Bill → e-Way Bills"},{"@type":"HowToStep","position":3,"name":"Click Generate on the invoice, or New e-Way Bill and choose the invoice"},{"@type":"HowToStep","position":4,"name":"Enter the transport details (Part B): mode, distance, vehicle number or transporter ID"},{"@type":"HowToStep","position":5,"name":"Click Generate e-Way Bill"},{"@type":"HowToStep","position":6,"name":"Print the e-Way Bill; update the vehicle, extend or cancel it when needed"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="../features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="../features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="../features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="../features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="../features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="../features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="../features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="../features/gst.html" class="nav-link">GST</a>
+        <a href="../industries.html" class="nav-link">Industries</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login.html" class="btn-login" data-action="erp-login">Login</a>
+        <a href="../demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../features.html" class="mobile-nav-link">Features</a>
+    <a href="../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="../features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="../features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="../features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="../features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="../features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="../industries.html" class="mobile-nav-link">Industries</a>
+    <a href="../pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="../faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Help guides</a>
+    <a href="../about.html" class="mobile-nav-link">About</a>
+    <a href="../contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="../login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="../demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="You are here">
+            <a href="index.html">Help guides</a><span aria-hidden="true">›</span><a href="index.html#gst">GST</a>
+          </nav>
+          <nav class="lang-switch" aria-label="Language / Language">
+            <a href="../guides/e-way-bill.html" hreflang="en" lang="en" aria-current="page">English</a>
+            <a href="../mr/guides/e-way-bill.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../hi/guides/e-way-bill.html" hreflang="hi" lang="hi">हिंदी</a>
+          </nav>
+        </div>
+        <h1>How to generate an e-Way Bill</h1>
+        <p class="guide-lead">Generate the e-Way Bill for an invoice straight from Techstar ERP — the invoice, party and item details are sent from your books, so you only add the transport details (Part B). No retyping on the e-way bill portal.</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ About 2 minutes</span>
+          <span class="guide-chip">Menu: GST → E-Invoice / E-Way Bill</span>
+          <span class="guide-chip">One-time setup: e-Way Bill API user</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="On this page">
+          <p class="guide-toc-title">On this page</p>
+          <ol>
+            <li><a href="#when">When is it needed?</a></li>
+            <li><a href="#setup">One-time setup</a></li>
+            <li><a href="#step-open">1. Open the e-Way Bills tab</a></li>
+            <li><a href="#step-invoice">2. Pick the invoice</a></li>
+            <li><a href="#step-partb">3. Enter Part B (transport)</a></li>
+            <li><a href="#step-generate">4. Generate</a></li>
+            <li><a href="#step-result">5. The e-Way Bill is active</a></li>
+            <li><a href="#step-manage">6. Print, vehicle, extend, cancel</a></li>
+            <li><a href="#other-ways">Other ways to generate</a></li>
+            <li><a href="#faq">Common questions</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="All guides">
+          <p class="guide-toc-title"><a href="index.html">All guides</a></p>
+          <details class="guide-nav-group">
+            <summary>Sales <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">Make a sales invoice</a></li>
+              <li><a href="pos-billing.html">Bill at the counter (POS)</a></li>
+              <li><a href="customers-credit.html">Customers and credit (udhar)</a></li>
+              <li><a href="invoices-list.html">Find, reprint or cancel an invoice</a></li>
+              <li><a href="quotations.html">Make a quotation</a></li>
+              <li><a href="sales-orders.html">Sales orders and deliveries</a></li>
+              <li><a href="delivery-challans.html">Delivery challans</a></li>
+              <li><a href="credit-notes-returns.html">Sales return and credit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Purchases <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">Add a purchase bill</a></li>
+              <li><a href="suppliers.html">Add suppliers</a></li>
+              <li><a href="purchase-orders-grn.html">Purchase order and goods received (GRN)</a></li>
+              <li><a href="supplier-payments.html">Pay a supplier</a></li>
+              <li><a href="debit-notes-returns.html">Purchase return and debit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Items & stock <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">Add items with HSN, GST and prices</a></li>
+              <li><a href="opening-stock.html">Enter opening stock</a></li>
+              <li><a href="stock-transfer.html">Transfer stock between branches</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">Generate an e-Invoice (IRN)</a></li>
+              <li><a href="e-way-bill.html" aria-current="page">Generate an e-Way Bill</a></li>
+              <li><a href="gstr-1.html">Prepare GSTR-1</a></li>
+              <li><a href="gstr-3b.html">Prepare GSTR-3B</a></li>
+              <li><a href="gstr-2b-matching.html">Match purchases with GSTR-2B</a></li>
+              <li><a href="gstr-1a.html">GSTR-1A amendments</a></li>
+              <li><a href="gst-payments.html">GST payments and cash ledger</a></li>
+              <li><a href="pre-filing-checks.html">Pre-filing checks</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP is also in Hindi and Marathi.</strong> Click the round button with your initial (top right) → <span class="ui">Language</span> → <strong>हिन्दी</strong> or <strong>मराठी</strong>. The menu changes to that language; invoices and other legal documents print as usual. The screenshots in this guide use the English menu.</p></div>
+          </div>
+
+          <h2 id="when">When is an e-Way Bill needed?</h2>
+          <p>An e-Way Bill is needed before goods move when the consignment value is above the limit — <strong>₹50,000</strong> for movement between states. For movement within a state the limit depends on the state (for example ₹1,00,000 within Maharashtra).</p>
+          <p>You do not have to remember this: the e-Way Bills list marks each invoice <strong>Pending</strong> when a bill is needed, or <strong>Not required (up to ₹…)</strong> with the limit that applies to the states of that sale.</p>
+
+          <h2 id="setup">One-time setup: your e-Way Bill portal login</h2>
+          <ol class="guide-list is-numbered">
+            <li>On <strong>ewaybillgst.gov.in</strong>, create an API user for your GSTIN (Registration → For GSP, choosing your GSP).</li>
+            <li>In Techstar ERP open <strong>GST → E-Invoice / E-Way Bill → GST Configuration</strong> <span class="mark-letter" aria-label="box A">A</span>.</li>
+            <li>Pick your GSTIN on the left, enter the e-Way Bill API user name and password <span class="mark-letter" aria-label="box B">B</span> and save. The login is checked with the portal when you save, and passwords are stored encrypted.</li>
+          </ol>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/e-way-bill/01-credentials.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/01-credentials.webp" alt="GST Configuration tab with the e-Way Bill portal API user name and password for the company GSTIN" width="2000" height="1525" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>Box A: GST Configuration tab. Box B: the e-Way Bill portal API user for your GSTIN (shown as Set up once saved).</figcaption>
+          </figure>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div><p><strong>No API user yet?</strong> You can still use the ERP: fill the same form and click <strong>Download JSON</strong>. Upload that file on the e-way bill portal and the bill is made there. (GST returns are not filed from this software.)</p></div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>Open the e-Way Bills tab</h3>
+              <p>Go to <strong>GST → E-Invoice / E-Way Bill</strong> and open the <strong>e-Way Bills</strong> tab <span class="mark-letter" aria-label="box A">A</span>. Every sales invoice is listed with its customer, date, value and e-Way Bill status. Use the <em>All / Active / Pending / Cancelled</em> tabs or the search box to find an invoice.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/e-way-bill/02-list-pending.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/02-list-pending.webp" alt="e-Way Bills list with one invoice pending, others marked not required or active" width="2000" height="1250" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: e-Way Bills tab. Box B: the invoice waiting for its e-Way Bill (Pending). Box C: New e-Way Bill.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-invoice">
+              <h3>Pick the invoice</h3>
+              <p>Click <span class="ui">Generate</span> on the invoice's row <span class="mark-letter" aria-label="box B">B</span>, or click <span class="ui">+ New e-Way Bill</span> <span class="mark-letter" aria-label="box C">C</span> and choose the invoice from the list. The customer, GSTIN and value of the invoice are shown so you can check you have the right one.</p>
+            </section>
+
+            <section class="guide-step" id="step-partb">
+              <h3>Enter the transport details (Part B)</h3>
+              <div class="guide-table-wrap">
+                <table class="guide-table">
+                  <thead><tr><th>Field</th><th>What to enter</th></tr></thead>
+                  <tbody>
+                    <tr><td>Mode of transport</td><td>Road, Rail, Air or Ship.</td></tr>
+                    <tr><td>Distance (km)</td><td>The approximate distance. Leave it blank to let the portal calculate it from the PIN codes (there is a link to NIC's PIN-to-PIN distance).</td></tr>
+                    <tr><td>Vehicle number</td><td>By road: the vehicle number, for example MH12KT4521 — or give the transporter ID instead.</td></tr>
+                    <tr><td>Vehicle type</td><td>Regular, or Over dimensional cargo.</td></tr>
+                    <tr><td>Transporter ID</td><td>The transporter's GSTIN or TRANSIN. Needed when there is no vehicle number yet.</td></tr>
+                    <tr><td>Transporter name, LR no.</td><td>Optional. By rail, air or ship the transport document number and date are required.</td></tr>
+                    <tr><td>Delivery address</td><td>Filled from the invoice's ship-to address. City and PIN code are required.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+          <figure class="guide-shot" style="max-width:640px">
+            <a href="../assets/guides/e-way-bill/03-dialog-top.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/03-dialog-top.webp" alt="New e-Way Bill window with the invoice chosen and the Part B transport details: mode, distance and vehicle number" width="1280" height="1640" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: the invoice. Box B: distance. Box C: vehicle number.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-generate">
+              <h3>Generate</h3>
+              <p>Check the delivery <span class="ui">City / place</span> <span class="mark-letter" aria-label="box A">A</span> and <span class="ui">PIN code</span> <span class="mark-letter" aria-label="box B">B</span>, then click <span class="ui">Generate e-Way Bill</span> <span class="mark-letter" aria-label="box C">C</span>. The ERP sends the invoice and transport details to the e-way bill portal and records the e-Way Bill number and its validity on the invoice. <span class="ui">Download JSON</span> <span class="mark-letter" aria-label="box D">D</span> makes the upload file for the portal instead.</p>
+
+          <figure class="guide-shot" style="max-width:640px">
+            <a href="../assets/guides/e-way-bill/04-dialog-bottom.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/04-dialog-bottom.webp" alt="Lower part of the New e-Way Bill window with the delivery city, PIN code and the Generate e-Way Bill and Download JSON buttons" width="1280" height="1640" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: delivery city. Box B: PIN code. Box C: Generate e-Way Bill. Box D: Download JSON (to upload on the portal).</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-result">
+              <h3>The e-Way Bill is active</h3>
+              <p>The invoice now shows <strong>Active</strong>, the 12-digit e-Way Bill number and <strong>Valid up to</strong>. The portal sets the validity from the distance — for normal cargo about one day for every 200 km.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/e-way-bill/05-generated.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/05-generated.webp" alt="e-Way Bills list showing the invoice with an active e-Way Bill number and its validity date" width="2000" height="1525" loading="lazy" decoding="async">
+            </a>
+            <figcaption>The invoice with its active e-Way Bill number and validity.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-manage">
+              <h3>Print, change the vehicle, extend or cancel</h3>
+              <p>Click the <strong>⋯</strong> button on the row:</p>
+              <ul class="guide-list">
+                <li><span class="ui">Print e-Way Bill</span> — give the print to the driver; <span class="ui">View on portal</span> shows the portal's record.</li>
+                <li><span class="ui">Update vehicle (Part B)</span> — the goods moved to another vehicle (breakdown, transhipment); choose the reason.</li>
+                <li><span class="ui">Change transporter</span> — hand the bill to another transporter.</li>
+                <li><span class="ui">Extend validity</span> — appears from 8 hours before to 8 hours after the bill expires, when the goods cannot reach in time.</li>
+                <li><span class="ui">Cancel e-Way Bill</span> — only within 24 hours of generating it and before the goods are checked in transit. A cancelled bill cannot be used again; generate a new one.</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/e-way-bill/06-row-menu.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/e-way-bill/06-row-menu.webp" alt="Actions menu of an active e-Way Bill with view, print, update vehicle, change transporter and cancel" width="2000" height="1525" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Actions of an active e-Way Bill.</figcaption>
+          </figure>
+            </section>
+          </div>
+
+          <h2 id="other-ways">Other ways to generate an e-Way Bill</h2>
+          <ul class="guide-list">
+            <li><strong>Right after saving the invoice</strong> — when the goods are above the limit, the saved invoice shows a yellow reminder with a <em>Generate E-Way Bill</em> link. If you use e-invoicing, generate the IRN in the window that opens; the same window then asks for the transport details and makes the e-Way Bill. See <a href="sales-invoice.html">How to make a sales invoice</a>.</li>
+            <li><strong>From challan / return</strong> — for delivery challans, sale returns and purchase returns: type the document number, fetch it and generate.</li>
+            <li><strong>Trip sheet (combine bills)</strong> — in the <strong>⋯</strong> menu at the top: one consolidated e-Way Bill for several bills on one vehicle.</li>
+            <li><strong>Bills where I am the transporter</strong> — e-Way Bills that others have assigned to your GSTIN.</li>
+          </ul>
+
+          <h2 id="faq">Common questions</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>The list says “Not required”. Can I still make an e-Way Bill?</summary>
+              <div>Yes. The <strong>Generate</strong> button stays on every invoice, for example when a transporter asks for an e-Way Bill even below the limit.</div>
+            </details>
+            <details>
+              <summary>I get an error about the login or credentials.</summary>
+              <div>Save the e-Way Bill API user under <strong>GST → E-Invoice / E-Way Bill → GST Configuration</strong> (see the one-time setup above). The user name and password must be exactly as created on the e-way bill portal.</div>
+            </details>
+            <details>
+              <summary>Is the vehicle number required?</summary>
+              <div>By road you need either the vehicle number or the transporter ID. If the vehicle is not known yet, give the transporter ID now and add the vehicle later with <strong>Update vehicle (Part B)</strong>.</div>
+            </details>
+            <details>
+              <summary>I made a mistake in the e-Way Bill.</summary>
+              <div>Cancel it within 24 hours (⋯ → Cancel e-Way Bill, with a reason) and generate a new one. If only the vehicle changed, use Update vehicle instead of cancelling.</div>
+            </details>
+            <details>
+              <summary>Does the e-Way Bill change my accounts?</summary>
+              <div>No. The e-Way Bill number and validity are saved on the invoice for your records and printing; the invoice's amounts and your books stay as they are.</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">More guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="e-invoice.html"><span>← Previous</span><strong>Generate an e-Invoice (IRN)</strong></a>
+            <a class="guide-next-card" href="gstr-1.html"><span>Next →</span><strong>Prepare GSTR-1</strong></a>
+            <a class="guide-next-card" href="index.html"><span>Help guides</span><strong>All help guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots are from Techstar ERP with a demo company (Shree Ganesh Traders, Pune). All names, GSTINs, amounts and document numbers are sample data.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="logo footer-logo">
+            <img src="../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="../features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="../features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="../features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="../features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="../features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="../features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Help guides</h4>
+          <ul class="footer-links">
+            <li><a href="../guides/sales-invoice.html" class="footer-link">Make a sales invoice</a></li>
+            <li><a href="../guides/purchase-bill.html" class="footer-link">Add a purchase bill</a></li>
+            <li><a href="../guides/e-way-bill.html" class="footer-link">Generate an e-Way Bill</a></li>
+            <li><a href="../guides/gstr-1.html" class="footer-link">Prepare GSTR-1</a></li>
+            <li><a href="../guides/index.html" class="footer-link">All help guides</a></li>
+            <li><a href="../docs.html" class="footer-link">Help documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="../faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="../demo.html" class="footer-link">Book a demo</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="../refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <span>Address:</span> Chhatrapati Sambhajinagar, Maharashtra, India
+          </div>
+          <div class="footer-contact-item">
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-bottom-link">Terms &amp; Conditions</a>
+          <a href="../refund-policy.html" class="footer-bottom-link">Refund &amp; Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/erp-integration.js"></script>
+
+</body>
+</html>

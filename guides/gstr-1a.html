@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Correct an Invoice with GSTR-1A — Techstar ERP Help</title>
+  <meta name="description" content="Step by step with screenshots: correct an invoice already reported in GSTR-1 — pick the invoice, enter the corrected value, GSTIN, place of supply or rate, save and download the GSTR-1A JSON to upload on the GST portal.">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/gstr-1a">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/gstr-1a">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="How to Correct an Invoice with GSTR-1A — Techstar ERP Help">
+  <meta property="og:description" content="Step by step with screenshots: correct an invoice already reported in GSTR-1 — pick the invoice, enter the corrected value, GSTIN, place of supply or rate, save and download the GSTR-1A JSON to upload on the GST portal.">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to record GSTR-1A amendments","description":"Step by step with screenshots: correct an invoice already reported in GSTR-1 — pick the invoice, enter the corrected value, GSTIN, place of supply or rate, save and download the GSTR-1A JSON to upload on the GST portal.","inLanguage":"en","step":[{"@type":"HowToStep","position":1,"name":"Open GST → More GST → GSTR-1A amendments"},{"@type":"HowToStep","position":2,"name":"Choose the return period and click Load registers"},{"@type":"HowToStep","position":3,"name":"Pick the invoice to correct"},{"@type":"HowToStep","position":4,"name":"Choose the reason and enter the corrected value, buyer GSTIN, place of supply or rate"},{"@type":"HowToStep","position":5,"name":"Click Save correction"},{"@type":"HowToStep","position":6,"name":"Click Download GSTR-1A JSON and upload it yourself on the GST portal"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="../features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="../features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="../features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="../features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="../features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="../features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="../features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="../features/gst.html" class="nav-link">GST</a>
+        <a href="../industries.html" class="nav-link">Industries</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login.html" class="btn-login" data-action="erp-login">Login</a>
+        <a href="../demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../features.html" class="mobile-nav-link">Features</a>
+    <a href="../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="../features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="../features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="../features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="../features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="../features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="../industries.html" class="mobile-nav-link">Industries</a>
+    <a href="../pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="../faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Help guides</a>
+    <a href="../about.html" class="mobile-nav-link">About</a>
+    <a href="../contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="../login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="../demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="You are here">
+            <a href="index.html">Help guides</a><span aria-hidden="true">›</span><a href="index.html#gst">GST</a>
+          </nav>
+          <nav class="lang-switch" aria-label="Language / Language">
+            <a href="../guides/gstr-1a.html" hreflang="en" lang="en" aria-current="page">English</a>
+            <a href="../mr/guides/gstr-1a.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../hi/guides/gstr-1a.html" hreflang="hi" lang="hi">हिंदी</a>
+          </nav>
+        </div>
+        <h1>How to record GSTR-1A amendments</h1>
+        <p class="guide-lead">Made a mistake in an invoice that is already in your filed GSTR-1? Record the correction in Techstar ERP: pick the invoice, enter what was wrong, and download the GSTR-1A JSON. You upload that file and file GSTR-1A yourself on the GST portal. Your invoices and books are not changed.</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ About 3 minutes</span>
+          <span class="guide-chip">Menu: GST → More GST → GSTR-1A amendments</span>
+          <span class="guide-chip">Filed by you on the GST portal</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="On this page">
+          <p class="guide-toc-title">On this page</p>
+          <ol>
+            <li><a href="#before">Before you start</a></li>
+            <li><a href="#step-open">1. Open GSTR-1A and load the month</a></li>
+            <li><a href="#step-pick">2. Pick the invoice</a></li>
+            <li><a href="#step-correct">3. Enter the correction</a></li>
+            <li><a href="#step-save">4. Save the correction</a></li>
+            <li><a href="#step-json">5. Download the GSTR-1A JSON</a></li>
+            <li><a href="#faq">Common questions</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="All guides">
+          <p class="guide-toc-title"><a href="index.html">All guides</a></p>
+          <details class="guide-nav-group">
+            <summary>Sales <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">Make a sales invoice</a></li>
+              <li><a href="pos-billing.html">Bill at the counter (POS)</a></li>
+              <li><a href="customers-credit.html">Customers and credit (udhar)</a></li>
+              <li><a href="invoices-list.html">Find, reprint or cancel an invoice</a></li>
+              <li><a href="quotations.html">Make a quotation</a></li>
+              <li><a href="sales-orders.html">Sales orders and deliveries</a></li>
+              <li><a href="delivery-challans.html">Delivery challans</a></li>
+              <li><a href="credit-notes-returns.html">Sales return and credit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Purchases <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">Add a purchase bill</a></li>
+              <li><a href="suppliers.html">Add suppliers</a></li>
+              <li><a href="purchase-orders-grn.html">Purchase order and goods received (GRN)</a></li>
+              <li><a href="supplier-payments.html">Pay a supplier</a></li>
+              <li><a href="debit-notes-returns.html">Purchase return and debit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Items & stock <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">Add items with HSN, GST and prices</a></li>
+              <li><a href="opening-stock.html">Enter opening stock</a></li>
+              <li><a href="stock-transfer.html">Transfer stock between branches</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">Generate an e-Invoice (IRN)</a></li>
+              <li><a href="e-way-bill.html">Generate an e-Way Bill</a></li>
+              <li><a href="gstr-1.html">Prepare GSTR-1</a></li>
+              <li><a href="gstr-3b.html">Prepare GSTR-3B</a></li>
+              <li><a href="gstr-2b-matching.html">Match purchases with GSTR-2B</a></li>
+              <li><a href="gstr-1a.html" aria-current="page">GSTR-1A amendments</a></li>
+              <li><a href="gst-payments.html">GST payments and cash ledger</a></li>
+              <li><a href="pre-filing-checks.html">Pre-filing checks</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP is also in Hindi and Marathi.</strong> Click the round button with your initial (top right) → <span class="ui">Language</span> → <strong>हिन्दी</strong> or <strong>मराठी</strong>. The menu changes to that language; invoices and other legal documents print as usual. The screenshots in this guide use the English menu.</p></div>
+          </div>
+
+          <h2 id="before">Before you start</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>For invoices already reported in GSTR-1.</strong> As the screen says, GSTR-1A amends outward invoices and credit notes of a tax period before its GSTR-3B is filed.</p>
+              <p><strong>The ERP records, you file.</strong> The correction is saved here and goes into a GSTR-1A JSON. Nothing is sent to the GST portal: you upload the JSON and file GSTR-1A there.</p>
+              <p><strong>Your GSTIN is saved</strong> in Settings → Business details &amp; GST — it decides CGST + SGST or IGST and is needed for the JSON.</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>Open GSTR-1A and load the month</h3>
+              <p>In the left menu open <strong>GST → More GST → GSTR-1A amendments</strong> <span class="mark-letter" aria-label="box A">A</span>. Choose the <span class="ui">Return period</span> <span class="mark-letter" aria-label="box B">B</span> of the invoice — in the example September 2026, whose GSTR-1 is already filed — and click <span class="ui">Load registers</span> <span class="mark-letter" aria-label="box C">C</span>.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/gstr-1a/01-open.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/gstr-1a/01-open.webp" alt="GSTR-1A amendments screen in Techstar ERP with the return period September 2026 and the Load registers button" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>Box A: GST → More GST → GSTR-1A amendments. Box B: Return period. Box C: Load registers.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-pick">
+              <h3>Pick the invoice</h3>
+              <p>In <span class="ui">Invoice to correct</span> <span class="mark-letter" aria-label="box A">A</span> choose the invoice from the month's list. Its details as reported appear under <strong>Original invoice</strong> <span class="mark-letter" aria-label="box B">B</span>: buyer GSTIN, place of supply, taxable value and GST rate.</p>
+              <p>The <span class="ui">Type</span> is set for you from the invoice — <em>Invoice to a registered buyer (B2BA)</em>, <em>Large invoice to an unregistered buyer in another State (B2CLA)</em>, <em>Credit / debit note (CDNRA)</em> or <em>Export invoice (EXP-A)</em>. Change it only if it is wrong.</p>
+            </section>
+
+            <section class="guide-step" id="step-correct">
+              <h3>Enter the correction</h3>
+              <p>Choose the <span class="ui">Reason</span> <span class="mark-letter" aria-label="box C">C</span> — <em>Wrong taxable value</em>, <em>Wrong buyer GSTIN</em>, <em>Wrong place of supply</em>, <em>Wrong GST rate</em> or <em>Other</em> — and change the field that was wrong:</p>
+              <div class="guide-table-wrap">
+                <table class="guide-table">
+                  <thead><tr><th>Field</th><th>What to enter</th></tr></thead>
+                  <tbody>
+                    <tr><td>Corrected invoice number</td><td>Filled from the invoice; change only if the number was wrong.</td></tr>
+                    <tr><td>Corrected buyer GSTIN</td><td>The right GSTIN. Leave it blank for an unregistered buyer.</td></tr>
+                    <tr><td>Corrected place of supply</td><td>The right State. The ERP works out CGST + SGST (your own State) or IGST (another State) from it.</td></tr>
+                    <tr><td>Corrected GST rate</td><td>The right rate.</td></tr>
+                    <tr><td>Corrected taxable value (₹) <span class="mark-letter" aria-label="box D">D</span></td><td>The right taxable value — in the example ₹36,800 instead of ₹37,100.</td></tr>
+                    <tr><td>Corrected cess (₹)</td><td>If cess applies.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/gstr-1a/02-correct.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/gstr-1a/02-correct.webp" alt="GSTR-1A correction form with the invoice picked, the original invoice details, the reason and the corrected taxable value" width="2000" height="1068" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: invoice to correct. Box B: the original invoice. Box C: reason. Box D: corrected taxable value. Box E: Save correction.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-save">
+              <h3>Save the correction</h3>
+              <p>Click <span class="ui">Save correction</span> (box E above). The correction appears under <strong>Corrections recorded for Sep 2026</strong> <span class="mark-letter" aria-label="box A">A</span>: the type and the original invoice, the corrected details and reason, the new taxable value with the old one (<em>Was</em>), the corrected tax and the status <strong>Recorded</strong>.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/gstr-1a/03-saved.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/gstr-1a/03-saved.webp" alt="Corrections recorded for September 2026 with one B2BA correction, the corrected taxable value and tax, and the Download GSTR-1A JSON button" width="2000" height="568" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: the recorded correction. Box B: Download GSTR-1A JSON. Box C: Export Excel.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-json">
+              <h3>Download the GSTR-1A JSON</h3>
+              <p>Click <span class="ui">Download GSTR-1A JSON</span> <span class="mark-letter" aria-label="box B">B</span>. The file (named like <em>GSTR1A_&lt;GSTIN&gt;_2026-09.json</em>) holds all the corrections of the month. Upload it yourself on the GST portal and file GSTR-1A there. <span class="ui">Export Excel</span> <span class="mark-letter" aria-label="box C">C</span> gives the same corrections as a worksheet for your records or your CA.</p>
+              <div class="guide-callout is-warn">
+                <span class="guide-callout-icon" aria-hidden="true">⚠️</span>
+                <div><p>GSTR-1A changes what is reported, not your books. If the invoice itself must change in your accounts, use a credit or debit note as your accountant advises.</p></div>
+              </div>
+            </section>
+          </div>
+
+          <h2 id="faq">Common questions</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>Does saving a correction change my invoice or my books?</summary>
+              <div>No. The correction is a separate record that goes into the GSTR-1A JSON. The invoice, the customer's balance and your ledgers stay as they are.</div>
+            </details>
+            <details>
+              <summary>Does Techstar ERP file GSTR-1A?</summary>
+              <div>No. It prepares the JSON. You upload it and file GSTR-1A on the GST portal yourself.</div>
+            </details>
+            <details>
+              <summary>Why is my invoice not in the list?</summary>
+              <div>The list shows the invoices of the month you loaded. Choose the invoice's month in <strong>Return period</strong> and click <strong>Load registers</strong> again.</div>
+            </details>
+            <details>
+              <summary>How is the corrected tax worked out?</summary>
+              <div>From the corrected taxable value and rate. If the corrected place of supply is your own State, the tax is split into CGST and SGST; otherwise it is IGST.</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">More guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="gstr-2b-matching.html"><span>← Previous</span><strong>Match purchases with GSTR-2B</strong></a>
+            <a class="guide-next-card" href="gst-payments.html"><span>Next →</span><strong>GST payments and cash ledger</strong></a>
+            <a class="guide-next-card" href="index.html"><span>Help guides</span><strong>All help guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots are from Techstar ERP with a demo company (Shree Ganesh Traders, Pune). All names, GSTINs, amounts and document numbers are sample data.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="logo footer-logo">
+            <img src="../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="../features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="../features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="../features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="../features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="../features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="../features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Help guides</h4>
+          <ul class="footer-links">
+            <li><a href="../guides/sales-invoice.html" class="footer-link">Make a sales invoice</a></li>
+            <li><a href="../guides/purchase-bill.html" class="footer-link">Add a purchase bill</a></li>
+            <li><a href="../guides/e-way-bill.html" class="footer-link">Generate an e-Way Bill</a></li>
+            <li><a href="../guides/gstr-1.html" class="footer-link">Prepare GSTR-1</a></li>
+            <li><a href="../guides/index.html" class="footer-link">All help guides</a></li>
+            <li><a href="../docs.html" class="footer-link">Help documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="../faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="../demo.html" class="footer-link">Book a demo</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="../refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <span>Address:</span> Chhatrapati Sambhajinagar, Maharashtra, India
+          </div>
+          <div class="footer-contact-item">
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-bottom-link">Terms &amp; Conditions</a>
+          <a href="../refund-policy.html" class="footer-bottom-link">Refund &amp; Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/erp-integration.js"></script>
+
+</body>
+</html>

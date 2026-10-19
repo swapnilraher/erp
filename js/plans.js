@@ -99,7 +99,7 @@
     // Starter / Business: try free or buy now; other plans: buy now
     const actions = el("div", "plan-contact-actions");
     if (canTry(plan)) {
-      const trial = el("a", "btn " + (plan.recommended ? "btn-primary" : "btn-secondary") + " plan-cta", "Start 3-day free trial");
+      const trial = el("a", "btn " + (plan.recommended ? "btn-primary" : "btn-secondary") + " plan-cta", "Start 7-day free trial");
       trial.href = registerUrl(plan, "trial");
       trial.addEventListener("click", () => window.TechstarERP && window.TechstarERP.trackEvent("plan_click", { plan: plan.id, intent: "trial" }));
       actions.append(trial);
@@ -168,7 +168,7 @@
       ["Invoices & reminders on WhatsApp", () => "✓", "✓"],
       ["Dedicated server & custom domain", () => "—", "✓"],
       ["Dedicated relationship manager", (p) => ((p.features || []).some((f) => /dedicated account manager/i.test(f)) ? "✓" : "—"), "✓"],
-      ["3-day free trial", (p) => (canTry(p) ? "✓" : "—"), "—"],
+      ["7-day free trial", (p) => (canTry(p) ? "✓" : "—"), "—"],
       ["Subscribe without a trial", () => "✓", "Contact us"],
     ];
     const tbody = el("tbody");
@@ -194,6 +194,17 @@
         node.append(contactCard(mode === "compact"));
       }
     });
+    // Home page hero: the cheapest current plan per month — yearly price ÷ 12 when paid annually, else the monthly price
+    const cheapest = plans.reduce((low, p) => (!low || p.yearlyPrice < low.yearlyPrice ? p : low), null);
+    if (cheapest) {
+      const yearly = billing === "yearly";
+      document.querySelectorAll("[data-hero-price]").forEach((n) => {
+        n.textContent = inr(yearly ? Math.round(cheapest.yearlyPrice / 12) : cheapest.monthlyPrice);
+      });
+      document.querySelectorAll("[data-hero-price-note]").forEach((n) => {
+        n.textContent = yearly ? `paid annually (${inr(cheapest.yearlyPrice)} a year)` : "paid monthly, cancel any time";
+      });
+    }
     // The "save" badge states the real saving of the current prices, not a fixed number
     const best = Math.max(0, ...plans.map(savingPct));
     document.querySelectorAll(".billing-save").forEach((badge) => {

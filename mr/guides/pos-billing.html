@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>काउंटरवर POS बिल कसे करायचे — Techstar ERP मदत</title>
+  <meta name="description" content="Screenshots सह स्टेप बाय स्टेप: Techstar ERP मध्ये काउंटरवर बिल करा — आयटम स्कॅन करा किंवा शोधा, सूट द्या, रोख, UPI, कार्ड किंवा उधार घ्या, पावती प्रिंट करा आणि बिल hold करा.">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/mr/guides/pos-billing">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/pos-billing">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/pos-billing">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/pos-billing">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/pos-billing">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="mr_IN">
+  <meta property="og:title" content="काउंटरवर POS बिल कसे करायचे — Techstar ERP मदत">
+  <meta property="og:description" content="Screenshots सह स्टेप बाय स्टेप: Techstar ERP मध्ये काउंटरवर बिल करा — आयटम स्कॅन करा किंवा शोधा, सूट द्या, रोख, UPI, कार्ड किंवा उधार घ्या, पावती प्रिंट करा आणि बिल hold करा.">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/mr/guides/pos-billing">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"काउंटरवर बिल (POS) कसे करायचे","description":"Screenshots सह स्टेप बाय स्टेप: Techstar ERP मध्ये काउंटरवर बिल करा — आयटम स्कॅन करा किंवा शोधा, सूट द्या, रोख, UPI, कार्ड किंवा उधार घ्या, पावती प्रिंट करा आणि बिल hold करा.","inLanguage":"mr","step":[{"@type":"HowToStep","position":1,"name":"Sales → POS billing उघडा (किंवा F8 दाबा)"},{"@type":"HowToStep","position":2,"name":"बारकोड स्कॅन करा किंवा F4 ने आयटम शोधा"},{"@type":"HowToStep","position":3,"name":"Cart मधील नग आणि दर तपासा"},{"@type":"HowToStep","position":4,"name":"गरज असेल तर ग्राहक निवडा (उधारीचे ग्राहक, GSTIN)"},{"@type":"HowToStep","position":5,"name":"सूट आणि ग्राहकाने दिलेली रोख रक्कम टाका"},{"@type":"HowToStep","position":6,"name":"पेमेंट घ्या: Cash F8, UPI F9, Credit F10 किंवा Card F11"},{"@type":"HowToStep","position":7,"name":"पावती प्रिंट करा किंवा बिल WhatsApp वर पाठवा, मग पुढचे बिल सुरू करा"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../../features.html" class="nav-link" aria-haspopup="true">वैशिष्ट्ये ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../../features/billing-sales.html" class="nav-dropdown-item">विक्री आणि बिलिंग</a>
+            <a href="../../features/pos.html" class="nav-dropdown-item">रिटेल POS</a>
+            <a href="../../features/inventory.html" class="nav-dropdown-item">इन्व्हेंटरी आणि स्टॉक</a>
+            <a href="../../features/accounting.html" class="nav-dropdown-item">अकाउंटिंग आणि फायनान्स</a>
+            <a href="../../features/gst.html" class="nav-dropdown-item">GST अनुपालन</a>
+            <a href="../../features/reports.html" class="nav-dropdown-item">रिपोर्ट, ऑडिट आणि MIS</a>
+            <a href="../../features/multi-branch.html" class="nav-dropdown-item">अनेक शाखांचे नियंत्रण</a>
+            <a href="../../features/role-management.html" class="nav-dropdown-item">युजर, रोल आणि सुरक्षा</a>
+          </div>
+        </div>
+        <a href="../../features/gst.html" class="nav-link">GST</a>
+        <a href="../../industries.html" class="nav-link">उद्योग</a>
+        <a href="../../pricing.html" class="nav-link">किंमत</a>
+        <a href="../../about.html" class="nav-link">आमच्याबद्दल</a>
+        <a href="../../contact.html" class="nav-link">संपर्क</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../../login.html" class="btn-login" data-action="erp-login">लॉगिन</a>
+        <a href="../../demo.html" class="btn btn-secondary btn-sm">डेमो बुक करा</a>
+        <a href="../../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">मोफत ट्रायल सुरू करा</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="मेनू उघडा" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mobile-nav-link">होम</a>
+    <a href="../../features.html" class="mobile-nav-link">वैशिष्ट्ये</a>
+    <a href="../../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">विक्री आणि बिलिंग</a>
+    <a href="../../features/pos.html" class="mobile-nav-link mobile-nav-sub">रिटेल POS</a>
+    <a href="../../features/inventory.html" class="mobile-nav-link mobile-nav-sub">इन्व्हेंटरी आणि स्टॉक</a>
+    <a href="../../features/accounting.html" class="mobile-nav-link mobile-nav-sub">अकाउंटिंग आणि फायनान्स</a>
+    <a href="../../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST अनुपालन</a>
+    <a href="../../features/reports.html" class="mobile-nav-link mobile-nav-sub">रिपोर्ट, ऑडिट आणि MIS</a>
+    <a href="../../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">अनेक शाखांचे नियंत्रण</a>
+    <a href="../../features/role-management.html" class="mobile-nav-link mobile-nav-sub">युजर, रोल आणि सुरक्षा</a>
+    <a href="../../industries.html" class="mobile-nav-link">उद्योग</a>
+    <a href="../../pricing.html" class="mobile-nav-link">किंमत</a>
+    <a href="../../faq.html" class="mobile-nav-link">प्रश्नोत्तरे</a>
+    <a href="../../mr/guides/index.html" class="mobile-nav-link">मदत guides</a>
+    <a href="../../about.html" class="mobile-nav-link">आमच्याबद्दल</a>
+    <a href="../../contact.html" class="mobile-nav-link">संपर्क</a>
+    <div class="mobile-menu-actions">
+      <a href="../../login.html" class="btn btn-secondary" data-action="erp-login">लॉगिन</a>
+      <a href="../../demo.html" class="btn btn-secondary">डेमो बुक करा</a>
+      <a href="../../free-trial.html" class="btn btn-primary" data-action="start-trial">मोफत ट्रायल सुरू करा</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="तुम्ही इथे आहात">
+            <a href="index.html">मदत guides</a><span aria-hidden="true">›</span><a href="index.html#sales">विक्री</a>
+          </nav>
+          <nav class="lang-switch" aria-label="भाषा / Language">
+            <a href="../../guides/pos-billing.html" hreflang="en" lang="en">English</a>
+            <a href="../../mr/guides/pos-billing.html" hreflang="mr" lang="mr" aria-current="page">मराठी</a>
+            <a href="../../hi/guides/pos-billing.html" hreflang="hi" lang="hi">हिंदी</a>
+          </nav>
+        </div>
+        <h1>काउंटरवर बिल (POS) कसे करायचे</h1>
+        <p class="guide-lead">POS स्क्रीन काउंटरवरच्या जलद विक्रीसाठी आहे. बारकोड स्कॅन करा किंवा आयटम शोधा, एका कीने पेमेंट घ्या आणि पावती आपोआप प्रिंट होते. तुमच्या किमतीतून GST किती ते ERP स्वतः काढतो, बिलाला नंबर देतो आणि बिल save होताच स्टॉक कमी करतो.</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ एका बिलाला एक मिनिटापेक्षा कमी</span>
+          <span class="guide-chip">Menu: Sales → POS billing</span>
+          <span class="guide-chip">Shortcut: कोणत्याही स्क्रीनवरून F8</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="या पानावर">
+          <p class="guide-toc-title">या पानावर</p>
+          <ol>
+            <li><a href="#before">सुरू करण्यापूर्वी</a></li>
+            <li><a href="#step-open">1. POS billing उघडा</a></li>
+            <li><a href="#step-items">2. आयटम स्कॅन करा किंवा शोधा</a></li>
+            <li><a href="#step-cart">3. नग आणि दर तपासा</a></li>
+            <li><a href="#step-customer">4. ग्राहक (हवा असल्यास)</a></li>
+            <li><a href="#step-discount">5. सूट, रोख आणि सुट्टे पैसे</a></li>
+            <li><a href="#step-pay">6. पेमेंट घ्या</a></li>
+            <li><a href="#step-saved">7. पावती, WhatsApp, पुढचे बिल</a></li>
+            <li><a href="#step-hold">8. बिल hold करा आणि परत आणा</a></li>
+            <li><a href="#keys">कीबोर्ड शॉर्टकट</a></li>
+            <li><a href="#faq">नेहमीचे प्रश्न</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="सर्व guides">
+          <p class="guide-toc-title"><a href="index.html">सर्व guides</a></p>
+          <details class="guide-nav-group" open>
+            <summary>विक्री <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">सेल्स इनव्हॉइस बनवा</a></li>
+              <li><a href="pos-billing.html" aria-current="page">काउंटरवर बिल (POS)</a></li>
+              <li><a href="customers-credit.html">ग्राहक आणि उधारी</a></li>
+              <li><a href="invoices-list.html">इनव्हॉइस शोधा, पुन्हा प्रिंट करा किंवा रद्द करा</a></li>
+              <li><a href="quotations.html">कोटेशन बनवा</a></li>
+              <li><a href="sales-orders.html">सेल्स ऑर्डर आणि डिलिव्हरी</a></li>
+              <li><a href="delivery-challans.html">डिलिव्हरी चलन</a></li>
+              <li><a href="credit-notes-returns.html">सेल्स रिटर्न आणि क्रेडिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>खरेदी <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">खरेदी बिल टाका</a></li>
+              <li><a href="suppliers.html">सप्लायर जोडा</a></li>
+              <li><a href="purchase-orders-grn.html">खरेदी ऑर्डर आणि माल आला (GRN)</a></li>
+              <li><a href="supplier-payments.html">सप्लायरला पेमेंट करा</a></li>
+              <li><a href="debit-notes-returns.html">खरेदी परतावा आणि डेबिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>आयटम आणि स्टॉक <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">HSN, GST आणि किमतींसह आयटम जोडा</a></li>
+              <li><a href="opening-stock.html">सुरुवातीचा स्टॉक टाका</a></li>
+              <li><a href="stock-transfer.html">शाखांमध्ये स्टॉक ट्रान्सफर करा</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">ई-इनव्हॉइस (IRN) बनवा</a></li>
+              <li><a href="e-way-bill.html">ई-वे बिल बनवा</a></li>
+              <li><a href="gstr-1.html">GSTR-1 तयार करा</a></li>
+              <li><a href="gstr-3b.html">GSTR-3B तयार करा</a></li>
+              <li><a href="gstr-2b-matching.html">खरेदी GSTR-2B शी जुळवा</a></li>
+              <li><a href="gstr-1a.html">GSTR-1A दुरुस्ती</a></li>
+              <li><a href="gst-payments.html">GST पेमेंट आणि कॅश लेजर</a></li>
+              <li><a href="pre-filing-checks.html">रिटर्नआधी तपासणी</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP मराठी आणि हिंदीतही वापरता येतो.</strong> वर उजवीकडे तुमच्या नावाच्या आद्याक्षराच्या गोल बटणावर click करा → <span class="ui">Language</span> (भाषा) → <strong>मराठी</strong>. ERP चा menu मराठीत दिसतो (उदा. Sales = विक्री). बिले आणि इतर कायदेशीर कागदपत्रे नेहमीप्रमाणेच छापली जातात. या guide मधले screenshots English menu चे आहेत.</p></div>
+          </div>
+
+          <h2 id="before">सुरू करण्यापूर्वी</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>आयटम item master मध्ये विक्री दरासह असावेत</strong> (Items &amp; stock → Items); आयटमला बारकोड असेल तर तो स्कॅन करता येतो. काउंटरवर विक्री दर म्हणजे <strong>GST सकट किंमत</strong>, MRP सारखी; त्यातून GST ERP स्वतः वेगळा काढतो.</p>
+              <p><strong>काउंटर आणि शिफ्ट ऐच्छिक आहेत.</strong> तुमच्या दुकानात ते असतील (Sales → Counters, shifts &amp; day-end) तर स्क्रीनच्या वर या कॉम्प्युटरचा काउंटर निवडा आणि गल्ल्यातली सुरुवातीची रोख टाकून शिफ्ट उघडा.</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>POS billing उघडा</h3>
+              <p>डाव्या menu मध्ये <strong>Sales → POS billing</strong> <span class="mark-letter" aria-label="बॉक्स A">A</span> वर click करा (मराठी menu मध्ये: <strong>विक्री → POS बिलिंग</strong>), किंवा कोणत्याही स्क्रीनवर <kbd>F8</kbd> दाबा. बिलाला जास्त जागा मिळावी म्हणून काउंटरवर menu फक्त icons चा होतो; icon वर माउस नेला की त्यातल्या स्क्रीन दिसतात.</p>
+              <p>वरच्या पट्टीत cashier, कीज आणि पुढचा बिल नंबर <span class="mark-letter" aria-label="बॉक्स B">B</span> दिसतो. बिल save झाल्यावरच नंबर पक्का होतो, त्यामुळे मालिकेत गॅप येत नाही. स्कॅन बॉक्सजवळचे <span class="ui">Catalog</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> आयटम शोध उघडते, आणि हिरवा बॅज (उदा. <em>6 items ready</em>) म्हणजे आयटम आणि स्टॉक या कॉम्प्युटरवरच ठेवलेले आहेत, त्यामुळे स्कॅनिंगला इंटरनेटची वाट पाहावी लागत नाही.</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/pos-billing/01-counter.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/01-counter.webp" alt="Techstar ERP ची रिकामी POS billing स्क्रीन, Sales menu उघडलेला" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>Sales → POS billing. बॉक्स A: menu मधील पर्याय. बॉक्स B: पुढचा बिल नंबर. बॉक्स C: आयटम catalogue (F4).</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-items">
+              <h3>आयटम स्कॅन करा किंवा शोधा</h3>
+              <p>बारकोड <strong>स्कॅन</strong> करा — स्क्रीनवर कुठेही असलात तरी स्कॅनर चालतो, <span class="ui">Scan or type a barcode…</span> बॉक्स तो पकडतो. प्रत्येक स्कॅनला एक नग वाढतो; तोच आयटम पुन्हा स्कॅन केला तर आणखी एक. एकदम जास्त नग टाकायचे असतील तर नग, स्टार आणि बारकोड टाइप करा, उदा. 4 नगांसाठी <strong>4*89000000003</strong>.</p>
+              <p><strong>बारकोड नाही?</strong> <kbd>F4</kbd> दाबा किंवा <span class="ui">Catalog</span> वर click करा, नावाची किमान दोन अक्षरे टाइप करा <span class="mark-letter" aria-label="बॉक्स A">A</span>, मग बाणाच्या कीज आणि <kbd>Enter</kbd> ने किंवा click करून आयटम निवडा <span class="mark-letter" aria-label="बॉक्स B">B</span>. यादीत बारकोड, स्टॉक आणि दर दिसतो.</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/pos-billing/02-catalog.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/02-catalog.webp" alt="POS catalogue शोध — दोन जुळणारे आयटम, त्यांचा बारकोड, स्टॉक आणि दर" width="1960" height="680" loading="lazy" decoding="async">
+            </a>
+            <figcaption>F4 Catalog. बॉक्स A: नाव किंवा बारकोडचा भाग टाइप करा. बॉक्स B: स्टॉक आणि दरासह जुळणारे आयटम.</figcaption>
+          </figure>
+              <div class="guide-callout is-tip">
+                <span class="guide-callout-icon" aria-hidden="true">💡</span>
+                <div><p>फोन किंवा टॅबलेटवर <span class="ui">Camera</span> ने कॅमेऱ्यातून बारकोड स्कॅन करता येतो (ब्राउझर सपोर्ट करत असेल तर), आणि <span class="ui">Touch</span> ने मोठ्या आयटम टाइल्स दिसतात, त्यांवर बोटाने टॅप करा.</p></div>
+              </div>
+            </section>
+
+            <section class="guide-step" id="step-cart">
+              <h3>नग आणि दर तपासा</h3>
+              <p>प्रत्येक आयटम cart मध्ये एक ओळ म्हणून येतो — बारकोड, GST दर आणि हातातला स्टॉक सह. प्रत्येक आयटमनंतर cursor परत स्कॅन बॉक्समध्ये <span class="mark-letter" aria-label="बॉक्स A">A</span> जातो, पुढच्या आयटमसाठी तयार.</p>
+              <ul class="guide-list">
+                <li><strong>नग</strong> <span class="mark-letter" aria-label="बॉक्स B">B</span>: − किंवा + वर click करा, <kbd>←</kbd> / <kbd>→</kbd> दाबा, किंवा टाइप करा. 0.5 kg सारखे अर्धे नगही चालतात.</li>
+                <li><strong>दर</strong> <span class="mark-letter" aria-label="बॉक्स C">C</span>: GST सकट विक्री दर. या बिलापुरता तो बदलू शकता.</li>
+                <li>बिनच्या icon ने किंवा <kbd>Del</kbd> ने ओळ <strong>काढा</strong>. <kbd>↑</kbd> / <kbd>↓</kbd> ने ओळींमध्ये फिरा.</li>
+              </ul>
+              <p>खालच्या पट्टीत <span class="mark-letter" aria-label="बॉक्स D">D</span> बिलाचा GST दरानुसार दिसतो: तुमच्याच राज्यातील विक्रीसाठी <strong>CGST + SGST</strong>, नाहीतर <em>Inter-State</em> बॅजसह <strong>IGST</strong>.</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/pos-billing/03-cart.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/03-cart.webp" alt="तीन आयटम, नग, दर, रक्कम आणि CGST व SGST पट्टीसह POS cart" width="2000" height="1308" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: स्कॅन बॉक्स. बॉक्स B: नग. बॉक्स C: दर (GST सकट). बॉक्स D: दरानुसार बिलाचा GST.</figcaption>
+          </figure>
+              <div class="guide-callout is-warn">
+                <span class="guide-callout-icon" aria-hidden="true">⚠️</span>
+                <div><p>लाल <strong>Short by</strong> बॅज म्हणजे या शाखेतील स्टॉकपेक्षा cart मध्ये जास्त नग आहेत. बिल save करताना server स्टॉक पुन्हा तपासतो.</p></div>
+              </div>
+            </section>
+
+            <section class="guide-step" id="step-customer">
+              <h3>ग्राहक (हवा असल्यास)</h3>
+              <p>Walk-in ग्राहक असेल तर <span class="ui">Customer</span> रिकामा ठेवू शकता. बिलावर ग्राहक टाकायचा असेल तर नाव, मोबाईल नंबर किंवा member code टाइप करून <kbd>Enter</kbd> दाबा. उधारीवर घेणाऱ्या ग्राहकांना <strong>Credit (udhar)</strong> बॅज <span class="mark-letter" aria-label="बॉक्स A">A</span> असतो, सोबत त्यांची बाकी आणि क्रेडिट मर्यादा दिसते.</p>
+              <p>उधारीच्या ग्राहकासाठी एक बॉक्स <span class="mark-letter" aria-label="बॉक्स B">B</span> मर्यादा तपासतो: हिरव्या रंगात <strong>Credit OK</strong>, किंवा ग्राहकाचे क्रेडिट बंद असेल, मर्यादा ₹0 असेल किंवा या बिलाने बाकी मर्यादेपेक्षा जास्त जात असेल तर लाल. <span class="ui">Credit</span> बटण <span class="mark-letter" aria-label="बॉक्स C">C</span> फक्त हिरवा बॉक्स असतानाच चालते.</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/pos-billing/07-credit-customer.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/07-credit-customer.webp" alt="उधारीचा ग्राहक निवडलेले POS बिल — बाकी, क्रेडिट मर्यादा आणि Credit OK" width="2000" height="1308" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: Credit (udhar) बॅज, बाकी आणि मर्यादेसह ग्राहक. बॉक्स B: क्रेडिटची तपासणी. बॉक्स C: Credit (F10).</figcaption>
+          </figure>
+              <ul class="guide-list">
+                <li><strong>नवीन ग्राहक:</strong> <span class="ui">New customer</span> वर click करा, <span class="ui">Full name</span>, <span class="ui">Mobile</span> आणि असेल तर GSTIN टाका. उधार द्यायचे असेल तर <span class="ui">Gets credit (udhar)</span> वर टिक करा आणि <span class="ui">Credit limit (₹)</span> टाका — ₹0 म्हणजे उधार नाही. <span class="ui">Save</span> वर click करा.</li>
+                <li><strong>व्यवसायाला बिल:</strong> ग्राहकाचा GSTIN <span class="ui">GSTIN (optional)</span> मध्ये टाका. मग टॅक्स GSTIN मधील राज्यानुसार लागतो.</li>
+                <li><strong>माल दुसऱ्या राज्यात पोहोचवायचा आहे:</strong> GSTIN नसलेल्या ग्राहकासाठी <span class="ui">Supply</span> मध्ये <em>At counter</em> ऐवजी <em>Deliver to …</em> ते राज्य निवडा. मग बिलावर IGST लागतो.</li>
+              </ul>
+            </section>
+
+            <section class="guide-step" id="step-discount">
+              <h3>सूट, रोख आणि सुट्टे पैसे</h3>
+              <p>उजवीकडे घ्यायची रक्कम, <strong>Net payable</strong> <span class="mark-letter" aria-label="बॉक्स A">A</span>, आणि ती कशी बनली ते दिसते.</p>
+              <ul class="guide-list">
+                <li><strong>सूट</strong> <span class="mark-letter" aria-label="बॉक्स B">B</span>: <kbd>F7</kbd> दाबा, <strong>₹</strong> किंवा <strong>%</strong> निवडा आणि टाइप करा. GST मोजण्याआधी सूट सगळ्या ओळींवर वाटली जाते, त्यामुळे GST पण कमी होतो.</li>
+                <li><strong>रोख आणि सुट्टे</strong> <span class="mark-letter" aria-label="बॉक्स C">C</span>: ग्राहकाने दिलेली रक्कम <span class="ui">Cash received (₹)</span> मध्ये टाका; किती परत द्यायचे ते <span class="ui">Change (₹)</span> मध्ये दिसते.</li>
+                <li>कूपन किंवा लॉयल्टी पॉइंट सूटीच्या खाली टाकून <span class="ui">Apply</span> ने तपासता येतात.</li>
+              </ul>
+              <p>मोठे <span class="ui">Cash</span> बटण <span class="mark-letter" aria-label="बॉक्स D">D</span> (<kbd>F8</kbd>) बिल रोख विक्री म्हणून save करते — पेमेंटच्या इतर पद्धती पुढच्या स्टेपमध्ये.</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/pos-billing/04-payment.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/04-payment.webp" alt="POS ची उजवी बाजू — net payable, 75 रुपये सूट, 6000 रोख आणि 1000 सुट्टे" width="2000" height="1308" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: net payable. बॉक्स B: सूट (F7). बॉक्स C: मिळालेली रोख आणि सुट्टे. बॉक्स D: Cash (F8) ने बिल save होते.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-pay">
+              <h3>पेमेंट घ्या</h3>
+              <p>एकच की दाबली की पेमेंटच्या पद्धतीसह बिल save होते: <kbd>F8</kbd> <strong>Cash</strong> (रोख), <kbd>F9</kbd> <strong>UPI</strong>, <kbd>F11</kbd> <strong>Card</strong> किंवा <kbd>F10</kbd> <strong>Credit</strong> (उधार — फक्त उधारीच्या ग्राहकांसाठी). बटणांवर click केले तरी चालते.</p>
+              <p>किंवा <kbd>End</kbd> (<span class="ui">Take payment</span>) दाबा, एकूण रक्कम पाहा आणि निवडा: <span class="ui">Cash</span> <span class="mark-letter" aria-label="बॉक्स A">A</span>, <span class="ui">UPI / bank</span>, <span class="ui">Card</span> किंवा <span class="ui">Credit (udhar)</span>. <span class="ui">Back (Esc)</span> ने परत बिलावर याल.</p>
+
+          <figure class="guide-shot" style="max-width:480px">
+            <a href="../../assets/guides/pos-billing/05-take-payment.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/05-take-payment.webp" alt="बिलाची एकूण रक्कम आणि Cash, UPI / bank, Card व Credit पर्यायांसह Take payment विंडो" width="960" height="1000" loading="lazy" decoding="async">
+            </a>
+            <figcaption>End: Take payment. बॉक्स A: Cash (F8). Walk-in ग्राहकासाठी Credit फिका (बंद) दिसतो.</figcaption>
+          </figure>
+              <div class="guide-callout is-info">
+                <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+                <div>
+                  <p><strong>Cashier लॉगिन:</strong> दर बदलला, 10% पेक्षा जास्त सूट दिली किंवा उधारीचे बिल मर्यादेपेक्षा जास्त गेले तर मॅनेजरची मंजुरी लागते. Cashier ला <em>Manager approval needed</em> दिसते, तो <span class="ui">Send for approval</span> वर click करतो; मॅनेजर मंजूर करेपर्यंत बिल Approvals मध्ये थांबते.</p>
+                  <p><strong>GSTIN नसलेले मोठे बिल:</strong> ₹50,000 किंवा जास्त (taxable value) असेल तर बिलावर ग्राहकाचे नाव आणि पत्ता असणे आवश्यक आहे, म्हणून ERP ते विचारतो.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="guide-step" id="step-saved">
+              <h3>पावती, WhatsApp आणि पुढचे बिल</h3>
+              <p>बिल नंबरसह save होते आणि 80 mm पावती लगेच प्रिंट होते. <strong>Bill saved</strong> विंडोमध्ये एकूण रक्कम, GST आणि मिळालेली रोख टाकली असेल तर परत द्यायचे सुट्टे दिसतात.</p>
+              <ul class="guide-list">
+                <li><span class="ui">Print receipt</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> ने पावती पुन्हा प्रिंट होते.</li>
+                <li>ग्राहकाचा मोबाईल टाकून <span class="ui">Send on WhatsApp</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> वर click करा — बिलाची PDF जाते.</li>
+                <li><span class="ui">New bill</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> ने पुढच्या ग्राहकासाठी काउंटर रिकामा होतो.</li>
+                <li>या काउंटरवर प्रिंटर नाही? <em>Print the receipt automatically after every bill (this counter)</em> वरची टिक काढा.</li>
+              </ul>
+
+          <figure class="guide-shot" style="max-width:600px">
+            <a href="../../assets/guides/pos-billing/06-saved.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/06-saved.webp" alt="बिल नंबर, एकूण रक्कम, GST, मिळालेली रोख, सुट्टे, WhatsApp आणि Print receipt बटणांसह Bill saved विंडो" width="1200" height="1050" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: पावती पुन्हा प्रिंट. बॉक्स B: PDF WhatsApp वर पाठवा. बॉक्स C: पुढचे बिल सुरू करा.</figcaption>
+          </figure>
+              <p>बिल save झाल्यावर स्टॉक कमी होतो, विक्री GST सह तुमच्या हिशोबात नोंदवली जाते आणि — उधारीच्या बिलात — ग्राहकाची बाकी वाढते. मालासाठी ई-वे बिल लागत असेल तर <strong>Bill saved</strong> ऐवजी ई-वे बिलाची विंडो येते; पहा <a href="e-way-bill.html">ई-वे बिल कसे बनवायचे</a>.</p>
+            </section>
+
+            <section class="guide-step" id="step-hold">
+              <h3>बिल hold करा आणि परत आणा</h3>
+              <p>ग्राहक आणखी एक वस्तू आणायला गेला? <kbd>F3</kbd> दाबा किंवा <span class="ui">Hold</span> वर click करा. बिल बाजूला ठेवले जाते आणि पुढच्या ग्राहकासाठी काउंटर मोकळा होतो. वर उजवीकडे संख्येसह <span class="ui">Held bills</span> बटण दिसते.</p>
+              <p><span class="ui">Held bills</span> आणि <span class="ui">Recall</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> वर click करा — बिल त्याचे आयटम, ग्राहक आणि सूटसह परत येते. Hold केलेली बिले server वर ठेवली जातात, त्यामुळे शाखेतील कोणत्याही काउंटरवरून ती परत आणता येतात.</p>
+
+          <figure class="guide-shot" style="max-width:600px">
+            <a href="../../assets/guides/pos-billing/08-held.webp" target="_blank" rel="noopener" title="पूर्ण आकारातील screenshot उघडा">
+              <img src="../../assets/guides/pos-billing/08-held.webp" alt="उधारीच्या ग्राहकाचे एक hold केलेले बिल आणि Recall बटणासह Held bills विंडो" width="1200" height="390" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Held bills: कोणी hold केले, कधी, आयटम आणि रक्कम. बॉक्स A: Recall.</figcaption>
+          </figure>
+            </section>
+          </div>
+
+          <h2 id="keys">कीबोर्ड शॉर्टकट</h2>
+          <div class="guide-table-wrap">
+            <table class="guide-table">
+              <thead><tr><th>कीज</th><th>काय होते</th></tr></thead>
+              <tbody>
+                <tr><td><kbd>F8</kbd> (इतर कोणत्याही स्क्रीनवर)</td><td>POS billing उघडते</td></tr>
+                <tr><td><kbd>F2</kbd></td><td>स्कॅन बॉक्समध्ये जा</td></tr>
+                <tr><td><kbd>F4</kbd></td><td>Catalogue शोध उघडा किंवा बंद करा</td></tr>
+                <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Cart च्या ओळींमध्ये फिरा</td></tr>
+                <tr><td><kbd>←</kbd> / <kbd>→</kbd> किंवा <kbd>-</kbd> / <kbd>+</kbd></td><td>निवडलेल्या ओळीचे नग कमी / जास्त</td></tr>
+                <tr><td><kbd>Del</kbd></td><td>निवडलेली ओळ काढा</td></tr>
+                <tr><td><kbd>F7</kbd></td><td>सूटीवर जा</td></tr>
+                <tr><td><kbd>F3</kbd></td><td>बिल hold करा</td></tr>
+                <tr><td><kbd>F8</kbd> / <kbd>F9</kbd> / <kbd>F10</kbd> / <kbd>F11</kbd></td><td>बिल Cash / UPI / Credit / Card म्हणून save करा</td></tr>
+                <tr><td><kbd>End</kbd></td><td>Take payment विंडो</td></tr>
+                <tr><td><kbd>Esc</kbd></td><td>उघडा शोध किंवा विंडो बंद करा</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="faq">नेहमीचे प्रश्न</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>काउंटरवरच्या किमतीत GST धरलेला असतो का?</summary>
+              <div>हो. POS स्क्रीनवरचा दर म्हणजे ग्राहक देतो ती GST सकट किंमत. त्यातून CGST आणि SGST (किंवा IGST) ERP वेगळा काढतो आणि उजवीकडे व cart खालच्या पट्टीत दाखवतो. GST आधीच्या दराने टॅक्स इनव्हॉइस करायचे असेल तर <a href="sales-invoice.html">Sales → GST invoice</a> वापरा.</div>
+            </details>
+            <details>
+              <summary>Credit बटण फिके (बंद) का आहे?</summary>
+              <div>उधार फक्त <strong>Credit (udhar)</strong> असलेल्या ग्राहकालाच देता येते — त्याचे क्रेडिट चालू असावे आणि या बिलानंतरही बाकी मर्यादेच्या आत राहावी. आधी असा ग्राहक निवडा; बटणांवरचा हिरवा किंवा लाल बॉक्स उधार का देता येत नाही ते सांगतो.</div>
+            </details>
+            <details>
+              <summary>बिल करताना इंटरनेट गेले तर काय होते?</summary>
+              <div>रोख, UPI किंवा कार्डचे बिल तरीही पूर्ण करता येते: ERP <strong>provisional slip</strong> (टॅक्स इनव्हॉइस नाही) प्रिंट करतो आणि इंटरनेट परत आल्यावर बिल आपोआप नोंदवतो; मग ग्राहकासाठी टॅक्स इनव्हॉइस प्रिंट करा. असे एका वेळी एकच बिल थांबू शकते. उधारीच्या बिलाला इंटरनेट लागतेच, कारण ग्राहकाची मर्यादा server वर तपासली जाते.</div>
+            </details>
+            <details>
+              <summary>काउंटरचे बिल पुन्हा प्रिंट, परत किंवा रद्द कसे करायचे?</summary>
+              <div>काउंटरची बिले इतर सगळ्या बिलांसोबत <strong>Sales → Invoices</strong> (मराठी menu: विक्री → इनव्हॉइस यादी) मध्ये असतात — पहा इनव्हॉइस शोधा, पुन्हा प्रिंट करा किंवा रद्द करा. परत आलेला माल तिथेच sales return म्हणून घेतला जातो.</div>
+            </details>
+            <details>
+              <summary>उधारीचे ग्राहक कुठे जोडायचे आणि त्यांची बाकी कशी घ्यायची?</summary>
+              <div><strong>Sales → Customers</strong> (मराठी menu: विक्री → ग्राहक) मध्ये — पहा ग्राहक आणि उधारी. काउंटरवरूनही <strong>New customer</strong> ने ग्राहक जोडता येतो.</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">आणखी guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="sales-invoice.html"><span>← मागील</span><strong>सेल्स इनव्हॉइस बनवा</strong></a>
+            <a class="guide-next-card" href="customers-credit.html"><span>पुढील →</span><strong>ग्राहक आणि उधारी</strong></a>
+            <a class="guide-next-card" href="index.html"><span>मदत guides</span><strong>सर्व मदत guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots Techstar ERP मधील demo कंपनीचे आहेत (Shree Ganesh Traders, Pune). सर्व नावे, GSTIN, रकमा आणि कागदपत्रांचे नंबर नमुना माहिती आहेत.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../../index.html" class="logo footer-logo">
+            <img src="../../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST बिलिंग, POS, इन्व्हेंटरी, अकाउंटिंग आणि GST रिटर्न — भारतीय व्यवसायांसाठी एकच cloud ERP.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">प्रॉडक्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../features/billing-sales.html" class="footer-link">विक्री आणि बिलिंग</a></li>
+            <li><a href="../../features/pos.html" class="footer-link">रिटेल POS</a></li>
+            <li><a href="../../features/inventory.html" class="footer-link">इन्व्हेंटरी आणि स्टॉक</a></li>
+            <li><a href="../../features/accounting.html" class="footer-link">अकाउंटिंग आणि फायनान्स</a></li>
+            <li><a href="../../features/gst.html" class="footer-link">GST अनुपालन</a></li>
+            <li><a href="../../features/reports.html" class="footer-link">रिपोर्ट, ऑडिट आणि MIS</a></li>
+            <li><a href="../../pricing.html" class="footer-link">किंमत</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">मदत guides</h4>
+          <ul class="footer-links">
+            <li><a href="../../mr/guides/sales-invoice.html" class="footer-link">सेल्स इनव्हॉइस बनवा</a></li>
+            <li><a href="../../mr/guides/purchase-bill.html" class="footer-link">खरेदी बिल टाका</a></li>
+            <li><a href="../../mr/guides/e-way-bill.html" class="footer-link">ई-वे बिल बनवा</a></li>
+            <li><a href="../../mr/guides/gstr-1.html" class="footer-link">GSTR-1 तयार करा</a></li>
+            <li><a href="../../mr/guides/index.html" class="footer-link">सर्व मदत guides</a></li>
+            <li><a href="../../docs.html" class="footer-link">मदत माहिती (English)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">सपोर्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../faq.html" class="footer-link">प्रश्नोत्तरे (FAQ)</a></li>
+            <li><a href="../../contact.html" class="footer-link">संपर्क करा</a></li>
+            <li><a href="../../demo.html" class="footer-link">डेमो बुक करा</a></li>
+            <li><a href="../../privacy.html" class="footer-link">प्रायव्हसी पॉलिसी</a></li>
+            <li><a href="../../terms.html" class="footer-link">सेवा अटी</a></li>
+            <li><a href="../../refund-policy.html" class="footer-link">परतावा आणि रद्द करणे</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">संपर्क</h4>
+          <div class="footer-contact-item">
+            <span>पत्ता:</span> छत्रपती संभाजीनगर, महाराष्ट्र, भारत
+          </div>
+          <div class="footer-contact-item">
+            <span>ई-मेल:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>फोन / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../../privacy.html" class="footer-bottom-link">प्रायव्हसी पॉलिसी</a>
+          <a href="../../terms.html" class="footer-bottom-link">अटी आणि शर्ती</a>
+          <a href="../../refund-policy.html" class="footer-bottom-link">परतावा आणि रद्द करणे</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/erp-integration.js"></script>
+
+</body>
+</html>

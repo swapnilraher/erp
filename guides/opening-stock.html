@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Enter Opening Stock — Techstar ERP Help</title>
+  <meta name="description" content="Step by step with screenshots: enter the stock you hold on the day your books start in Techstar ERP — quantity and cost rate by branch and batch, one line at a time or from a CSV file.">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/guides/opening-stock">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/opening-stock">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/opening-stock">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/opening-stock">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/opening-stock">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="How to Enter Opening Stock — Techstar ERP Help">
+  <meta property="og:description" content="Step by step with screenshots: enter the stock you hold on the day your books start in Techstar ERP — quantity and cost rate by branch and batch, one line at a time or from a CSV file.">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/guides/opening-stock">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to enter opening stock (item by item or from a CSV file)","description":"Step by step with screenshots: enter the stock you hold on the day your books start in Techstar ERP — quantity and cost rate by branch and batch, one line at a time or from a CSV file.","inLanguage":"en","step":[{"@type":"HowToStep","position":1,"name":"Open Items & stock → Opening stock"},{"@type":"HowToStep","position":2,"name":"In Add or change an opening line choose the item and the branch"},{"@type":"HowToStep","position":3,"name":"Enter the quantity and the cost rate, and the batch and expiry if any"},{"@type":"HowToStep","position":4,"name":"Click Save line and check the totals at the top"},{"@type":"HowToStep","position":5,"name":"For many items paste CSV rows in Import (CSV) and click Add / update these lines"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="../features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="../features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="../features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="../features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="../features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="../features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="../features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="../features/gst.html" class="nav-link">GST</a>
+        <a href="../industries.html" class="nav-link">Industries</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login.html" class="btn-login" data-action="erp-login">Login</a>
+        <a href="../demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../features.html" class="mobile-nav-link">Features</a>
+    <a href="../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="../features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="../features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="../features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="../features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="../features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="../industries.html" class="mobile-nav-link">Industries</a>
+    <a href="../pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="../faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Help guides</a>
+    <a href="../about.html" class="mobile-nav-link">About</a>
+    <a href="../contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="../login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="../demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="You are here">
+            <a href="index.html">Help guides</a><span aria-hidden="true">›</span><a href="index.html#stock">Items & stock</a>
+          </nav>
+          <nav class="lang-switch" aria-label="Language / Language">
+            <a href="../guides/opening-stock.html" hreflang="en" lang="en" aria-current="page">English</a>
+            <a href="../mr/guides/opening-stock.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../hi/guides/opening-stock.html" hreflang="hi" lang="hi">हिंदी</a>
+          </nav>
+        </div>
+        <h1>How to enter opening stock (item by item or from a CSV file)</h1>
+        <p class="guide-lead">When you start with the ERP, enter the stock you already hold: quantity and cost rate of each item, by branch and batch. Its value becomes the opening balance of Stock-in-Hand in your accounts, so the stock and the books agree from day one.</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ About 3 minutes</span>
+          <span class="guide-chip">Menu: Items & stock → Opening stock</span>
+          <span class="guide-chip">Owner, admin or accountant</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="On this page">
+          <p class="guide-toc-title">On this page</p>
+          <ol>
+            <li><a href="#before">Before you start</a></li>
+            <li><a href="#step-open">1. Open Opening stock</a></li>
+            <li><a href="#step-line">2. Add an opening line</a></li>
+            <li><a href="#step-saved">3. Check the line and the totals</a></li>
+            <li><a href="#step-csv">4. Import many lines from a CSV file</a></li>
+            <li><a href="#step-check">5. Fix the rows the ERP reports</a></li>
+            <li><a href="#faq">Common questions</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="All guides">
+          <p class="guide-toc-title"><a href="index.html">All guides</a></p>
+          <details class="guide-nav-group">
+            <summary>Sales <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">Make a sales invoice</a></li>
+              <li><a href="pos-billing.html">Bill at the counter (POS)</a></li>
+              <li><a href="customers-credit.html">Customers and credit (udhar)</a></li>
+              <li><a href="invoices-list.html">Find, reprint or cancel an invoice</a></li>
+              <li><a href="quotations.html">Make a quotation</a></li>
+              <li><a href="sales-orders.html">Sales orders and deliveries</a></li>
+              <li><a href="delivery-challans.html">Delivery challans</a></li>
+              <li><a href="credit-notes-returns.html">Sales return and credit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Purchases <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">Add a purchase bill</a></li>
+              <li><a href="suppliers.html">Add suppliers</a></li>
+              <li><a href="purchase-orders-grn.html">Purchase order and goods received (GRN)</a></li>
+              <li><a href="supplier-payments.html">Pay a supplier</a></li>
+              <li><a href="debit-notes-returns.html">Purchase return and debit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>Items & stock <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">Add items with HSN, GST and prices</a></li>
+              <li><a href="opening-stock.html" aria-current="page">Enter opening stock</a></li>
+              <li><a href="stock-transfer.html">Transfer stock between branches</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">Generate an e-Invoice (IRN)</a></li>
+              <li><a href="e-way-bill.html">Generate an e-Way Bill</a></li>
+              <li><a href="gstr-1.html">Prepare GSTR-1</a></li>
+              <li><a href="gstr-3b.html">Prepare GSTR-3B</a></li>
+              <li><a href="gstr-2b-matching.html">Match purchases with GSTR-2B</a></li>
+              <li><a href="gstr-1a.html">GSTR-1A amendments</a></li>
+              <li><a href="gst-payments.html">GST payments and cash ledger</a></li>
+              <li><a href="pre-filing-checks.html">Pre-filing checks</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP is also in Hindi and Marathi.</strong> Click the round button with your initial (top right) → <span class="ui">Language</span> → <strong>हिन्दी</strong> or <strong>मराठी</strong>. The menu changes to that language; invoices and other legal documents print as usual. The screenshots in this guide use the English menu.</p></div>
+          </div>
+
+          <h2 id="before">Before you start</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>The items must already exist</strong> (see <a href="add-items.html">How to add an item</a>), and you need a stock count on the day your books start, with the cost rate of each item.</p>
+              <p><strong>Who can do it:</strong> the owner, an admin or an accountant. The books start date is set under Banking &amp; accounts → Financial year &amp; lock.</p>
+              <p><strong>Until a month is locked.</strong> Opening stock can be changed until a month of the books is locked. After that it is frozen; bring stock in with a purchase or a physical stock count instead.</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>Open Opening stock</h3>
+              <p>In the left menu click <strong>Items &amp; stock → Opening stock</strong> <span class="mark-letter" aria-label="box A">A</span>.</p>
+              <p>The strip at the top <span class="mark-letter" aria-label="box B">B</span> shows the date your <strong>books start on</strong>, the value of the opening stock entered item by item, and the <strong>opening stock in accounts</strong> — the opening balance of Stock-in-Hand. They should match; if not, the strip says <em>Differs from the items</em>. Below it, the table lists the opening lines with branch, batch, expiry, quantity, rate and value.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/opening-stock/01-opening.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/opening-stock/01-opening.webp" alt="Opening stock screen in Techstar ERP with the menu entry and the strip with books start date and opening stock values highlighted" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>Box A: Items &amp; stock → Opening stock. Box B: books start date, opening stock of the items and in the accounts.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-line">
+              <h3>Add an opening line</h3>
+              <p>In <strong>Add or change an opening line</strong>:</p>
+              <ul class="guide-list">
+                <li><span class="ui">Item</span> <span class="mark-letter" aria-label="box A">A</span> — search the item or scan its barcode (services are not offered: they have no stock).</li>
+                <li><span class="ui">Branch</span> <span class="mark-letter" aria-label="box B">B</span> — the branch that holds this stock.</li>
+                <li><span class="ui">Qty</span> <span class="mark-letter" aria-label="box C">C</span> — the quantity counted.</li>
+                <li><span class="ui">Rate (cost)</span> <span class="mark-letter" aria-label="box D">D</span> — the cost per unit; the item's purchase rate is filled in, change it to your actual cost.</li>
+                <li><span class="ui">Batch</span> and <span class="ui">Expiry</span> — only for items kept by batch (medicines, food, paints).</li>
+              </ul>
+              <p>Click <span class="ui">Save line</span> <span class="mark-letter" aria-label="box E">E</span>. The message <em>Opening stock saved.</em> appears.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/opening-stock/02-add-line.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/opening-stock/02-add-line.webp" alt="Add or change an opening line box with item, branch, quantity 120, rate 140 and the Save line button highlighted" width="2000" height="901" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: item. Box B: branch. Box C: quantity. Box D: cost rate. Box E: Save line.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-saved">
+              <h3>Check the line and the totals</h3>
+              <p>The new line is in the table <span class="mark-letter" aria-label="box A">A</span> with its value (quantity × rate), and the totals at the top <span class="mark-letter" aria-label="box B">B</span> go up by the same amount — in the item list and in the accounts.</p>
+              <ul class="guide-list">
+                <li>To <strong>change</strong> a line, enter the same item, branch and batch again with the right quantity or rate: it replaces the old line.</li>
+                <li>To <strong>remove</strong> a line, click its bin icon and confirm.</li>
+                <li>Use the branch box above the table to see one branch at a time.</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/opening-stock/03-saved.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/opening-stock/03-saved.webp" alt="Opening stock table with the new ball valve line and the totals at the top updated" width="2000" height="1085" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: the line just saved. Box B: the totals, with the items and the accounts still matching.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-csv">
+              <h3>Import many lines from a CSV file</h3>
+              <p>For many items, use <strong>Import (CSV)</strong> lower on the screen. Click <span class="ui">Download a sample file</span> <span class="mark-letter" aria-label="box A">A</span> to see the format, then paste your rows in the box <span class="mark-letter" aria-label="box B">B</span>, one row per line:</p>
+              <p><code>barcode, qty, rate, batch, expiry (YYYY-MM-DD), branch code</code></p>
+              <ul class="guide-list">
+                <li>Batch, expiry and branch may be left blank; a blank branch takes the branch chosen above the table.</li>
+                <li>Put text that contains a comma in double quotes. A header row is skipped.</li>
+                <li><span class="ui">Add / update these lines</span> <span class="mark-letter" aria-label="box C">C</span> adds the rows and replaces any existing line for the same item, branch and batch.</li>
+                <li><span class="ui">Replace all openings</span> <span class="mark-letter" aria-label="box D">D</span> replaces the whole opening stock with the rows in the box (it asks you to confirm first).</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/opening-stock/04-csv.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/opening-stock/04-csv.webp" alt="Import CSV box with two pasted rows, the Download a sample file link and the Add update and Replace all buttons highlighted" width="2000" height="523" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: sample file. Box B: the CSV rows. Box C: add or update these lines. Box D: replace the whole opening stock.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-check">
+              <h3>Fix the rows the ERP reports</h3>
+              <p>Every row is checked before anything is saved. If a row is wrong, <strong>nothing is saved</strong> and the box <span class="mark-letter" aria-label="box A">A</span> lists each problem with its row number — for example a quantity that is not a number, an expiry not written as YYYY-MM-DD, or a branch code that does not exist. Correct the rows and click the button again.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/opening-stock/05-csv-check.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/opening-stock/05-csv-check.webp" alt="Import CSV box with the red list of rows to correct: row 3, quantity ten is not a number, nothing was saved" width="2000" height="634" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: the rows to correct — nothing is saved until every row is right.</figcaption>
+          </figure>
+            </section>
+          </div>
+
+          <h2 id="faq">Common questions</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>Why does the ERP ask for a cost rate?</summary>
+              <div>The quantity × cost rate of every line is the value of your opening stock. That value is the opening balance of Stock-in-Hand in your accounts, so your profit is right from the first month.</div>
+            </details>
+            <details>
+              <summary>The screen says some items got stock on the item master, not as opening stock.</summary>
+              <div>Older data may carry stock on the item itself. Its value is not in the opening stock in the accounts, so the first period would show it as profit. Choose the branch that holds that stock above the table and click <strong>Make them opening stock</strong>.</div>
+            </details>
+            <details>
+              <summary>I found more stock after a month was locked.</summary>
+              <div>Opening stock is frozen once a month of the books is locked. Bring the stock in with a purchase, or with a physical stock count under Items &amp; stock.</div>
+            </details>
+            <details>
+              <summary>Can I enter the same item for two branches or two batches?</summary>
+              <div>Yes — one line per item, branch and batch. The same item, branch and batch can appear only once; entering it again replaces the line.</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">More guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="add-items.html"><span>← Previous</span><strong>Add items with HSN, GST and prices</strong></a>
+            <a class="guide-next-card" href="stock-transfer.html"><span>Next →</span><strong>Transfer stock between branches</strong></a>
+            <a class="guide-next-card" href="index.html"><span>Help guides</span><strong>All help guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots are from Techstar ERP with a demo company (Shree Ganesh Traders, Pune). All names, GSTINs, amounts and document numbers are sample data.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="logo footer-logo">
+            <img src="../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="../features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="../features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="../features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="../features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="../features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="../features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Help guides</h4>
+          <ul class="footer-links">
+            <li><a href="../guides/sales-invoice.html" class="footer-link">Make a sales invoice</a></li>
+            <li><a href="../guides/purchase-bill.html" class="footer-link">Add a purchase bill</a></li>
+            <li><a href="../guides/e-way-bill.html" class="footer-link">Generate an e-Way Bill</a></li>
+            <li><a href="../guides/gstr-1.html" class="footer-link">Prepare GSTR-1</a></li>
+            <li><a href="../guides/index.html" class="footer-link">All help guides</a></li>
+            <li><a href="../docs.html" class="footer-link">Help documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="../faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="../demo.html" class="footer-link">Book a demo</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="../refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <span>Address:</span> Chhatrapati Sambhajinagar, Maharashtra, India
+          </div>
+          <div class="footer-contact-item">
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-bottom-link">Terms &amp; Conditions</a>
+          <a href="../refund-policy.html" class="footer-bottom-link">Refund &amp; Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/erp-integration.js"></script>
+
+</body>
+</html>

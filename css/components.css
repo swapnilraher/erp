@@ -431,7 +431,12 @@
 .feature-tab-btn.active { background: var(--color-primary-light); border-color: var(--color-primary-light); color: var(--color-white); }
 .feature-tab-panel { display: none; }
 .feature-tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center; }
-@media (max-width: 768px) { .feature-tab-panel.active { grid-template-columns: 1fr; } }
+/* Phones: all six tabs wrap into view instead of hiding behind a side scroll */
+@media (max-width: 768px) {
+  .feature-tab-panel.active { grid-template-columns: 1fr; }
+  .feature-tabs { flex-wrap: wrap; justify-content: center; overflow: visible; }
+  .feature-tab-btn { padding: 8px 14px; }
+}
 
 /* ====== BRANCH DIAGRAM ====== */
 .branch-diagram { display: flex; flex-direction: column; align-items: center; gap: 0; }
@@ -1307,10 +1312,11 @@
 .ewb-val { font-weight: 700; color: var(--text-dark); }
 .ewb-active { color: #B45309; background: rgba(245,158,11,0.12); border-radius: var(--radius-full); padding: 1px 6px; font-size: 9px; font-weight: 700; }
 
+/* Phones: the five steps wrap onto two rows (3 + 2) — a hidden side scroll cut step 5 off */
 @media (max-width: 768px) {
-  .gst-workflow-steps { justify-content: flex-start; }
+  .gst-workflow-steps { flex-wrap: wrap; justify-content: center; row-gap: var(--space-5); overflow: visible; }
   .gst-step-arrow { display: none; }
-  .gst-step { min-width: 90px; }
+  .gst-step { flex: 0 0 33.33%; min-width: 0; padding: 0 4px; }
 }
 
 /* ====== MOCK SCREEN (SHARED) ====== */
@@ -1451,3 +1457,58 @@
 .plan-card-contact .btn-secondary { background: transparent; color: #FFFFFF; border-color: rgba(255,255,255,0.35); }
 .plan-card-contact .btn-secondary:hover { background: rgba(255,255,255,0.1); }
 @media (max-width: 640px) { .grid-4[data-plans] { grid-template-columns: 1fr; } }
+
+/* ====== REAL ERP SCREENSHOTS (home page) ====== */
+/* Screens are real captures of the ERP with its demo company; the caption says so. */
+.shot { margin: 0; }
+.shot .mock-screen img { display: block; width: 100%; height: auto; }
+.shot-caption { margin-top: var(--space-3); font-size: 12px; color: var(--text-muted); text-align: center; }
+.hero-shot { position: relative; z-index: 1; min-width: 0; }
+.hero-shot .mock-screen { box-shadow: 0 32px 80px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.06); }
+.hero-price { margin: var(--space-5) 0 var(--space-5); }
+.hero-price-line { font-size: var(--text-sm); color: var(--text-muted); margin: var(--space-3) 0 0; }
+.hero-price-line .hero-price-amount { font-size: 1.25rem; font-weight: var(--font-extrabold); color: var(--text-dark); }
+.billing-toggle-sm { padding: 3px; border-radius: 12px; }
+.billing-toggle-sm button { padding: 6px 14px; font-size: 13px; border-radius: 9px; }
+
+/* Honest "what you get" cards where no screenshot exists yet */
+.list-card { background: var(--color-white); border: 1px solid var(--color-gray-200); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); padding: var(--space-6); }
+.list-card-title { font-size: var(--text-base); font-weight: var(--font-bold); color: var(--text-dark); margin-bottom: var(--space-4); }
+.list-card-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.list-card-chips span { font-size: 13px; font-weight: 600; color: var(--color-primary); background: var(--color-primary-alpha); border: 1px solid rgba(30,58,138,0.12); border-radius: var(--radius-full); padding: 6px 12px; }
+.list-card-note { margin-top: var(--space-4); font-size: 13px; color: var(--text-muted); }
+
+/* Indian flag as SVG: Windows does not draw flag emoji (it shows the letters "IN") */
+.flag-in { width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(15,23,42,0.08); }
+
+/* Industry cards open the matching section of the industries page */
+a.industry-card { display: block; color: inherit; text-decoration: none; }
+.industry-anchor { scroll-margin-top: calc(var(--header-height) + 16px); }
+
+/* Roles table: tell phone users the table scrolls sideways */
+.rbac-swipe-hint { display: none; font-size: 12px; color: var(--text-muted); margin-top: var(--space-2); text-align: right; }
+@media (max-width: 768px) { .rbac-swipe-hint { display: block; } }
+
+/* Demo form: next steps after the request is sent */
+.form-success-actions { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; margin-top: var(--space-6); }
+
+/* Footer: keep the phone number on one line */
+.footer-contact-item a[href^="tel:"] { white-space: nowrap; }
+
+/* Phones: the bottom bar carries WhatsApp, Demo and Trial, so the round floating buttons (which covered
+   the hero) are hidden on pages that have the bar, and back-to-top sits above the bar instead of under it. */
+.mobile-cta-wa { flex: 0 0 auto; width: 44px; padding: 0; display: inline-flex; align-items: center; justify-content: center; background: #25D366; border-color: #25D366; color: #FFFFFF; }
+@media (max-width: 768px) {
+  body:has(.mobile-cta-bar) .floating-buttons { display: none; }
+  #backToTop { bottom: calc(84px + env(safe-area-inset-bottom)) !important; }
+}
+
+/* Links inside running text (global a {} inherits colour, so these would look like plain words) */
+.text-link, .pricing-wallet-note a, .faq-answer a { color: var(--color-primary-light); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Phones: the three branch boxes share the width instead of pushing the page sideways */
+@media (max-width: 480px) {
+  .branches-row { gap: var(--space-2); width: 100%; }
+  .branch-item { flex: 1 1 0; min-width: 0; }
+  .branch-node { padding: var(--space-2); font-size: 11px; width: 100%; }
+}

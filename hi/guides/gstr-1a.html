@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSTR-1A से इनवॉइस कैसे ठीक करें — Techstar ERP मदद</title>
+  <meta name="description" content="Screenshots के साथ स्टेप बाय स्टेप: GSTR-1 में पहले बताया इनवॉइस ठीक करें — इनवॉइस चुनें, सही रकम, GSTIN, place of supply या रेट डालें, save करें और GST पोर्टल पर upload के लिए GSTR-1A JSON डाउनलोड करें।">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/hi/guides/gstr-1a">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/gstr-1a">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/gstr-1a">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/gstr-1a">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="hi_IN">
+  <meta property="og:title" content="GSTR-1A से इनवॉइस कैसे ठीक करें — Techstar ERP मदद">
+  <meta property="og:description" content="Screenshots के साथ स्टेप बाय स्टेप: GSTR-1 में पहले बताया इनवॉइस ठीक करें — इनवॉइस चुनें, सही रकम, GSTIN, place of supply या रेट डालें, save करें और GST पोर्टल पर upload के लिए GSTR-1A JSON डाउनलोड करें।">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/hi/guides/gstr-1a">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"GSTR-1A सुधार कैसे दर्ज करें","description":"Screenshots के साथ स्टेप बाय स्टेप: GSTR-1 में पहले बताया इनवॉइस ठीक करें — इनवॉइस चुनें, सही रकम, GSTIN, place of supply या रेट डालें, save करें और GST पोर्टल पर upload के लिए GSTR-1A JSON डाउनलोड करें।","inLanguage":"hi","step":[{"@type":"HowToStep","position":1,"name":"GST → More GST → GSTR-1A amendments खोलें"},{"@type":"HowToStep","position":2,"name":"रिटर्न का महीना चुनें और Load registers पर click करें"},{"@type":"HowToStep","position":3,"name":"ठीक करने वाला इनवॉइस चुनें"},{"@type":"HowToStep","position":4,"name":"कारण चुनें और सही रकम, ग्राहक का GSTIN, place of supply या रेट डालें"},{"@type":"HowToStep","position":5,"name":"Save correction पर click करें"},{"@type":"HowToStep","position":6,"name":"Download GSTR-1A JSON पर click करें और फ़ाइल खुद GST पोर्टल पर upload करें"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../../features.html" class="nav-link" aria-haspopup="true">फ़ीचर ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../../features/billing-sales.html" class="nav-dropdown-item">बिक्री और बिलिंग</a>
+            <a href="../../features/pos.html" class="nav-dropdown-item">रिटेल POS</a>
+            <a href="../../features/inventory.html" class="nav-dropdown-item">इन्वेंटरी और स्टॉक</a>
+            <a href="../../features/accounting.html" class="nav-dropdown-item">अकाउंटिंग और फ़ाइनेंस</a>
+            <a href="../../features/gst.html" class="nav-dropdown-item">GST अनुपालन</a>
+            <a href="../../features/reports.html" class="nav-dropdown-item">रिपोर्ट, ऑडिट और MIS</a>
+            <a href="../../features/multi-branch.html" class="nav-dropdown-item">कई ब्रांच का कंट्रोल</a>
+            <a href="../../features/role-management.html" class="nav-dropdown-item">यूज़र, रोल और सुरक्षा</a>
+          </div>
+        </div>
+        <a href="../../features/gst.html" class="nav-link">GST</a>
+        <a href="../../industries.html" class="nav-link">इंडस्ट्री</a>
+        <a href="../../pricing.html" class="nav-link">कीमत</a>
+        <a href="../../about.html" class="nav-link">हमारे बारे में</a>
+        <a href="../../contact.html" class="nav-link">संपर्क</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../../login.html" class="btn-login" data-action="erp-login">लॉगिन</a>
+        <a href="../../demo.html" class="btn btn-secondary btn-sm">डेमो बुक करें</a>
+        <a href="../../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">फ़्री ट्रायल शुरू करें</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="मेनू खोलें" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mobile-nav-link">होम</a>
+    <a href="../../features.html" class="mobile-nav-link">फ़ीचर</a>
+    <a href="../../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">बिक्री और बिलिंग</a>
+    <a href="../../features/pos.html" class="mobile-nav-link mobile-nav-sub">रिटेल POS</a>
+    <a href="../../features/inventory.html" class="mobile-nav-link mobile-nav-sub">इन्वेंटरी और स्टॉक</a>
+    <a href="../../features/accounting.html" class="mobile-nav-link mobile-nav-sub">अकाउंटिंग और फ़ाइनेंस</a>
+    <a href="../../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST अनुपालन</a>
+    <a href="../../features/reports.html" class="mobile-nav-link mobile-nav-sub">रिपोर्ट, ऑडिट और MIS</a>
+    <a href="../../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">कई ब्रांच का कंट्रोल</a>
+    <a href="../../features/role-management.html" class="mobile-nav-link mobile-nav-sub">यूज़र, रोल और सुरक्षा</a>
+    <a href="../../industries.html" class="mobile-nav-link">इंडस्ट्री</a>
+    <a href="../../pricing.html" class="mobile-nav-link">कीमत</a>
+    <a href="../../faq.html" class="mobile-nav-link">सवाल-जवाब</a>
+    <a href="../../hi/guides/index.html" class="mobile-nav-link">मदद guides</a>
+    <a href="../../about.html" class="mobile-nav-link">हमारे बारे में</a>
+    <a href="../../contact.html" class="mobile-nav-link">संपर्क</a>
+    <div class="mobile-menu-actions">
+      <a href="../../login.html" class="btn btn-secondary" data-action="erp-login">लॉगिन</a>
+      <a href="../../demo.html" class="btn btn-secondary">डेमो बुक करें</a>
+      <a href="../../free-trial.html" class="btn btn-primary" data-action="start-trial">फ़्री ट्रायल शुरू करें</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="आप यहाँ हैं">
+            <a href="index.html">मदद guides</a><span aria-hidden="true">›</span><a href="index.html#gst">GST</a>
+          </nav>
+          <nav class="lang-switch" aria-label="भाषा / Language">
+            <a href="../../guides/gstr-1a.html" hreflang="en" lang="en">English</a>
+            <a href="../../mr/guides/gstr-1a.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../../hi/guides/gstr-1a.html" hreflang="hi" lang="hi" aria-current="page">हिंदी</a>
+          </nav>
+        </div>
+        <h1>GSTR-1A सुधार कैसे दर्ज करें</h1>
+        <p class="guide-lead">भरे हुए GSTR-1 के किसी इनवॉइस में गलती हो गई? Techstar ERP में सुधार दर्ज करें: इनवॉइस चुनें, क्या गलत था वह डालें और GSTR-1A JSON डाउनलोड करें। वह फ़ाइल आप खुद GST पोर्टल पर upload करके GSTR-1A भरते हैं। आपके इनवॉइस और हिसाब नहीं बदलते।</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ लगभग 3 मिनट</span>
+          <span class="guide-chip">Menu: GST → More GST → GSTR-1A amendments</span>
+          <span class="guide-chip">रिटर्न आप GST पोर्टल पर भरते हैं</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="इस पेज पर">
+          <p class="guide-toc-title">इस पेज पर</p>
+          <ol>
+            <li><a href="#before">शुरू करने से पहले</a></li>
+            <li><a href="#step-open">1. GSTR-1A खोलें और महीना load करें</a></li>
+            <li><a href="#step-pick">2. इनवॉइस चुनें</a></li>
+            <li><a href="#step-correct">3. सुधार डालें</a></li>
+            <li><a href="#step-save">4. सुधार save करें</a></li>
+            <li><a href="#step-json">5. GSTR-1A JSON डाउनलोड करें</a></li>
+            <li><a href="#faq">आम सवाल</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="सारे guides">
+          <p class="guide-toc-title"><a href="index.html">सारे guides</a></p>
+          <details class="guide-nav-group">
+            <summary>बिक्री <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">सेल्स इनवॉइस बनाएँ</a></li>
+              <li><a href="pos-billing.html">काउंटर पर बिल (POS)</a></li>
+              <li><a href="customers-credit.html">ग्राहक और उधार</a></li>
+              <li><a href="invoices-list.html">इनवॉइस खोजें, दोबारा प्रिंट करें या कैंसिल करें</a></li>
+              <li><a href="quotations.html">कोटेशन बनाएँ</a></li>
+              <li><a href="sales-orders.html">सेल्स ऑर्डर और डिलीवरी</a></li>
+              <li><a href="delivery-challans.html">डिलीवरी चालान</a></li>
+              <li><a href="credit-notes-returns.html">सेल्स रिटर्न और क्रेडिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>खरीद <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">खरीद बिल डालें</a></li>
+              <li><a href="suppliers.html">सप्लायर जोड़ें</a></li>
+              <li><a href="purchase-orders-grn.html">खरीद ऑर्डर और माल आया (GRN)</a></li>
+              <li><a href="supplier-payments.html">सप्लायर को पेमेंट करें</a></li>
+              <li><a href="debit-notes-returns.html">खरीद वापसी और डेबिट नोट</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>आइटम और स्टॉक <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">HSN, GST और कीमतों के साथ आइटम जोड़ें</a></li>
+              <li><a href="opening-stock.html">शुरुआती स्टॉक डालें</a></li>
+              <li><a href="stock-transfer.html">ब्रांचों के बीच स्टॉक ट्रांसफ़र करें</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">ई-इनवॉइस (IRN) बनाएँ</a></li>
+              <li><a href="e-way-bill.html">ई-वे बिल बनाएँ</a></li>
+              <li><a href="gstr-1.html">GSTR-1 तैयार करें</a></li>
+              <li><a href="gstr-3b.html">GSTR-3B तैयार करें</a></li>
+              <li><a href="gstr-2b-matching.html">खरीद का GSTR-2B से मिलान</a></li>
+              <li><a href="gstr-1a.html" aria-current="page">GSTR-1A सुधार</a></li>
+              <li><a href="gst-payments.html">GST पेमेंट और कैश लेजर</a></li>
+              <li><a href="pre-filing-checks.html">रिटर्न से पहले जाँच</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP हिंदी और मराठी में भी इस्तेमाल कर सकते हैं।</strong> ऊपर दाईं ओर अपने नाम के पहले अक्षर वाले गोल बटन पर click करें → <span class="ui">Language</span> (भाषा) → <strong>हिन्दी</strong>। ERP का menu हिंदी में दिखेगा (जैसे Sales = बिक्री)। बिल और दूसरे कानूनी दस्तावेज़ हमेशा की तरह छपते हैं। इस guide के screenshots English menu के हैं।</p></div>
+          </div>
+
+          <h2 id="before">शुरू करने से पहले</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>GSTR-1 में पहले बताए इनवॉइस के लिए।</strong> जैसा स्क्रीन पर लिखा है, GSTR-1A से किसी महीने का GSTR-3B भरने से पहले उस महीने के इनवॉइस और क्रेडिट नोट ठीक किए जाते हैं।</p>
+              <p><strong>ERP दर्ज करता है, आप भरते हैं।</strong> सुधार यहाँ save होता है और GSTR-1A JSON में जाता है। GST पोर्टल को कुछ नहीं भेजा जाता: JSON आप upload करते हैं और GSTR-1A वहीं भरते हैं।</p>
+              <p><strong>आपका GSTIN save होना चाहिए</strong> — Settings → Business details &amp; GST में। CGST + SGST या IGST उसी से तय होता है और JSON के लिए भी ज़रूरी है।</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>GSTR-1A खोलें और महीना load करें</h3>
+              <p>बाईं ओर के menu में <strong>GST → More GST → GSTR-1A amendments</strong> <span class="mark-letter" aria-label="बॉक्स A">A</span> खोलें (हिंदी menu में: <strong>GST → और GST → GSTR-1A सुधार</strong>)। इनवॉइस का <span class="ui">Return period</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> चुनें — उदाहरण में सितंबर 2026, जिसका GSTR-1 पहले ही भरा जा चुका है — और <span class="ui">Load registers</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> पर click करें।</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/gstr-1a/01-open.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/gstr-1a/01-open.webp" alt="सितंबर 2026 रिटर्न महीना और Load registers बटन के साथ Techstar ERP की GSTR-1A amendments स्क्रीन" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: GST → More GST → GSTR-1A amendments। बॉक्स B: Return period। बॉक्स C: Load registers।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-pick">
+              <h3>इनवॉइस चुनें</h3>
+              <p><span class="ui">Invoice to correct</span> <span class="mark-letter" aria-label="बॉक्स A">A</span> में महीने की सूची से इनवॉइस चुनें। जैसा बताया गया था, वैसी जानकारी <strong>Original invoice</strong> <span class="mark-letter" aria-label="बॉक्स B">B</span> के नीचे दिखती है: ग्राहक का GSTIN, place of supply, taxable value और GST रेट।</p>
+              <p><span class="ui">Type</span> इनवॉइस से अपने आप तय होता है — <em>Invoice to a registered buyer (B2BA)</em>, <em>Large invoice to an unregistered buyer in another State (B2CLA)</em>, <em>Credit / debit note (CDNRA)</em> या <em>Export invoice (EXP-A)</em>। गलत हो तभी बदलें।</p>
+            </section>
+
+            <section class="guide-step" id="step-correct">
+              <h3>सुधार डालें</h3>
+              <p><span class="ui">Reason</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> चुनें — <em>Wrong taxable value</em>, <em>Wrong buyer GSTIN</em>, <em>Wrong place of supply</em>, <em>Wrong GST rate</em> या <em>Other</em> — और जो गलत था वह field बदलें:</p>
+              <div class="guide-table-wrap">
+                <table class="guide-table">
+                  <thead><tr><th>Field</th><th>क्या डालें</th></tr></thead>
+                  <tbody>
+                    <tr><td>Corrected invoice number</td><td>इनवॉइस से भरा होता है; नंबर ही गलत हो तभी बदलें।</td></tr>
+                    <tr><td>Corrected buyer GSTIN</td><td>सही GSTIN। बिना रजिस्ट्रेशन वाले ग्राहक के लिए खाली छोड़ें।</td></tr>
+                    <tr><td>Corrected place of supply</td><td>सही राज्य। उससे ERP CGST + SGST (आपका अपना राज्य) या IGST (दूसरा राज्य) तय करता है।</td></tr>
+                    <tr><td>Corrected GST rate</td><td>सही रेट।</td></tr>
+                    <tr><td>Corrected taxable value (₹) <span class="mark-letter" aria-label="बॉक्स D">D</span></td><td>सही taxable value — उदाहरण में ₹37,100 की जगह ₹36,800।</td></tr>
+                    <tr><td>Corrected cess (₹)</td><td>cess लागू हो तो।</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/gstr-1a/02-correct.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/gstr-1a/02-correct.webp" alt="चुना हुआ इनवॉइस, मूल इनवॉइस की जानकारी, कारण और सही taxable value वाला GSTR-1A सुधार फ़ॉर्म" width="2000" height="1068" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: ठीक करने वाला इनवॉइस। बॉक्स B: मूल इनवॉइस। बॉक्स C: कारण। बॉक्स D: सही taxable value। बॉक्स E: Save correction।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-save">
+              <h3>सुधार save करें</h3>
+              <p><span class="ui">Save correction</span> (ऊपर बॉक्स E) पर click करें। सुधार <strong>Corrections recorded for Sep 2026</strong> <span class="mark-letter" aria-label="बॉक्स A">A</span> के नीचे दिखता है: प्रकार और मूल इनवॉइस, सही जानकारी और कारण, नई taxable value और पुरानी (<em>Was</em>), सही टैक्स और स्थिति <strong>Recorded</strong>।</p>
+
+          <figure class="guide-shot">
+            <a href="../../assets/guides/gstr-1a/03-saved.webp" target="_blank" rel="noopener" title="पूरे आकार का screenshot खोलें">
+              <img src="../../assets/guides/gstr-1a/03-saved.webp" alt="एक B2BA सुधार, सही taxable value और टैक्स, और Download GSTR-1A JSON बटन के साथ सितंबर 2026 के दर्ज सुधार" width="2000" height="568" loading="lazy" decoding="async">
+            </a>
+            <figcaption>बॉक्स A: दर्ज सुधार। बॉक्स B: Download GSTR-1A JSON। बॉक्स C: Export Excel।</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-json">
+              <h3>GSTR-1A JSON डाउनलोड करें</h3>
+              <p><span class="ui">Download GSTR-1A JSON</span> <span class="mark-letter" aria-label="बॉक्स B">B</span> पर click करें। फ़ाइल में (नाम <em>GSTR1A_&lt;GSTIN&gt;_2026-09.json</em> जैसा) महीने के सारे सुधार होते हैं। उसे खुद GST पोर्टल पर upload करें और GSTR-1A वहीं भरें। <span class="ui">Export Excel</span> <span class="mark-letter" aria-label="बॉक्स C">C</span> वही सुधार आपके रिकॉर्ड या CA के लिए worksheet के रूप में देता है।</p>
+              <div class="guide-callout is-warn">
+                <span class="guide-callout-icon" aria-hidden="true">⚠️</span>
+                <div><p>GSTR-1A से बताई गई जानकारी बदलती है, आपका हिसाब नहीं। अगर इनवॉइस ही हिसाब में बदलना हो तो अपने accountant की सलाह से क्रेडिट या डेबिट नोट इस्तेमाल करें।</p></div>
+              </div>
+            </section>
+          </div>
+
+          <h2 id="faq">आम सवाल</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>क्या सुधार save करने से मेरा इनवॉइस या हिसाब बदलता है?</summary>
+              <div>नहीं। सुधार एक अलग रिकॉर्ड है जो GSTR-1A JSON में जाता है। इनवॉइस, ग्राहक का बकाया और आपके लेजर जैसे हैं वैसे ही रहते हैं।</div>
+            </details>
+            <details>
+              <summary>क्या Techstar ERP GSTR-1A भरता है?</summary>
+              <div>नहीं। वह JSON तैयार करता है। उसे upload करना और GSTR-1A भरना आप खुद GST पोर्टल पर करते हैं।</div>
+            </details>
+            <details>
+              <summary>मेरा इनवॉइस सूची में क्यों नहीं है?</summary>
+              <div>सूची में load किए महीने के ही इनवॉइस दिखते हैं। <strong>Return period</strong> में इनवॉइस का महीना चुनें और फिर से <strong>Load registers</strong> पर click करें।</div>
+            </details>
+            <details>
+              <summary>सही टैक्स कैसे गिना जाता है?</summary>
+              <div>सही taxable value और रेट से। सही place of supply आपका अपना राज्य हो तो टैक्स CGST और SGST में बँटता है; वरना IGST होता है।</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">और guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="gstr-2b-matching.html"><span>← पिछला</span><strong>खरीद का GSTR-2B से मिलान</strong></a>
+            <a class="guide-next-card" href="gst-payments.html"><span>अगला →</span><strong>GST पेमेंट और कैश लेजर</strong></a>
+            <a class="guide-next-card" href="index.html"><span>मदद guides</span><strong>सारे मदद guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots Techstar ERP की demo कंपनी के हैं (Shree Ganesh Traders, Pune)। सभी नाम, GSTIN, रकम और दस्तावेज़ों के नंबर नमूना जानकारी हैं।</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../../index.html" class="logo footer-logo">
+            <img src="../../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST बिलिंग, POS, इन्वेंटरी, अकाउंटिंग और GST रिटर्न — भारतीय व्यापारों के लिए एक cloud ERP।</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">प्रोडक्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../features/billing-sales.html" class="footer-link">बिक्री और बिलिंग</a></li>
+            <li><a href="../../features/pos.html" class="footer-link">रिटेल POS</a></li>
+            <li><a href="../../features/inventory.html" class="footer-link">इन्वेंटरी और स्टॉक</a></li>
+            <li><a href="../../features/accounting.html" class="footer-link">अकाउंटिंग और फ़ाइनेंस</a></li>
+            <li><a href="../../features/gst.html" class="footer-link">GST अनुपालन</a></li>
+            <li><a href="../../features/reports.html" class="footer-link">रिपोर्ट, ऑडिट और MIS</a></li>
+            <li><a href="../../pricing.html" class="footer-link">कीमत</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">मदद guides</h4>
+          <ul class="footer-links">
+            <li><a href="../../hi/guides/sales-invoice.html" class="footer-link">सेल्स इनवॉइस बनाएँ</a></li>
+            <li><a href="../../hi/guides/purchase-bill.html" class="footer-link">खरीद बिल डालें</a></li>
+            <li><a href="../../hi/guides/e-way-bill.html" class="footer-link">ई-वे बिल बनाएँ</a></li>
+            <li><a href="../../hi/guides/gstr-1.html" class="footer-link">GSTR-1 तैयार करें</a></li>
+            <li><a href="../../hi/guides/index.html" class="footer-link">सारे मदद guides</a></li>
+            <li><a href="../../docs.html" class="footer-link">मदद जानकारी (English)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">सपोर्ट</h4>
+          <ul class="footer-links">
+            <li><a href="../../faq.html" class="footer-link">सवाल-जवाब (FAQ)</a></li>
+            <li><a href="../../contact.html" class="footer-link">संपर्क करें</a></li>
+            <li><a href="../../demo.html" class="footer-link">डेमो बुक करें</a></li>
+            <li><a href="../../privacy.html" class="footer-link">प्राइवेसी पॉलिसी</a></li>
+            <li><a href="../../terms.html" class="footer-link">सेवा की शर्तें</a></li>
+            <li><a href="../../refund-policy.html" class="footer-link">रिफ़ंड और कैंसिलेशन</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">संपर्क</h4>
+          <div class="footer-contact-item">
+            <span>पता:</span> छत्रपति संभाजीनगर, महाराष्ट्र, भारत
+          </div>
+          <div class="footer-contact-item">
+            <span>ई-मेल:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>फ़ोन / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../../privacy.html" class="footer-bottom-link">प्राइवेसी पॉलिसी</a>
+          <a href="../../terms.html" class="footer-bottom-link">नियम और शर्तें</a>
+          <a href="../../refund-policy.html" class="footer-bottom-link">रिफ़ंड और कैंसिलेशन</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/erp-integration.js"></script>
+
+</body>
+</html>

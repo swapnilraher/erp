@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.TechstarMainReady)document.documentElement.classList.remove('js')},3000);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Transfer Stock Between Branches — Techstar ERP Help</title>
+  <meta name="description" content="Step by step with screenshots: send stock from one branch to another in Techstar ERP — request, review, dispatch with vehicle details and receive with shortages — plus the e-Way Bill JSON and the tax invoice between two GSTINs.">
+  <link rel="canonical" href="https://erp-by-swapnilaher.web.app/guides/stock-transfer">
+  <link rel="alternate" hreflang="en" href="https://erp-by-swapnilaher.web.app/guides/stock-transfer">
+  <link rel="alternate" hreflang="mr" href="https://erp-by-swapnilaher.web.app/mr/guides/stock-transfer">
+  <link rel="alternate" hreflang="hi" href="https://erp-by-swapnilaher.web.app/hi/guides/stock-transfer">
+  <link rel="alternate" hreflang="x-default" href="https://erp-by-swapnilaher.web.app/guides/stock-transfer">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#1E40AF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="How to Transfer Stock Between Branches — Techstar ERP Help">
+  <meta property="og:description" content="Step by step with screenshots: send stock from one branch to another in Techstar ERP — request, review, dispatch with vehicle details and receive with shortages — plus the e-Way Bill JSON and the tax invoice between two GSTINs.">
+  <meta property="og:url" content="https://erp-by-swapnilaher.web.app/guides/stock-transfer">
+  <meta property="og:image" content="https://erp-by-swapnilaher.web.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Techstar ERP — GST billing, accounting, inventory and POS">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to transfer stock from one branch to another","description":"Step by step with screenshots: send stock from one branch to another in Techstar ERP — request, review, dispatch with vehicle details and receive with shortages — plus the e-Way Bill JSON and the tax invoice between two GSTINs.","inLanguage":"en","step":[{"@type":"HowToStep","position":1,"name":"Open Items & stock → Stock transfers and click New transfer"},{"@type":"HowToStep","position":2,"name":"Choose the receiving branch, the item, the quantity and the value per unit, then click Send for review"},{"@type":"HowToStep","position":3,"name":"Review the request and click Approve"},{"@type":"HowToStep","position":4,"name":"Click Dispatch, enter the transport and vehicle number and confirm"},{"@type":"HowToStep","position":5,"name":"At the receiving branch click Receive, enter the quantity received and confirm"}]}</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Techstar ERP home">
+        <img src="../assets/logo.svg" alt="Techstar ERP" width="157" height="34" style="height:34px;width:auto">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-dropdown">
+          <a href="../features.html" class="nav-link" aria-haspopup="true">Features ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../features/billing-sales.html" class="nav-dropdown-item">Sales &amp; Billing</a>
+            <a href="../features/pos.html" class="nav-dropdown-item">Retail POS</a>
+            <a href="../features/inventory.html" class="nav-dropdown-item">Inventory &amp; Stock</a>
+            <a href="../features/accounting.html" class="nav-dropdown-item">Accounting &amp; Finance</a>
+            <a href="../features/gst.html" class="nav-dropdown-item">GST Compliance</a>
+            <a href="../features/reports.html" class="nav-dropdown-item">Reports, Audit &amp; MIS</a>
+            <a href="../features/multi-branch.html" class="nav-dropdown-item">Multi-Branch Control</a>
+            <a href="../features/role-management.html" class="nav-dropdown-item">Users, Roles &amp; Security</a>
+          </div>
+        </div>
+        <a href="../features/gst.html" class="nav-link">GST</a>
+        <a href="../industries.html" class="nav-link">Industries</a>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login.html" class="btn-login" data-action="erp-login">Login</a>
+        <a href="../demo.html" class="btn btn-secondary btn-sm">Book Demo</a>
+        <a href="../free-trial.html" class="btn btn-primary btn-sm" data-action="start-trial">Start Free Trial</a>
+      </div>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-link">Home</a>
+    <a href="../features.html" class="mobile-nav-link">Features</a>
+    <a href="../features/billing-sales.html" class="mobile-nav-link mobile-nav-sub">Sales &amp; Billing</a>
+    <a href="../features/pos.html" class="mobile-nav-link mobile-nav-sub">Retail POS</a>
+    <a href="../features/inventory.html" class="mobile-nav-link mobile-nav-sub">Inventory &amp; Stock</a>
+    <a href="../features/accounting.html" class="mobile-nav-link mobile-nav-sub">Accounting &amp; Finance</a>
+    <a href="../features/gst.html" class="mobile-nav-link mobile-nav-sub">GST Compliance</a>
+    <a href="../features/reports.html" class="mobile-nav-link mobile-nav-sub">Reports, Audit &amp; MIS</a>
+    <a href="../features/multi-branch.html" class="mobile-nav-link mobile-nav-sub">Multi-Branch Control</a>
+    <a href="../features/role-management.html" class="mobile-nav-link mobile-nav-sub">Users, Roles &amp; Security</a>
+    <a href="../industries.html" class="mobile-nav-link">Industries</a>
+    <a href="../pricing.html" class="mobile-nav-link">Pricing</a>
+    <a href="../faq.html" class="mobile-nav-link">FAQ</a>
+    <a href="../guides/index.html" class="mobile-nav-link">Help guides</a>
+    <a href="../about.html" class="mobile-nav-link">About</a>
+    <a href="../contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <a href="../login.html" class="btn btn-secondary" data-action="erp-login">Login</a>
+      <a href="../demo.html" class="btn btn-secondary">Book Demo</a>
+      <a href="../free-trial.html" class="btn btn-primary" data-action="start-trial">Start Free Trial</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-hero-top">
+          <nav class="guide-crumbs" aria-label="You are here">
+            <a href="index.html">Help guides</a><span aria-hidden="true">›</span><a href="index.html#stock">Items & stock</a>
+          </nav>
+          <nav class="lang-switch" aria-label="Language / Language">
+            <a href="../guides/stock-transfer.html" hreflang="en" lang="en" aria-current="page">English</a>
+            <a href="../mr/guides/stock-transfer.html" hreflang="mr" lang="mr">मराठी</a>
+            <a href="../hi/guides/stock-transfer.html" hreflang="hi" lang="hi">हिंदी</a>
+          </nav>
+        </div>
+        <h1>How to transfer stock from one branch to another</h1>
+        <p class="guide-lead">A transfer moves stock between your branches in four steps: request, review, dispatch and receive. Stock leaves the sending branch only when it is dispatched, and arrives at the other branch when it is received — with any shortage recorded.</p>
+        <div class="guide-meta">
+          <span class="guide-chip">⏱ About 4 minutes</span>
+          <span class="guide-chip">Menu: Items & stock → Stock transfers</span>
+          <span class="guide-chip">One item per transfer</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container guide-layout">
+      <div class="guide-side">
+        <aside class="guide-toc" aria-label="On this page">
+          <p class="guide-toc-title">On this page</p>
+          <ol>
+            <li><a href="#before">Before you start</a></li>
+            <li><a href="#step-open">1. Open Stock transfers</a></li>
+            <li><a href="#step-new">2. Request the transfer</a></li>
+            <li><a href="#step-review">3. Review and approve</a></li>
+            <li><a href="#step-dispatch">4. Dispatch</a></li>
+            <li><a href="#step-receive">5. Receive at the other branch</a></li>
+            <li><a href="#step-details">6. Details, e-Way Bill JSON and tax invoice</a></li>
+            <li><a href="#faq">Common questions</a></li>
+          </ol>
+        </aside>
+        <nav class="guide-allnav" aria-label="All guides">
+          <p class="guide-toc-title"><a href="index.html">All guides</a></p>
+          <details class="guide-nav-group">
+            <summary>Sales <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="sales-invoice.html">Make a sales invoice</a></li>
+              <li><a href="pos-billing.html">Bill at the counter (POS)</a></li>
+              <li><a href="customers-credit.html">Customers and credit (udhar)</a></li>
+              <li><a href="invoices-list.html">Find, reprint or cancel an invoice</a></li>
+              <li><a href="quotations.html">Make a quotation</a></li>
+              <li><a href="sales-orders.html">Sales orders and deliveries</a></li>
+              <li><a href="delivery-challans.html">Delivery challans</a></li>
+              <li><a href="credit-notes-returns.html">Sales return and credit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>Purchases <span class="guide-nav-count">5</span></summary>
+            <ul>
+              <li><a href="purchase-bill.html">Add a purchase bill</a></li>
+              <li><a href="suppliers.html">Add suppliers</a></li>
+              <li><a href="purchase-orders-grn.html">Purchase order and goods received (GRN)</a></li>
+              <li><a href="supplier-payments.html">Pay a supplier</a></li>
+              <li><a href="debit-notes-returns.html">Purchase return and debit note</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group" open>
+            <summary>Items & stock <span class="guide-nav-count">3</span></summary>
+            <ul>
+              <li><a href="add-items.html">Add items with HSN, GST and prices</a></li>
+              <li><a href="opening-stock.html">Enter opening stock</a></li>
+              <li><a href="stock-transfer.html" aria-current="page">Transfer stock between branches</a></li>
+            </ul>
+          </details>
+          <details class="guide-nav-group">
+            <summary>GST <span class="guide-nav-count">8</span></summary>
+            <ul>
+              <li><a href="e-invoice.html">Generate an e-Invoice (IRN)</a></li>
+              <li><a href="e-way-bill.html">Generate an e-Way Bill</a></li>
+              <li><a href="gstr-1.html">Prepare GSTR-1</a></li>
+              <li><a href="gstr-3b.html">Prepare GSTR-3B</a></li>
+              <li><a href="gstr-2b-matching.html">Match purchases with GSTR-2B</a></li>
+              <li><a href="gstr-1a.html">GSTR-1A amendments</a></li>
+              <li><a href="gst-payments.html">GST payments and cash ledger</a></li>
+              <li><a href="pre-filing-checks.html">Pre-filing checks</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+
+      <article class="guide-body">
+          <div class="guide-callout is-lang">
+            <span class="guide-callout-icon" aria-hidden="true">🌐</span>
+            <div><p><strong>Techstar ERP is also in Hindi and Marathi.</strong> Click the round button with your initial (top right) → <span class="ui">Language</span> → <strong>हिन्दी</strong> or <strong>मराठी</strong>. The menu changes to that language; invoices and other legal documents print as usual. The screenshots in this guide use the English menu.</p></div>
+          </div>
+
+          <h2 id="before">Before you start</h2>
+          <div class="guide-callout is-info">
+            <span class="guide-callout-icon" aria-hidden="true">ℹ️</span>
+            <div>
+              <p><strong>You need two branches</strong> (Settings → Branches &amp; bill numbering), the item with its HSN code (see <a href="add-items.html">How to add an item</a>) and enough stock of it at the sending branch.</p>
+              <p><strong>Who does what:</strong> the owner, an admin, an accountant or a branch manager reviews (approves, asks a question or rejects). Staff tied to a branch can dispatch only from their own branch and receive only at their own branch.</p>
+            </div>
+          </div>
+
+          <div class="guide-steps">
+            <section class="guide-step" id="step-open">
+              <h3>Open Stock transfers</h3>
+              <p>In the left menu click <strong>Items &amp; stock → Stock transfers</strong> <span class="mark-letter" aria-label="box A">A</span>, then <span class="ui">+ New transfer</span> <span class="mark-letter" aria-label="box B">B</span>.</p>
+              <p>The list shows each transfer with its date, number, the two branches and their GSTINs, the item, the status and the quantity. The tabs filter by step: <em>Waiting for review</em>, <em>Questions</em>, <em>Ready to dispatch</em>, <em>In transit</em> and <em>Done</em>.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/stock-transfer/01-transfers.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/01-transfers.webp" alt="Stock transfers list in Techstar ERP with the menu entry and the New transfer button highlighted" width="2000" height="1250" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption>Box A: Items &amp; stock → Stock transfers. Box B: New transfer.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-new">
+              <h3>Request the transfer</h3>
+              <p>The window <strong>Transfer stock to another branch</strong> opens — <em>Stock moves when it is dispatched.</em></p>
+              <ul class="guide-list">
+                <li><span class="ui">From branch</span> — the sending branch (fixed to your own branch if your user belongs to one). <span class="ui">To branch</span> <span class="mark-letter" aria-label="box A">A</span> — the receiving branch.</li>
+                <li><span class="ui">Item</span> <span class="mark-letter" aria-label="box B">B</span> — search or scan. The stock at the sending branch is shown under the box. One item per transfer: make another transfer for each further item.</li>
+                <li><span class="ui">Quantity</span> <span class="mark-letter" aria-label="box C">C</span> — not more than the stock at the sending branch.</li>
+                <li><span class="ui">Value per unit (₹)</span> <span class="mark-letter" aria-label="box D">D</span> — filled with the item's purchase rate; it is the value used on the transfer papers and the e-Way Bill.</li>
+                <li><span class="ui">Purpose</span> — <em>Restock branch</em>, <em>Balance stock</em>, <em>Customer order</em> or <em>Return to main godown</em> — and <span class="ui">Notes</span> for the other branch.</li>
+              </ul>
+              <p>Click <span class="ui">Send for review</span> <span class="mark-letter" aria-label="box E">E</span>. The transfer gets its number (for example <strong>ST-2026-00003</strong>) and waits for review. No stock has moved yet.</p>
+
+          <figure class="guide-shot" style="max-width:592px">
+            <a href="../assets/guides/stock-transfer/02-new.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/02-new.webp" alt="Transfer stock to another branch window with receiving branch, item with stock at the sending branch, quantity, value per unit and Send for review highlighted" width="1184" height="1160" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: receiving branch. Box B: item, with the stock at the sending branch. Box C: quantity. Box D: value per unit. Box E: Send for review.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-review">
+              <h3>Review and approve</h3>
+              <p>On the transfer's row click <span class="ui">Review</span>. The window shows the route, the quantity asked for and the requester's note; the item name on the transfer can still be changed. Then:</p>
+              <ul class="guide-list">
+                <li><span class="ui">Ask a question</span> <span class="mark-letter" aria-label="box A">A</span> — for example to suggest a smaller quantity. The sending branch answers with <span class="ui">Answer question</span> (and may change the quantity), and the transfer comes back for review.</li>
+                <li><span class="ui">Reject</span> <span class="mark-letter" aria-label="box B">B</span> — with the reason in Notes.</li>
+                <li><span class="ui">Approve</span> <span class="mark-letter" aria-label="box C">C</span> — the transfer is ready to dispatch.</li>
+              </ul>
+
+          <figure class="guide-shot" style="max-width:592px">
+            <a href="../assets/guides/stock-transfer/03-review.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/03-review.webp" alt="Review transfer request window with Ask a question, Reject and Approve buttons highlighted" width="1184" height="980" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: ask a question. Box B: reject. Box C: approve.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-dispatch">
+              <h3>Dispatch</h3>
+              <p>An approved transfer shows <span class="ui">Dispatch</span> <span class="mark-letter" aria-label="box A">A</span> on its row. Click it when the goods are loaded.</p>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/stock-transfer/04-approved.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/04-approved.webp" alt="Stock transfers list with the approved transfer and its Dispatch button highlighted" width="2000" height="1017" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: Dispatch.</figcaption>
+          </figure>
+              <p>In <strong>Dispatch from …</strong> enter the <span class="ui">Transport</span> <span class="mark-letter" aria-label="box A">A</span> (road, rail, air or ship), the <span class="ui">Vehicle number</span> <span class="mark-letter" aria-label="box B">B</span> and, if you like, the <span class="ui">Transporter</span>. Click <span class="ui">Dispatch</span> <span class="mark-letter" aria-label="box C">C</span>: the stock leaves the sending branch now and the transfer is <em>In transit</em>. If the value and route need an e-Way Bill, the message after dispatch says so.</p>
+
+          <figure class="guide-shot" style="max-width:584px">
+            <a href="../assets/guides/stock-transfer/05-dispatch.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/05-dispatch.webp" alt="Dispatch window with transport mode, vehicle number, transporter and the Dispatch button highlighted" width="1168" height="520" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: transport. Box B: vehicle number. Box C: Dispatch — the stock leaves the sending branch.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-receive">
+              <h3>Receive at the other branch</h3>
+              <p>When the goods arrive, click <span class="ui">Receive</span> on the transfer. For each item the window shows what was <strong>Sent</strong>:</p>
+              <ul class="guide-list">
+                <li><span class="ui">Received</span> <span class="mark-letter" aria-label="box A">A</span> — count the goods and enter what arrived.</li>
+                <li><strong>Difference</strong> <span class="mark-letter" aria-label="box B">B</span> — <em>Matches</em>, <em>Short by …</em> or <em>Extra …</em>.</li>
+                <li><span class="ui">Remarks</span> — for example what was short or damaged.</li>
+              </ul>
+              <p>Click <span class="ui">Receive</span> <span class="mark-letter" aria-label="box C">C</span>. The quantity received comes into the receiving branch's stock, and the transfer is <em>Received</em>, <em>Received short</em> or <em>Received extra</em>.</p>
+
+          <figure class="guide-shot" style="max-width:592px">
+            <a href="../assets/guides/stock-transfer/06-receive.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/06-receive.webp" alt="Receive window with 100 pipes sent, 98 received, the difference Short by 2 and the Receive button highlighted" width="1184" height="800" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: quantity received. Box B: the difference — short by 2. Box C: Receive.</figcaption>
+          </figure>
+            </section>
+
+            <section class="guide-step" id="step-details">
+              <h3>Details, e-Way Bill JSON and tax invoice</h3>
+              <p>Click the transfer number or the <strong>eye</strong> icon to open its details: both branches with GSTIN and State, the items <span class="mark-letter" aria-label="box A">A</span> with the quantity asked, sent and received and the value, the transport, any questions and who received it.</p>
+              <ul class="guide-list">
+                <li><span class="ui">Download e-Way Bill JSON</span> <span class="mark-letter" aria-label="box B">B</span> — asks for the road distance (1 to 4000 km) and downloads the file to upload on the e-Way Bill portal.</li>
+                <li><span class="ui">Tax invoice</span> <span class="mark-letter" aria-label="box C">C</span> and <span class="ui">Generate IRN</span> — shown when the two branches have <strong>different GSTINs</strong>. Such a transfer is a supply between two registrations: the ERP books the GST at the sending branch on dispatch and the GST credit at the receiving branch on receipt. If e-invoicing applies to you, generate the IRN before printing — without it the invoice prints only as a draft.</li>
+              </ul>
+
+          <figure class="guide-shot">
+            <a href="../assets/guides/stock-transfer/07-details.webp" target="_blank" rel="noopener" title="Open the full-size screenshot">
+              <img src="../assets/guides/stock-transfer/07-details.webp" alt="Transfer details window with the items asked, sent and received, and the Download e-Way Bill JSON and Tax invoice buttons highlighted" width="1568" height="1280" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Box A: quantities at each step. Box B: e-Way Bill JSON. Box C: tax invoice (the demo branches have different GSTINs).</figcaption>
+          </figure>
+              <div class="guide-callout is-tip">
+                <span class="guide-callout-icon" aria-hidden="true">💡</span>
+                <div><p><strong>Branches under the same GSTIN</strong> (the usual case within one State): the transfer only moves stock between them; there is no tax invoice and no Tax invoice button.</p></div>
+              </div>
+            </section>
+          </div>
+
+          <h2 id="faq">Common questions</h2>
+          <div class="guide-faq">
+            <details>
+              <summary>When does the stock actually move?</summary>
+              <div>Only at dispatch (out of the sending branch) and at receipt (into the receiving branch). A request waiting for review, or an approved transfer not yet dispatched, does not change any stock.</div>
+            </details>
+            <details>
+              <summary>The ERP says to add the HSN code first.</summary>
+              <div>The HSN code goes on the transfer papers and the e-Way Bill, so it is required. Add it to the item under Items &amp; stock → Items and make the transfer again.</div>
+            </details>
+            <details>
+              <summary>I need to send several items.</summary>
+              <div>Make one transfer for each item. The list, the search box and the tabs keep them together.</div>
+            </details>
+            <details>
+              <summary>Fewer goods arrived than were sent.</summary>
+              <div>Enter the quantity that actually arrived when receiving. Only that quantity comes into the receiving branch, the transfer is marked <em>Received short</em>, and your remarks are kept in its details.</div>
+            </details>
+          </div>
+
+
+          <h2 id="next">More guides</h2>
+          <div class="guide-next">
+            <a class="guide-next-card" href="opening-stock.html"><span>← Previous</span><strong>Enter opening stock</strong></a>
+            <a class="guide-next-card" href="index.html"><span>Help guides</span><strong>All help guides →</strong></a>
+          </div>
+          <p class="guide-note">Screenshots are from Techstar ERP with a demo company (Shree Ganesh Traders, Pune). All names, GSTINs, amounts and document numbers are sample data.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- ====== GLOBAL FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="../index.html" class="logo footer-logo">
+            <img src="../assets/logo-white.svg" alt="Techstar ERP" width="166" height="36" style="height:36px;width:auto">
+          </a>
+          <p class="footer-tagline">GST billing, POS, inventory, accounting and GST returns — one cloud ERP for Indian businesses.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="../features/billing-sales.html" class="footer-link">Sales &amp; Billing</a></li>
+            <li><a href="../features/pos.html" class="footer-link">Retail POS</a></li>
+            <li><a href="../features/inventory.html" class="footer-link">Inventory &amp; Stock</a></li>
+            <li><a href="../features/accounting.html" class="footer-link">Accounting &amp; Finance</a></li>
+            <li><a href="../features/gst.html" class="footer-link">GST Compliance</a></li>
+            <li><a href="../features/reports.html" class="footer-link">Reports, Audit &amp; MIS</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Help guides</h4>
+          <ul class="footer-links">
+            <li><a href="../guides/sales-invoice.html" class="footer-link">Make a sales invoice</a></li>
+            <li><a href="../guides/purchase-bill.html" class="footer-link">Add a purchase bill</a></li>
+            <li><a href="../guides/e-way-bill.html" class="footer-link">Generate an e-Way Bill</a></li>
+            <li><a href="../guides/gstr-1.html" class="footer-link">Prepare GSTR-1</a></li>
+            <li><a href="../guides/index.html" class="footer-link">All help guides</a></li>
+            <li><a href="../docs.html" class="footer-link">Help documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="../faq.html" class="footer-link">FAQs</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact us</a></li>
+            <li><a href="../demo.html" class="footer-link">Book a demo</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="../refund-policy.html" class="footer-link">Refund &amp; Cancellation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <span>Address:</span> Chhatrapati Sambhajinagar, Maharashtra, India
+          </div>
+          <div class="footer-contact-item">
+            <span>Email:</span> <a href="mailto:official@swapnilaher.in" class="footer-link">official@swapnilaher.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>Phone / WhatsApp:</span> <a href="tel:+919579005645" class="footer-link">+91 95790 05645</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-bottom-left">© 2026 TECHSTAR MONEY SOLUTION PRIVATE LIMITED (CIN: U66190MH2026PTC478675 | GSTIN: 27AANCT3833C1ZB). All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <a href="../privacy.html" class="footer-bottom-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-bottom-link">Terms &amp; Conditions</a>
+          <a href="../refund-policy.html" class="footer-bottom-link">Refund &amp; Cancellation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/erp-integration.js"></script>
+
+</body>
+</html>
