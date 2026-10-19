@@ -241,6 +241,16 @@ document.addEventListener("DOMContentLoaded", () => {
     trackEvent("call_click", {});
     metaTrack("Contact", { content_name: "call" });
   }));
+
+  // Sign-up links drawn when the page loaded (free-trial page, plan cards) can predate the Pixel's _fbp / _fbc
+  // cookies on a visitor's first page, so the cookies are added when the link is used (click, middle / right click).
+  ["click", "auxclick", "contextmenu"].forEach((type) => document.addEventListener(type, (e) => {
+    const link = e.target instanceof Element ? e.target.closest(`a[href^="${ERP_APP_URL}/register"]`) : null;
+    if (!link) return;
+    const url = new URL(link.href);
+    metaCookieParams(url.searchParams);
+    link.href = url.toString();
+  }, true));
 });
 
 window.TechstarERP = {
