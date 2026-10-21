@@ -120,6 +120,8 @@ function utmParams() {
   if (utm.utmSource) params.set("utm_source", utm.utmSource);
   if (utm.utmMedium) params.set("utm_medium", utm.utmMedium);
   if (utm.utmCampaign) params.set("utm_campaign", utm.utmCampaign);
+  // Which ad / video brought the visitor (Meta fills {{ad.name}})
+  if (utm.utmContent) params.set("utm_content", utm.utmContent);
   // Meta ad-click id: lets the ERP attribute a later sign-up to the ad (the ERP is a different domain).
   if (utm.fbclid) params.set("fbclid", utm.fbclid);
   return params;
