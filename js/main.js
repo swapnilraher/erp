@@ -207,7 +207,7 @@ if (demoForm) {
     }
     btn.textContent = label;
     btn.disabled = false;
-    showError(`${result.error} You can also WhatsApp or call us on +91 95790 05645.`);
+    showError(`${result.error} You can also WhatsApp us on +91 94204 05601 or call +91 95790 05645.`);
   });
 }
 

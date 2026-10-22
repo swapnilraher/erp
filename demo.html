@@ -171,7 +171,7 @@
         const result = await erp.submitLead(formData);
         btn.disabled = false;
         btn.textContent = "Book My Free Demo";
-        if (!result.ok) return showError(`${result.error} You can also WhatsApp or call us on +91 95790 05645.`);
+        if (!result.ok) return showError(`${result.error} You can also WhatsApp us on +91 94204 05601 or call +91 95790 05645.`);
 
         lead = result;
         $("demoMainWrap").style.display = "none";

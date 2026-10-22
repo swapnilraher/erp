@@ -42,7 +42,7 @@
     features: ["Dedicated CPU & server for your company", "Custom domain (e.g. erp.yourcompany.com)", "Unlimited users",
       "Unlimited branches", "Dedicated relationship manager (RM)", "Everything in the Enterprise plan"],
   };
-  const CONTACT = { phone: "+91 95790 05645", tel: "tel:+919579005645", whatsapp: "https://wa.me/919579005645", email: "official@swapnilaher.in" };
+  const CONTACT = { phone: "+91 95790 05645", tel: "tel:+919579005645", whatsapp: "https://wa.me/919420405601", email: "official@swapnilaher.in" };
 
   let plans = FALLBACK.slice();
   let billing = "yearly";
