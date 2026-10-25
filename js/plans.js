@@ -46,6 +46,8 @@
 
   let plans = FALLBACK.slice();
   let billing = "yearly";
+  // The yearly offer as the ERP applies it (owner's decision, 25-Oct-2026): free months on every yearly payment, money-back days
+  let offer = { bonusMonths: 0, moneyBackDays: 15 };
   const mounts = [];
 
   const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
@@ -83,6 +85,13 @@
     const note = el("div", "plan-tax-note", "Price includes GST");
     if (billing === "yearly" && savingPct(plan)) note.textContent += ` · save ${savingPct(plan)}% vs monthly`;
     c.append(note);
+    if (billing === "yearly") {
+      const extra = el("div", "plan-tax-note",
+        (offer.bonusMonths ? `+ ${offer.bonusMonths} months free: ${12 + offer.bonusMonths} months · ` : "") + `${offer.moneyBackDays}-day money-back guarantee`);
+      extra.style.color = "#047857";
+      extra.style.fontWeight = "600";
+      c.append(extra);
+    }
 
     const limits = el("div", "plan-limits");
     limits.append(el("span", "", `${plan.maxUsers} users`), el("span", "", `${plan.maxBranches} ${plan.maxBranches === 1 ? "branch" : "branches"}`));
@@ -194,22 +203,25 @@
         node.append(contactCard(mode === "compact"));
       }
     });
-    // Home page hero: the cheapest current plan per month — yearly price ÷ 12 when paid annually, else the monthly price
+    // Home page hero: the cheapest current plan per month — the yearly price over the months it buys (12 + free months)
+    // when paid annually, else the monthly price
     const cheapest = plans.reduce((low, p) => (!low || p.yearlyPrice < low.yearlyPrice ? p : low), null);
     if (cheapest) {
       const yearly = billing === "yearly";
+      const months = 12 + offer.bonusMonths;
       document.querySelectorAll("[data-hero-price]").forEach((n) => {
-        n.textContent = inr(yearly ? Math.round(cheapest.yearlyPrice / 12) : cheapest.monthlyPrice);
+        n.textContent = inr(yearly ? Math.round(cheapest.yearlyPrice / months) : cheapest.monthlyPrice);
       });
       document.querySelectorAll("[data-hero-price-note]").forEach((n) => {
-        n.textContent = yearly ? `paid annually (${inr(cheapest.yearlyPrice)} a year)` : "paid monthly, cancel any time";
+        n.textContent = yearly ? `paid annually (${inr(cheapest.yearlyPrice)} for ${months} months)` : "paid monthly, cancel any time";
       });
     }
-    // The "save" badge states the real saving of the current prices, not a fixed number
+    // The "save" badge states the real saving of the current prices (and the free months), not a fixed number
     const best = Math.max(0, ...plans.map(savingPct));
     document.querySelectorAll(".billing-save").forEach((badge) => {
-      badge.textContent = best > 0 ? "Save up to " + best + "%" : "";
-      badge.hidden = best === 0;
+      const parts = [best > 0 ? "Save up to " + best + "%" : "", offer.bonusMonths ? offer.bonusMonths + " months free" : ""].filter(Boolean);
+      badge.textContent = parts.join(" + ");
+      badge.hidden = parts.length === 0;
     });
     document.querySelectorAll("[data-billing]").forEach((b) => {
       const on = b.getAttribute("data-billing") === billing;
@@ -219,13 +231,15 @@
   }
 
   async function refresh() {
-    const remote = window.TechstarERP && (await window.TechstarERP.fetchPublicPlans());
+    const erp = window.TechstarERP;
+    const [remote, offers] = await Promise.all([erp && erp.fetchPublicPlans(), erp && erp.fetchPublicOffers ? erp.fetchPublicOffers() : null]);
+    if (offers) offer = { bonusMonths: offers.yearlyBonusMonths, moneyBackDays: offers.moneyBackDays };
     if (Array.isArray(remote) && remote.length) {
       plans = remote
         .filter((p) => p && p.id && typeof p.monthlyPrice === "number" && typeof p.yearlyPrice === "number")
         .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
-      paint();
     }
+    if (offers || (Array.isArray(remote) && remote.length)) paint();
   }
 
   window.TechstarPlans = {

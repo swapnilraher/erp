@@ -211,6 +211,18 @@ async function fetchPublicPlans() {
   }
 }
 
+/** The yearly plan offer as the ERP applies it: free months on every yearly payment (0 when off) and the money-back days. */
+async function fetchPublicOffers() {
+  try {
+    const res = await fetch(`${ERP_APP_URL}/api/public/offers`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return { yearlyBonusMonths: Math.max(0, Number(data.yearlyBonusMonths) || 0), moneyBackDays: Number(data.moneyBackDays) || 15 };
+  } catch {
+    return null;
+  }
+}
+
 function trackEvent(name, props = {}) {
   if (typeof window.gtag === "function") window.gtag("event", name, props);
 }
@@ -263,6 +275,7 @@ window.TechstarERP = {
   cleanIndianMobile,
   navigateToFreeTrial,
   fetchPublicPlans,
+  fetchPublicOffers,
   trackEvent,
   metaTrack,
 };
